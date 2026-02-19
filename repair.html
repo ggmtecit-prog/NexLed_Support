@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Reparações — Suporte Nexled</title>
+
+    <!-- 1. Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- 2. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Design System CSS -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- 4. Configure Tailwind with NexLed tokens -->
+    <script src="src/config-cdn.js"></script>
+
+    <!-- 5. Nexled Utils -->
+    <script src="src/scripts/utils.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+      .custom-scrollbar { @apply overflow-y-auto; }
+      .custom-scrollbar::-webkit-scrollbar { @apply w-8; }
+      .custom-scrollbar::-webkit-scrollbar-button { @apply hidden; }
+      .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+      .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb { @apply bg-green-primary; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:active { @apply bg-green-secondary; }
+
+      /* Nav dropdown placeholder */
+      .nav-dropdown {
+        @apply relative flex items-center gap-8 px-12 py-8 text-body-sm font-medium text-grey-primary
+               border border-grey-tertiary rounded-lg hover:border-grey-secondary hover:text-black
+               transition-all duration-default ease-premium cursor-pointer select-none;
+      }
+      .nav-dropdown.is-active {
+        @apply text-black border-green-primary/40 bg-green-primary/5;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+
+    <!-- ============================================================
+       TOP NAVIGATION
+  ============================================================ -->
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+        <div
+            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover gap-24">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-12 group flex-shrink-0">
+                <div
+                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+                    <i class="ri-customer-service-fill text-h3"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte
+                        Nexled</span>
+                </div>
+            </a>
+
+            <!-- Placeholder Dropdowns — Repairs Guides is active on this page -->
+            <nav class="hidden lg:flex items-center gap-12">
+                <button class="nav-dropdown is-active" aria-label="Repairs Guides" disabled>
+                    <span>Repairs Guides</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm"></i>
+                </button>
+                <button class="nav-dropdown" aria-label="Download Files" disabled>
+                    <span class="text-grey-secondary">Download Files</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-secondary"></i>
+                </button>
+                <a href="contact.html"
+                    class="text-body-sm font-medium text-grey-primary hover:text-black transition-colors px-4">Contact
+                    Us</a>
+            </nav>
+
+            <!-- Right Actions: functional lang <select> + flag button -->
+            <div class="flex items-center gap-12 flex-shrink-0">
+                <div class="relative flex items-center">
+                    <select id="lang-select"
+                        class="appearance-none bg-grey-tertiary/60 border border-grey-tertiary rounded-lg pl-12 pr-28 py-8 text-body-sm text-black font-medium cursor-pointer hover:bg-grey-tertiary transition-colors focus:outline-none focus:ring-4 focus:ring-black">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                    </select>
+                    <i
+                        class="ri-arrow-down-s-line absolute right-8 top-1/2 -translate-y-1/2 text-icon-sm text-grey-primary pointer-events-none"></i>
+                </div>
+                <button
+                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all text-body-lg"
+                    aria-label="Language / Region">
+                    🇬🇧
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+    <main class="flex-1 mt-[148px] pb-0 w-full">
+
+        <!-- ── Page Header ── -->
+        <section class="px-32 py-48 max-w-standard mx-auto">
+
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-8 text-body-xs text-grey-primary mb-24" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link hover:text-green-primary transition-colors">Home</a>
+                <i class="ri-arrow-right-s-line text-icon-sm"></i>
+                <a href="index.html" class="breadcrumb-link hover:text-green-primary transition-colors">Support</a>
+                <i class="ri-arrow-right-s-line text-icon-sm"></i>
+                <span class="text-black">Reparações</span>
+            </nav>
+
+            <div class="text-center mb-48">
+                <h1 class="text-display font-semibold mb-16" id="page-hero-title">Repairs Guide</h1>
+                <p class="text-body-lg text-grey-primary max-w-readable mx-auto font-light" id="page-hero-desc">
+                    Here you will find a complete collection of support materials, including procedural guides, product
+                    datasheets, and relevant
+                    warnings. These resources are designed to assist in understanding system features, ensuring proper
+                    handling of
+                    product
+                    information, and maintaining compliance with required standards.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ── Categories (Dynamic) ── -->
+        <div id="repair-categories" class="px-32 pb-64 max-w-standard mx-auto space-y-48">
+            <!-- Rendered by JS -->
+            <div class="flex justify-center py-64">
+                <i class="ri-loader-4-line animate-spin text-h1 text-grey-tertiary"></i>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="mt-auto w-full">
+
+        <!-- Main footer body -->
+        <div class="bg-white border-t border-grey-tertiary px-32 py-48">
+            <div class="max-w-wide mx-auto grid grid-cols-2 md:grid-cols-5 gap-32">
+
+                <!-- Brand column -->
+                <div class="col-span-2 md:col-span-1 flex flex-col gap-16">
+                    <a href="index.html" class="flex items-center gap-12 group w-fit">
+                        <div
+                            class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+                            <i class="ri-customer-service-fill text-h3"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                            <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte
+                                Nexled</span>
+                        </div>
+                    </a>
+                    <ul class="space-y-8 text-body-xs text-grey-primary">
+                        <li class="flex items-start gap-8"><i
+                                class="ri-map-pin-line text-icon-sm mt-0.5 flex-shrink-0"></i><span>Rua Exemplo, 123,
+                                Lisboa,
+                                Portugal</span></li>
+                        <li class="flex items-center gap-8"><i
+                                class="ri-phone-line text-icon-sm flex-shrink-0"></i><span>+351 000
+                                000 000</span></li>
+                        <li class="flex items-center gap-8"><i
+                                class="ri-mail-line text-icon-sm flex-shrink-0"></i><span>suporte@nexled.pt</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Contact Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Us 1-3 (Omitted for brevity, assumed same as shared) -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom nav bar — green -->
+        <div class="bg-green-primary px-32 py-16">
+            <div class="max-w-wide mx-auto flex items-center justify-between">
+                <p class="text-body-xs text-white/70">© <span id="year"></span> Nexled</p>
+                <nav class="flex items-center gap-32">
+                    <a href="repair.html"
+                        class="text-body-xs text-white font-medium hover:text-white transition-colors">Reparações</a>
+                    <a href="index.html#warranty"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Garantia</a>
+                    <a href="downloads.html"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Downloads</a>
+                    <a href="index.html#warranty"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Warranty</a>
+                    <a href="contact.html"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Mensagens</a>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        async function initRepairs() {
+            const lang = Utils.getLang();
+            Utils.initLanguageSelector('lang-select');
+
+            const data = await Utils.fetchJSON('data/repairs.json');
+            if (!data) return;
+
+            // Update titles
+            if (data.meta && data.meta.title) {
+                document.title = Utils.t(data.meta.title, lang);
+                document.getElementById('page-hero-title').textContent = Utils.t(data.meta.title, lang);
+            }
+
+            const container = document.getElementById('repair-categories');
+            container.innerHTML = '';
+
+            if (data.categories) {
+                data.categories.forEach(cat => {
+                    const sec = document.createElement('section');
+                    sec.className = 'category';
+                    sec.id = cat.id || '';
+
+                    let cardsHtml = '';
+                    if (cat.cards) {
+                        cat.cards.forEach(card => {
+                            const img = Utils.sanitizeImagePath(card.image);
+                            const title = Utils.t(card.title, lang);
+                            const desc = Utils.t(card.description, lang);
+
+                            let repairsHtml = '';
+                            if (card.repairs) {
+                                repairsHtml = `<div class="grid grid-cols-3 gap-x-16 gap-y-8">`;
+                                card.repairs.forEach(r => {
+                                    const rLabel = Utils.t(r.label, lang);
+                                    repairsHtml += `
+                                    <a href="steps.html?file=${r.file}&lang=${lang}"
+                                       class="text-body-xs font-medium text-green-primary hover:text-green-secondary transition-colors truncate">
+                                       ${rLabel}
+                                    </a>`;
+                                });
+                                repairsHtml += `</div>`;
+                            }
+
+                            cardsHtml += `
+                            <div class="bg-white border border-grey-tertiary rounded-2xl shadow-btn-default hover:shadow-btn-hover transition-all duration-default ease-premium overflow-hidden flex min-h-[120px]">
+                                <div class="w-[140px] flex-shrink-0 bg-grey-tertiary/20 overflow-hidden flex items-center justify-center border-r border-grey-tertiary">
+                                    ${img ? `<img src="${img}" alt="${title}" class="w-full h-full object-cover">` : `<i class="ri-image-line text-h2 text-grey-secondary"></i>`}
+                                </div>
+                                <div class="flex-1 px-24 py-20 flex flex-col justify-center gap-12">
+                                    <div>
+                                        <h3 class="text-body-lg font-semibold text-black">${title}</h3>
+                                        <p class="text-body-sm text-grey-primary">${desc}</p>
+                                    </div>
+                                    ${repairsHtml}
+                                </div>
+                            </div>`;
+                        });
+                    }
+
+                    sec.innerHTML = `
+                    <h2 class="text-h2 font-semibold mb-24">${Utils.t(cat.title, lang)}</h2>
+                    <div class="space-y-16">${cardsHtml}</div>
+                `;
+                    container.appendChild(sec);
+                });
+            }
+        }
+
+        initRepairs();
+    </script>
+</body>
+
+</html>

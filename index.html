@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Área de Suporte — Nexled</title>
+
+    <!-- 1. Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- 2. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Design System CSS -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- 4. Configure Tailwind with NexLed tokens -->
+    <script src="src/config-cdn.js"></script>
+
+    <!-- 5. Nexled Utils -->
+    <script src="src/scripts/utils.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+      .custom-scrollbar { @apply overflow-y-auto; }
+      .custom-scrollbar::-webkit-scrollbar { @apply w-8; }
+      .custom-scrollbar::-webkit-scrollbar-button { @apply hidden; }
+      .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+      .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb { @apply bg-green-primary; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:active { @apply bg-green-secondary; }
+
+      /* Nav dropdown placeholder */
+      .nav-dropdown {
+        @apply relative flex items-center gap-8 px-12 py-8 text-body-sm font-medium text-grey-primary
+               border border-grey-tertiary rounded-lg hover:border-grey-secondary hover:text-black
+               transition-all duration-default ease-premium cursor-pointer select-none;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+
+    <!-- ============================================================
+       TOP NAVIGATION
+  ============================================================ -->
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+        <div
+            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover gap-24">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-12 group flex-shrink-0">
+                <div
+                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+                    <i class="ri-customer-service-fill text-h3"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte
+                        Nexled</span>
+                </div>
+            </a>
+
+            <!-- Placeholder Dropdowns (functionality TBD) -->
+            <nav class="hidden lg:flex items-center gap-12">
+                <button class="nav-dropdown" aria-label="Select an option" disabled>
+                    <span class="text-grey-secondary">Select an option</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-secondary"></i>
+                </button>
+                <button class="nav-dropdown" aria-label="Select an option" disabled>
+                    <span class="text-grey-secondary">Select an option</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-secondary"></i>
+                </button>
+                <button class="nav-dropdown" aria-label="Select an option" disabled>
+                    <span class="text-grey-secondary">Select an option</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-secondary"></i>
+                </button>
+            </nav>
+
+            <!-- Right Actions — Search + Language Selector -->
+            <div class="flex items-center gap-12 flex-shrink-0">
+
+                <!-- Search icon (placeholder) -->
+                <button
+                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all"
+                    aria-label="Pesquisar">
+                    <i class="ri-search-line text-icon-md"></i>
+                </button>
+
+                <!-- Language Selector -->
+                <div class="relative flex items-center">
+                    <select id="lang-select"
+                        class="appearance-none bg-grey-tertiary/60 border border-grey-tertiary rounded-lg pl-12 pr-28 py-8 text-body-sm text-black font-medium cursor-pointer hover:bg-grey-tertiary transition-colors focus:outline-none focus:ring-4 focus:ring-black">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                    </select>
+                    <i
+                        class="ri-arrow-down-s-line absolute right-8 top-1/2 -translate-y-1/2 text-icon-sm text-grey-primary pointer-events-none"></i>
+                </div>
+
+                <!-- Flag / locale icon -->
+                <button
+                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all text-body-lg"
+                    aria-label="Language / Region">
+                    🇬🇧
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+    <main class="flex-1 mt-[148px] pb-0 w-full">
+
+        <!-- ── Hero ── -->
+        <section class="px-32 py-64 max-w-standard mx-auto text-center">
+            <h1 class="text-display font-semibold mb-16 text-black">Suporte Nexled</h1>
+            <p class="text-body-lg text-grey-primary max-w-readable mx-auto font-light">
+                Here you will find a comprehensive collection of support resources, including answers to the most
+                frequently
+                asked
+                questions. These resources are designed to help you quickly find solutions to common issues, install and
+                configure
+                products, and troubleshoot problems that may arise over time.
+            </p>
+        </section>
+
+        <!-- ── 3 Action Cards ── -->
+        <section id="actions" class="px-32 pb-64 max-w-standard mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+
+                <!-- Repair Guides -->
+                <a href="repair.html"
+                    class="glass-panel p-32 flex flex-col gap-16 hover:-translate-y-px hover:shadow-btn-hover transition-all duration-default ease-premium group cursor-pointer">
+                    <div
+                        class="w-48 h-48 bg-green-primary rounded-lg flex items-center justify-center text-white group-hover:scale-hover transition-transform duration-default ease-premium shadow-btn-default flex-shrink-0">
+                        <i class="ri-tools-line text-h3"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-h3 font-semibold text-black mb-8">Repair Guides</h2>
+                        <p class="text-body-sm text-grey-primary leading-relaxed">
+                            This guide will help you understand the support options available to you, including how to
+                            request
+                            repairs, replacements and information on our parts.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex items-center gap-8 text-green-primary text-body-sm font-medium">
+                        <span>Go to Repair Guides</span>
+
+                    </div>
+                </a>
+
+                <!-- Downloads Files -->
+                <a href="downloads.html"
+                    class="glass-panel p-32 flex flex-col gap-16 hover:-translate-y-px hover:shadow-btn-hover transition-all duration-default ease-premium group cursor-pointer">
+                    <div
+                        class="w-48 h-48 bg-green-primary rounded-lg flex items-center justify-center text-white group-hover:scale-hover transition-transform duration-default ease-premium shadow-btn-default flex-shrink-0">
+                        <i class="ri-download-2-line text-h3"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-h3 font-semibold text-black mb-8">Downloads Files</h2>
+                        <p class="text-body-sm text-grey-primary leading-relaxed">
+                            Here you'll find all the EPREL labels in PDF and PNG format, as well as the Product Fiches
+                            available in
+                            each supported language for download.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex items-center gap-8 text-green-primary text-body-sm font-medium">
+                        <span>Go to Downloads Files</span>
+
+                    </div>
+                </a>
+
+                <!-- Contact Us -->
+                <a href="contact.html"
+                    class="glass-panel p-32 flex flex-col gap-16 hover:-translate-y-px hover:shadow-btn-hover transition-all duration-default ease-premium group cursor-pointer">
+                    <div
+                        class="w-48 h-48 bg-green-primary rounded-lg flex items-center justify-center text-white group-hover:scale-hover transition-transform duration-default ease-premium shadow-btn-default flex-shrink-0">
+                        <i class="ri-customer-service-fill text-h3"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-h3 font-semibold text-black mb-8">Contact Us</h2>
+                        <p class="text-body-sm text-grey-primary leading-relaxed">
+                            Get in touch with one of our support specialists. We're here to help you resolve any
+                            technical issues and
+                            ensure your products are working as expected.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex items-center gap-8 text-green-primary text-body-sm font-medium">
+                        <span>Go to Contact Us</span>
+
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ── FAQ & Main Questions ── -->
+        <section id="faq" class="px-32 py-64 max-w-standard mx-auto">
+
+            <div class="text-center mb-48">
+                <h2 class="text-h1 font-semibold mb-16">FAQ &amp; Main Questions</h2>
+                <p class="text-body-lg text-grey-primary max-w-readable mx-auto font-light">
+                    Below you'll find answers to the most frequently asked questions. If the answer you're looking for
+                    isn't here,
+                    you can always contact our support team through the contact page.
+                </p>
+            </div>
+
+            <!-- Accordion list -->
+            <div class="space-y-0 divide-y divide-grey-tertiary border-y border-grey-tertiary">
+
+                <details class="group py-24">
+                    <summary
+                        class="flex items-center gap-16 cursor-pointer list-none text-body-lg font-medium text-black select-none">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        How do I start a support request?
+                    </summary>
+                    <p class="mt-12 pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        Visit the contact page or use the scheduling option to book a session with one of our support
+                        specialists.
+                    </p>
+                </details>
+
+                <details class="group py-24">
+                    <summary
+                        class="flex items-center gap-16 cursor-pointer list-none text-body-lg font-medium text-black select-none">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        How long does a repair take?
+                    </summary>
+                    <p class="mt-12 pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        The time depends on the type of repair. Consult the repair guides for an accurate estimate.
+                    </p>
+                </details>
+
+                <details class="group py-24">
+                    <summary
+                        class="flex items-center gap-16 cursor-pointer list-none text-body-lg font-medium text-black select-none">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Where can I get manuals?
+                    </summary>
+                    <p class="mt-12 pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        Manuals are available free of charge in the <a href="downloads.html"
+                            class="text-green-primary hover:text-green-secondary transition-colors">Downloads</a>
+                        section.
+                    </p>
+                </details>
+
+                <details class="group py-24">
+                    <summary
+                        class="flex items-center gap-16 cursor-pointer list-none text-body-lg font-medium text-black select-none">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Do Nexled products include a warranty?
+                    </summary>
+                    <p class="mt-12 pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        Yes, warranty conditions differ for each product. Please consult your product documentation.
+                    </p>
+                </details>
+
+                <details class="group py-24">
+                    <summary
+                        class="flex items-center gap-16 cursor-pointer list-none text-body-lg font-medium text-black select-none">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Where can I find EPREL labels and fiches?
+                    </summary>
+                    <p class="mt-12 pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        All EPREL documents are accessible within the <a href="downloads.html"
+                            class="text-green-primary hover:text-green-secondary transition-colors">Product
+                            Downloads</a> section.
+                    </p>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- ── Warranty & Guarantee ── -->
+        <section id="warranty" class="px-32 py-64 max-w-standard mx-auto">
+
+            <div class="text-center mb-48">
+                <h2 class="text-h1 font-semibold mb-16">Warranty &amp; Guarantee</h2>
+                <p class="text-body-lg text-grey-primary max-w-readable mx-auto font-light">
+                    Below is a full summary of the standard warranty conditions applicable to Nexled products. For
+                    specific
+                    information about your product, please consult the corresponding product documentation or contact
+                    support.
+                </p>
+            </div>
+
+            <div class="space-y-0 divide-y divide-grey-tertiary border-y border-grey-tertiary">
+
+                <div class="py-24">
+                    <h3 class="flex items-center gap-16 text-body-lg font-medium text-black mb-12">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Coverage
+                    </h3>
+                    <p class="pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        The warranty applies to defects in materials and workmanship when the product is used under
+                        normal operating conditions. It does not cover damages that stem from misuse or environmental
+                        factors.
+                    </p>
+                </div>
+
+                <div class="py-24">
+                    <h3 class="flex items-center gap-16 text-body-lg font-medium text-black mb-12">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Exclusions
+                    </h3>
+                    <p class="pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        This warranty does not cover damage resulting from misuse, improper installation, accidents,
+                        unauthorized modifications, or exposure to conditions outside the recommended operating
+                        envelope.
+                        Products altered or repaired without Nexled authorization are generally not covered for warranty
+                        review.
+                    </p>
+                </div>
+
+                <div class="py-24">
+                    <h3 class="flex items-center gap-16 text-body-lg font-medium text-black mb-12">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Request Warranty Service
+                    </h3>
+                    <p class="pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        To request warranty service, gather the product model, serial number, and proof of purchase,
+                        then contact the support team. You'll be guided through the process. Support will send detailed
+                        instructions
+                        on how to return the product or obtain a direct service — if applicable.
+                    </p>
+                </div>
+
+                <div class="py-24">
+                    <h3 class="flex items-center gap-16 text-body-lg font-medium text-black mb-12">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Required Documentation
+                    </h3>
+                    <p class="pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        You must provide proof of purchase, a clear description of the issue, and a copy of the date and
+                        the product serial number. Keep this information handy prior to contacting our warranty service
+                        department.
+                    </p>
+                </div>
+
+                <div class="py-24">
+                    <h3 class="flex items-center gap-16 text-body-lg font-medium text-black mb-12">
+                        <span class="text-green-primary text-h3 leading-none flex-shrink-0">·</span>
+                        Product Lifespan &amp; Performance Expectations
+                    </h3>
+                    <p class="pl-28 text-body-sm text-grey-primary leading-relaxed">
+                        Nexled products are designed to deliver lasting, safe performance when used under recommended
+                        conditions. Any reduction in output or expected performance that is not associated to a direct
+                        Performance
+                        lapse or fault is not considered a notable product performance disturbance.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+       FOOTER — multi-column design (functionality TBD)
+  ============================================================ -->
+    <footer class="mt-auto w-full">
+
+        <!-- Main footer body -->
+        <div class="bg-white border-t border-grey-tertiary px-32 py-48">
+            <div class="max-w-wide mx-auto grid grid-cols-2 md:grid-cols-5 gap-32">
+
+                <!-- Brand column -->
+                <div class="col-span-2 md:col-span-1 flex flex-col gap-16">
+                    <a href="index.html" class="flex items-center gap-12 group w-fit">
+                        <div
+                            class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+                            <i class="ri-customer-service-fill text-h3"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                            <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte
+                                Nexled</span>
+                        </div>
+                    </a>
+                    <ul class="space-y-8 text-body-xs text-grey-primary">
+                        <li class="flex items-start gap-8"><i
+                                class="ri-map-pin-line text-icon-sm mt-0.5 flex-shrink-0"></i><span>Rua
+                                Exemplo, 123, Lisboa, Portugal</span></li>
+                        <li class="flex items-center gap-8"><i
+                                class="ri-phone-line text-icon-sm flex-shrink-0"></i><span>+351 000
+                                000 000</span></li>
+                        <li class="flex items-center gap-8"><i
+                                class="ri-mail-line text-icon-sm flex-shrink-0"></i><span>suporte@nexled.pt</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us column -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Contact Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Us column 1 -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Us column 2 -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Us column 3 -->
+                <div class="flex flex-col gap-16">
+                    <p class="text-body-sm font-semibold text-black">Connect Us</p>
+                    <ul class="space-y-10 text-body-xs text-grey-primary">
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+                        <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom nav bar — green -->
+        <div class="bg-green-primary px-32 py-16">
+            <div class="max-w-wide mx-auto flex items-center justify-between">
+                <p class="text-body-xs text-white/70">© <span id="year"></span> Nexled</p>
+                <nav class="flex items-center gap-32">
+                    <a href="repair.html"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Reparações</a>
+                    <a href="#warranty"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Garantia</a>
+                    <a href="downloads.html"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Downloads</a>
+                    <a href="#warranty"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Warranty</a>
+                    <a href="contact.html"
+                        class="text-body-xs text-white/80 hover:text-white transition-colors">Mensagens</a>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Use utils to handle language selection
+        Utils.initLanguageSelector('lang-select');
+
+        // Custom scrollbar scroll detection
+        const scrollContainers = document.querySelectorAll('.custom-scrollbar');
+        scrollContainers.forEach(container => {
+            let scrollTimeout;
+            container.addEventListener('scroll', () => {
+                container.classList.add('is-scrolling');
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => container.classList.remove('is-scrolling'), 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

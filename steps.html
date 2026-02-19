@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Guide — Suporte Nexled</title>
+
+    <!-- 1. Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- 2. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Design System CSS -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- 4. Configure Tailwind with NexLed tokens -->
+    <script src="src/config-cdn.js"></script>
+
+    <!-- 5. Nexled Utils -->
+    <script src="src/scripts/utils.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .custom-scrollbar { @apply overflow-y-auto; }
+            .custom-scrollbar::-webkit-scrollbar { @apply w-8; }
+            .custom-scrollbar::-webkit-scrollbar-button { @apply hidden; }
+            .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
+            .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium; }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb { @apply bg-green-primary; }
+            .custom-scrollbar::-webkit-scrollbar-thumb:active { @apply bg-green-secondary; }
+        }
+    </style>
+</head>
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+
+    <!-- TOP NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+        <div
+            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-12 group">
+                <div
+                    class="w-40 h-40 bg-white border border-grey-tertiary rounded-xs flex items-center justify-center shadow-sm group-hover:scale-hover transition-transform overflow-hidden">
+                    <img src="favicon.svg" alt="Nexled" class="w-24 h-24">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suport Page</span>
+                </div>
+            </a>
+
+            <!-- Center Navigation -->
+            <nav class="hidden lg:flex items-center gap-24">
+                <a href="repair.html" class="flex items-center gap-8 cursor-pointer group">
+                    <span
+                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Repairs
+                        Guides</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
+                </a>
+                <a href="downloads.html" class="flex items-center gap-8 cursor-pointer group">
+                    <span
+                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Download
+                        Files</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
+                </a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-16">
+                <a href="contact.html"
+                    class="px-16 py-8 border border-grey-tertiary rounded-full text-body-xs font-medium text-grey-primary hover:text-black hover:bg-grey-tertiary/20 transition-all">
+                    Contact Us
+                </a>
+                <a href="#"
+                    class="px-16 py-8 bg-green-primary rounded-lg text-white text-body-xs font-medium flex items-center gap-8 hover:bg-green-secondary transition-all shadow-btn-default">
+                    <i class="ri-shopping-bag-line text-icon-sm"></i>
+                    Shop
+                </a>
+
+                <!-- Language Selector -->
+                <div class="relative flex items-center">
+                    <select id="lang-select"
+                        class="appearance-none bg-grey-tertiary/10 border border-grey-tertiary rounded-lg pl-8 pr-24 py-4 text-body-sm text-black font-medium cursor-pointer hover:bg-grey-tertiary/20 transition-colors focus:outline-none">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                    </select>
+                    <i
+                        class="ri-arrow-down-s-line absolute right-4 top-1/2 -translate-y-1/2 text-icon-sm text-grey-primary pointer-events-none"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-wide mx-auto w-full">
+
+        <!-- BREADCRUMBS -->
+        <nav class="flex items-center gap-8 text-body-xs text-grey-primary mb-32 uppercase tracking-widest"
+            aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-black">Home</a>
+            <span>></span>
+            <a href="repair.html" class="hover:text-black">Support</a>
+            <span>></span>
+            <span class="font-bold text-black border-b border-black" id="bc-title">Guide</span>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <header class="text-center mb-64 max-w-readable mx-auto">
+            <h1 class="text-display font-medium text-black mb-24" id="main-title">Loading...</h1>
+            <p class="text-body-sm text-grey-primary leading-relaxed" id="main-desc">
+                Here you will find a complete collection of support materials, including procedural guides, product
+                datasheets,
+                and relevant warnings.
+            </p>
+        </header>
+
+        <!-- SUMMARY CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-24 mb-64">
+
+            <!-- Estimated Time -->
+            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
+                <h3 class="text-body-sm font-semibold text-black mb-12">Estimated Time & Difficulty</h3>
+                <p class="text-body-xs text-black leading-relaxed" id="time-text">
+                    Loading...
+                </p>
+            </div>
+
+            <!-- Required Parts -->
+            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
+                <h3 class="text-body-sm font-semibold text-black mb-12">Required Parts and Tools</h3>
+                <p class="text-body-xs text-grey-primary mb-12">Some of these items might also be purchased directly
+                    from our
+                    online store.</p>
+                <ul class="space-y-4" id="parts-list">
+                    <!-- Dynamic -->
+                </ul>
+            </div>
+
+            <!-- Print Card -->
+            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
+                <h3 class="text-body-sm font-semibold text-black mb-12">Print Step In This Page</h3>
+                <p class="text-body-xs text-grey-primary mb-24">
+                    You can use the button below to print all the steps directly onto paper for easier reference during
+                    the
+                    process.
+                </p>
+                <div class="flex justify-end">
+                    <button onclick="window.print()"
+                        class="px-20 py-8 bg-green-primary text-white text-body-xs font-semibold rounded-lg hover:bg-green-secondary transition-all shadow-btn-default">
+                        Print Page
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- STEPS -->
+        <section id="steps" class="mt-32">
+            <h2 class="text-h3 font-semibold text-black mb-24">Steps</h2>
+            <div class="space-y-24" id="steps-container">
+                <!-- Dynamic -->
+                <div class="flex justify-center py-32"><i
+                        class="ri-loader-4-line animate-spin text-h1 text-grey-tertiary"></i></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-64 px-32 pb-32">
+        <div class="max-w-wide mx-auto bg-white border border-grey-tertiary rounded-3xl overflow-hidden shadow-sm">
+            <div class="p-48 grid grid-cols-2 md:grid-cols-6 gap-32">
+                <!-- Brand -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-12 mb-24">
+                        <div
+                            class="w-48 h-48 border-2 border-green-primary rounded-xl flex items-center justify-center overflow-hidden p-4">
+                            <img src="favicon.svg" alt="Nexled" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <a href="index.html"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <span class="text-body-xs font-medium">Home</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Simplified footer links -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Company</h4>
+                    <ul>
+                        <li><a href="contact.html" class="text-body-xs text-grey-primary">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-green-primary px-48 py-16 flex flex-wrap justify-between items-center gap-16">
+                <p class="text-body-xs font-medium text-white/80">© <span id="year"></span> Nexled</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        async function initSteps() {
+            const lang = Utils.getLang();
+            Utils.initLanguageSelector('lang-select');
+
+            const relFile = Utils.getParam('file') || 'DQ/DQ_5.json';
+            const dataUrl = `data/${relFile}`;
+
+            const content = await Utils.fetchJSON(dataUrl);
+            if (!content) {
+                document.getElementById('main-title').textContent = "Content not found";
+                return;
+            }
+
+            const pageTitle = Utils.t(content.meta?.title_tag || content.idconteudo, lang, 'Untitled');
+            document.title = `${pageTitle} — Suporte Nexled`;
+            document.getElementById('bc-title').textContent = pageTitle;
+            document.getElementById('main-title').textContent = Utils.t(content.idconteudo, lang, '');
+
+            const timeText = Utils.t(content.meta?.tempo_estimado, lang, '');
+            document.getElementById('time-text').innerHTML = timeText ? `<strong class="font-bold">${timeText}</strong>` : 'Time not specified';
+
+            // Parts
+            const partsList = document.getElementById('parts-list');
+            partsList.innerHTML = '';
+            if (content.parts) {
+                content.parts.forEach(p => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-center justify-between group cursor-pointer';
+                    li.innerHTML = `
+                    <span class="text-body-xs text-black font-medium underline underline-offset-2">${Utils.t(p.name, lang)}</span>
+                    <i class="ri-arrow-right-up-line text-icon-xs text-black opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                `;
+                    partsList.appendChild(li);
+                });
+            }
+
+            // Steps
+            const stepsContainer = document.getElementById('steps-container');
+            stepsContainer.innerHTML = '';
+            if (content.steps) {
+                content.steps.forEach((step, i) => {
+                    const stepTitle = Utils.t(step.title, lang, 'Step');
+                    const stepImg = Utils.sanitizeImagePath(step.image || 'img/repair_step_placeholder.webp');
+                    const stepImgAlt = Utils.t(step.image_alt, lang, '');
+                    const stepDesc = Utils.t(step.description, lang, '');
+                    const stepNum = i + 1;
+
+                    const card = document.createElement('div');
+                    card.className = "bg-white border border-grey-tertiary rounded-xl overflow-hidden hover:shadow-hover transition-all duration-default ease-premium p-16";
+                    card.innerHTML = `
+                    <div class="flex flex-col md:flex-row gap-32">
+                        <div class="md:w-[48%] aspect-[16/10] rounded-lg overflow-hidden flex-shrink-0">
+                            <img src="${stepImg}" alt="${stepImgAlt}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center py-24 px-16">
+                            <h3 class="text-body-lg font-semibold text-black mb-12">
+                                <span class="mr-4">${stepNum}.</span>${stepTitle}
+                            </h3>
+                            <p class="text-body-xs text-grey-primary leading-relaxed max-w-sm">
+                                ${stepDesc}
+                            </p>
+                        </div>
+                    </div>
+                `;
+                    stepsContainer.appendChild(card);
+                });
+            }
+        }
+
+        initSteps();
+    </script>
+</body>
+
+</html>
