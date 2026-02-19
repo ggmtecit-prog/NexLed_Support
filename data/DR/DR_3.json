@@ -1,0 +1,358 @@
+{
+  "idconteudo": {
+    "pt": "Troca do Modelo LED — Downlight Quadrados 200",
+    "en": "LED Module Replacement — Square Downlight 200",
+    "es": "Cambio del Módulo LED — Downlight Cuadrado 200",
+    "fr": "Remplacement du Module LED — Downlight Carré 200"
+  },
+  "meta": {
+    "tempo_estimado": {
+      "pt": "Tempo Estimado: 10 a 20 minutos",
+      "en": "Estimated time: 10 to 20 minutes",
+      "es": "Tiempo estimado: 10 a 20 minutos",
+      "fr": "Temps estimé : 10 à 20 minutes"
+    },
+    "title_tag": {
+      "pt": "Troca do Modelo LED — Downlight Quadrados 200",
+      "en": "LED Module Replacement — Square Downlight 200",
+      "es": "Cambio del Módulo LED — Downlight Cuadrado 200",
+      "fr": "Remplacement du Module LED — Downlight Carré 200"
+    },
+    "section_title": {
+      "pt": "APENAS RECOMENDADO A REPARAÇÃO A PESSOAS ESPECIALIZADAS/TECNICOS - Passos para técnicos",
+      "en": "REPAIR RECOMMENDED FOR SPECIALIZED PERSONNEL / TECHNICIANS ONLY - Steps for technicians",
+      "es": "REPARACIÓN RECOMENDADA SOLO PARA PERSONAL ESPECIALIZADO/TÉCNICOS - Pasos para técnicos",
+      "fr": "RÉPARATION RECOMMANDÉE UNIQUEMENT POUR PERSONNEL SPÉCIALISÉ/TECHNICIENS - Étapes pour techniciens"
+    }
+  },
+  "parts": [
+    {
+      "name": {
+        "pt": "Fonte de Energia 24V",
+        "en": "24V Power Supply",
+        "es": "Fuente de Alimentación 24V",
+        "fr": "Alimentation 24V"
+      },
+      "sku": "DRV-24V-DL200",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Fonte 24V",
+        "en": "24V power supply",
+        "es": "Fuente 24V",
+        "fr": "Alimentation 24V"
+      }
+    },
+    {
+      "name": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      },
+      "sku": "CON-2P",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      }
+    },
+    {
+      "name": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      },
+      "sku": "CON-2P",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": {
+        "pt": "1. Desligar a alimentação",
+        "en": "1. Switch off the power",
+        "es": "1. Apagar la alimentación",
+        "fr": "1. Couper l'alimentation"
+      },
+      "image": "../../img/photos_step/global/G1_Step1.webp",
+      "image_alt": {
+        "pt": "Desligue a alimentação",
+        "en": "Switch off the power",
+        "es": "Apague la alimentación",
+        "fr": "Coupez l'alimentation"
+      },
+      "description": {
+        "pt": "Desligue a alimentação no quadro elétrico antes de iniciar a intervenção.",
+        "en": "Switch off the power at the electrical panel before starting the intervention.",
+        "es": "Apague la alimentación en el cuadro eléctrico antes de iniciar la intervención.",
+        "fr": "Coupez l'alimentation au tableau électrique avant de commencer l'intervention."
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "pt": "2. Remover o downlight",
+        "en": "2. Remove the downlight",
+        "es": "2. Retire el downlight",
+        "fr": "2. Retirer le downlight"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step2.webp",
+      "image_alt": {
+        "pt": "Remover o downlight",
+        "en": "Remove the downlight",
+        "es": "Retirar el downlight",
+        "fr": "Retirer le downlight"
+      },
+      "description": {
+        "pt": "Posicione-se por baixo do downlight e remova-o com cuidado, segurando firmemente e puxando para baixo. Atenção aos clips metálicos na traseira.",
+        "en": "Position yourself beneath the downlight and remove it carefully, holding firmly and pulling down. Pay attention to the metal clips at the rear.",
+        "es": "Colóquese debajo del downlight y retírelo con cuidado, sujetando firmemente y tirando hacia abajo. Atención a las grapas metálicas en la parte trasera.",
+        "fr": "Placez-vous sous le downlight et retirez-le précautionneusement en tenant fermement et en tirant vers le bas. Attention aux clips métalliques à l'arrière."
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "pt": "3. Desconectar cabos",
+        "en": "3. Disconnect cables",
+        "es": "3. Desconectar cables",
+        "fr": "3. Déconnecter les câbles"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step3.webp",
+      "image_alt": {
+        "pt": "Desconectar cabos",
+        "en": "Disconnect cables",
+        "es": "Desconectar cables",
+        "fr": "Déconnecter les câbles"
+      },
+      "description": {
+        "pt": "Localize a ligação entre o downlight e a fonte de energia e desconecte com cuidado. Coloque o downlight sobre uma superfície plana e limpa.",
+        "en": "Locate the connection between the downlight and the power supply and disconnect carefully. Place the downlight on a clean, flat surface.",
+        "es": "Localice la conexión entre el downlight y la fuente de alimentación y desconecte con cuidado. Coloque el downlight sobre una superficie plana y limpia.",
+        "fr": "Localisez la connexion entre le downlight et l'alimentation et déconnectez-la avec précaution. Placez le downlight sur une surface plane et propre."
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "pt": "4. Localize e retire os parafusos",
+        "en": "4. Locate and remove the screws",
+        "es": "4. Localice y retire los tornillos",
+        "fr": "4. Localisez et retirez les vis"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step4.webp",
+      "image_alt": {
+        "pt": "Remover suporte interno",
+        "en": "Remove internal support",
+        "es": "Retirar soporte interno",
+        "fr": "Retirer le support interne"
+      },
+      "description": {
+        "pt": "Localize e retire os parafusos que fixam o módulo LED. Verifique também os clips metálicos.",
+        "en": "Locate and remove the screws that secure the LED module. Also check the metal clips.",
+        "es": "Localice y retire los tornillos que fijan el módulo LED. Verifique también las grapas metálicas.",
+        "fr": "Localisez et retirez les vis qui fixent le module LED. Vérifiez également les clips métalliques."
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "pt": "5. Retire o antigo módulo LED",
+        "en": "5. Remove the old LED module",
+        "es": "5. Retire el módulo LED antiguo",
+        "fr": "5. Retirez l'ancien module LED"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step5.webp",
+      "image_alt": {
+        "pt": "Verificar componentes",
+        "en": "Inspect components",
+        "es": "Verificar componentes",
+        "fr": "Vérifier les composants"
+      },
+      "description": {
+        "pt": "Retire o módulo LED antigo com um movimento vertical para cima e coloque-o de lado em superfície limpa.",
+        "en": "Remove the old LED module with a vertical upward movement and place it aside on a clean surface.",
+        "es": "Retire el módulo LED antiguo con un movimiento vertical hacia arriba y colóquelo a un lado sobre una superficie limpia.",
+        "fr": "Retirez l'ancien module LED par un mouvement vertical vers le haut et placez-le de côté sur une surface propre."
+      }
+    },
+    {
+      "id": 6,
+      "title": {
+        "pt": "6. Buscar o novo módulo LED",
+        "en": "6. Retrieve the new LED module",
+        "es": "6. Obtener el nuevo módulo LED",
+        "fr": "6. Récupérer le nouveau module LED"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step6.webp",
+      "image_alt": {
+        "pt": "Remover elemento defeituoso",
+        "en": "Remove defective element",
+        "es": "Retirar elemento defectuoso",
+        "fr": "Retirer l'élément défectueux"
+      },
+      "description": {
+        "pt": "Obtenha o novo módulo LED, verifique compatibilidade e prepare-o para instalação.",
+        "en": "Obtain the new LED module, verify compatibility and prepare it for installation.",
+        "es": "Obtenga el nuevo módulo LED, verifique la compatibilidad y prepárelo para la instalación.",
+        "fr": "Obtenez le nouveau module LED, vérifiez la compatibilité et préparez-le pour l'installation."
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "pt": "7. Posicionar na estrutura metálica",
+        "en": "7. Position on the metal frame",
+        "es": "7. Colocar en la estructura metálica",
+        "fr": "7. Positionner sur la structure métallique"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step7.webp",
+      "image_alt": {
+        "pt": "Preparar substituição",
+        "en": "Prepare replacement",
+        "es": "Preparar sustitución",
+        "fr": "Préparer le remplacement"
+      },
+      "description": {
+        "pt": "Alinhe o novo módulo LED sobre a estrutura metálica, coincidindo os furos do módulo com os furos de fixação.",
+        "en": "Align the new LED module over the metal frame, matching the module holes with the fastening holes.",
+        "es": "Aline el nuevo módulo LED sobre la estructura metálica, haciendo coincidir los agujeros del módulo con los de fijación.",
+        "fr": "Alignez le nouveau module LED sur la structure métallique en faisant coïncider les trous du module avec les trous de fixation."
+      }
+    },
+    {
+      "id": 8,
+      "title": {
+        "pt": "8. Apertar os parafusos do módulo",
+        "en": "8. Tighten the module screws",
+        "es": "8. Apriete los tornillos del módulo",
+        "fr": "8. Serrez les vis du module"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step8.webp",
+      "image_alt": {
+        "pt": "Instalar nova peça",
+        "en": "Install new part",
+        "es": "Instalar nueva pieza",
+        "fr": "Installer la nouvelle pièce"
+      },
+      "description": {
+        "pt": "Aperte os parafusos do módulo de forma segura e uniforme. Reposicione os clips metálicos na mesma posição original.",
+        "en": "Tighten the module screws securely and evenly. Reposition the metal clips to their original position.",
+        "es": "Apriete los tornillos del módulo de forma segura y uniforme. Vuelva a colocar las grapas metálicas en su posición original.",
+        "fr": "Serrez les vis du module de manière sûre et uniforme. Replacez les clips métalliques à leur position d'origine."
+      }
+    },
+    {
+      "id": 9,
+      "title": {
+        "pt": "9. Conectar o downlight à fonte",
+        "en": "9. Connect the downlight to the power supply",
+        "es": "9. Conectar el downlight a la fuente",
+        "fr": "9. Connecter le downlight à l'alimentation"
+      },
+      "image": "../../img/photos_step/DL_R/3/G3_Step9.webp",
+      "image_alt": {
+        "pt": "Fixar montagem",
+        "en": "Secure assembly",
+        "es": "Fijar montaje",
+        "fr": "Fixer l'assemblage"
+      },
+      "description": {
+        "pt": "Leve o downlight ao orifício de instalação e conecte-o à fonte de energia.",
+        "en": "Bring the downlight to the installation opening and connect it to the power supply.",
+        "es": "Lleve el downlight al orificio de instalación y conéctelo a la fuente de alimentación.",
+        "fr": "Amenez le downlight à l'ouverture d'installation et connectez-le à l'alimentation."
+      }
+    },
+    {
+      "id": 10,
+      "title": {
+        "pt": "10. Reinstalar o downlight",
+        "en": "10. Reinstall the downlight",
+        "es": "10. Volver a instalar el downlight",
+        "fr": "10. Réinstaller le downlight"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step12.webp",
+      "image_alt": {
+        "pt": "Teste parcial",
+        "en": "Partial test",
+        "es": "Prueba parcial",
+        "fr": "Test partiel"
+      },
+      "description": {
+        "pt": "Recoloque o downlight na posição original com cuidado, garantindo que os clips metálicos ficam corretamente encaixados.",
+        "en": "Place the downlight back into its original position carefully, ensuring the metal clips are correctly seated.",
+        "es": "Vuelva a colocar el downlight en su posición original con cuidado, asegurando que las grapas metálicas queden correctamente encajadas.",
+        "fr": "Replacez le downlight à sa position d'origine avec précaution, en veillant à ce que les clips métalliques soient correctement enclenchés."
+      }
+    },
+    {
+      "id": 11,
+      "title": {
+        "pt": "11. Ligar o quadro elétrico",
+        "en": "11. Switch on the electrical panel",
+        "es": "11. Encender el cuadro eléctrico",
+        "fr": "11. Rétablir l'alimentation au tableau électrique"
+      },
+      "image": "../../img/photos_step/global/G1_Step13.webp",
+      "image_alt": {
+        "pt": "Reposicionar e finalizar",
+        "en": "Reposition and finalize",
+        "es": "Reposicionar y finalizar",
+        "fr": "Reposer et finaliser"
+      },
+      "description": {
+        "pt": "Volte a ligar a alimentação no quadro elétrico.",
+        "en": "Switch the power back on at the electrical panel.",
+        "es": "Vuelva a encender la alimentación en el cuadro eléctrico.",
+        "fr": "Rétablissez l'alimentation au tableau électrique."
+      }
+    },
+    {
+      "id": 12,
+      "title": {
+        "pt": "12. Verificações finais",
+        "en": "12. Final checks",
+        "es": "12. Comprobaciones finales",
+        "fr": "12. Vérifications finales"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step14.webp",
+      "image_alt": {
+        "pt": "Revisão final",
+        "en": "Final review",
+        "es": "Revisión final",
+        "fr": "Revue finale"
+      },
+      "description": {
+        "pt": "Verifique o funcionamento do downlight e confirme que não há ruídos, aquecimento anómalo, cintilação ou ligações soltas.",
+        "en": "Check the downlight operation and confirm there are no noises, abnormal heating, flicker or loose connections.",
+        "es": "Compruebe el funcionamiento del downlight y confirme que no hay ruidos, calentamiento anómalo, parpadeo o conexiones sueltas.",
+        "fr": "Vérifiez le fonctionnement du downlight et confirmez qu'il n'y a pas de bruits, de surchauffe, de scintillement ou de connexions lâches."
+      }
+    }
+  ],
+  "footer": {
+    "copyright": {
+      "pt": "© 2025 Nexled",
+      "en": "© 2025 Nexled",
+      "es": "© 2025 Nexled",
+      "fr": "© 2025 Nexled"
+    },
+    "back_link_text": {
+      "pt": "Voltar",
+      "en": "Back",
+      "es": "Volver",
+      "fr": "Retour"
+    }
+  }
+}

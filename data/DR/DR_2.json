@@ -1,0 +1,380 @@
+{
+  "idconteudo": {
+    "pt": "Troca do Cabo da Fonte de Energia — Downlight Quadrados 200",
+    "en": "Power Supply Cable Replacement — Square Downlight 200",
+    "es": "Cambio del Cable de la Fuente de Alimentación — Downlight Cuadrado 200",
+    "fr": "Remplacement du Câble d'Alimentation — Downlight Carré 200"
+  },
+  "meta": {
+    "tempo_estimado": {
+      "pt": "Tempo Estimado: 5 a 10 minutos",
+      "en": "Estimated time: 5 to 10 minutes",
+      "es": "Tiempo estimado: 5 a 10 minutos",
+      "fr": "Temps estimé : 5 à 10 minutes"
+    },
+    "title_tag": {
+      "pt": "Troca do Cabo da Fonte de Energia — Downlight Quadrados 200",
+      "en": "Power Supply Cable Replacement — Square Downlight 200",
+      "es": "Cambio del Cable de la Fuente de Alimentación — Downlight Cuadrado 200",
+      "fr": "Remplacement du Câble d'Alimentation — Downlight Carré 200"
+    },
+    "section_title": {
+      "pt": "Passos para utilizador & Passos para técnicos",
+      "en": "User Steps & Technician Steps",
+      "es": "Pasos para usuario y pasos para técnicos",
+      "fr": "Étapes pour l'utilisateur et pour les techniciens"
+    }
+  },
+  "parts": [
+    {
+      "name": {
+        "pt": "Cabo da Fonte de Energia 24V",
+        "en": "24V Power Supply Cable",
+        "es": "Cable de la Fuente de Alimentación 24V",
+        "fr": "Câble d'Alimentation 24V"
+      },
+      "sku": "DRV-24V-DL200",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Fonte 24V",
+        "en": "24V power supply",
+        "es": "Fuente 24V",
+        "fr": "Alimentation 24V"
+      }
+    },
+    {
+      "name": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      },
+      "sku": "CON-2P",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      }
+    },
+    {
+      "name": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      },
+      "sku": "CON-2P",
+      "image": "../../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": {
+        "pt": "1. Desligar a alimentação",
+        "en": "1. Switch off the power",
+        "es": "1. Apagar la alimentación",
+        "fr": "1. Couper l'alimentation"
+      },
+      "image": "../../img/photos_step/global/G1_Step1.webp",
+      "image_alt": {
+        "pt": "Desligue a alimentação",
+        "en": "Switch off the power",
+        "es": "Apague la alimentación",
+        "fr": "Coupez l'alimentation"
+      },
+      "description": {
+        "pt": "Desligue a alimentação no quadro elétrico antes de iniciar a intervenção.",
+        "en": "Switch off the power at the electrical panel before starting the intervention.",
+        "es": "Apague la alimentación en el cuadro eléctrico antes de iniciar la intervención.",
+        "fr": "Coupez l'alimentation au tableau électrique avant de commencer l'intervention."
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "pt": "2. Remover o downlight",
+        "en": "2. Remove the downlight",
+        "es": "2. Retire el downlight",
+        "fr": "2. Retirer le downlight"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step2.webp",
+      "image_alt": {
+        "pt": "Remover o downlight",
+        "en": "Remove the downlight",
+        "es": "Retirar el downlight",
+        "fr": "Retirer le downlight"
+      },
+      "description": {
+        "pt": "Posicione-se por baixo do downlight e remova-o com cuidado, segurando firmemente e puxando para baixo. Atenção aos clips metálicos na traseira.",
+        "en": "Position yourself beneath the downlight and remove it carefully, holding firmly and pulling down. Pay attention to the metal clips at the rear.",
+        "es": "Colóquese debajo del downlight y retírelo con cuidado, sujetando firmemente y tirando hacia abajo. Atención a las grapas metálicas en la parte trasera.",
+        "fr": "Placez-vous sous le downlight et retirez-le avec précaution, en tenant fermement et en tirant vers le bas. Attention aux clips métalliques à l'arrière."
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "pt": "3. Desconectar cabos",
+        "en": "3. Disconnect cables",
+        "es": "3. Desconectar cables",
+        "fr": "3. Déconnecter les câbles"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step3.webp",
+      "image_alt": {
+        "pt": "Desconectar cabos",
+        "en": "Disconnect cables",
+        "es": "Desconectar cables",
+        "fr": "Déconnecter les câbles"
+      },
+      "description": {
+        "pt": "Localize a ligação entre o downlight e a fonte de energia e desconecte com cuidado. Coloque o downlight sobre uma superfície plana e limpa.",
+        "en": "Locate the connection between the downlight and the power supply and disconnect carefully. Place the downlight on a clean, flat surface.",
+        "es": "Localice la conexión entre el downlight y la fuente de alimentación y desconecte con cuidado. Coloque el downlight sobre una superficie plana y limpia.",
+        "fr": "Localisez la connexion entre le downlight et l'alimentation et déconnectez-la avec précaution. Placez le downlight sur une surface plane et propre."
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "pt": "4. Localizar a fonte de energia",
+        "en": "4. Locate the power supply",
+        "es": "4. Localizar la fuente de alimentación",
+        "fr": "4. Localiser l'alimentation"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step4.webp",
+      "image_alt": {
+        "pt": "Abrir a tampa da fonte",
+        "en": "Open the power supply cover",
+        "es": "Abrir la tapa de la fuente",
+        "fr": "Ouvrir le couvercle de l'alimentation"
+      },
+      "description": {
+        "pt": "Localize a fonte de energia e retire-a cuidadosamente do espaço. Evite forçar ou danificar a fonte e as respetivas ligações/cabos.",
+        "en": "Locate the power supply and remove it carefully from its compartment. Avoid forcing or damaging the supply and its connections/cables.",
+        "es": "Localice la fuente de alimentación y retírela con cuidado del espacio. Evite forzar o dañar la fuente y sus conexiones/cables.",
+        "fr": "Localisez l'alimentation et retirez-la avec précaution de son emplacement. Évitez de forcer ou d'endommager l'alimentation et ses connexions/câbles."
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "pt": "5. Abrir a tampa da fonte",
+        "en": "5. Open the supply cover",
+        "es": "5. Abrir la tapa de la fuente",
+        "fr": "5. Ouvrir le couvercle de l'alimentation"
+      },
+      "image": "../../img/photos_step/DL_Q/1/G1_Step5.webp",
+      "image_alt": {
+        "pt": "Soltar os cabos L e N",
+        "en": "Release L and N cables",
+        "es": "Soltar los cables L y N",
+        "fr": "Desserrez les câbles L et N"
+      },
+      "description": {
+        "pt": "Abra a tampa da fonte usando os dedos em movimento de pinça para aceder aos terminais interiores.",
+        "en": "Open the supply cover using a pinch movement with your fingers to access the internal terminals.",
+        "es": "Abra la tapa de la fuente usando un movimiento de pinza con los dedos para acceder a los terminales interiores.",
+        "fr": "Ouvrez le couvercle de l'alimentation en effectuant un mouvement de pincement avec les doigts pour accéder aux bornes internes."
+      }
+    },
+    {
+      "id": 6,
+      "title": {
+        "pt": "6. Soltar os cabos + e -",
+        "en": "6. Loosen the + and - cables",
+        "es": "6. Aflojar los cables + y -",
+        "fr": "6. Desserrez les câbles + et -"
+      },
+      "image": "../../img/photos_step/DL_Q/2/G2_Step6.webp",
+      "image_alt": {
+        "pt": "Preparar remoção",
+        "en": "Prepare removal",
+        "es": "Preparar extracción",
+        "fr": "Préparer le retrait"
+      },
+      "description": {
+        "pt": "Solte os parafusos que prendem os cabos + e - e remova-os com cuidado, evitando danificar os condutores.",
+        "en": "Loosen the screws securing the + and - cables and remove them carefully, avoiding damage to the conductors.",
+        "es": "Afloje los tornillos que sujetan los cables + y - y retírelos con cuidado, evitando dañar los conductores.",
+        "fr": "Desserrez les vis retenant les câbles + et - et retirez-les avec précaution, en évitant d'endommager les conducteurs."
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "pt": "7. Preparar o novo cabo",
+        "en": "7. Prepare the new cable",
+        "es": "7. Preparar el nuevo cable",
+        "fr": "7. Préparer le nouveau câble"
+      },
+      "image": "../../img/photos_step/DL_Q/2/G2_Step7.webp",
+      "image_alt": {
+        "pt": "Remover a fonte antiga",
+        "en": "Remove the old supply",
+        "es": "Retirar la fuente antigua",
+        "fr": "Retirer l'ancienne alimentation"
+      },
+      "description": {
+        "pt": "Coloque o cabo antigo de lado e posicione o novo cabo junto às ligações.",
+        "en": "Set the old cable aside and position the new cable next to the connections.",
+        "es": "Coloque el cable antiguo a un lado y sitúe el nuevo cable junto a las conexiones.",
+        "fr": "Mettez l'ancien câble de côté et positionnez le nouveau câble près des connexions."
+      }
+    },
+    {
+      "id": 8,
+      "title": {
+        "pt": "8. Ligar os cabos + e - na fonte",
+        "en": "8. Connect the + and - cables to the supply",
+        "es": "8. Conectar los cables + y - a la fuente",
+        "fr": "8. Connecter les câbles + et - à l'alimentation"
+      },
+      "image": "../../img/photos_step/DL_Q/2/G2_Step8.webp",
+      "image_alt": {
+        "pt": "Preparar a nova fonte",
+        "en": "Prepare the new supply",
+        "es": "Preparar la nueva fuente",
+        "fr": "Préparer la nouvelle alimentation"
+      },
+      "description": {
+        "pt": "Conecte os cabos + e - na fonte conforme a ilustração. Aperte os parafusos de forma segura sem danificar os terminais.",
+        "en": "Connect the + and - cables to the supply as illustrated. Tighten screws securely without damaging the terminals.",
+        "es": "Conecte los cables + y - en la fuente según la ilustración. Apriete los tornillos de forma segura sin dañar las terminales.",
+        "fr": "Connectez les câbles + et - à l'alimentation comme indiqué. Serrez les vis de manière sécurisée sans endommager les bornes."
+      }
+    },
+    {
+      "id": 9,
+      "title": {
+        "pt": "9. Fechar a tampa e conectar o downlight",
+        "en": "9. Close the cover and connect the downlight",
+        "es": "9. Cerrar la tapa y conectar el downlight",
+        "fr": "9. Refermer le couvercle et connecter le downlight"
+      },
+      "image": "../../img/photos_step/DL_Q/1/G1_Step10.webp",
+      "image_alt": {
+        "pt": "Ligar e testar",
+        "en": "Connect and test",
+        "es": "Conectar y probar",
+        "fr": "Connecter et tester"
+      },
+      "description": {
+        "pt": "Feche a tampa da fonte seguindo a ilustração e conecte o downlight à nova fonte de energia.",
+        "en": "Close the supply cover following the illustration and connect the downlight to the new power supply.",
+        "es": "Cierre la tapa de la fuente según la ilustración y conecte el downlight a la nueva fuente de alimentación.",
+        "fr": "Refermez le couvercle de l'alimentation selon l'illustration et connectez le downlight à la nouvelle alimentation."
+      }
+    },
+    {
+      "id": 10,
+      "title": {
+        "pt": "10. Recolocar a fonte de energia",
+        "en": "10. Reinstall the power supply",
+        "es": "10. Recolocar la fuente de alimentación",
+        "fr": "10. Reposer l'alimentation"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step11.webp",
+      "image_alt": {
+        "pt": "Verificações finais",
+        "en": "Final checks",
+        "es": "Comprobaciones finales",
+        "fr": "Vérifications finales"
+      },
+      "description": {
+        "pt": "Coloque a nova fonte no mesmo local da anterior, garantindo que está segura e sem tensão nos cabos.",
+        "en": "Place the new supply in the same location as the previous one, ensuring it is secure and cables are not under strain.",
+        "es": "Coloque la nueva fuente en el mismo lugar que la anterior, asegurando que esté segura y sin tensión en los cables.",
+        "fr": "Replacez la nouvelle alimentation au même endroit que l'ancienne, en veillant à ce qu'elle soit sécurisée et sans tension sur les câbles."
+      }
+    },
+    {
+      "id": 11,
+      "title": {
+        "pt": "11. Reinstalar o downlight",
+        "en": "11. Reinstall the downlight",
+        "es": "11. Reinstalar el downlight",
+        "fr": "11. Réinstaller le downlight"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step12.webp",
+      "image_alt": {
+        "pt": "Limpeza e arrumação",
+        "en": "Cleaning and tidying",
+        "es": "Limpieza y orden",
+        "fr": "Nettoyage et rangement"
+      },
+      "description": {
+        "pt": "Recoloque o downlight na posição original com cuidado para não danificar a unidade nem os clips.",
+        "en": "Place the downlight back into its original position carefully so as not to damage the unit or the clips.",
+        "es": "Vuelva a colocar el downlight en su posición original con cuidado para no dañar la unidad ni las grapas.",
+        "fr": "Replacez le downlight à sa position d'origine avec précaution afin de ne pas endommager l'appareil ni les clips."
+      }
+    },
+    {
+      "id": 12,
+      "title": {
+        "pt": "12. Ligar o quadro elétrico",
+        "en": "12. Switch on the electrical panel",
+        "es": "12. Encender el cuadro eléctrico",
+        "fr": "12. Rétablir l'alimentation au tableau électrique"
+      },
+      "image": "../../img/photos_step/global/G1_Step13.webp",
+      "image_alt": {
+        "pt": "Etiquetar / registar intervenção",
+        "en": "Label / log the intervention",
+        "es": "Etiquetar / registrar la intervención",
+        "fr": "Étiqueter / enregistrer l'intervention"
+      },
+      "description": {
+        "pt": "Volte a ligar a alimentação no quadro elétrico.",
+        "en": "Switch the power back on at the electrical panel.",
+        "es": "Vuelva a encender la alimentación en el cuadro eléctrico.",
+        "fr": "Rétablissez l'alimentation au tableau électrique."
+      }
+    },
+    {
+      "id": 13,
+      "title": {
+        "pt": "13. Verificações finais",
+        "en": "13. Final checks",
+        "es": "13. Comprobaciones finales",
+        "fr": "13. Vérifications finales"
+      },
+      "image": "../../img/photos_step/DL_R/1/G1_Step14.webp",
+      "image_alt": {
+        "pt": "Concluir",
+        "en": "Complete",
+        "es": "Completar",
+        "fr": "Terminer"
+      },
+      "description": {
+        "pt": "Verifique o funcionamento do downlight e confirme que não há ruídos, aquecimento anómalo ou ligações soltas.",
+        "en": "Check the downlight operation and confirm there are no noises, abnormal heating or loose connections.",
+        "es": "Compruebe el funcionamiento del downlight y confirme que no hay ruidos, calentamiento anómalo o conexiones sueltas.",
+        "fr": "Vérifiez le fonctionnement du downlight et confirmez qu'il n'y a pas de bruits, de surchauffe ni de connexions lâches."
+      }
+    }
+  ],
+  "footer": {
+    "copyright": {
+      "pt": "© 2025 Nexled",
+      "en": "© 2025 Nexled",
+      "es": "© 2025 Nexled",
+      "fr": "© 2025 Nexled"
+    },
+    "back_link_text": {
+      "pt": "Voltar",
+      "en": "Back",
+      "es": "Volver",
+      "fr": "Retour"
+    }
+  }
+}

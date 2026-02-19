@@ -1,0 +1,16 @@
+export const colors = {
+  'green-primary': '#03683D',
+  'green-secondary': '#058C53',
+  'green-hover-icons': '#BEE0D2',
+  'green-hover-text': '#E3F1EB',
+  'blue-primary': '#386789',
+  'blue-secondary': '#5B8BAA',
+  'black': '#121212',
+  'white': '#FCFCFC',
+  'grey-primary': '#878787',
+  'grey-secondary': '#D9D9D9',
+  'grey-tertiary': '#EDEDED',
+  'link-visited': '#4C1D95',
+  'red-primary': '#B1242F',
+  'red-secondary': '#C94A55',
+};

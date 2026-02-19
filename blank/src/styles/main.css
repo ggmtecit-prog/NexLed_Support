@@ -1,0 +1,426 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: 'Urbanist', sans-serif;
+    }
+}
+
+@layer components {
+    .spinner-container {
+        @apply flex items-center justify-center;
+    }
+
+    .spinner svg path {
+        fill: transparent;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: center;
+    }
+
+    .spinner-track {
+        @apply stroke-grey-tertiary;
+    }
+
+    .spinner-anim {
+        @apply stroke-green-secondary;
+        stroke-dasharray: 100, 226;
+        animation: rotate-path 2s linear infinite;
+    }
+
+    /* White Variant */
+    .spinner-white .spinner-track {
+        @apply stroke-white/20;
+    }
+
+    .spinner-white .spinner-anim {
+        @apply stroke-white;
+    }
+}
+
+@keyframes rotate-path {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -326;
+    }
+}
+
+
+
+/* Premium Underline Animation Redesign: Spatial Separation */
+.link-premium {
+    position: relative;
+    display: inline-block;
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    /* motion-duration-default motion-ease-premium */
+    transform-origin: center;
+}
+
+.link-premium::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0.10;
+    /* opacity-faint */
+    /* Visible by default as planned */
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    /* motion-duration-default motion-ease-premium */
+}
+
+.link-premium:hover,
+.link-premium.state-hover {
+    transform: translateY(-1px) scale(1.02);
+    /* interactive-lift-subtle interactive-scale-hover */
+    color: #058C53;
+    /* colors-green-secondary */
+}
+
+.link-premium:hover::after,
+.link-premium.state-hover::after {
+    transform: translateY(2px);
+    opacity: 1;
+}
+
+/* Active / Pressed State */
+.link-premium:active,
+.link-premium.state-active {
+    transform: translateY(0) scale(0.98);
+    /* interactive-scale-press */
+}
+
+.link-premium:active::after,
+.link-premium.state-active::after {
+    transform: translateY(1px);
+    /* interactive-press-offset */
+    opacity: 1;
+}
+
+/* Focus Ring Fix */
+.link-premium:focus-visible {
+    outline: none;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--colors-white, #FCFCFC);
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism using verification mapping */
+.glass-panel {
+    background: rgba(252, 252, 252, 0.7);
+    /* white + 70% opacity */
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(252, 252, 252, 0.4);
+    box-shadow: var(--shadows-default);
+    border-radius: var(--radius-md);
+}
+
+/* Syntax Highlighting Base */
+pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: var(--spacing-16);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-size: var(--typography-body-xs);
+    font-family: monospace;
+}
+
+/* Section Spacing */
+section {
+    scroll-margin-top: 8rem;
+}
+
+
+
+/* Loading Spinner */
+
+@layer components {
+    .spinner-container {
+        @apply flex items-center justify-center;
+    }
+
+    .spinner svg path {
+        fill: transparent;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: center;
+    }
+
+    .spinner-track {
+        @apply stroke-grey-tertiary;
+    }
+
+    .spinner-anim {
+        @apply stroke-green-secondary;
+        stroke-dasharray: 100, 226;
+        animation: rotate-path 2s linear infinite;
+    }
+
+    /* White Variant */
+    .spinner-white .spinner-track {
+        @apply stroke-white/20;
+    }
+
+    .spinner-white .spinner-anim {
+        @apply stroke-white;
+    }
+}
+
+@keyframes rotate-path {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -326;
+    }
+}
+
+
+/* Custom Scrollbar */
+@layer components {
+    .custom-scrollbar {
+        @apply overflow-y-auto;
+    }
+
+    /* Custom Scrollbar Styles using Tokens */
+    .custom-scrollbar::-webkit-scrollbar {
+        @apply w-8;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-button {
+        @apply hidden;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+    .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
+        @apply bg-green-primary;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:active {
+        @apply bg-green-secondary;
+    }
+}
+
+/* Dedicated Breadcrumb Link Style */
+.breadcrumb-link {
+    position: relative;
+    display: inline-block;
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:focus-visible {
+    color: #058C53;
+    /* green-secondary */
+    outline: none;
+}
+
+.breadcrumb-link:active {
+    transform: scale(0.98);
+}
+
+/* Dropdown animation styles */
+.dropdown__menu {
+    transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Size variants (Large / Medium / Small) */
+.dropdown--lg .dropdown__trigger {
+    @apply h-btn-md w-btn-md px-6 text-body-lg;
+}
+
+.dropdown--lg .dropdown__arrow {
+    @apply text-icon-lg;
+}
+
+.dropdown--lg .dropdown__menu .dropdown__item {
+    @apply pl-16 pr-8 py-12 text-body-lg;
+}
+
+.dropdown--md .dropdown__trigger {
+    @apply h-btn-sm w-btn-sm px-5 text-body;
+}
+
+.dropdown--md .dropdown__arrow {
+    @apply text-icon-md;
+}
+
+.dropdown--md .dropdown__menu .dropdown__item {
+    @apply pl-12 pr-8 py-8 text-body;
+}
+
+.dropdown--sm .dropdown__trigger {
+    @apply h-btn-sm w-btn-sm px-4 text-body-sm;
+}
+
+.dropdown--sm .dropdown__arrow {
+    @apply text-icon-sm;
+}
+
+.dropdown--sm .dropdown__menu .dropdown__item {
+    @apply pl-10 pr-8 py-8 text-body-sm;
+}
+
+/* Minimal variant (borderless / no shadow / left-aligned text) */
+.dropdown--minimal .dropdown__trigger {
+    @apply border-transparent shadow-none bg-white text-black font-regular justify-start;
+}
+
+.dropdown--minimal .dropdown__trigger .dropdown__value {
+    @apply text-left;
+}
+
+.dropdown--minimal .dropdown__trigger .dropdown__arrow {
+    @apply ml-auto;
+}
+
+.dropdown--minimal .dropdown__trigger:hover {
+    @apply bg-grey-tertiary/50;
+}
+
+.dropdown--minimal .dropdown__trigger:focus-visible {
+    @apply ring-4 ring-black;
+}
+
+/* Hide default checkbox in dropdown */
+.dropdown__item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+@layer components {
+
+    /* Custom Scrollbar Styles using Tokens */
+    .custom-scrollbar::-webkit-scrollbar {
+        @apply w-8;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-button {
+        @apply hidden;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-grey-secondary rounded-full border-thin border-white;
+        background-clip: padding-box;
+        @apply transition-colors duration-400 ease-premium;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+    .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
+        @apply bg-green-primary;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:active {
+        @apply bg-green-secondary;
+    }
+}
+
+.dropdown__menu {
+    transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom styles for material selector */
+.material-item {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.material-thumb {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.material-item:hover .material-thumb {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.material-item:hover .material-img {
+    transform: scale(1.12);
+}
+
+.material-img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.material-item.is-selected .material-thumb {
+    box-shadow: 0 0 0 2px #058C53;
+    transform: translateY(-6px);
+}
+
+.label-check {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.material-item:not(.is-selected) .label-check {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.material-item.is-selected .label-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Hide number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Modal animation styles */
+.modal-overlay {
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-container {
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay:not(.is-visible) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay:not(.is-visible) .modal-container {
+    transform: scale(0.95) translateY(10px);
+}
+
+.modal-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay.is-visible .modal-container {
+    transform: scale(1) translateY(0);
+}

@@ -1,0 +1,66 @@
+{
+  "idconteudo": {
+    "pt": "Troca da Fonte de Energia — Barra 24V 120",
+    "en": "Power Supply Replacement — 24V 120 LED Bar",
+    "es": "Cambio de la Fuente de Alimentación — Barra LED 24V 120",
+    "fr": "Remplacement de l'Alimentation — Barre LED 24V 120"
+  },
+  "meta": {
+    "tempo_estimado": {
+      "pt": "Tempo estimado: N/A",
+      "en": "Estimated time: N/A",
+      "es": "Tiempo estimado: N/A",
+      "fr": "Temps estimé : N/A"
+    },
+    "title_tag": {
+      "pt": "Troca da Fonte de Energia — Barra 24V 120",
+      "en": "Power Supply Replacement — 24V 120 LED Bar",
+      "es": "Cambio de la Fuente de Alimentación — Barra LED 24V 120",
+      "fr": "Remplacement de l'Alimentation — Barre LED 24V 120"
+    },
+    "section_title": {
+      "pt": "Informação sobre reparação",
+      "en": "Repair information",
+      "es": "Información sobre reparación",
+      "fr": "Information sur la réparation"
+    }
+  },
+  "steps": [
+    {
+      "id": 1,
+      "title": {
+        "pt": "Reparação exclusiva pelo fabricante",
+        "en": "Manufacturer-only repair",
+        "es": "Reparación exclusiva por el fabricante",
+        "fr": "Réparation réservée au fabricant"
+      },
+      "image": "../img/danger.webp",
+      "image_alt": {
+        "pt": "Reparação pelo fabricante",
+        "en": "Manufacturer repair",
+        "es": "Reparación por el fabricante",
+        "fr": "Réparation par le fabricant"
+      },
+      "description": {
+        "pt": "A reparação desta fonte de alimentação apenas pode ser efetuada pelo fabricante; contacte o fabricante para assistência técnica, para agendar a intervenção e para instruções sobre o envio do equipamento.",
+        "en": "The repair of this power supply for the LED bar can only be performed by the manufacturer; contact the manufacturer for technical assistance, to schedule the intervention and for instructions on shipping the equipment.",
+        "es": "La reparación de esta fuente de alimentación para la barra LED solo puede ser realizada por el fabricante; póngase en contacto con el fabricante para asistencia técnica, para programar la intervención y para recibir instrucciones sobre el envío del equipo.",
+        "fr": "La réparation de cette alimentation pour la barre LED ne peut être effectuée que par le fabricant ; contactez le fabricant pour une assistance technique, pour planifier l'intervention et pour obtenir des instructions concernant l'envoi de l'équipement."
+      }
+    }
+  ],
+  "footer": {
+    "copyright": {
+      "pt": "© 2025 Nexled",
+      "en": "© 2025 Nexled",
+      "es": "© 2025 Nexled",
+      "fr": "© 2025 Nexled"
+    },
+    "back_link_text": {
+      "pt": "Voltar",
+      "en": "Back",
+      "es": "Volver",
+      "fr": "Retour"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Blank Template - NexLed UI System</title>
+
+    <!-- 1. Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- 2. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Tailwind CSS for certain components -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- 4. Configure Tailwind -->
+    <script src="src/config-cdn.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .custom-scrollbar {
+                @apply overflow-y-auto;
+            }
+
+            /* Custom Scrollbar Styles using Tokens */
+            .custom-scrollbar::-webkit-scrollbar {
+                @apply w-8;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-button {
+                @apply hidden;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                @apply bg-transparent;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb {
+                @apply bg-green-primary;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:active {
+                @apply bg-green-secondary;
+            }
+        }
+        @layer components {
+            .spinner-container {
+                @apply flex items-center justify-center;
+            }
+
+            .spinner svg path {
+                fill: transparent;
+                stroke-width: 8;
+                stroke-linecap: round;
+                transform-origin: center;
+            }
+
+            .spinner-track {
+                @apply stroke-grey-tertiary;
+            }
+
+            .spinner-anim {
+                @apply stroke-green-secondary;
+                stroke-dasharray: 100, 226;
+                animation: rotate-path 2s linear infinite;
+            }
+
+            .spinner-white .spinner-track {
+                @apply stroke-white/20;
+            }
+
+            .spinner-white .spinner-anim {
+                @apply stroke-white;
+            }
+        }
+
+        @keyframes rotate-path {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -326; }
+        }
+    </style>
+</head>
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+
+    <!-- TOP NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+        <div
+            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-12 group">
+                <div
+                    class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+                    <i class="ri-code-s-slash-line text-h3"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">NexLed</span>
+                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">System v1.2</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-32 h-full">
+
+                <!-- Components Dropdown -->
+                <div class="relative group h-full flex items-center">
+                    <button
+                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
+                        <span>Components</span>
+                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Bridge -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
+                        <!-- Visual Dropdown -->
+                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
+                            <div class="p-8 flex flex-col gap-4">
+                                <a href="#"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-box-1-line"></i> Atoms
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-hexagon-line"></i> Molecules
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-layout-3-line"></i> Organisms
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="relative group h-full flex items-center">
+                    <button
+                        class="flex items-center gap-8 text-body-sm font-medium text-grey-primary hover:text-black transition-colors py-8 h-full z-overlay">
+                        <span>Resources</span>
+                        <i class="ri-arrow-down-s-line transition-transform duration-300 group-hover:-rotate-180"></i>
+                    </button>
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-btn-sm pt-24 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-premium z-dropdown translate-y-8 group-hover:translate-y-0">
+                        <div class="bg-white border border-grey-tertiary shadow-btn-glow rounded-xl overflow-hidden">
+                            <div class="p-8 flex flex-col gap-4">
+                                <a href="#"
+                                    class="flex items-center gap-12 px-16 py-12 rounded-lg hover:bg-grey-tertiary/50 transition-colors text-body-sm text-grey-primary hover:text-green-primary">
+                                    <i class="ri-palette-line"></i> Design Tokens
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-16">
+                <button
+                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
+                    <i class="ri-search-line text-icon-md"></i>
+                </button>
+                <div class="w-standard h-24 bg-grey-tertiary hidden md:block"></div>
+                <a href="#"
+                    class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all">
+                    <i class="ri-github-fill text-icon-lg"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-standard mx-auto w-full">
+
+        <!-- PAGE HEADER -->
+        <header class="mb-48">
+            <h1 class="text-display font-semibold mb-12">New Page Title</h1>
+            <p class="text-body-lg text-grey-primary max-w-readable font-light">
+                Description of the new page goes here.
+            </p>
+        </header>
+
+        <div class="space-y-64">
+            <!-- Content section placeholder -->
+            <section id="section-1">
+                <div class="flex items-center gap-12 mb-24">
+                    <h2 class="text-h2 font-semibold">Section Title</h2>
+                </div>
+
+                <div class="glass-panel p-32 mb-24">
+                    <div
+                        class="flex flex-wrap gap-24 items-center justify-center p-40 border border-dashed border-grey-secondary/50 rounded-lg bg-grey-tertiary/5">
+                        <p class="text-body-md text-grey-primary italic">Content placeholder...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto border-t border-grey-tertiary px-32 py-32">
+        <div class="max-w-standard mx-auto flex justify-between items-center text-body-xs text-grey-primary">
+            <p>© 2026 NexLed UI Systems</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add .is-scrolling class when user scrolls with mouse wheel
+        const scrollContainers = document.querySelectorAll('.custom-scrollbar');
+
+        scrollContainers.forEach(container => {
+            let scrollTimeout;
+            container.addEventListener('scroll', () => {
+                container.classList.add('is-scrolling');
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    container.classList.remove('is-scrolling');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

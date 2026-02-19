@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": { "pt": "Reparações — Suporte Nexled", "en": "Repairs — Nexled Support", "es": "Reparaciones — Soporte Nexled", "fr": "Réparations — Support Nexled" }
+  },
+  "categories": [
+    {
+      "id": "downlights",
+  "title": { "pt": "Downlights", "en": "Downlights", "es": "Downlights", "fr": "Downlights" },
+      "cards": [
+        {
+          "image": "img/DLQ_20.webp",
+          "title": { "pt": "Downlight Quadrados 200", "en": "Square Downlight 200", "es": "Downlight cuadrado 200", "fr": "Downlight carré 200" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "DQ/DQ_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "DQ/DQ_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "DQ/DQ_3.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "DQ/DQ_4.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "DQ/DQ_5.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        },
+        {
+          "image": "img/DLQ_24.webp",
+          "title": { "pt": "Downlight Quadrados 240", "en": "Square Downlight 240", "es": "Downlight cuadrado 240", "fr": "Downlight carré 240" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "DQ/DQ_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "DQ/DQ_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "DQ/DQ_3.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "DQ/DQ_4.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "DQ/DQ_5.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        },
+        {
+          "image": "img/DLR.webp",
+          "title": { "pt": "Downlight Redondos 230", "en": "Round Downlight 230", "es": "Downlight redondo 230", "fr": "Downlight rond 230" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "DR/DR_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "DR/DR_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "DR/DR_3.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "DR/DR_4.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "DR/DR_5.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        },
+        {
+          "image": "img/DLR.webp",
+          "title": { "pt": "Downlight Redondos 320", "en": "Round Downlight 320", "es": "Downlight redondo 320", "fr": "Downlight rond 320" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "DR/DR_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "DR/DR_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "DR/DR_3.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "DR/DR_4.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "DR/DR_5.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        }
+      ]
+    }
+    ,
+    {
+      "id": "barras-24v",
+      "title": { "pt": "Barras 24V", "en": "24V Bars", "es": "Barras 24V", "fr": "Barres 24V" },
+      "cards": [
+        {
+          "image": "img/barra-24v.webp",
+          "title": { "pt": "Barras 24V", "en": "24V Bars", "es": "Barras 24V", "fr": "Barres 24V" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "B24V/B24V_60/B24V_60_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "B24V/B24V_60/B24V_60_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "B24V/B24V_60/B24V_60_2.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "B24V/B24V_60/B24V_60_2.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "B24V/B24V_60/B24V_60_2.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        } 
+        ,
+        {
+          "image": "img/barra-24v.webp",
+          "title": { "pt": "Barra 24V Modelo 120", "en": "24V Bar Model 120", "es": "Barra 24V Modelo 120", "fr": "Barre 24V Modèle 120" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+            { "file": "B24V/B24V_120/B24V_120_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "B24V/B24V_120/B24V_120_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "B24V/B24V_120/B24V_120_2.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "B24V/B24V_120/B24V_120_2.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "B24V/B24V_120/B24V_120_2.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        }
+        ,
+        {
+          "image": "img/barra-24v.webp",
+          "title": { "pt": "Barra 24V Modelo 145", "en": "24V Bar Model 145", "es": "Barra 24V Modelo 145", "fr": "Barre 24V Modèle 145" },
+          "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
+          "repairs": [
+           { "file": "B24V/B24V_145/B24V_145_1.json", "label": { "pt": "Troca da Fonte de Energia", "en": "Replace Power Supply", "es": "Reemplazar fuente de alimentación", "fr": "Remplacer l'alimentation" } },
+            { "file": "B24V/B24V_145/B24V_145_2.json", "label": { "pt": "Troca do Cabo da Fonte", "en": "Replace Power Cable", "es": "Reemplazar cable de alimentación", "fr": "Remplacer le câble d'alimentation" } },
+            { "file": "B24V/B24V_145/B24V_145_2.json", "label": { "pt": "Troca do Modulo LED", "en": "Replace LED Module", "es": "Reemplazar módulo LED", "fr": "Remplacer le module LED" } },
+            { "file": "B24V/B24V_145/B24V_145_2.json", "label": { "pt": "Troca da Estrutura de Metal", "en": "Replace Metal Frame", "es": "Reemplazar estructura metálica", "fr": "Remplacer la structure métallique" } },
+            { "file": "B24V/B24V_145/B24V_145_2.json", "label": { "pt": "Troca do Difusor", "en": "Replace Diffuser", "es": "Reemplazar difusor", "fr": "Remplacer le diffuseur" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

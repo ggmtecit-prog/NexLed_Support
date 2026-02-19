@@ -1,0 +1,402 @@
+{
+  "idconteudo": {
+    "pt": "Troca da Fonte de Energia — Barra 24V 60",
+    "en": "Power Supply Replacement — 24V LED Bar (60)",
+    "es": "Cambio de la Fuente de Alimentación — Barra 24V (60)",
+    "fr": "Remplacement de l'alimentation — Barre 24V (60)"
+  },
+  "meta": {
+    "tempo_estimado": {
+      "pt": "Tempo estimado: 5 a 10 minutos",
+      "en": "Estimated time: 5 to 10 minutes",
+      "es": "Tiempo estimado: 5 a 10 minutos",
+      "fr": "Temps estimé : 5 à 10 minutes"
+    },
+    "title_tag": {
+      "pt": "Troca da Fonte de Energia — Barra 24V",
+      "en": "Power Supply Replacement — 24V LED Bar",
+      "es": "Cambio de la Fuente de Alimentación — Barra 24V",
+      "fr": "Remplacement de l'alimentation — Barre 24V"
+    },
+    "section_title": {
+      "pt": "Passos para utilizador & Passos para técnicos",
+      "en": "User steps & Technician steps",
+      "es": "Pasos para usuario y pasos para técnicos",
+      "fr": "Étapes pour l'utilisateur et étapes pour les techniciens"
+    }
+  },
+  "parts": [
+    {
+      "name": {
+        "pt": "Fonte de Energia 24V",
+        "en": "24V Power Supply",
+        "es": "Fuente de Alimentación 24V",
+        "fr": "Alimentation 24V"
+      },
+      "sku": "DRV-24V-DL200",
+      "image": "../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Fonte 24V",
+        "en": "24V power supply",
+        "es": "Fuente 24V",
+        "fr": "Alimentation 24V"
+      }
+    },
+    {
+      "name": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      },
+      "sku": "CON-2P",
+      "image": "../img/parts/cabo-asqc2-branco.webp",
+      "alt": {
+        "pt": "Conector",
+        "en": "Connector",
+        "es": "Conector",
+        "fr": "Connecteur"
+      }
+    },
+    {
+      "name": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      },
+      "sku": "TOOL-SD-1",
+      "image": "../img/screwdriver.webp",
+      "alt": {
+        "pt": "Chave de Fenda",
+        "en": "Screwdriver",
+        "es": "Destornillador",
+        "fr": "Tournevis"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": {
+        "pt": "1. Desligar a alimentação",
+        "en": "1. Switch off the power",
+        "es": "1. Cortar la alimentación",
+        "fr": "1. Couper l'alimentation"
+      },
+      "image": "../img/photos_step/global/G1_Step1.webp",
+      "image_alt": {
+        "pt": "Desligue a alimentação",
+        "en": "Switch off the power",
+        "es": "Corte la alimentación",
+        "fr": "Coupez l'alimentation"
+      },
+      "description": {
+        "pt": "Desligue a alimentação no quadro elétrico antes de iniciar a reparação.",
+        "en": "Switch off the power at the electrical panel before starting the repair.",
+        "es": "Apague la alimentación en el cuadro eléctrico antes de iniciar la reparación.",
+        "fr": "Coupez l'alimentation au tableau électrique avant de commencer la réparation."
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "pt": "2. Localizar a fonte de energia",
+        "en": "2. Locate the power supply",
+        "es": "2. Localizar la fuente de alimentación",
+        "fr": "2. Localiser l'alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step2.png",
+      "image_alt": {
+        "pt": "Localizar a fonte de energia",
+        "en": "Locate the power supply",
+        "es": "Localizar la fuente de alimentación",
+        "fr": "Localiser l'alimentation"
+      },
+      "description": {
+        "pt": "Identifique a posição física da barra e siga o cabo até à caixa de derivação ou compartimento onde a fonte está instalada, e localize a fonte de energia para a realização da reparação.",
+        "en": "Identify the physical location of the LED bar and follow the cable to the junction box or compartment where the power supply is installed. Locate the power supply for the repair.",
+        "es": "Identifique la ubicación física de la barra LED y siga el cable hasta la caja de derivación o compartimento donde está instalada la fuente. Localice la fuente de alimentación para la reparación.",
+        "fr": "Identifiez l'emplacement physique de la barre LED et suivez le câble jusqu'à la boîte de dérivation ou le compartiment où l'alimentation est installée. Localisez l'alimentation pour la réparation."
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "pt": "3. Abrir tampas da fonte de energia",
+        "en": "3. Open the power supply covers",
+        "es": "3. Abrir las tapas de la fuente de alimentación",
+        "fr": "3. Ouvrir les capots de l'alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step3.png",
+      "image_alt": {
+        "pt": "Desconectar cabos",
+        "en": "Disconnect cables",
+        "es": "Desconectar cables",
+        "fr": "Déconnecter les câbles"
+      },
+      "description": {
+        "pt": "Com uma chave apropriada, desaperte os parafusos das tampas dos conectores e remova as tampas com cuidado para aceder aos terminais internos.",
+        "en": "Using a suitable screwdriver, loosen the screws of the connector covers and remove the covers carefully to access the internal terminals.",
+        "es": "Con un destornillador adecuado, afloje los tornillos de las cubiertas de los conectores y retire las cubiertas con cuidado para acceder a los bornes internos.",
+        "fr": "À l'aide d'un tournevis approprié, desserrez les vis des capots des connecteurs et retirez-les avec précaution pour accéder aux bornes internes."
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "pt": "4. Soltar os cabos de entrada L e N",
+        "en": "4. Loosen the input L and N conductors",
+        "es": "4. Aflojar los conductores de entrada L y N",
+        "fr": "4. Desserrer les conducteurs d'entrée L et N"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step4.png",
+      "image_alt": {
+        "pt": "Abrir a tampa da fonte",
+        "en": "Open the supply cover",
+        "es": "Abrir la tapa de la fuente",
+        "fr": "Ouvrir le couvercle de l'alimentation"
+      },
+      "description": {
+        "pt": "Solte os parafusos que fixam os condutores de entrada L e N e retire os cabos com cuidado, evitando esforço ou danificação dos condutores e das ilustrações de polaridade.",
+        "en": "Loosen the screws securing the input L and N conductors and remove the cables carefully, avoiding strain or damage to the conductors and polarity markings.",
+        "es": "Afloje los tornillos que sujetan los conductores de entrada L y N y retire los cables con cuidado, evitando esfuerzos o daños en los conductores y en las marcas de polaridad.",
+        "fr": "Desserrez les vis retenant les conducteurs d'entrée L et N et retirez les câbles avec précaution, en évitant toute traction ou dommage aux conducteurs et aux repères de polarité."
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "pt": "5. Aceder aos terminais internos",
+        "en": "5. Access the internal terminals",
+        "es": "5. Acceder a los bornes internos",
+        "fr": "5. Accéder aux bornes internes"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step5.png",
+      "image_alt": {
+        "pt": "Soltar os cabos L e N",
+        "en": "Release L and N cables",
+        "es": "Aflojar los cables L y N",
+        "fr": "Desserrez les câbles L et N"
+      },
+      "description": {
+        "pt": "Abra a tampa da fonte usando a chave adequada para expor os terminais + e -",
+        "en": "Open the power supply cover with the appropriate screwdriver to expose the internal + and - terminals.",
+        "es": "Abra la tapa de la fuente con el destornillador adecuado para exponer los bornes + y - internos.",
+        "fr": "Ouvrez le capot de l'alimentation avec le tournevis approprié pour exposer les bornes internes + et -."
+      }
+    },
+    {
+      "id": 6,
+      "title": {
+        "pt": "6. Soltar os cabos de saída + e -",
+        "en": "6. Loosen the output + and - cables",
+        "es": "6. Aflojar los cables de salida + y -",
+        "fr": "6. Desserrer les câbles de sortie + et -"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step6.png",
+      "image_alt": {
+        "pt": "Remover a fonte antiga",
+        "en": "Remove the old power supply",
+        "es": "Retirar la fuente antigua",
+        "fr": "Retirer l'ancienne alimentation"
+      },
+      "description": {
+        "pt": "Solte os parafusos que prendem os condutores de saída (+ e -) e remova os cabos com cuidado",
+        "en": "Loosen the screws securing the output + and - conductors and remove the cables carefully, avoiding damage to the conductors.",
+        "es": "Afloje los tornillos que sujetan los conductores de salida + y - y retire los cables con cuidado, evitando daños en los conductores.",
+        "fr": "Desserrez les vis retenant les conducteurs de sortie + et - et retirez les câbles avec précaution, en évitant d'endommager les conducteurs."
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "pt": "7. Preparar a nova fonte",
+        "en": "7. Prepare the new power supply",
+        "es": "7. Preparar la nueva fuente de alimentación",
+        "fr": "7. Préparer la nouvelle alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step7.png",
+      "image_alt": {
+        "pt": "Preparar e ligar a nova fonte",
+        "en": "Prepare and connect the new power supply",
+        "es": "Preparar y conectar la nueva fuente de alimentación",
+        "fr": "Préparer et connecter la nouvelle alimentation"
+      },
+      "description": {
+        "pt": "Separe a fonte antiga e posicione a nova fonte junto aos cabos L, N e +/-",
+        "en": "Set the old supply aside and position the new power supply close to the L, N and +/- conductors, ready for connection.",
+        "es": "Separe la fuente antigua y coloque la nueva fuente junto a los conductores L, N y +/-, lista para la conexión.",
+        "fr": "Mettez l'ancienne alimentation de côté et positionnez la nouvelle alimentation près des conducteurs L, N et +/-, prête à être raccordée."
+      }
+    },
+    {
+      "id": 8,
+      "title": {
+        "pt": "8. Abrir a tampa da nova fonte",
+        "en": "8. Open the new power supply cover",
+        "es": "8. Abrir la tapa de la nueva fuente de alimentación",
+        "fr": "8. Ouvrir le capot de la nouvelle alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step8.png",
+      "image_alt": {
+        "pt": "Fechar a tampa da fonte",
+        "en": "Open the supply cover",
+        "es": "Abrir la tapa de la fuente",
+        "fr": "Ouvrir le capot de l'alimentation"
+      },
+      "description": {
+        "pt": "Abra a tampa da nova fonte com a mesma chave para aceder aos terminais de entrada L/N",
+        "en": "Open the new power supply cover with the same screwdriver to access the input L/N terminals.",
+        "es": "Abra la tapa de la nueva fuente con el mismo destornillador para acceder a los bornes de entrada L/N.",
+        "fr": "Ouvrez le capot de la nouvelle alimentation avec le même tournevis pour accéder aux bornes d'entrée L/N."
+      }
+    },
+    {
+      "id": 9,
+      "title": {
+        "pt": "9. Ligar os cabos L e N na nova fonte",
+        "en": "9. Connect the L and N cables to the new power supply",
+        "es": "9. Conectar los cables L y N a la nueva fuente",
+        "fr": "9. Connecter les câbles L et N à la nouvelle alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step9.png",
+      "image_alt": {
+        "pt": "Reposicionar no teto",
+        "en": "Reposition in the ceiling",
+        "es": "Reposicionar en el techo",
+        "fr": "Repositionner au plafond"
+      },
+      "description": {
+        "pt": "Conecte os cabos L e N na nova fonte conforme a ilustração. Aperte aperte os parafusos de forma segura sem danificar os terminais",
+        "en": "Connect the L and N input conductors to the new power supply as shown. Tighten the screws securely without damaging the terminals.",
+        "es": "Conecte los conductores L y N a la nueva fuente según la ilustración. Apriete los tornillos de forma segura sin dañar los bornes.",
+        "fr": "Branchez les conducteurs d'entrée L et N à la nouvelle alimentation comme indiqué. Serrez les vis de manière sécurisée sans endommager les bornes."
+      }
+    },
+    {
+      "id": 10,
+      "title": {
+        "pt": "10. Abrir a tampa da nova fonte",
+        "en": "10. Open the new power supply cover (verify outputs)",
+        "es": "10. Abrir la tapa de la nueva fuente (verificar salidas)",
+        "fr": "10. Ouvrir le capot de la nouvelle alimentation (vérifier les sorties)"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step10.png",
+      "image_alt": {
+        "pt": "Ligar a alimentação e testar",
+        "en": "Verify outputs",
+        "es": "Verificar salidas",
+        "fr": "Vérifier les sorties"
+      },
+      "description": {
+        "pt": "Abra a tampa da nova fonte com a mesma chave para aceder aos terminais de saída +/-",
+        "en": "Open the new power supply cover to access the output +/- terminals and verify correct polarity and voltages before connecting the LED bar.",
+        "es": "Abra la tapa de la nueva fuente para acceder a los bornes de salida +/- y verifique la polaridad y tensiones correctas antes de conectar la barra LED.",
+        "fr": "Ouvrez le capot de la nouvelle alimentation pour accéder aux bornes de sortie +/- et vérifiez la polarité et les tensions correctes avant de connecter la barre LED."
+      }
+    },
+    {
+      "id": 11,
+      "title": {
+        "pt": "11. Ligar os cabos + e - na nova fonte",
+        "en": "11. Connect the + and - output cables to the new power supply",
+        "es": "11. Conectar los cables + y - a la nueva fuente",
+        "fr": "11. Connecter les câbles + et - à la nouvelle alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step11.png",
+      "image_alt": {
+        "pt": "Verificações finais",
+        "en": "Final checks",
+        "es": "Comprobaciones finales",
+        "fr": "Vérifications finales"
+      },
+      "description": {
+        "pt": "Conecte os cabos + e - na nova fonte conforme a ilustração. Aperte aperte os parafusos de forma segura sem danificar os terminais",
+        "en": "Connect the + and - output conductors to the new supply as illustrated. Tighten the terminal screws securely without damaging the wires or terminals.",
+        "es": "Conecte los conductores + y - a la nueva fuente como se indica. Apriete los tornillos de los bornes de forma segura sin dañar los cables ni los bornes.",
+        "fr": "Connectez les conducteurs + et - à la nouvelle alimentation comme indiqué. Serrez les vis des bornes de manière sécurisée sans endommager les fils ni les bornes."
+      }
+    },
+    {
+      "id": 12,
+      "title": {
+        "pt": "12. Fechar tampas da fonte nova",
+        "en": "12. Close the new power supply covers",
+        "es": "12. Cerrar las tapas de la nueva fuente",
+        "fr": "12. Refermer les capots de la nouvelle alimentation"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step12.png",
+      "image_alt": {
+        "pt": "Limpeza e arrumação",
+        "en": "Cleaning and tidying",
+        "es": "Limpieza y orden",
+        "fr": "Nettoyage et rangement"
+      },
+      "description": {
+        "pt": "Feche ambas tampas da fonte, aperte os parafusos sem danificar a unidade.",
+        "en": "Close both covers of the power supply and tighten the screws without damaging the unit.",
+        "es": "Cierre ambas tapas de la fuente y apriete los tornillos sin dañar la unidad.",
+        "fr": "Refermez les deux capots de l'alimentation et serrez les vis sans endommager l'appareil."
+      }
+    },
+    {
+      "id": 13,
+      "title": {
+        "pt": "13. Verificações finais",
+        "en": "13. Final checks",
+        "es": "13. Comprobaciones finales",
+        "fr": "13. Vérifications finales"
+      },
+      "image": "../img/photos_step/B24V/B24V_60/G1_Step13.png",
+      "image_alt": {
+        "pt": "Etiquetar / registar intervenção",
+        "en": "Label / record intervention",
+        "es": "Etiquetar / registrar intervención",
+        "fr": "Étiqueter / enregistrer l'intervention"
+      },
+      "description": {
+        "pt": "Veririque se as tampas e os cabos estão corretamente posicionados e seguros.",
+        "en": "Ensure the covers and cables are correctly positioned and secured before restoring power.",
+        "es": "Verifique que las tapas y los cables estén correctamente posicionados y asegurados antes de restaurar la alimentación.",
+        "fr": "Vérifiez que les capots et les câbles sont correctement positionnés et sécurisés avant de rétablir l'alimentation."
+      }
+    },
+    {
+      "id": 14,
+      "title": {
+        "pt": "14. Ligar o quadro elétrico",
+        "en": "14. Restore power at the electrical panel",
+        "es": "14. Restaurar la alimentación en el cuadro eléctrico",
+        "fr": "14. Rétablir l'alimentation au tableau électrique"
+      },
+      "image": "../img/photos_step/global/G1_Step13.webp",
+      "image_alt": {
+        "pt": "Concluir",
+        "en": "Complete",
+        "es": "Completar",
+        "fr": "Terminer"
+      },
+      "description": {
+        "pt": "Volte a ligar a alimentação no quadro elétrico, e verifique o funcionamento da barra LED e confirme que não há ruídos, aquecimento anómalo ou ligações soltas.",
+        "en": "Restore power at the electrical panel and check the LED bar operation. Confirm there are no unusual noises, overheating, or loose connections.",
+        "es": "Restaure la alimentación en el cuadro eléctrico y compruebe el funcionamiento de la barra LED. Confirme que no hay ruidos inusuales, sobrecalentamiento o conexiones sueltas.",
+        "fr": "Rétablissez l'alimentation au tableau électrique et vérifiez le fonctionnement de la barre LED. Confirmez qu'il n'y a pas de bruits anormaux, de surchauffe ou de connexions lâches."
+      }
+    }
+  ],
+  "footer": {
+    "copyright": {
+      "pt": "© 2025 Nexled",
+      "en": "© 2025 Nexled",
+      "es": "© 2025 Nexled",
+      "fr": "© 2025 Nexled"
+    },
+    "back_link_text": {
+      "pt": "Voltar",
+      "en": "Back",
+      "es": "Volver",
+      "fr": "Retour"
+    }
+  }
+}
