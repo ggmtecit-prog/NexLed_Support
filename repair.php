@@ -1,6 +1,6 @@
 <?php
 // JSON-driven repairs listing
-$allowedLangs = ['pt','en','es','fr'];
+$allowedLangs = ['pt', 'en', 'es', 'fr'];
 $lang = isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs) ? $_GET['lang'] : 'pt';
 
 // Read data/repairs.json
@@ -8,134 +8,380 @@ $dataFile = __DIR__ . '/data/repairs.json';
 $repairsRaw = is_readable($dataFile) ? file_get_contents($dataFile) : null;
 $repairsData = $repairsRaw ? json_decode($repairsRaw, true) : null;
 if (!is_array($repairsData)) {
-  // fallback minimal data to avoid breaking the page
-  $repairsData = ['meta'=>['title'=>['pt'=>'Reparações — Suporte Nexled']],'categories'=>[]];
+  $repairsData = ['meta' => ['title' => ['pt' => 'Reparações — Suporte Nexled']], 'categories' => []];
 }
 
 // Helper: translation with fallback to pt then first available
-function t($node, $lang, $fallback = '') {
-  if (!is_array($node)) return htmlspecialchars($fallback, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-  if (isset($node[$lang]) && $node[$lang] !== '') return htmlspecialchars($node[$lang], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-  if (isset($node['pt']) && $node['pt'] !== '') return htmlspecialchars($node['pt'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-  foreach ($node as $v) { if ($v !== '') return htmlspecialchars((string)$v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
+function t($node, $lang, $fallback = '')
+{
+  if (!is_array($node))
+    return htmlspecialchars($fallback, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+  if (isset($node[$lang]) && $node[$lang] !== '')
+    return htmlspecialchars($node[$lang], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+  if (isset($node['pt']) && $node['pt'] !== '')
+    return htmlspecialchars($node['pt'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+  foreach ($node as $v) {
+    if ($v !== '')
+      return htmlspecialchars((string) $v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+  }
   return htmlspecialchars($fallback, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
 // sanitize image src (simple: disallow schemes and allow local paths)
-function sanitize_image_src_simple($src) {
-  $s = trim((string)$src);
+function sanitize_image_src_simple($src)
+{
+  $s = trim((string) $src);
   $s = str_replace("\0", '', $s);
-  if ($s === '') return '';
-  if (preg_match('#^[a-zA-Z][a-zA-Z0-9+.-]*:#', $s) || strpos($s, '//') === 0) return '';
+  if ($s === '')
+    return '';
+  if (preg_match('#^[a-zA-Z][a-zA-Z0-9+.-]*:#', $s) || strpos($s, '//') === 0)
+    return '';
   return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="<?= htmlspecialchars($lang) ?>">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title><?= t($repairsData['meta']['title'] ?? null, $lang, 'Reparações — Suporte Nexled') ?></title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 1. Load Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- 2. Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 3. Design System CSS -->
+  <link rel="stylesheet" href="src/styles/main.css">
+
+  <!-- 4. Configure Tailwind with NexLed tokens -->
+  <script src="src/config-cdn.js"></script>
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .custom-scrollbar { @apply overflow-y-auto; }
+      .custom-scrollbar::-webkit-scrollbar { @apply w-8; }
+      .custom-scrollbar::-webkit-scrollbar-button { @apply hidden; }
+      .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover,
+      .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb { @apply bg-green-primary; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:active { @apply bg-green-secondary; }
+
+      /* Nav dropdown placeholder */
+      .nav-dropdown {
+        @apply relative flex items-center gap-8 px-12 py-8 text-body-sm font-medium text-grey-primary
+               border border-grey-tertiary rounded-lg hover:border-grey-secondary hover:text-black
+               transition-all duration-default ease-premium cursor-pointer select-none;
+      }
+      .nav-dropdown.is-active {
+        @apply text-black border-green-primary/40 bg-green-primary/5;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <table width="100%" cellpadding="8" cellspacing="0" role="presentation">
-      <tr>
-        <td align="left"><h1><a href="index.php">Nexled</a></h1></td>
-        <td align="right">
-          <a href="index.php"><?= t(['pt'=>'Voltar','en'=>'Back'],$lang,'Back') ?></a>
-          <label for="lang-select" style="margin-left:12px;margin-right:6px">Lang</label>
-          <select id="lang-select" aria-label="Select language">
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
+
+  <!-- ============================================================
+       TOP NAVIGATION
+  ============================================================ -->
+  <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+    <div
+      class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover gap-24">
+
+      <!-- Logo -->
+      <a href="index.php" class="flex items-center gap-12 group flex-shrink-0">
+        <div
+          class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+          <i class="ri-customer-service-fill text-h3"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+          <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte Nexled</span>
+        </div>
+      </a>
+
+      <!-- Placeholder Dropdowns — Repairs Guides is active on this page -->
+      <nav class="hidden lg:flex items-center gap-12">
+        <button class="nav-dropdown is-active" aria-label="Repairs Guides" disabled>
+          <span>Repairs Guides</span>
+          <i class="ri-arrow-down-s-line text-icon-sm"></i>
+        </button>
+        <button class="nav-dropdown" aria-label="Download Files" disabled>
+          <span class="text-grey-secondary">Download Files</span>
+          <i class="ri-arrow-down-s-line text-icon-sm text-grey-secondary"></i>
+        </button>
+        <a href="contact.html"
+          class="text-body-sm font-medium text-grey-primary hover:text-black transition-colors px-4">Contact Us</a>
+      </nav>
+
+      <!-- Right Actions: functional lang <select> + flag button -->
+      <div class="flex items-center gap-12 flex-shrink-0">
+        <?php
+        $script = htmlspecialchars($_SERVER['SCRIPT_NAME'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        ?>
+        <form method="get" action="<?= $script ?>" class="relative flex items-center">
+          <label for="lang-select" class="sr-only">Idioma</label>
+          <select id="lang-select" name="lang" onchange="this.form.submit()"
+            class="appearance-none bg-grey-tertiary/60 border border-grey-tertiary rounded-lg pl-12 pr-28 py-8 text-body-sm text-black font-medium cursor-pointer hover:bg-grey-tertiary transition-colors focus:outline-none focus:ring-4 focus:ring-black">
             <?php foreach ($allowedLangs as $al): ?>
-              <option value="<?= htmlspecialchars($al, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" <?= $al === $lang ? 'selected' : '' ?>><?= strtoupper(htmlspecialchars($al, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) ?></option>
+              <option value="<?= htmlspecialchars($al, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>" <?= $al === $lang ? 'selected' : '' ?>>
+                <?= strtoupper(htmlspecialchars($al, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) ?>
+              </option>
             <?php endforeach; ?>
           </select>
-        </td>
-      </tr>
-    </table>
+          <i
+            class="ri-arrow-down-s-line absolute right-8 top-1/2 -translate-y-1/2 text-icon-sm text-grey-primary pointer-events-none"></i>
+        </form>
+        <button
+          class="w-40 h-40 flex items-center justify-center rounded-full hover:bg-grey-tertiary text-grey-primary hover:text-black transition-all text-body-lg"
+          aria-label="Language / Region">
+          🇬🇧
+        </button>
+      </div>
+
+    </div>
   </header>
 
-  <main>
-    <div class="categories">
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main class="flex-1 mt-[148px] pb-0 w-full">
+
+    <!-- ── Page Header ── -->
+    <section class="px-32 py-48 max-w-standard mx-auto">
+
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-8 text-body-xs text-grey-primary mb-24" aria-label="Breadcrumb">
+        <a href="index.php" class="breadcrumb-link hover:text-green-primary transition-colors">Home</a>
+        <i class="ri-arrow-right-s-line text-icon-sm"></i>
+        <a href="index.php" class="breadcrumb-link hover:text-green-primary transition-colors">Support</a>
+        <i class="ri-arrow-right-s-line text-icon-sm"></i>
+        <a href="index.php" class="breadcrumb-link hover:text-green-primary transition-colors">Support</a>
+        <i class="ri-arrow-right-s-line text-icon-sm"></i>
+        <span class="text-black">Lorem</span>
+      </nav>
+
+      <div class="text-center mb-48">
+        <h1 class="text-display font-semibold mb-16">Repairs Guide</h1>
+        <p class="text-body-lg text-grey-primary max-w-readable mx-auto font-light">
+          Here you will find a complete collection of support materials, including procedural guides, product
+          datasheets, and relevant
+          warnings. These resources are designed to assist in understanding system features, ensuring proper handling of
+          product
+          information, and maintaining compliance with required standards.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── Categories (from JSON) ── -->
+    <div class="px-32 pb-64 max-w-standard mx-auto space-y-48">
+
       <?php foreach ($repairsData['categories'] as $cat): ?>
         <section class="category" id="<?= htmlspecialchars($cat['id'] ?? '') ?>">
-          <h4><?= t($cat['title'] ?? null, $lang, '') ?></h4>
-          <div class="grid">
+
+          <!-- Category heading -->
+          <h2 class="text-h2 font-semibold mb-24"><?= t($cat['title'] ?? null, $lang, '') ?></h2>
+
+          <!-- Product cards — horizontal layout, one per row -->
+          <div class="space-y-16">
+
             <?php foreach ($cat['cards'] as $card): ?>
-              <div class="card">
-                <?php $img = sanitize_image_src_simple($card['image'] ?? ''); if($img): ?><img src="<?= $img ?>" alt="<?= t($card['title'] ?? null, $lang, '') ?>" class="card-img"><?php endif; ?>
-                <h5><?= t($card['title'] ?? null, $lang, '') ?></h5>
-                <p><?= t($card['description'] ?? null, $lang, '') ?></p>
-                <?php if (!empty($card['repairs']) && is_array($card['repairs'])): ?>
-                  <ul class="repair-list">
-                    <?php foreach ($card['repairs'] as $r): ?>
-                      <?php $file = htmlspecialchars($r['file'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>
-                      <li><a href="steps.php?file=<?= $file ?>&lang=<?= htmlspecialchars($lang, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>"><?= t($r['label'] ?? null, $lang, '') ?></a></li>
-                    <?php endforeach; ?>
-                  </ul>
-                <?php endif; ?>
+              <?php $img = sanitize_image_src_simple($card['image'] ?? ''); ?>
+
+              <div
+                class="bg-white border border-grey-tertiary rounded-2xl shadow-btn-default hover:shadow-btn-hover transition-all duration-default ease-premium overflow-hidden flex min-h-[120px]">
+
+                <!-- Product Image -->
+                <div
+                  class="w-[140px] flex-shrink-0 bg-grey-tertiary/20 overflow-hidden flex items-center justify-center border-r border-grey-tertiary">
+                  <?php if ($img): ?>
+                    <img src="<?= $img ?>" alt="<?= t($card['title'] ?? null, $lang, '') ?>"
+                      class="w-full h-full object-cover">
+                  <?php else: ?>
+                    <i class="ri-image-line text-h2 text-grey-secondary"></i>
+                  <?php endif; ?>
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1 px-24 py-20 flex flex-col justify-center gap-12">
+                  <div>
+                    <h3 class="text-body-lg font-semibold text-black"><?= t($card['title'] ?? null, $lang, '') ?></h3>
+                    <p class="text-body-sm text-grey-primary"><?= t($card['description'] ?? null, $lang, '') ?></p>
+                  </div>
+
+                  <!-- Repair links — 3-col green text grid -->
+                  <?php if (!empty($card['repairs']) && is_array($card['repairs'])): ?>
+                    <div class="grid grid-cols-3 gap-x-16 gap-y-8">
+                      <?php foreach ($card['repairs'] as $r): ?>
+                        <?php $file = htmlspecialchars($r['file'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>
+                        <a href="steps.php?file=<?= $file ?>&lang=<?= htmlspecialchars($lang, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>"
+                          class="text-body-xs font-medium text-green-primary hover:text-green-secondary transition-colors truncate">
+                          <?= t($r['label'] ?? null, $lang, '') ?>
+                        </a>
+                      <?php endforeach; ?>
+                    </div>
+                  <?php endif; ?>
+                </div>
+
               </div>
+
             <?php endforeach; ?>
+
           </div>
         </section>
       <?php endforeach; ?>
+
     </div>
+
   </main>
 
-  <footer>
-    <table width="100%" cellpadding="8" cellspacing="0" role="presentation">
-      <tr>
-        <td align="left">&copy; 2025 Nexled</td>
-        <td align="right"><a href="index.php"><?= t(['pt'=>'Voltar','en'=>'Back'],$lang,'Back') ?></a></td>
-      </tr>
-    </table>
-  </footer>
-  <script>
-    // Language behavior:
-    // - On change: save to localStorage then reload current page with ?lang=<value>
-    // - On initial load: if localStorage has a saved lang different from the current query param, reload with saved lang
-    // - Also update all steps.php links to include the selected lang
-    (function(){
-      var select = document.getElementById('lang-select');
-      if(!select) return;
+  <!-- ============================================================
+       FOOTER — shared with index.php & downloads.html
+  ============================================================ -->
+  <footer class="mt-auto w-full">
 
-      function updateLinks(lang){
+    <!-- Main footer body -->
+    <div class="bg-white border-t border-grey-tertiary px-32 py-48">
+      <div class="max-w-wide mx-auto grid grid-cols-2 md:grid-cols-5 gap-32">
+
+        <!-- Brand column -->
+        <div class="col-span-2 md:col-span-1 flex flex-col gap-16">
+          <a href="index.php" class="flex items-center gap-12 group w-fit">
+            <div
+              class="w-40 h-40 bg-green-primary rounded-xs flex items-center justify-center text-white shadow-sm group-hover:scale-hover transition-transform">
+              <i class="ri-customer-service-fill text-h3"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+              <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suporte Nexled</span>
+            </div>
+          </a>
+          <ul class="space-y-8 text-body-xs text-grey-primary">
+            <li class="flex items-start gap-8"><i
+                class="ri-map-pin-line text-icon-sm mt-0.5 flex-shrink-0"></i><span>Rua Exemplo, 123, Lisboa,
+                Portugal</span></li>
+            <li class="flex items-center gap-8"><i class="ri-phone-line text-icon-sm flex-shrink-0"></i><span>+351 000
+                000 000</span></li>
+            <li class="flex items-center gap-8"><i
+                class="ri-mail-line text-icon-sm flex-shrink-0"></i><span>suporte@nexled.pt</span></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="flex flex-col gap-16">
+          <p class="text-body-sm font-semibold text-black">Contact Us</p>
+          <ul class="space-y-10 text-body-xs text-grey-primary">
+            <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Us 1 -->
+        <div class="flex flex-col gap-16">
+          <p class="text-body-sm font-semibold text-black">Connect Us</p>
+          <ul class="space-y-10 text-body-xs text-grey-primary">
+            <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Us 2 -->
+        <div class="flex flex-col gap-16">
+          <p class="text-body-sm font-semibold text-black">Connect Us</p>
+          <ul class="space-y-10 text-body-xs text-grey-primary">
+            <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Us 3 -->
+        <div class="flex flex-col gap-16">
+          <p class="text-body-sm font-semibold text-black">Connect Us</p>
+          <ul class="space-y-10 text-body-xs text-grey-primary">
+            <li><a href="#" class="hover:text-green-primary transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Mentions</a></li>
+            <li><a href="#" class="hover:text-green-primary transition-colors">Maps</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom nav bar — green -->
+    <div class="bg-green-primary px-32 py-16">
+      <div class="max-w-wide mx-auto flex items-center justify-between">
+        <p class="text-body-xs text-white/70">© <span id="year"></span> Nexled</p>
+        <nav class="flex items-center gap-32">
+          <a href="repair.php"
+            class="text-body-xs text-white font-medium hover:text-white transition-colors">Reparações</a>
+          <a href="index.php#warranty"
+            class="text-body-xs text-white/80 hover:text-white transition-colors">Garantia</a>
+          <a href="downloads.html" class="text-body-xs text-white/80 hover:text-white transition-colors">Downloads</a>
+          <a href="index.php#warranty"
+            class="text-body-xs text-white/80 hover:text-white transition-colors">Warranty</a>
+          <a href="contact.html" class="text-body-xs text-white/80 hover:text-white transition-colors">Mensagens</a>
+        </nav>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language behavior: persist to localStorage and sync links
+    (function () {
+      var select = document.getElementById('lang-select');
+      if (!select) return;
+
+      function updateLinks(lang) {
         var anchors = document.querySelectorAll('a[href*="steps.php?file="]');
-        anchors.forEach(function(a){
-          try{
+        anchors.forEach(function (a) {
+          try {
             var u = new URL(a.href, location.origin + location.pathname);
-            if(u.searchParams.has('file')){
+            if (u.searchParams.has('file')) {
               u.searchParams.set('lang', lang);
               a.href = u.pathname + u.search;
             }
-          }catch(e){ /* ignore malformed */ }
+          } catch (e) { }
         });
       }
 
-      // read current lang from URL (if any)
       var params = new URLSearchParams(location.search);
       var currentLang = params.get('lang') || select.value || 'pt';
 
-      // if saved lang exists and differs from currentLang, navigate to include saved lang
-      try{
+      try {
         var saved = localStorage.getItem('nexled.lang');
-        if(saved && saved !== currentLang){
+        if (saved && saved !== currentLang) {
           params.set('lang', saved);
-          // preserve pathname, set new search
           location.search = params.toString();
-          return; // page will reload
+          return;
         }
-      }catch(e){ /* ignore storage errors */ }
+      } catch (e) { }
 
-      // ensure select shows the active language
       select.value = currentLang;
       updateLinks(currentLang);
 
-      // on change: persist and reload page with new lang param
-      select.addEventListener('change', function(){
+      select.addEventListener('change', function () {
         var v = select.value;
-        try{ localStorage.setItem('nexled.lang', v); }catch(e){}
+        try { localStorage.setItem('nexled.lang', v); } catch (e) { }
         var p = new URLSearchParams(location.search);
         p.set('lang', v);
         location.search = p.toString();
@@ -143,4 +389,5 @@ function sanitize_image_src_simple($src) {
     })();
   </script>
 </body>
+
 </html>

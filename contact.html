@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Contact Us — Suporte Nexled</title>
+
+    <!-- 1. Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- 2. Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Design System CSS -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- 4. Configure Tailwind with NexLed tokens -->
+    <script src="src/config-cdn.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .input-field {
+                @apply w-full bg-white border border-grey-tertiary rounded-xl px-16 py-12 text-body-sm text-black placeholder:text-grey-secondary focus:outline-none focus:ring-2 focus:ring-green-primary/20 focus:border-green-primary transition-all;
+            }
+            .label-text {
+                @apply block text-body-xs font-medium text-grey-primary mb-8 ml-4;
+            }
+            .helper-text {
+                @apply block text-[10px] text-grey-secondary mt-8 ml-4;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col bg-[#F8F9FA]">
+
+    <!-- TOP NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
+        <div
+            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
+
+            <!-- Logo -->
+            <a href="index.php" class="flex items-center gap-12 group">
+                <div
+                    class="w-40 h-40 bg-white border border-grey-tertiary rounded-xs flex items-center justify-center shadow-sm group-hover:scale-hover transition-transform overflow-hidden">
+                    <img src="favicon.svg" alt="Nexled" class="w-24 h-24">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
+                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suport Page</span>
+                </div>
+            </a>
+
+            <!-- Center Navigation -->
+            <nav class="hidden lg:flex items-center gap-24">
+                <div class="flex items-center gap-8 cursor-pointer group">
+                    <span
+                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Repairs
+                        Guides</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
+                </div>
+                <div class="flex items-center gap-8 cursor-pointer group">
+                    <span
+                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Download
+                        Files</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
+                </div>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-16">
+                <a href="contact.html"
+                    class="px-16 py-8 bg-grey-tertiary/40 border border-grey-tertiary rounded-full text-body-xs font-medium text-black transition-all">
+                    Contact Us
+                </a>
+                <a href="#"
+                    class="px-16 py-8 bg-green-primary rounded-lg text-white text-body-xs font-medium flex items-center gap-8 hover:bg-green-secondary transition-all shadow-btn-default">
+                    <i class="ri-shopping-bag-line text-icon-sm"></i>
+                    Shop
+                </a>
+
+                <!-- Language Selector -->
+                <div
+                    class="flex items-center gap-8 px-8 py-4 border border-grey-tertiary rounded-lg bg-grey-tertiary/10 cursor-pointer hover:bg-grey-tertiary/20 transition-colors">
+                    <span class="text-body-lg">🇬🇧</span>
+                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-wide mx-auto w-full">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-8 text-body-xs text-grey-primary mb-32 uppercase tracking-widest"
+            aria-label="Breadcrumb">
+            <a href="#" class="hover:text-black">Lorum</a>
+            <span>></span>
+            <a href="#" class="hover:text-black">Lorum</a>
+            <span>></span>
+            <a href="#" class="hover:text-black">Lorum</a>
+            <span>></span>
+            <span class="font-bold text-black border-b border-black">Lorum</span>
+        </nav>
+
+        <!-- Hero -->
+        <header class="text-center mb-64 max-w-readable mx-auto">
+            <h1 class="text-display font-medium text-black mb-24">Contact Us</h1>
+            <p class="text-body-sm text-grey-primary leading-relaxed">
+                Here you will find a complete collection of support materials, including procedural guides, product
+                datasheets, and relevant warnings. These resources are designed to assist in understanding system
+                features, ensuring proper handling of product information, and maintaining compliance with required
+                standards.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-32">
+            <!-- Form -->
+            <div class="lg:col-span-8 bg-white border border-grey-tertiary rounded-3xl p-48 shadow-sm">
+                <form class="space-y-32">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+                        <div>
+                            <label class="label-text">Full Name</label>
+                            <input type="text" placeholder="Enter your name" class="input-field">
+                            <span class="helper-text">Example of a standard descriptive input.</span>
+                        </div>
+                        <div>
+                            <label class="label-text">Full Name</label>
+                            <input type="text" placeholder="Enter your name" class="input-field">
+                            <span class="helper-text">Example of a standard descriptive input.</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-text">Full Name</label>
+                        <input type="text" placeholder="Enter your name" class="input-field">
+                        <span class="helper-text">Example of a standard descriptive input.</span>
+                    </div>
+                    <div>
+                        <label class="label-text">Full Name</label>
+                        <textarea rows="6" placeholder="Enter your name" class="input-field resize-none"></textarea>
+                        <span class="helper-text">Example of a standard descriptive input.</span>
+                    </div>
+                    <div>
+                        <label class="label-text">Full Name</label>
+                        <textarea rows="8" placeholder="Enter your name" class="input-field resize-none"></textarea>
+                        <span class="helper-text">Example of a standard descriptive input.</span>
+                    </div>
+
+                    <div class="flex justify-end pt-8">
+                        <button type="submit"
+                            class="px-32 py-16 bg-green-primary text-white text-body-sm font-semibold rounded-2xl hover:bg-green-secondary hover:translate-y-[-2px] active:translate-y-[0px] transition-all duration-default ease-premium shadow-btn-default hover:shadow-btn-hover">
+                            Send Your Ticket
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-4 bg-white border border-grey-tertiary rounded-3xl p-32 shadow-sm h-fit">
+                <h2 class="text-body-lg font-bold text-black mb-12">Contact's</h2>
+                <p class="text-body-xs text-grey-primary mb-32">Here list of email and phone numbers</p>
+
+                <div class="space-y-24">
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-body-sm font-bold text-black mb-4">Contact 1</h3>
+                        <p class="text-body-xs text-grey-primary">+987 548785325</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-64 px-32 pb-32">
+        <div class="max-w-wide mx-auto bg-white border border-grey-tertiary rounded-3xl overflow-hidden shadow-sm">
+            <div class="p-48 grid grid-cols-2 md:grid-cols-6 gap-32">
+                <!-- Brand -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-12 mb-24">
+                        <div
+                            class="w-48 h-48 border-2 border-green-primary rounded-xl flex items-center justify-center overflow-hidden p-4">
+                            <img src="favicon.svg" alt="Nexled" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <a href="#"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <i class="ri-linkedin-fill text-icon-sm"></i>
+                            <span class="text-body-xs font-medium">Nunc</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <i class="ri-linkedin-fill text-icon-sm"></i>
+                            <span class="text-body-xs font-medium">Ornare</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <i class="ri-linkedin-fill text-icon-sm"></i>
+                            <span class="text-body-xs font-medium">Condimentum</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <i class="ri-linkedin-fill text-icon-sm"></i>
+                            <span class="text-body-xs font-medium">Neque</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
+                            <i class="ri-linkedin-fill text-icon-sm"></i>
+                            <span class="text-body-xs font-medium">Neque</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 1 -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Lobortis</h4>
+                    <ul class="space-y-12">
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Nunc</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Ornare</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Condimentum</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Consectetur</h4>
+                    <ul class="space-y-12">
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Nunc</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Ornare</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Condimentum</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Consectetur</h4>
+                    <ul class="space-y-12">
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Nunc</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Ornare</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Condimentum</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Consectetur</h4>
+                    <ul class="space-y-12">
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Nunc</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Ornare</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Condimentum</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5 -->
+                <div class="flex flex-col gap-16">
+                    <h4 class="text-body-sm font-bold text-black">Consectetur</h4>
+                    <ul class="space-y-12">
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Nunc</a></li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Ornare</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Condimentum</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-body-xs text-grey-primary hover:text-black transition-colors">Neque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Banner -->
+            <div class="bg-green-primary px-48 py-16 flex flex-wrap justify-between items-center gap-16">
+                <p class="text-body-xs font-medium text-white/80">Pellentesque</p>
+                <p class="text-body-xs font-medium text-white/80">Pellentesque</p>
+                <p class="text-body-xs font-medium text-white/80">Pellentesque</p>
+                <p class="text-body-xs font-medium text-white/80">Pellentesque</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

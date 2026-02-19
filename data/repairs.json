@@ -8,7 +8,7 @@
   "title": { "pt": "Downlights", "en": "Downlights", "es": "Downlights", "fr": "Downlights" },
       "cards": [
         {
-          "image": "img/DLQ_20.webp",
+          "image": "DL_Q.webp",
           "title": { "pt": "Downlight Quadrados 200", "en": "Square Downlight 200", "es": "Downlight cuadrado 200", "fr": "Downlight carré 200" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -20,7 +20,7 @@
           ]
         },
         {
-          "image": "img/DLQ_24.webp",
+          "image": "DL_Q.webp",
           "title": { "pt": "Downlight Quadrados 240", "en": "Square Downlight 240", "es": "Downlight cuadrado 240", "fr": "Downlight carré 240" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "image": "img/DLR.webp",
+          "image": "DL_R.webp",
           "title": { "pt": "Downlight Redondos 230", "en": "Round Downlight 230", "es": "Downlight redondo 230", "fr": "Downlight rond 230" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -44,7 +44,7 @@
           ]
         },
         {
-          "image": "img/DLR.webp",
+          "image": "DL_R.webp",
           "title": { "pt": "Downlight Redondos 320", "en": "Round Downlight 320", "es": "Downlight redondo 320", "fr": "Downlight rond 320" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -63,7 +63,7 @@
       "title": { "pt": "Barras 24V", "en": "24V Bars", "es": "Barras 24V", "fr": "Barres 24V" },
       "cards": [
         {
-          "image": "img/barra-24v.webp",
+          "image": "led_bar.webp",
           "title": { "pt": "Barras 24V", "en": "24V Bars", "es": "Barras 24V", "fr": "Barres 24V" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -76,7 +76,7 @@
         } 
         ,
         {
-          "image": "img/barra-24v.webp",
+          "image": "led_bar.webp",
           "title": { "pt": "Barra 24V Modelo 120", "en": "24V Bar Model 120", "es": "Barra 24V Modelo 120", "fr": "Barre 24V Modèle 120" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
@@ -89,7 +89,7 @@
         }
         ,
         {
-          "image": "img/barra-24v.webp",
+          "image": "led_bar.webp",
           "title": { "pt": "Barra 24V Modelo 145", "en": "24V Bar Model 145", "es": "Barra 24V Modelo 145", "fr": "Barre 24V Modèle 145" },
           "description": { "pt": "Descrição curta", "en": "Short description", "es": "Descripción breve", "fr": "Brève description" },
           "repairs": [
