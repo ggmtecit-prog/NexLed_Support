@@ -1,292 +1,551 @@
-<!DOCTYPE html>
-<html lang="pt">
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Guide — Suporte Nexled</title>
+    <title>Guide - Nexled Support</title>
 
     <!-- 1. Load Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- 2. Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. Design System CSS -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- 3. Configure Tailwind -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3"></script>
+    <link rel="stylesheet" href="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3">
 
-    <!-- 4. Configure Tailwind with NexLed tokens -->
-    <script src="src/config-cdn.js"></script>
-
-    <!-- 5. Nexled Utils -->
-    <script src="src/scripts/utils.js"></script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            .custom-scrollbar { @apply overflow-y-auto; }
-            .custom-scrollbar::-webkit-scrollbar { @apply w-8; }
-            .custom-scrollbar::-webkit-scrollbar-button { @apply hidden; }
-            .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-grey-secondary rounded-full border-thin border-white bg-clip-padding transition-colors duration-default ease-premium; }
-            .custom-scrollbar::-webkit-scrollbar-thumb:hover,
-            .custom-scrollbar.is-scrolling::-webkit-scrollbar-thumb { @apply bg-green-primary; }
-            .custom-scrollbar::-webkit-scrollbar-thumb:active { @apply bg-green-secondary; }
-        }
-    </style>
+    <!-- 4. Interactive Components -->
+    <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="text-black selection:bg-green-primary/10 flex min-h-screen flex-col">
-
-    <!-- TOP NAVIGATION -->
-    <header class="fixed top-0 left-0 w-full z-sticky px-32 py-24 pointer-events-none">
-        <div
-            class="max-w-wide mx-auto bg-white/80 backdrop-blur-xl border border-white/40 shadow-btn-default rounded-2xl flex items-center justify-between px-32 py-24 pointer-events-auto transition-all duration-default ease-premium hover:shadow-btn-hover">
-
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-12 group">
-                <div
-                    class="w-40 h-40 bg-white border border-grey-tertiary rounded-xs flex items-center justify-center shadow-sm group-hover:scale-hover transition-transform overflow-hidden">
-                    <img src="favicon.svg" alt="Nexled" class="w-24 h-24">
-                </div>
+<body class="bg-grey-tertiary text-black flex min-h-screen flex-col">
+    <div class="w-full max-w-wide mx-auto px-32 py-24">
+        <header class="nav-bar">
+            <a href="#" class="flex items-center gap-12 group" data-support-route="home">
+                <img src="design/UI_SYSTEM/public/logos/support_logo.svg" alt="NexLed" class="w-56 h-56">
                 <div class="flex flex-col">
-                    <span class="font-semibold text-body-lg leading-none tracking-tight text-black">Nexled</span>
-                    <span class="text-body-xs font-mono text-grey-primary uppercase tracking-wider">Suport Page</span>
+                    <span class="font-semibold text-h3 leading-none tracking-tight text-black">NexLed</span>
+                    <span class="font-regular text-body-sm text-black tracking-wider">Support Page</span>
                 </div>
             </a>
 
-            <!-- Center Navigation -->
-            <nav class="hidden lg:flex items-center gap-24">
-                <a href="repair.html" class="flex items-center gap-8 cursor-pointer group">
-                    <span
-                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Repairs
-                        Guides</span>
-                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
-                </a>
-                <a href="downloads.html" class="flex items-center gap-8 cursor-pointer group">
-                    <span
-                        class="text-body-sm font-medium text-grey-primary group-hover:text-black transition-colors">Download
-                        Files</span>
-                    <i class="ri-arrow-down-s-line text-icon-sm text-grey-primary group-hover:text-black"></i>
-                </a>
-            </nav>
-
-            <!-- Right Actions -->
-            <div class="flex items-center gap-16">
-                <a href="contact.html"
-                    class="px-16 py-8 border border-grey-tertiary rounded-full text-body-xs font-medium text-grey-primary hover:text-black hover:bg-grey-tertiary/20 transition-all">
-                    Contact Us
-                </a>
-                <a href="#"
-                    class="px-16 py-8 bg-green-primary rounded-lg text-white text-body-xs font-medium flex items-center gap-8 hover:bg-green-secondary transition-all shadow-btn-default">
-                    <i class="ri-shopping-bag-line text-icon-sm"></i>
-                    Shop
-                </a>
-
-                <!-- Language Selector -->
-                <div class="relative flex items-center">
-                    <select id="lang-select"
-                        class="appearance-none bg-grey-tertiary/10 border border-grey-tertiary rounded-lg pl-8 pr-24 py-4 text-body-sm text-black font-medium cursor-pointer hover:bg-grey-tertiary/20 transition-colors focus:outline-none">
-                        <option value="pt">PT</option>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                        <option value="fr">FR</option>
-                    </select>
-                    <i
-                        class="ri-arrow-down-s-line absolute right-4 top-1/2 -translate-y-1/2 text-icon-sm text-grey-primary pointer-events-none"></i>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-    <!-- CONTENT -->
-    <main class="flex-1 mt-[160px] px-32 pb-64 max-w-wide mx-auto w-full">
-
-        <!-- BREADCRUMBS -->
-        <nav class="flex items-center gap-8 text-body-xs text-grey-primary mb-32 uppercase tracking-widest"
-            aria-label="Breadcrumb">
-            <a href="index.html" class="hover:text-black">Home</a>
-            <span>></span>
-            <a href="repair.html" class="hover:text-black">Support</a>
-            <span>></span>
-            <span class="font-bold text-black border-b border-black" id="bc-title">Guide</span>
-        </nav>
-
-        <!-- HERO SECTION -->
-        <header class="text-center mb-64 max-w-readable mx-auto">
-            <h1 class="text-display font-medium text-black mb-24" id="main-title">Loading...</h1>
-            <p class="text-body-sm text-grey-primary leading-relaxed" id="main-desc">
-                Here you will find a complete collection of support materials, including procedural guides, product
-                datasheets,
-                and relevant warnings.
-            </p>
-        </header>
-
-        <!-- SUMMARY CARDS -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-24 mb-64">
-
-            <!-- Estimated Time -->
-            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
-                <h3 class="text-body-sm font-semibold text-black mb-12">Estimated Time & Difficulty</h3>
-                <p class="text-body-xs text-black leading-relaxed" id="time-text">
-                    Loading...
-                </p>
-            </div>
-
-            <!-- Required Parts -->
-            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
-                <h3 class="text-body-sm font-semibold text-black mb-12">Required Parts and Tools</h3>
-                <p class="text-body-xs text-grey-primary mb-12">Some of these items might also be purchased directly
-                    from our
-                    online store.</p>
-                <ul class="space-y-4" id="parts-list">
-                    <!-- Dynamic -->
-                </ul>
-            </div>
-
-            <!-- Print Card -->
-            <div class="bg-white border border-grey-tertiary rounded-xl p-24 shadow-sm">
-                <h3 class="text-body-sm font-semibold text-black mb-12">Print Step In This Page</h3>
-                <p class="text-body-xs text-grey-primary mb-24">
-                    You can use the button below to print all the steps directly onto paper for easier reference during
-                    the
-                    process.
-                </p>
-                <div class="flex justify-end">
-                    <button onclick="window.print()"
-                        class="px-20 py-8 bg-green-primary text-white text-body-xs font-semibold rounded-lg hover:bg-green-secondary transition-all shadow-btn-default">
-                        Print Page
+            <nav class="hidden md:flex items-center gap-24 h-full" aria-label="Primary">
+                <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
+                    <button type="button" class="dropdown-trigger" data-support-route="repair" aria-haspopup="dialog" aria-expanded="false">
+                        <span class="dropdown-value">Repair Guides</span>
+                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
                     </button>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- STEPS -->
-        <section id="steps" class="mt-32">
-            <h2 class="text-h3 font-semibold text-black mb-24">Steps</h2>
-            <div class="space-y-24" id="steps-container">
-                <!-- Dynamic -->
-                <div class="flex justify-center py-32"><i
-                        class="ri-loader-4-line animate-spin text-h1 text-grey-tertiary"></i></div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="mt-64 px-32 pb-32">
-        <div class="max-w-wide mx-auto bg-white border border-grey-tertiary rounded-3xl overflow-hidden shadow-sm">
-            <div class="p-48 grid grid-cols-2 md:grid-cols-6 gap-32">
-                <!-- Brand -->
-                <div class="col-span-2 md:col-span-1">
-                    <div class="flex items-center gap-12 mb-24">
-                        <div
-                            class="w-48 h-48 border-2 border-green-primary rounded-xl flex items-center justify-center overflow-hidden p-4">
-                            <img src="favicon.svg" alt="Nexled" class="w-full h-full object-contain">
+                    <div class="dropdown-menu flyout flyout-features" role="dialog" aria-label="Components navigation">
+                        <div class="flyout-body">
+                            <div class="flyout-copy">
+                                <div class="flyout-grid">
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-8">
-                        <a href="index.html"
-                            class="flex items-center gap-8 text-grey-primary hover:text-black transition-colors">
-                            <span class="text-body-xs font-medium">Home</span>
-                        </a>
+                </div>
+
+                <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
+                    <button type="button" class="dropdown-trigger" data-support-route="downloads" aria-haspopup="dialog" aria-expanded="false">
+                        <span class="dropdown-value">Download Files</span>
+                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu flyout flyout-features" role="dialog" aria-label="Resources navigation">
+                        <div class="flyout-body">
+                            <div class="flyout-copy">
+                                <div class="flyout-grid">
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flyout-link"><span class="flyout-media"><i
+                                                class="ri-archive-line" aria-hidden="true"></i></span>
+                                        <div>
+                                            <h4 class="flyout-title">Curabitur maximus</h4>
+                                            <p class="flyout-text">Aliquam sapien felis, tincidunt non fermentum ac,
+                                                accumsan eget eros</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Simplified footer links -->
-                <div class="flex flex-col gap-16">
-                    <h4 class="text-body-sm font-bold text-black">Company</h4>
-                    <ul>
-                        <li><a href="contact.html" class="text-body-xs text-grey-primary">Contact</a></li>
+            </nav>
+
+            <div class="flex items-center gap-12">
+                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact">Get in touch</button>
+                <button type="button" class="btn btn-primary btn-xs" data-support-route="store">
+                    <i class="ri-store-line text-icon-md" aria-hidden="true"></i>
+                    Store
+                </button>
+                <div class="language-selector language-selector-icon language-selector-xs has-value">
+                    <button type="button" class="language-selector-trigger" aria-haspopup="listbox"
+                        aria-expanded="false" aria-label="Current language: English">
+                        <span class="language-selector-current">
+                            <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
+                                srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
+                        </span>
+                        <i class="ri-arrow-down-s-line language-selector-arrow" aria-hidden="true"></i>
+                    </button>
+                    <ul class="language-selector-menu custom-scrollbar" role="listbox"
+                        aria-label="Icon-only extra small language options">
+                        <li class="language-selector-option" role="option" aria-selected="true" data-code="gb">
+                            <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
+                                srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
+                            <span>English</span>
+                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                        </li>
+                        <li class="language-selector-option" role="option" aria-selected="false" data-code="pt">
+                            <img class="language-selector-flag" src="https://flagcdn.com/w40/pt.png"
+                                srcset="https://flagcdn.com/w80/pt.png 2x" width="20" height="20" alt="">
+                            <span>Portugu&#234;s</span>
+                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                        </li>
+                        <li class="language-selector-option" role="option" aria-selected="false" data-code="es">
+                            <img class="language-selector-flag" src="https://flagcdn.com/w40/es.png"
+                                srcset="https://flagcdn.com/w80/es.png 2x" width="20" height="20" alt="">
+                            <span>Espa&#241;ol</span>
+                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="bg-green-primary px-48 py-16 flex flex-wrap justify-between items-center gap-16">
-                <p class="text-body-xs font-medium text-white/80">© <span id="year"></span> Nexled</p>
-            </div>
+        </header>
+    </div>
+
+    <main class="flex-1 w-full">
+        <div class="w-full max-w-standard mx-auto px-32 py-48 space-y-64">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html" class="link-navigation link-sm"><span class="link-label">Home</span></a>
+                    </li>
+                    <li class="breadcrumb-separator">
+                        <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="index.html" class="link-navigation link-sm"><span class="link-label">Support</span></a>
+                    </li>
+                    <li class="breadcrumb-separator">
+                        <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <span id="bc-title">Guide</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <header class="page-header-hero">
+                <h1 id="main-title" class="text-display font-semibold text-black">Loading...</h1>
+                <p id="main-desc" class="max-w-readable text-body-lg font-light text-grey-primary">
+                    Here you will find a complete collection of support materials, including procedural guides, product
+                    datasheets, and relevant warnings.
+                </p>
+            </header>
+
+            <section class="grid grid-cols-1 gap-24 md:grid-cols-3">
+                <article class="card h-full">
+                    <div class="card-body">
+                        <h2 class="card-title">Estimated Time &amp; Difficulty</h2>
+                        <p id="time-text" class="card-text">Loading guide details...</p>
+                    </div>
+                </article>
+
+                <article class="card h-full">
+                    <div class="card-body">
+                        <h2 class="card-title">Required Parts and Tools</h2>
+                        <p class="card-text">Some of these items might also be purchased directly from our online store.</p>
+                        <ul id="parts-list" class="space-y-8" aria-live="polite">
+                            <li class="text-body-sm font-light text-grey-primary">Loading guide details...</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card h-full">
+                    <div class="card-body">
+                        <h2 class="card-title">Print Step In This Page</h2>
+                        <p class="card-text">
+                            You can use the button below to print all the steps directly onto paper for easier
+                            reference during the process.
+                        </p>
+                        <div class="flex justify-end">
+                            <button type="button" onclick="window.print()" class="btn btn-primary btn-sm">Print Page</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="steps" class="space-y-24">
+                <h2 class="text-h3 font-semibold text-black">Steps</h2>
+                <div id="steps-container" class="space-y-24" aria-live="polite">
+                    <div class="flex justify-center py-32">
+                        <div class="spinner spinner-md" aria-hidden="true">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <path class="spinner-track"
+                                    d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                                <path class="spinner-anim"
+                                    d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </footer>
+    </main>
 
+    <div class="w-full max-w-wide mx-auto px-32 pb-64">
+        <footer class="footer">
+            <div class="footer-body">
+                <div class="footer-grid">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="design/UI_SYSTEM/public/logos/nexled_logo.svg" alt="NexLed Logo"
+                            class="w-thumb-md h-thumb-md mb-8">
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h3 class="footer-brand-title">Nexled</h3>
+                        <ul class="footer-links flex-1 mb-16">
+                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
+                                        class="link-label">Sobre N&oacute;s</span></a></li>
+                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
+                                        class="link-label">Carrinho</span></a></li>
+                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
+                                        class="link-label">Subscrever Newsletter</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="mb-12">
+                            <a href="#" class="link-navigation link-lg">
+                                <span class="link-label">Categorias</span>
+                            </a>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Retalho</span></a></li>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Interior</span></a>
+                            </li>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Industrial</span></a>
+                            </li>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Fontes
+                                        Alimenta&ccedil;&atilde;o</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="mb-12">
+                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label">Contactos</span></a>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:comercial@tecit.pt" class="link-subtle link-sm"><span class="link-label">comercial@tecit.pt</span></a></li>
+                            <li><a href="tel:+351229999230" class="link-subtle link-sm"><span class="link-label">+351 229 999 230</span></a></li>
+                            <li><a href="tel:+351919989354" class="link-subtle link-sm"><span class="link-label">+351 919 989 354</span></a></li>
+                            <li><a href="tel:+351917321988" class="link-subtle link-sm"><span class="link-label">+351 917 321 988</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="mb-12">
+                            <a href="#" class="link-navigation link-lg">
+                                <span class="link-label">Localiza&ccedil;&atilde;o</span>
+                            </a>
+                        </h4>
+                        <address class="footer-links not-italic mb-16">
+                            <p>Travessa Cabo do Mundo, 681</p>
+                            <p>4455-427 Perafita,</p>
+                            <p>Matosinhos - Portugal</p>
+                        </address>
+                        <h4 class="text-body-lg font-normal text-black mb-4">Hor&aacute;rio</h4>
+                        <p class="text-body-sm font-light text-black">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="mb-12">
+                            <a href="repair.html" class="link-navigation link-lg"><span class="link-label">Suporte</span></a>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label">Instru&ccedil;&otilde;es Repara&ccedil;&atilde;o</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="src/scripts/utils.js"></script>
+    <script src="src/scripts/support-site.js"></script>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        const DEFAULT_STEP_FILE = 'DQ/DQ_5.json';
 
-        async function initSteps() {
-            const lang = Utils.getLang();
-            Utils.initLanguageSelector('lang-select');
+        SupportSite.initPage({ preserveQueryKeys: ['file'] });
 
-            const relFile = Utils.getParam('file') || 'DQ/DQ_5.json';
-            const dataUrl = `data/${relFile}`;
+        function getSpinnerMarkup() {
+            return `
+                <div class="flex justify-center py-32">
+                    <div class="spinner spinner-md" aria-hidden="true">
+                        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <path class="spinner-track" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                            <path class="spinner-anim" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                        </svg>
+                    </div>
+                </div>
+            `;
+        }
 
-            const content = await Utils.fetchJSON(dataUrl);
-            if (!content) {
-                document.getElementById('main-title').textContent = "Content not found";
+        function stripStepPrefix(title) {
+            return typeof title === 'string' ? title.replace(/^\s*\d+\.\s*/, '').trim() : '';
+        }
+
+        function resolveGuideImagePath(src) {
+            const safePath = Utils.sanitizeImagePath(src || '');
+            if (!safePath) {
+                return 'favicon.svg';
+            }
+
+            return safePath.replace(/^(\.\.\/)+/, '');
+        }
+
+        function renderParts(parts, lang) {
+            const partsList = document.getElementById('parts-list');
+            partsList.innerHTML = '';
+
+            if (!Array.isArray(parts) || !parts.length) {
+                const emptyItem = document.createElement('li');
+                emptyItem.className = 'text-body-sm font-light text-grey-primary';
+                emptyItem.textContent = 'No parts specified.';
+                partsList.appendChild(emptyItem);
                 return;
             }
 
-            const pageTitle = Utils.t(content.meta?.title_tag || content.idconteudo, lang, 'Untitled');
-            document.title = `${pageTitle} — Suporte Nexled`;
-            document.getElementById('bc-title').textContent = pageTitle;
-            document.getElementById('main-title').textContent = Utils.t(content.idconteudo, lang, '');
+            parts.forEach((part) => {
+                const item = document.createElement('li');
+                item.className = 'flex items-center justify-between gap-12';
 
-            const timeText = Utils.t(content.meta?.tempo_estimado, lang, '');
-            document.getElementById('time-text').innerHTML = timeText ? `<strong class="font-bold">${timeText}</strong>` : 'Time not specified';
+                const label = document.createElement('span');
+                label.className = 'text-body-sm font-medium text-black';
+                label.textContent = Utils.t(part.name, lang, 'Part');
 
-            // Parts
-            const partsList = document.getElementById('parts-list');
-            partsList.innerHTML = '';
-            if (content.parts) {
-                content.parts.forEach(p => {
-                    const li = document.createElement('li');
-                    li.className = 'flex items-center justify-between group cursor-pointer';
-                    li.innerHTML = `
-                    <span class="text-body-xs text-black font-medium underline underline-offset-2">${Utils.t(p.name, lang)}</span>
-                    <i class="ri-arrow-right-up-line text-icon-xs text-black opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                `;
-                    partsList.appendChild(li);
-                });
-            }
+                const icon = document.createElement('i');
+                icon.className = 'ri-arrow-right-up-line text-icon-sm text-grey-primary';
+                icon.setAttribute('aria-hidden', 'true');
 
-            // Steps
-            const stepsContainer = document.getElementById('steps-container');
-            stepsContainer.innerHTML = '';
-            if (content.steps) {
-                content.steps.forEach((step, i) => {
-                    const stepTitle = Utils.t(step.title, lang, 'Step');
-                    const stepImg = Utils.sanitizeImagePath(step.image || 'img/repair_step_placeholder.webp');
-                    const stepImgAlt = Utils.t(step.image_alt, lang, '');
-                    const stepDesc = Utils.t(step.description, lang, '');
-                    const stepNum = i + 1;
-
-                    const card = document.createElement('div');
-                    card.className = "bg-white border border-grey-tertiary rounded-xl overflow-hidden hover:shadow-hover transition-all duration-default ease-premium p-16";
-                    card.innerHTML = `
-                    <div class="flex flex-col md:flex-row gap-32">
-                        <div class="md:w-[48%] aspect-[16/10] rounded-lg overflow-hidden flex-shrink-0">
-                            <img src="${stepImg}" alt="${stepImgAlt}" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex flex-col justify-center py-24 px-16">
-                            <h3 class="text-body-lg font-semibold text-black mb-12">
-                                <span class="mr-4">${stepNum}.</span>${stepTitle}
-                            </h3>
-                            <p class="text-body-xs text-grey-primary leading-relaxed max-w-sm">
-                                ${stepDesc}
-                            </p>
-                        </div>
-                    </div>
-                `;
-                    stepsContainer.appendChild(card);
-                });
-            }
+                item.appendChild(label);
+                item.appendChild(icon);
+                partsList.appendChild(item);
+            });
         }
 
-        initSteps();
+        function createStepCard(step, index, lang) {
+            const article = document.createElement('article');
+            article.className = 'card';
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const layout = document.createElement('div');
+            layout.className = 'grid grid-cols-1 gap-24 md:grid-cols-12 md:items-center';
+
+            const mediaColumn = document.createElement('div');
+            mediaColumn.className = 'md:col-span-5';
+
+            const image = document.createElement('img');
+            image.className = 'w-full rounded-md object-cover';
+            image.src = resolveGuideImagePath(step.image);
+            image.alt = Utils.t(step.image_alt, lang, stripStepPrefix(Utils.t(step.title, lang, 'Step')));
+
+            const contentColumn = document.createElement('div');
+            contentColumn.className = 'space-y-12 md:col-span-7';
+
+            const title = document.createElement('h3');
+            title.className = 'card-title flex items-start gap-8';
+
+            const number = document.createElement('span');
+            number.textContent = `${index + 1}.`;
+
+            const label = document.createElement('span');
+            label.textContent = stripStepPrefix(Utils.t(step.title, lang, 'Step'));
+
+            const description = document.createElement('p');
+            description.className = 'card-text';
+            description.textContent = Utils.t(step.description, lang, '');
+
+            title.appendChild(number);
+            title.appendChild(label);
+            mediaColumn.appendChild(image);
+            contentColumn.appendChild(title);
+            contentColumn.appendChild(description);
+            layout.appendChild(mediaColumn);
+            layout.appendChild(contentColumn);
+            body.appendChild(layout);
+            article.appendChild(body);
+
+            return article;
+        }
+
+        function renderSteps(steps, lang) {
+            const stepsContainer = document.getElementById('steps-container');
+            stepsContainer.innerHTML = '';
+
+            if (!Array.isArray(steps) || !steps.length) {
+                const emptyCard = document.createElement('article');
+                emptyCard.className = 'card';
+                emptyCard.innerHTML = `
+                    <div class="card-body">
+                        <h3 class="card-title">No steps available</h3>
+                        <p class="card-text">This guide does not include any step instructions.</p>
+                    </div>
+                `;
+                stepsContainer.appendChild(emptyCard);
+                return;
+            }
+
+            steps.forEach((step, index) => {
+                stepsContainer.appendChild(createStepCard(step, index, lang));
+            });
+        }
+
+        function renderErrorState() {
+            document.title = 'Guide - Nexled Support';
+            document.getElementById('bc-title').textContent = 'Guide';
+            document.getElementById('main-title').textContent = 'Content not found';
+            document.getElementById('time-text').textContent = 'Time not specified';
+
+            const partsList = document.getElementById('parts-list');
+            partsList.innerHTML = '<li class="text-body-sm font-light text-grey-primary">Unable to load parts.</li>';
+
+            const stepsContainer = document.getElementById('steps-container');
+            stepsContainer.innerHTML = `
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Unable to load guide</h3>
+                        <p class="card-text">The requested guide file could not be loaded.</p>
+                    </div>
+                </article>
+            `;
+        }
+
+        async function initStepsPage() {
+            const lang = Utils.getLang();
+            document.getElementById('steps-container').innerHTML = getSpinnerMarkup();
+
+            const relativeFile = Utils.getParam('file') || DEFAULT_STEP_FILE;
+            const content = await Utils.fetchJSON(`data/${relativeFile}`);
+
+            if (!content) {
+                renderErrorState();
+                return;
+            }
+
+            const pageTitle = Utils.t(content.meta?.title_tag || content.idconteudo, lang, 'Guide');
+            const headingTitle = Utils.t(content.idconteudo, lang, pageTitle);
+            const timeText = Utils.t(content.meta?.tempo_estimado, lang, '');
+
+            document.title = `${pageTitle} - Nexled Support`;
+            document.getElementById('bc-title').textContent = pageTitle;
+            document.getElementById('main-title').textContent = headingTitle;
+            document.getElementById('time-text').textContent = timeText || 'Time not specified';
+
+            renderParts(content.parts, lang);
+            renderSteps(content.steps, lang);
+        }
+
+        initStepsPage();
     </script>
 </body>
 
 </html>
+
+
+
+
+
