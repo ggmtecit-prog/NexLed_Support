@@ -492,12 +492,14 @@
         const lang = getCurrentLang();
         const pageCopy = siteCopy[pageKey];
         const sharedCopy = siteCopy.shared || {};
-        if (!pageCopy || typeof pageCopy !== 'object') {
+        if ((!pageCopy || typeof pageCopy !== 'object') && (!sharedCopy || typeof sharedCopy !== 'object')) {
             return;
         }
 
         const resolveKey = (key, fallback = '') => {
-            const pageValue = getByPath(pageCopy, key);
+            const pageValue = pageCopy && typeof pageCopy === 'object'
+                ? getByPath(pageCopy, key)
+                : undefined;
             if (pageValue !== undefined) {
                 return resolveLocalizedValue(pageValue, lang, fallback);
             }

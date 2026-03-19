@@ -25,14 +25,14 @@
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="bg-grey-tertiary text-black flex min-h-screen flex-col">
+<body class="bg-grey-tertiary text-black flex min-h-screen flex-col" data-support-page="index">
     <div class="w-full max-w-wide mx-auto px-32 py-24">
         <header class="nav-bar">
             <a href="#" class="flex items-center gap-12 group" data-support-route="home">
                 <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
                 <div class="flex flex-col">
                     <span class="font-semibold text-h3 leading-none tracking-tight text-black">NexLed</span>
-                    <span class="font-regular text-body-sm text-black tracking-wider">Support Page</span>
+                    <span class="font-regular text-body-sm text-black tracking-wider" data-i18n="header.supportPage">Support Page</span>
                 </div>
             </a>
 
@@ -73,11 +73,11 @@
             </nav>
 
             <div class="flex items-center gap-12">
-                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact">Get in
+                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact" data-i18n="header.getInTouch">Get in
                     touch</button>
                 <button type="button" class="btn btn-primary btn-xs" data-support-route="store">
                     <i class="ri-store-line text-icon-md" aria-hidden="true"></i>
-                    Store
+                    <span data-i18n="header.store">Store</span>
                 </button>
                 <div class="language-selector language-selector-icon language-selector-xs has-value">
                     <button type="button" class="language-selector-trigger" aria-haspopup="listbox"
@@ -117,8 +117,8 @@
     <main class="flex-1 w-full">
         <div class="w-full max-w-standard mx-auto px-32 py-64 space-y-64">
             <header class="page-header-hero">
-                <h1 class="text-display font-semibold text-black">Suporte Nexled</h1>
-                <p class="max-w-readable text-body-lg font-light text-grey-primary">
+                <h1 class="text-display font-semibold text-black" data-i18n="hero.title">Suporte Nexled</h1>
+                <p class="max-w-readable text-body-lg font-light text-grey-primary" data-i18n="hero.description">
                     Here you will find a comprehensive collection of support resources, including answers to the most
                     frequently asked questions. These resources are designed to help you quickly find solutions to
                     common issues, install and configure products, and troubleshoot problems that may arise over time.
@@ -133,14 +133,14 @@
                                 <div class="card-icon">
                                     <i class="ri-tools-line text-icon-lg" aria-hidden="true"></i>
                                 </div>
-                                <h3 class="card-title">Repair Guides</h3>
+                                <h3 class="card-title" data-i18n="actions.repair.title">Repair Guides</h3>
                             </div>
-                            <p class="card-text">
+                            <p class="card-text" data-i18n="actions.repair.description">
                                 This guide will help you understand the support options available to you, including how
                                 to request repairs, replacements and information on our parts.
                             </p>
                             <a href="repair.html" class="link link-md">
-                                <span class="link-label">Go to Repair Guides</span>
+                                <span class="link-label" data-i18n="actions.repair.cta">Go to Repair Guides</span>
                             </a>
                         </div>
                     </article>
@@ -151,14 +151,14 @@
                                 <div class="card-icon">
                                     <i class="ri-download-2-line text-icon-lg" aria-hidden="true"></i>
                                 </div>
-                                <h3 class="card-title">Downloads Files</h3>
+                                <h3 class="card-title" data-i18n="actions.downloads.title">Downloads Files</h3>
                             </div>
-                            <p class="card-text">
+                            <p class="card-text" data-i18n="actions.downloads.description">
                                 Here you will find all the EPREL labels in PDF and PNG format, as well as the Product
                                 Fiches available in each supported language for download.
                             </p>
                             <a href="downloads.html" class="link link-md">
-                                <span class="link-label">Go to Downloads Files</span>
+                                <span class="link-label" data-i18n="actions.downloads.cta">Go to Downloads Files</span>
                             </a>
                         </div>
                     </article>
@@ -169,14 +169,14 @@
                                 <div class="card-icon">
                                     <i class="ri-customer-service-fill text-icon-lg" aria-hidden="true"></i>
                                 </div>
-                                <h3 class="card-title">Contact Us</h3>
+                                <h3 class="card-title" data-i18n="actions.contact.title">Contact Us</h3>
                             </div>
-                            <p class="card-text">
+                            <p class="card-text" data-i18n="actions.contact.description">
                                 Get in touch with one of our support specialists. We are here to help you resolve any
                                 technical issues and ensure your products are working as expected.
                             </p>
                             <a href="contact.html" class="link link-md">
-                                <span class="link-label">Go to Contact Us</span>
+                                <span class="link-label" data-i18n="actions.contact.cta">Go to Contact Us</span>
                             </a>
                         </div>
                     </article>
@@ -185,10 +185,10 @@
 
             <section id="faq">
                 <div class="text-style text-style-faq">
-                    <h2 class="text-style-title">
+                    <h2 class="text-style-title" data-i18n="faq.title">
                         FAQ &amp; Main Questions
                     </h2>
-                    <p class="text-style-subtitle">
+                    <p class="text-style-subtitle" data-i18n="faq.subtitle">
                         Below is Frequently Asked Questions, along with clear and concise answers. It provides quick
                         access to essential information, helping clarify common doubts and offering straightforward
                         guidance on the most important topics.
@@ -198,32 +198,32 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">How do I start a support request?</h3>
-                                <p class="text-style-faq-answer">Visit the contact page or use the scheduling option to
+                                <h3 class="text-style-faq-question" data-i18n="faq.items.start.question">How do I start a support request?</h3>
+                                <p class="text-style-faq-answer" data-i18n="faq.items.start.answer">Visit the contact page or use the scheduling option to
                                     book a session.</p>
                             </div>
                         </li>
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">How long does a repair take?</h3>
-                                <p class="text-style-faq-answer">The time depends on the type of repair. See the repair
+                                <h3 class="text-style-faq-question" data-i18n="faq.items.duration.question">How long does a repair take?</h3>
+                                <p class="text-style-faq-answer" data-i18n="faq.items.duration.answer">The time depends on the type of repair. See the repair
                                     article for estimates.</p>
                             </div>
                         </li>
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Where can I get manuals?</h3>
-                                <p class="text-style-faq-answer">Manuals are available in the Downloads/Manuals
+                                <h3 class="text-style-faq-question" data-i18n="faq.items.manuals.question">Where can I get manuals?</h3>
+                                <p class="text-style-faq-answer" data-i18n="faq.items.manuals.answer">Manuals are available in the Downloads/Manuals
                                     section.</p>
                             </div>
                         </li>
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Do Nexled products include a warranty?</h3>
-                                <p class="text-style-faq-answer">Yes, warranty details are listed in each product's
+                                <h3 class="text-style-faq-question" data-i18n="faq.items.warranty.question">Do Nexled products include a warranty?</h3>
+                                <p class="text-style-faq-answer" data-i18n="faq.items.warranty.answer">Yes, warranty details are listed in each product's
                                     documentation.</p>
                             </div>
                         </li>
@@ -233,10 +233,10 @@
 
             <section id="warranty">
                 <div class="text-style text-style-faq">
-                    <h2 class="text-style-title">
+                    <h2 class="text-style-title" data-i18n="warranty.title">
                         Warranty &amp; Guarantee
                     </h2>
-                    <p class="text-style-subtitle">
+                    <p class="text-style-subtitle" data-i18n="warranty.subtitle">
                         Below is Frequently Asked Questions, along with clear and concise answers. It provides quick
                         access to essential information, helping clarify common doubts and offering straightforward
                         guidance on the most important topics.
@@ -246,8 +246,8 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Coverage</h3>
-                                <p class="text-style-faq-answer">
+                                <h3 class="text-style-faq-question" data-i18n="warranty.items.coverage.question">Coverage</h3>
+                                <p class="text-style-faq-answer" data-i18n="warranty.items.coverage.answer">
                                     The warranty applies to defects in materials and workmanship when the product is
                                     used under normal operating conditions. It does not cover damages that stem from
                                     misuse or environmental factors.
@@ -257,8 +257,8 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Exclusions</h3>
-                                <p class="text-style-faq-answer">
+                                <h3 class="text-style-faq-question" data-i18n="warranty.items.exclusions.question">Exclusions</h3>
+                                <p class="text-style-faq-answer" data-i18n="warranty.items.exclusions.answer">
                                     This warranty does not cover damage resulting from misuse, improper installation,
                                     accidents, unauthorized modifications, or exposure to conditions outside the
                                     recommended operating envelope. Products altered or repaired without Nexled
@@ -269,8 +269,8 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Request Warranty Service</h3>
-                                <p class="text-style-faq-answer">
+                                <h3 class="text-style-faq-question" data-i18n="warranty.items.service.question">Request Warranty Service</h3>
+                                <p class="text-style-faq-answer" data-i18n="warranty.items.service.answer">
                                     To request warranty service, gather the product model, serial number, and proof of
                                     purchase, then contact the support team. Support will send detailed instructions on
                                     how to return the product or obtain a direct service if applicable.
@@ -280,8 +280,8 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Required Documentation</h3>
-                                <p class="text-style-faq-answer">
+                                <h3 class="text-style-faq-question" data-i18n="warranty.items.documentation.question">Required Documentation</h3>
+                                <p class="text-style-faq-answer" data-i18n="warranty.items.documentation.answer">
                                     You must provide proof of purchase, a clear description of the issue, a copy of the
                                     date, and the product serial number. Keep this information handy prior to
                                     contacting our warranty service department.
@@ -291,8 +291,8 @@
                         <li class="text-style-faq-item">
                             <span class="text-style-faq-bullet">&bull;</span>
                             <div class="text-style-faq-content">
-                                <h3 class="text-style-faq-question">Product Lifespan &amp; Performance Expectations</h3>
-                                <p class="text-style-faq-answer">
+                                <h3 class="text-style-faq-question" data-i18n="warranty.items.lifespan.question">Product Lifespan &amp; Performance Expectations</h3>
+                                <p class="text-style-faq-answer" data-i18n="warranty.items.lifespan.answer">
                                     Nexled products are designed to deliver lasting, safe performance when used under
                                     recommended conditions. Any reduction in output or expected performance that is not
                                     associated to a direct performance lapse or fault is not considered a notable
@@ -319,27 +319,27 @@
                         <h3 class="footer-brand-title">Nexled</h3>
                         <ul class="footer-links flex-1 mb-16">
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Sobre N&oacute;s</span></a></li>
+                                        class="link-label" data-i18n="footer.about">Sobre N&oacute;s</span></a></li>
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Carrinho</span></a></li>
+                                        class="link-label" data-i18n="footer.cart">Carrinho</span></a></li>
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Subscrever Newsletter</span></a></li>
+                                        class="link-label" data-i18n="footer.newsletter">Subscrever Newsletter</span></a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="#" class="link-navigation link-lg">
-                                <span class="link-label">Categorias</span>
+                                <span class="link-label" data-i18n="footer.categoriesTitle">Categorias</span>
                             </a>
                         </h4>
                         <ul class="footer-links">
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Retalho</span></a></li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Interior</span></a>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.retail">Retalho</span></a></li>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.interior">Interior</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Industrial</span></a>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.industrial">Industrial</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Fontes
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.powerSupplies">Fontes
                                         Alimenta&ccedil;&atilde;o</span></a></li>
                         </ul>
                     </div>
@@ -347,7 +347,7 @@
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="contact.html" class="link-navigation link-lg"><span
-                                    class="link-label">Contactos</span></a>
+                                    class="link-label" data-i18n="footer.contacts">Contactos</span></a>
                         </h4>
                         <ul class="footer-links">
                             <li><a href="mailto:comercial@tecit.pt" class="link-subtle link-sm"><span
@@ -364,7 +364,7 @@
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="#" class="link-navigation link-lg">
-                                <span class="link-label">Localiza&ccedil;&atilde;o</span>
+                                <span class="link-label" data-i18n="footer.location">Localiza&ccedil;&atilde;o</span>
                             </a>
                         </h4>
                         <address class="footer-links not-italic mb-16">
@@ -372,18 +372,18 @@
                             <p>4455-427 Perafita,</p>
                             <p>Matosinhos - Portugal</p>
                         </address>
-                        <h4 class="text-body-lg font-normal text-black mb-4">Hor&aacute;rio</h4>
-                        <p class="text-body-sm font-light text-black">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
+                        <h4 class="text-body-lg font-normal text-black mb-4" data-i18n="footer.hours">Hor&aacute;rio</h4>
+                        <p class="text-body-sm font-light text-black" data-i18n="footer.officeHours">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="repair.html" class="link-navigation link-lg"><span
-                                    class="link-label">Suporte</span></a>
+                                    class="link-label" data-i18n="footer.support">Suporte</span></a>
                         </h4>
                         <ul class="footer-links">
                             <li><a href="repair.html" class="link-subtle link-sm"><span
-                                        class="link-label">Instru&ccedil;&otilde;es Repara&ccedil;&atilde;o</span></a>
+                                        class="link-label" data-i18n="footer.repairInstructions">Instru&ccedil;&otilde;es Repara&ccedil;&atilde;o</span></a>
                             </li>
                         </ul>
                     </div>
