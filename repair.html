@@ -155,34 +155,28 @@
                     <div class="flex flex-col">
                         <h3 class="footer-brand-title">Nexled</h3>
                         <ul class="footer-links flex-1 mb-16">
-                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label" data-i18n="footer.about">Sobre N&oacute;s</span></a></li>
-                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label" data-i18n="footer.cart">Carrinho</span></a></li>
-                            <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label" data-i18n="footer.newsletter">Subscrever
-                                        Newsletter</span></a></li>
+                            <li><a href="index.html" class="link-text-icon link-sm"><i class="ri-home-4-line"></i><span
+                                        class="link-label">P&aacute;gina de Suporte</span></a></li>
+                            <li><a href="repair.html" class="link-text-icon link-sm"><i class="ri-tools-line"></i><span
+                                        class="link-label">Guias de Repara&ccedil;&atilde;o</span></a></li>
+                            <li><a href="downloads.html" class="link-text-icon link-sm"><i class="ri-download-2-line"></i><span
+                                        class="link-label">Ficheiros para Download</span></a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
-                            <a href="#" class="link-navigation link-lg">
-                                <span class="link-label" data-i18n="footer.categoriesTitle">Categorias</span>
+                            <a href="index.html" class="link-navigation link-lg">
+                                <span class="link-label">Recursos</span>
                             </a>
                         </h4>
                         <ul class="footer-links">
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label"
-                                        data-i18n="footer.retail">Retalho</span></a></li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label"
-                                        data-i18n="footer.interior">Interior</span></a>
+                            <li><a href="index.html#faq" class="link-subtle link-sm"><span class="link-label">Perguntas Frequentes</span></a></li>
+                            <li><a href="index.html#warranty" class="link-subtle link-sm"><span class="link-label">Garantia</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label"
-                                        data-i18n="footer.industrial">Industrial</span></a>
+                            <li><a href="contact.html" class="link-subtle link-sm"><span class="link-label">Contacte-nos</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label"
-                                        data-i18n="footer.powerSupplies">Fontes
-                                        Alimenta&ccedil;&atilde;o</span></a></li>
+                            <li><a href="index.html" class="link-subtle link-sm"><span class="link-label">P&aacute;gina Inicial</span></a></li>
                         </ul>
                     </div>
 
@@ -222,13 +216,15 @@
 
                     <div class="footer-col">
                         <h4 class="mb-12">
-                            <a href="repair.html" class="link-navigation link-lg"><span class="link-label"
-                                    data-i18n="footer.support">Suporte</span></a>
+                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label">Ajuda R&aacute;pida</span></a>
                         </h4>
                         <ul class="footer-links">
-                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label"
-                                        data-i18n="footer.repairInstructions">Instru&ccedil;&otilde;es
-                                        Repara&ccedil;&atilde;o</span></a></li>
+                            <li><a href="contact.html" class="link-subtle link-sm"><span class="link-label">Abrir Pedido de Suporte</span></a>
+                            </li>
+                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label">Ver Guias de Repara&ccedil;&atilde;o</span></a>
+                            </li>
+                            <li><a href="downloads.html" class="link-subtle link-sm"><span class="link-label">Ver Downloads</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -313,7 +309,7 @@
             const imagePath = Utils.sanitizeImagePath(card.image || '');
             if (imagePath) {
                 const image = document.createElement('img');
-                image.className = 'w-full rounded-md object-cover';
+                image.className = 'text-style-media-frame w-full rounded-md object-cover';
                 image.src = imagePath;
                 image.alt = `${Utils.t(card.title, lang, 'Repair guide')} repair guide`;
                 mediaColumn.appendChild(image);
