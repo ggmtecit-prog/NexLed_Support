@@ -10,19 +10,19 @@
     };
     const BREADCRUMB_TRAILS = {
         downloads: [
-            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
             { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Download Files' },
         ],
         contact: [
-            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
             { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Contact Us' },
         ],
         repair: [
-            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
             { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Repair Guides' },
         ],
         steps: [
-            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
             { type: 'route', route: 'repair', labelPath: 'nav.repairGuides', fallback: 'Repair Guides' },
             { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Guide' },
         ],

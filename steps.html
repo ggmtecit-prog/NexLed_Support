@@ -117,27 +117,7 @@
 
     <main class="flex-1 w-full">
         <div class="w-full max-w-standard mx-auto px-32 pt-8 pb-48 space-y-64">
-            <nav aria-label="Breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="link-navigation link-sm"><span class="link-label"
-                                data-i18n="breadcrumb.home">Home</span></a>
-                    </li>
-                    <li class="breadcrumb-separator">
-                        <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="link-navigation link-sm"><span class="link-label"
-                                data-i18n="breadcrumb.support">Support</span></a>
-                    </li>
-                    <li class="breadcrumb-separator">
-                        <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
-                    </li>
-                    <li class="breadcrumb-item" aria-current="page">
-                        <span id="bc-title">Guide</span>
-                    </li>
-                </ol>
-            </nav>
+            <nav aria-label="Breadcrumb" data-support-breadcrumb></nav>
 
             <header class="page-header-hero">
                 <h1 id="main-title" class="text-display font-semibold text-black">Loading...</h1>
@@ -426,7 +406,7 @@
 
         function renderErrorState() {
             document.title = 'Guide - Nexled Support';
-            document.getElementById('bc-title').textContent = 'Guide';
+            SupportSite.setBreadcrumbCurrent('Guide');
             document.getElementById('main-title').textContent = 'Content not found';
             document.getElementById('time-text').textContent = 'Time not specified';
 
@@ -461,7 +441,7 @@
             const timeText = Utils.t(content.meta?.tempo_estimado, lang, '');
 
             document.title = `${pageTitle} - Nexled Support`;
-            document.getElementById('bc-title').textContent = pageTitle;
+            SupportSite.setBreadcrumbCurrent(pageTitle);
             document.getElementById('main-title').textContent = headingTitle;
             document.getElementById('time-text').textContent = timeText || 'Time not specified';
 
