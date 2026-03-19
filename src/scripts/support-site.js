@@ -15,6 +15,7 @@
         es: { lang: 'es', label: 'Spanish' },
         fr: { lang: 'fr', label: 'French' },
     };
+    let flyoutConfigPromise = null;
 
     function langToSelectorCode(lang) {
         return lang === 'en' ? 'gb' : lang;
@@ -22,6 +23,217 @@
 
     function selectorCodeToLang(code) {
         return code === 'gb' ? 'en' : code;
+    }
+
+    function getFlyoutConfig() {
+        if (flyoutConfigPromise) {
+            return flyoutConfigPromise;
+        }
+
+        if (!window.Utils || typeof Utils.fetchJSON !== 'function') {
+            flyoutConfigPromise = Promise.resolve(null);
+            return flyoutConfigPromise;
+        }
+
+        flyoutConfigPromise = Utils.fetchJSON('data/flyouts.json');
+        return flyoutConfigPromise;
+    }
+
+    function getTextValue(value, fallback = '') {
+        return typeof value === 'string' && value.trim() ? value.trim() : fallback;
+    }
+
+    function escapeHTML(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function normalizeFlyoutId(value, fallback) {
+        const normalized = getTextValue(value, fallback)
+            .toLowerCase()
+            .replace(/[^a-z0-9_-]+/g, '-')
+            .replace(/-{2,}/g, '-')
+            .replace(/^-|-$/g, '');
+
+        return normalized || fallback;
+    }
+
+    function sanitizeFlyoutHref(value) {
+        const href = getTextValue(value, '#');
+        if (
+            href.startsWith('//') ||
+            /^[a-z][a-z0-9+.-]*:/i.test(href) ||
+            /^javascript:/i.test(href)
+        ) {
+            return '#';
+        }
+
+        return href;
+    }
+
+    function buildFlyoutMarkup(menuKey, flyout) {
+        const categories = Array.isArray(flyout?.categories) ? flyout.categories : [];
+        if (!categories.length) {
+            return '';
+        }
+
+        const safeMenuKey = normalizeFlyoutId(menuKey, 'flyout');
+        const navLabel = escapeHTML(
+            getTextValue(flyout.navLabel, getTextValue(flyout.ariaLabel, 'Flyout categories'))
+        );
+
+        const tabsMarkup = categories.map((category, index) => {
+            const isActive = index === 0;
+            const categoryId = normalizeFlyoutId(category?.id, `category-${index + 1}`);
+            const categoryLabel = escapeHTML(getTextValue(category?.label, `Category ${index + 1}`));
+
+            return `
+                <button type="button" class="flyout-nav-item${isActive ? ' is-active' : ''}"
+                    id="support-${safeMenuKey}-flyout-tab-${categoryId}" role="tab"
+                    aria-selected="${isActive ? 'true' : 'false'}"
+                    aria-controls="support-${safeMenuKey}-flyout-panel-${categoryId}"
+                    data-flyout-category="${categoryId}" tabindex="${isActive ? '0' : '-1'}">
+                    <span>${categoryLabel}</span>
+                    <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                </button>
+            `;
+        }).join('');
+
+        const panelsMarkup = categories.map((category, index) => {
+            const categoryId = normalizeFlyoutId(category?.id, `category-${index + 1}`);
+            const itemsMarkup = (category.items || []).map((item) => {
+                const itemLabel = escapeHTML(getTextValue(item?.label, 'Product'));
+                const imagePath = Utils.sanitizeImagePath(getTextValue(item?.image, ''));
+                const imageMarkup = imagePath
+                    ? `<img src="${escapeHTML(imagePath)}" alt="${escapeHTML(getTextValue(item?.alt, getTextValue(item?.label, 'Product image')))}">`
+                    : '';
+                const href = escapeHTML(sanitizeFlyoutHref(item?.href));
+
+                return `
+                    <a href="${href}" class="flyout-link">
+                        <span class="flyout-media">
+                            ${imageMarkup}
+                        </span>
+                        <span class="flyout-label">${itemLabel}</span>
+                    </a>
+                `;
+            }).join('');
+
+            return `
+                <div class="flyout-grid" id="support-${safeMenuKey}-flyout-panel-${categoryId}" role="tabpanel"
+                    aria-labelledby="support-${safeMenuKey}-flyout-tab-${categoryId}"
+                    data-flyout-panel="${categoryId}"${index === 0 ? '' : ' hidden'}>
+                    ${itemsMarkup}
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="flyout-body">
+                <nav class="flyout-nav" aria-label="${navLabel}" role="tablist">
+                    ${tabsMarkup}
+                </nav>
+                <div class="flyout-copy">
+                    ${panelsMarkup}
+                </div>
+            </div>
+        `;
+    }
+
+    function bindSupportFlyouts() {
+        document.querySelectorAll('[data-support-flyout-products]').forEach((flyout) => {
+            if (flyout.dataset.supportFlyoutBound === 'true') {
+                return;
+            }
+
+            flyout.dataset.supportFlyoutBound = 'true';
+
+            const tabs = Array.from(flyout.querySelectorAll('[data-flyout-category]'));
+            const panels = Array.from(flyout.querySelectorAll('[data-flyout-panel]'));
+            if (tabs.length === 0 || panels.length === 0) {
+                return;
+            }
+
+            const activateCategory = (category) => {
+                tabs.forEach((tab) => {
+                    const isActive = tab.dataset.flyoutCategory === category;
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    tab.setAttribute('tabindex', isActive ? '0' : '-1');
+                });
+
+                panels.forEach((panel) => {
+                    panel.hidden = panel.dataset.flyoutPanel !== category;
+                });
+            };
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    activateCategory(tab.dataset.flyoutCategory);
+                });
+
+                tab.addEventListener('keydown', (event) => {
+                    let nextIndex = index;
+
+                    if (event.key === 'ArrowDown') {
+                        nextIndex = (index + 1) % tabs.length;
+                    } else if (event.key === 'ArrowUp') {
+                        nextIndex = (index - 1 + tabs.length) % tabs.length;
+                    } else if (event.key === 'Home') {
+                        nextIndex = 0;
+                    } else if (event.key === 'End') {
+                        nextIndex = tabs.length - 1;
+                    } else {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    const nextTab = tabs[nextIndex];
+                    activateCategory(nextTab.dataset.flyoutCategory);
+                    nextTab.focus();
+                });
+            });
+
+            activateCategory(
+                tabs.find((tab) => tab.classList.contains('is-active'))?.dataset.flyoutCategory ||
+                tabs[0].dataset.flyoutCategory
+            );
+        });
+    }
+
+    async function hydrateFlyouts() {
+        const flyoutConfig = await getFlyoutConfig();
+        if (!flyoutConfig || typeof flyoutConfig !== 'object') {
+            return;
+        }
+
+        document.querySelectorAll('.dropdown.dropdown-flyout').forEach((dropdown) => {
+            const routeKey = dropdown.querySelector('.dropdown-trigger')?.dataset.supportRoute;
+            const flyout = flyoutConfig[routeKey];
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            if (!flyout || !menu) {
+                return;
+            }
+
+            menu.classList.remove('flyout-features');
+            menu.classList.add('flyout-products');
+            menu.removeAttribute('data-flyout-products');
+            menu.setAttribute('data-support-flyout-products', '');
+            menu.setAttribute('role', 'dialog');
+
+            if (flyout.ariaLabel) {
+                menu.setAttribute('aria-label', flyout.ariaLabel);
+            }
+
+            menu.innerHTML = buildFlyoutMarkup(routeKey, flyout);
+        });
+
+        bindSupportFlyouts();
     }
 
     function getLanguageOptionMarkup(code) {
@@ -201,11 +413,13 @@
         }
 
         hydrateLinks();
+        hydrateFlyouts();
     }
 
     window.SupportSite = {
         ROUTES,
         initPage,
+        hydrateFlyouts,
         syncLanguageSelector,
         bindLanguageSelector,
         langToSelectorCode,

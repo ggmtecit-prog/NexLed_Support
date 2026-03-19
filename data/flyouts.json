@@ -1,0 +1,122 @@
+{
+  "repair": {
+    "ariaLabel": "Repair Guides navigation",
+    "navLabel": "Repair guide categories",
+    "categories": [
+      {
+        "id": "downlights",
+        "label": "Downlights",
+        "items": [
+          {
+            "label": "Square Downlight 200",
+            "href": "repair.html#square-downlight-200",
+            "image": "DL_Q.webp",
+            "alt": "Square Downlight 200 product image"
+          },
+          {
+            "label": "Square Downlight 240",
+            "href": "repair.html#square-downlight-240",
+            "image": "DL_Q.webp",
+            "alt": "Square Downlight 240 product image"
+          },
+          {
+            "label": "Round Downlight 230",
+            "href": "repair.html#round-downlight-230",
+            "image": "DL_R.webp",
+            "alt": "Round Downlight 230 product image"
+          },
+          {
+            "label": "Round Downlight 320",
+            "href": "repair.html#round-downlight-320",
+            "image": "DL_R.webp",
+            "alt": "Round Downlight 320 product image"
+          }
+        ]
+      },
+      {
+        "id": "bars-24v",
+        "label": "24V Bars",
+        "items": [
+          {
+            "label": "24V Bar Model 60",
+            "href": "repair.html#24v-bar-model-60",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 60 product image"
+          },
+          {
+            "label": "24V Bar Model 120",
+            "href": "repair.html#24v-bar-model-120",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 120 product image"
+          },
+          {
+            "label": "24V Bar Model 145",
+            "href": "repair.html#24v-bar-model-145",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 145 product image"
+          }
+        ]
+      }
+    ]
+  },
+  "downloads": {
+    "ariaLabel": "Download Files navigation",
+    "navLabel": "Download categories",
+    "categories": [
+      {
+        "id": "downlights",
+        "label": "Downlights",
+        "items": [
+          {
+            "label": "Square Downlight 200",
+            "href": "downloads.html#square-downlight-200",
+            "image": "DL_Q.webp",
+            "alt": "Square Downlight 200 product image"
+          },
+          {
+            "label": "Square Downlight 240",
+            "href": "downloads.html#square-downlight-240",
+            "image": "DL_Q.webp",
+            "alt": "Square Downlight 240 product image"
+          },
+          {
+            "label": "Round Downlight 230",
+            "href": "downloads.html#round-downlight-230",
+            "image": "DL_R.webp",
+            "alt": "Round Downlight 230 product image"
+          },
+          {
+            "label": "Round Downlight 320",
+            "href": "downloads.html#round-downlight-320",
+            "image": "DL_R.webp",
+            "alt": "Round Downlight 320 product image"
+          }
+        ]
+      },
+      {
+        "id": "bars-24v",
+        "label": "24V Bars",
+        "items": [
+          {
+            "label": "24V Bar Model 60",
+            "href": "downloads.html#24v-bar-model-60",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 60 product image"
+          },
+          {
+            "label": "24V Bar Model 120",
+            "href": "downloads.html#24v-bar-model-120",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 120 product image"
+          },
+          {
+            "label": "24V Bar Model 145",
+            "href": "downloads.html#24v-bar-model-145",
+            "image": "led_bar.webp",
+            "alt": "24V Bar Model 145 product image"
+          }
+        ]
+      }
+    ]
+  }
+}
