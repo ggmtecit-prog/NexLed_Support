@@ -8,6 +8,25 @@
         faq: 'index.html#faq',
         warranty: 'index.html#warranty',
     };
+    const BREADCRUMB_TRAILS = {
+        downloads: [
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Download Files' },
+        ],
+        contact: [
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Contact Us' },
+        ],
+        repair: [
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Repair Guides' },
+        ],
+        steps: [
+            { type: 'route', route: 'home', labelPath: 'breadcrumb.support', fallback: 'Support' },
+            { type: 'route', route: 'repair', labelPath: 'nav.repairGuides', fallback: 'Repair Guides' },
+            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Guide' },
+        ],
+    };
 
     const LANG_OPTIONS = {
         gb: { lang: 'en', label: 'English' },
@@ -111,6 +130,24 @@
         }
 
         return fallback;
+    }
+
+    function resolveSiteCopyValue(siteCopy, pageKey, key, lang, fallback = '') {
+        if (!key) {
+            return fallback;
+        }
+
+        const pageCopy = siteCopy && typeof siteCopy === 'object' ? siteCopy[pageKey] : undefined;
+        const sharedCopy = siteCopy && typeof siteCopy === 'object' ? siteCopy.shared || {} : {};
+        const pageValue = pageCopy && typeof pageCopy === 'object'
+            ? getByPath(pageCopy, key)
+            : undefined;
+
+        if (pageValue !== undefined) {
+            return resolveLocalizedValue(pageValue, lang, fallback);
+        }
+
+        return resolveLocalizedValue(getByPath(sharedCopy, key), lang, fallback);
     }
 
     function buildFlyoutMarkup(menuKey, flyout) {
@@ -478,6 +515,74 @@
         });
     }
 
+    async function hydrateBreadcrumbs(options = {}) {
+        const breadcrumbNavs = document.querySelectorAll('[data-support-breadcrumb]');
+        if (!breadcrumbNavs.length) {
+            return;
+        }
+
+        const pageKey = options.pageKey || document.body?.dataset.supportPage;
+        if (!pageKey) {
+            return;
+        }
+
+        const siteCopy = await getSiteCopy();
+        const lang = getCurrentLang();
+
+        breadcrumbNavs.forEach((nav) => {
+            const trailKey = nav.dataset.supportBreadcrumb || pageKey;
+            const trail = BREADCRUMB_TRAILS[trailKey];
+            if (!Array.isArray(trail) || !trail.length) {
+                return;
+            }
+
+            const preserveQueryKeys = (nav.dataset.supportPreserveQuery || '')
+                .split(',')
+                .map((key) => key.trim())
+                .filter(Boolean);
+
+            const itemsMarkup = trail.map((item, index) => {
+                const isLast = index === trail.length - 1;
+                const fallback = item.type === 'current' && nav.dataset.supportBreadcrumbCurrent
+                    ? nav.dataset.supportBreadcrumbCurrent
+                    : item.fallback || '';
+                const label = resolveSiteCopyValue(siteCopy, pageKey, item.labelPath, lang, fallback) || fallback;
+                const escapedLabel = escapeHTML(label);
+
+                if (item.type === 'route' && item.route && !isLast) {
+                    const href = escapeHTML(withLang(ROUTES[item.route] || '#', lang, preserveQueryKeys));
+                    return `
+                        <li class="breadcrumb-item">
+                            <a href="${href}" class="link-navigation link-sm"><span class="link-label">${escapedLabel}</span></a>
+                        </li>
+                        <li class="breadcrumb-separator">
+                            <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
+                        </li>
+                    `;
+                }
+
+                return `
+                    <li class="breadcrumb-item" aria-current="page">
+                        <span class="link-label" data-support-breadcrumb-current-label>${escapedLabel}</span>
+                    </li>
+                `;
+            }).join('');
+
+            nav.innerHTML = `<ol class="breadcrumb">${itemsMarkup}</ol>`;
+        });
+    }
+
+    function setBreadcrumbCurrent(label) {
+        const nextLabel = getTextValue(label, '');
+        document.querySelectorAll('[data-support-breadcrumb]').forEach((nav) => {
+            nav.dataset.supportBreadcrumbCurrent = nextLabel;
+        });
+
+        document.querySelectorAll('[data-support-breadcrumb-current-label]').forEach((element) => {
+            element.textContent = nextLabel;
+        });
+    }
+
     async function hydratePageCopy(options = {}) {
         const siteCopy = await getSiteCopy();
         if (!siteCopy || typeof siteCopy !== 'object') {
@@ -496,18 +601,7 @@
             return;
         }
 
-        const resolveKey = (key, fallback = '') => {
-            const pageValue = pageCopy && typeof pageCopy === 'object'
-                ? getByPath(pageCopy, key)
-                : undefined;
-            if (pageValue !== undefined) {
-                return resolveLocalizedValue(pageValue, lang, fallback);
-            }
-
-            const sharedValue = getByPath(sharedCopy, key);
-            return resolveLocalizedValue(sharedValue, lang, fallback);
-        };
-
+        const resolveKey = (key, fallback = '') => resolveSiteCopyValue(siteCopy, pageKey, key, lang, fallback);
         const pageTitle = resolveKey('meta.title');
         if (pageTitle) {
             document.title = pageTitle;
@@ -589,6 +683,7 @@
         }
 
         hydrateLinks();
+        hydrateBreadcrumbs(options);
         hydrateFlyouts();
         hydratePageCopy(options);
     }
@@ -596,8 +691,10 @@
     window.SupportSite = {
         ROUTES,
         initPage,
+        hydrateBreadcrumbs,
         hydrateFlyouts,
         hydratePageCopy,
+        setBreadcrumbCurrent,
         syncLanguageSelector,
         bindLanguageSelector,
         langToSelectorCode,

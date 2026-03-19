@@ -830,10 +830,10 @@
     },
     "breadcrumb": {
       "current": {
-        "pt": "Reparações",
-        "en": "Repairs",
-        "es": "Reparaciones",
-        "fr": "Réparations"
+        "pt": "Guias de Reparação",
+        "en": "Repair Guides",
+        "es": "Guías de Reparación",
+        "fr": "Guides de réparation"
       }
     }
   },
