@@ -1,0 +1,354 @@
+{
+  "shared": {
+    "header": {
+      "supportPage": {
+        "pt": "P\u00e1gina de Suporte",
+        "en": "Support Page",
+        "es": "P\u00e1gina de Soporte",
+        "fr": "Page d'assistance"
+      },
+      "getInTouch": {
+        "pt": "Entrar em contacto",
+        "en": "Get in touch",
+        "es": "Contactar",
+        "fr": "Nous contacter"
+      },
+      "store": {
+        "pt": "Loja",
+        "en": "Store",
+        "es": "Tienda",
+        "fr": "Boutique"
+      }
+    },
+    "footer": {
+      "about": {
+        "pt": "Sobre N\u00f3s",
+        "en": "About Us",
+        "es": "Sobre Nosotros",
+        "fr": "\u00c0 propos"
+      },
+      "cart": {
+        "pt": "Carrinho",
+        "en": "Cart",
+        "es": "Carrito",
+        "fr": "Panier"
+      },
+      "newsletter": {
+        "pt": "Subscrever Newsletter",
+        "en": "Subscribe to Newsletter",
+        "es": "Suscribirse al bolet\u00edn",
+        "fr": "S'abonner \u00e0 la newsletter"
+      },
+      "categoriesTitle": {
+        "pt": "Categorias",
+        "en": "Categories",
+        "es": "Categor\u00edas",
+        "fr": "Cat\u00e9gories"
+      },
+      "retail": {
+        "pt": "Retalho",
+        "en": "Retail",
+        "es": "Retail",
+        "fr": "Retail"
+      },
+      "interior": {
+        "pt": "Interior",
+        "en": "Interior",
+        "es": "Interior",
+        "fr": "Int\u00e9rieur"
+      },
+      "industrial": {
+        "pt": "Industrial",
+        "en": "Industrial",
+        "es": "Industrial",
+        "fr": "Industriel"
+      },
+      "powerSupplies": {
+        "pt": "Fontes de Alimenta\u00e7\u00e3o",
+        "en": "Power Supplies",
+        "es": "Fuentes de Alimentaci\u00f3n",
+        "fr": "Alimentations"
+      },
+      "contacts": {
+        "pt": "Contactos",
+        "en": "Contacts",
+        "es": "Contacto",
+        "fr": "Contacts"
+      },
+      "location": {
+        "pt": "Localiza\u00e7\u00e3o",
+        "en": "Location",
+        "es": "Ubicaci\u00f3n",
+        "fr": "Localisation"
+      },
+      "hours": {
+        "pt": "Hor\u00e1rio",
+        "en": "Hours",
+        "es": "Horario",
+        "fr": "Horaires"
+      },
+      "officeHours": {
+        "pt": "09:00h \u00e0s 18:00h Dias \u00fateis",
+        "en": "09:00 to 18:00 on business days",
+        "es": "09:00 a 18:00 en d\u00edas laborables",
+        "fr": "09h00 \u00e0 18h00 les jours ouvrables"
+      },
+      "support": {
+        "pt": "Suporte",
+        "en": "Support",
+        "es": "Soporte",
+        "fr": "Assistance"
+      },
+      "repairInstructions": {
+        "pt": "Instru\u00e7\u00f5es Repara\u00e7\u00e3o",
+        "en": "Repair Instructions",
+        "es": "Instrucciones de Reparaci\u00f3n",
+        "fr": "Instructions de r\u00e9paration"
+      }
+    }
+  },
+  "index": {
+    "meta": {
+      "title": {
+        "pt": "Suporte Nexled",
+        "en": "Nexled Support",
+        "es": "Soporte Nexled",
+        "fr": "Support Nexled"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Suporte Nexled",
+        "en": "Nexled Support",
+        "es": "Soporte Nexled",
+        "fr": "Support Nexled"
+      },
+      "description": {
+        "pt": "Aqui encontrar\u00e1 uma cole\u00e7\u00e3o abrangente de recursos de suporte, incluindo respostas \u00e0s perguntas mais frequentes. Estes recursos foram concebidos para o ajudar a encontrar rapidamente solu\u00e7\u00f5es para problemas comuns, instalar e configurar produtos e resolver dificuldades que possam surgir ao longo do tempo.",
+        "en": "Here you will find a comprehensive collection of support resources, including answers to the most frequently asked questions. These resources are designed to help you quickly find solutions to common issues, install and configure products, and troubleshoot problems that may arise over time.",
+        "es": "Aqu\u00ed encontrar\u00e1 una colecci\u00f3n completa de recursos de soporte, incluidas respuestas a las preguntas m\u00e1s frecuentes. Estos recursos est\u00e1n dise\u00f1ados para ayudarle a encontrar r\u00e1pidamente soluciones a problemas comunes, instalar y configurar productos y resolver incidencias que puedan surgir con el tiempo.",
+        "fr": "Vous trouverez ici une collection compl\u00e8te de ressources d'assistance, y compris des r\u00e9ponses aux questions les plus fr\u00e9quentes. Ces ressources sont con\u00e7ues pour vous aider \u00e0 trouver rapidement des solutions aux probl\u00e8mes courants, installer et configurer les produits et r\u00e9soudre les difficult\u00e9s pouvant survenir au fil du temps."
+      }
+    },
+    "actions": {
+      "repair": {
+        "title": {
+          "pt": "Guias de Repara\u00e7\u00e3o",
+          "en": "Repair Guides",
+          "es": "Gu\u00edas de Reparaci\u00f3n",
+          "fr": "Guides de r\u00e9paration"
+        },
+        "description": {
+          "pt": "Este guia ajuda-o a compreender as op\u00e7\u00f5es de suporte dispon\u00edveis, incluindo como solicitar repara\u00e7\u00f5es, substitui\u00e7\u00f5es e informa\u00e7\u00f5es sobre pe\u00e7as.",
+          "en": "This guide will help you understand the support options available to you, including how to request repairs, replacements and information on our parts.",
+          "es": "Esta gu\u00eda le ayudar\u00e1 a comprender las opciones de soporte disponibles, incluyendo c\u00f3mo solicitar reparaciones, sustituciones e informaci\u00f3n sobre nuestras piezas.",
+          "fr": "Ce guide vous aidera \u00e0 comprendre les options d'assistance disponibles, y compris la mani\u00e8re de demander des r\u00e9parations, des remplacements et des informations sur nos pi\u00e8ces."
+        },
+        "cta": {
+          "pt": "Ir para Guias de Repara\u00e7\u00e3o",
+          "en": "Go to Repair Guides",
+          "es": "Ir a Gu\u00edas de Reparaci\u00f3n",
+          "fr": "Voir les guides de r\u00e9paration"
+        }
+      },
+      "downloads": {
+        "title": {
+          "pt": "Ficheiros para Download",
+          "en": "Download Files",
+          "es": "Archivos de Descarga",
+          "fr": "Fichiers \u00e0 t\u00e9l\u00e9charger"
+        },
+        "description": {
+          "pt": "Aqui encontrar\u00e1 todas as etiquetas EPREL em formato PDF e PNG, bem como as Fichas de Produto dispon\u00edveis em cada idioma suportado para download.",
+          "en": "Here you will find all the EPREL labels in PDF and PNG format, as well as the Product Fiches available in each supported language for download.",
+          "es": "Aqu\u00ed encontrar\u00e1 todas las etiquetas EPREL en formato PDF y PNG, as\u00ed como las fichas de producto disponibles para descargar en cada idioma compatible.",
+          "fr": "Vous trouverez ici toutes les \u00e9tiquettes EPREL au format PDF et PNG, ainsi que les fiches produit disponibles au t\u00e9l\u00e9chargement dans chaque langue prise en charge."
+        },
+        "cta": {
+          "pt": "Ir para Ficheiros para Download",
+          "en": "Go to Download Files",
+          "es": "Ir a Archivos de Descarga",
+          "fr": "Voir les fichiers \u00e0 t\u00e9l\u00e9charger"
+        }
+      },
+      "contact": {
+        "title": {
+          "pt": "Contacte-nos",
+          "en": "Contact Us",
+          "es": "Cont\u00e1ctenos",
+          "fr": "Contactez-nous"
+        },
+        "description": {
+          "pt": "Entre em contacto com um dos nossos especialistas de suporte. Estamos aqui para o ajudar a resolver qualquer problema t\u00e9cnico e garantir que os seus produtos funcionam como esperado.",
+          "en": "Get in touch with one of our support specialists. We are here to help you resolve any technical issues and ensure your products are working as expected.",
+          "es": "P\u00f3ngase en contacto con uno de nuestros especialistas de soporte. Estamos aqu\u00ed para ayudarle a resolver cualquier problema t\u00e9cnico y garantizar que sus productos funcionen como se espera.",
+          "fr": "Prenez contact avec l'un de nos sp\u00e9cialistes de l'assistance. Nous sommes l\u00e0 pour vous aider \u00e0 r\u00e9soudre tout probl\u00e8me technique et \u00e0 garantir que vos produits fonctionnent comme pr\u00e9vu."
+        },
+        "cta": {
+          "pt": "Ir para Contacte-nos",
+          "en": "Go to Contact Us",
+          "es": "Ir a Cont\u00e1ctenos",
+          "fr": "Voir la page contact"
+        }
+      }
+    },
+    "faq": {
+      "title": {
+        "pt": "FAQ e Quest\u00f5es Principais",
+        "en": "FAQ & Main Questions",
+        "es": "FAQ y Preguntas Principales",
+        "fr": "FAQ et Questions Principales"
+      },
+      "subtitle": {
+        "pt": "Abaixo encontra perguntas frequentes com respostas claras e concisas. Este conte\u00fado oferece acesso r\u00e1pido \u00e0 informa\u00e7\u00e3o essencial, ajudando a esclarecer d\u00favidas comuns e fornecendo orienta\u00e7\u00f5es objetivas sobre os temas mais importantes.",
+        "en": "Below is Frequently Asked Questions, along with clear and concise answers. It provides quick access to essential information, helping clarify common doubts and offering straightforward guidance on the most important topics.",
+        "es": "A continuaci\u00f3n encontrar\u00e1 preguntas frecuentes junto con respuestas claras y concisas. Ofrece acceso r\u00e1pido a informaci\u00f3n esencial, ayuda a aclarar dudas comunes y proporciona orientaci\u00f3n directa sobre los temas m\u00e1s importantes.",
+        "fr": "Vous trouverez ci-dessous les questions les plus fr\u00e9quentes accompagn\u00e9es de r\u00e9ponses claires et concises. Elles donnent un acc\u00e8s rapide aux informations essentielles, aident \u00e0 clarifier les doutes courants et fournissent des indications directes sur les sujets les plus importants."
+      },
+      "items": {
+        "start": {
+          "question": {
+            "pt": "Como inicio um pedido de suporte?",
+            "en": "How do I start a support request?",
+            "es": "\u00bfC\u00f3mo inicio una solicitud de soporte?",
+            "fr": "Comment d\u00e9marrer une demande d'assistance ?"
+          },
+          "answer": {
+            "pt": "Visite a p\u00e1gina de contacto ou utilize a op\u00e7\u00e3o de agendamento para marcar uma sess\u00e3o.",
+            "en": "Visit the contact page or use the scheduling option to book a session.",
+            "es": "Visite la p\u00e1gina de contacto o utilice la opci\u00f3n de programaci\u00f3n para reservar una sesi\u00f3n.",
+            "fr": "Visitez la page de contact ou utilisez l'option de planification pour r\u00e9server une session."
+          }
+        },
+        "duration": {
+          "question": {
+            "pt": "Quanto tempo demora uma repara\u00e7\u00e3o?",
+            "en": "How long does a repair take?",
+            "es": "\u00bfCu\u00e1nto tiempo tarda una reparaci\u00f3n?",
+            "fr": "Combien de temps prend une r\u00e9paration ?"
+          },
+          "answer": {
+            "pt": "O tempo depende do tipo de repara\u00e7\u00e3o. Consulte o artigo de repara\u00e7\u00e3o para estimativas.",
+            "en": "The time depends on the type of repair. See the repair article for estimates.",
+            "es": "El tiempo depende del tipo de reparaci\u00f3n. Consulte el art\u00edculo de reparaci\u00f3n para ver estimaciones.",
+            "fr": "Le temps d\u00e9pend du type de r\u00e9paration. Consultez l'article de r\u00e9paration pour les estimations."
+          }
+        },
+        "manuals": {
+          "question": {
+            "pt": "Onde posso obter manuais?",
+            "en": "Where can I get manuals?",
+            "es": "\u00bfD\u00f3nde puedo obtener manuales?",
+            "fr": "O\u00f9 puis-je obtenir les manuels ?"
+          },
+          "answer": {
+            "pt": "Os manuais est\u00e3o dispon\u00edveis na sec\u00e7\u00e3o Downloads/Manuais.",
+            "en": "Manuals are available in the Downloads/Manuals section.",
+            "es": "Los manuales est\u00e1n disponibles en la secci\u00f3n Descargas/Manuales.",
+            "fr": "Les manuels sont disponibles dans la section T\u00e9l\u00e9chargements/Manuels."
+          }
+        },
+        "warranty": {
+          "question": {
+            "pt": "Os produtos Nexled incluem garantia?",
+            "en": "Do Nexled products include a warranty?",
+            "es": "\u00bfLos productos Nexled incluyen garant\u00eda?",
+            "fr": "Les produits Nexled incluent-ils une garantie ?"
+          },
+          "answer": {
+            "pt": "Sim, os detalhes da garantia est\u00e3o indicados na documenta\u00e7\u00e3o de cada produto.",
+            "en": "Yes, warranty details are listed in each product's documentation.",
+            "es": "S\u00ed, los detalles de la garant\u00eda se indican en la documentaci\u00f3n de cada producto.",
+            "fr": "Oui, les d\u00e9tails de la garantie figurent dans la documentation de chaque produit."
+          }
+        }
+      }
+    },
+    "warranty": {
+      "title": {
+        "pt": "Garantia e Cobertura",
+        "en": "Warranty & Guarantee",
+        "es": "Garant\u00eda y Cobertura",
+        "fr": "Garantie et Couverture"
+      },
+      "subtitle": {
+        "pt": "Abaixo encontra informa\u00e7\u00f5es essenciais sobre a garantia dos produtos, exclus\u00f5es, documenta\u00e7\u00e3o necess\u00e1ria e expectativas de desempenho.",
+        "en": "Below is Frequently Asked Questions, along with clear and concise answers. It provides quick access to essential information, helping clarify common doubts and offering straightforward guidance on the most important topics.",
+        "es": "A continuaci\u00f3n encontrar\u00e1 informaci\u00f3n esencial sobre la garant\u00eda del producto, exclusiones, documentaci\u00f3n necesaria y expectativas de rendimiento.",
+        "fr": "Vous trouverez ci-dessous les informations essentielles sur la garantie du produit, les exclusions, la documentation requise et les attentes de performance."
+      },
+      "items": {
+        "coverage": {
+          "question": {
+            "pt": "Cobertura",
+            "en": "Coverage",
+            "es": "Cobertura",
+            "fr": "Couverture"
+          },
+          "answer": {
+            "pt": "A garantia aplica-se a defeitos de materiais e de fabrico quando o produto \u00e9 utilizado em condi\u00e7\u00f5es normais de funcionamento. N\u00e3o cobre danos resultantes de utiliza\u00e7\u00e3o indevida ou fatores ambientais.",
+            "en": "The warranty applies to defects in materials and workmanship when the product is used under normal operating conditions. It does not cover damages that stem from misuse or environmental factors.",
+            "es": "La garant\u00eda se aplica a defectos de materiales y fabricaci\u00f3n cuando el producto se utiliza en condiciones normales de funcionamiento. No cubre da\u00f1os derivados de un uso indebido o de factores ambientales.",
+            "fr": "La garantie s'applique aux d\u00e9fauts de mat\u00e9riaux et de fabrication lorsque le produit est utilis\u00e9 dans des conditions normales de fonctionnement. Elle ne couvre pas les dommages provenant d'une mauvaise utilisation ou de facteurs environnementaux."
+          }
+        },
+        "exclusions": {
+          "question": {
+            "pt": "Exclus\u00f5es",
+            "en": "Exclusions",
+            "es": "Exclusiones",
+            "fr": "Exclusions"
+          },
+          "answer": {
+            "pt": "Esta garantia n\u00e3o cobre danos resultantes de utiliza\u00e7\u00e3o indevida, instala\u00e7\u00e3o incorreta, acidentes, modifica\u00e7\u00f5es n\u00e3o autorizadas ou exposi\u00e7\u00e3o a condi\u00e7\u00f5es fora do recomendado. Produtos alterados ou reparados sem autoriza\u00e7\u00e3o da Nexled geralmente n\u00e3o s\u00e3o eleg\u00edveis para an\u00e1lise de garantia.",
+            "en": "This warranty does not cover damage resulting from misuse, improper installation, accidents, unauthorized modifications, or exposure to conditions outside the recommended operating envelope. Products altered or repaired without Nexled authorization are generally not covered for warranty review.",
+            "es": "Esta garant\u00eda no cubre da\u00f1os derivados del uso indebido, instalaci\u00f3n incorrecta, accidentes, modificaciones no autorizadas o exposici\u00f3n a condiciones fuera de las recomendadas. Los productos alterados o reparados sin autorizaci\u00f3n de Nexled generalmente no est\u00e1n cubiertos para revisi\u00f3n de garant\u00eda.",
+            "fr": "Cette garantie ne couvre pas les dommages r\u00e9sultant d'une mauvaise utilisation, d'une installation incorrecte, d'accidents, de modifications non autoris\u00e9es ou d'une exposition \u00e0 des conditions hors des limites recommand\u00e9es. Les produits modifi\u00e9s ou r\u00e9par\u00e9s sans autorisation de Nexled ne sont g\u00e9n\u00e9ralement pas couverts au titre de la garantie."
+          }
+        },
+        "service": {
+          "question": {
+            "pt": "Solicitar Assist\u00eancia em Garantia",
+            "en": "Request Warranty Service",
+            "es": "Solicitar Servicio de Garant\u00eda",
+            "fr": "Demander un service sous garantie"
+          },
+          "answer": {
+            "pt": "Para solicitar assist\u00eancia em garantia, re\u00fana o modelo do produto, o n\u00famero de s\u00e9rie e a prova de compra, e depois contacte a equipa de suporte. O suporte enviar\u00e1 instru\u00e7\u00f5es detalhadas sobre como devolver o produto ou obter assist\u00eancia direta, se aplic\u00e1vel.",
+            "en": "To request warranty service, gather the product model, serial number, and proof of purchase, then contact the support team. Support will send detailed instructions on how to return the product or obtain a direct service if applicable.",
+            "es": "Para solicitar servicio de garant\u00eda, re\u00fana el modelo del producto, el n\u00famero de serie y la prueba de compra, y despu\u00e9s contacte con el equipo de soporte. El soporte le enviar\u00e1 instrucciones detalladas sobre c\u00f3mo devolver el producto u obtener servicio directo si procede.",
+            "fr": "Pour demander un service sous garantie, rassemblez le mod\u00e8le du produit, le num\u00e9ro de s\u00e9rie et la preuve d'achat, puis contactez l'\u00e9quipe d'assistance. L'assistance vous enverra des instructions d\u00e9taill\u00e9es sur la proc\u00e9dure de retour ou sur l'obtention d'un service direct si applicable."
+          }
+        },
+        "documentation": {
+          "question": {
+            "pt": "Documenta\u00e7\u00e3o Necess\u00e1ria",
+            "en": "Required Documentation",
+            "es": "Documentaci\u00f3n Necesaria",
+            "fr": "Documentation requise"
+          },
+          "answer": {
+            "pt": "Deve fornecer prova de compra, uma descri\u00e7\u00e3o clara do problema, a data e o n\u00famero de s\u00e9rie do produto. Tenha esta informa\u00e7\u00e3o dispon\u00edvel antes de contactar o nosso departamento de garantia.",
+            "en": "You must provide proof of purchase, a clear description of the issue, a copy of the date, and the product serial number. Keep this information handy prior to contacting our warranty service department.",
+            "es": "Debe proporcionar prueba de compra, una descripci\u00f3n clara del problema, la fecha y el n\u00famero de serie del producto. Mantenga esta informaci\u00f3n a mano antes de contactar con nuestro departamento de garant\u00eda.",
+            "fr": "Vous devez fournir une preuve d'achat, une description claire du probl\u00e8me, la date et le num\u00e9ro de s\u00e9rie du produit. Gardez ces informations \u00e0 port\u00e9e de main avant de contacter notre service de garantie."
+          }
+        },
+        "lifespan": {
+          "question": {
+            "pt": "Vida \u00datil e Expectativas de Desempenho",
+            "en": "Product Lifespan & Performance Expectations",
+            "es": "Vida \u00fatil y Expectativas de Rendimiento",
+            "fr": "Dur\u00e9e de vie et attentes de performance"
+          },
+          "answer": {
+            "pt": "Os produtos Nexled s\u00e3o concebidos para oferecer desempenho duradouro e seguro quando utilizados nas condi\u00e7\u00f5es recomendadas. Qualquer redu\u00e7\u00e3o de sa\u00edda ou desempenho esperado que n\u00e3o esteja associada a uma falha direta n\u00e3o \u00e9 considerada uma perturba\u00e7\u00e3o relevante do desempenho do produto.",
+            "en": "Nexled products are designed to deliver lasting, safe performance when used under recommended conditions. Any reduction in output or expected performance that is not associated to a direct performance lapse or fault is not considered a notable product performance disturbance.",
+            "es": "Los productos Nexled est\u00e1n dise\u00f1ados para ofrecer un rendimiento duradero y seguro cuando se utilizan en las condiciones recomendadas. Cualquier reducci\u00f3n en la salida o el rendimiento esperado que no est\u00e9 asociada a un fallo directo no se considera una perturbaci\u00f3n relevante del rendimiento del producto.",
+            "fr": "Les produits Nexled sont con\u00e7us pour offrir des performances durables et s\u00fbres lorsqu'ils sont utilis\u00e9s dans les conditions recommand\u00e9es. Toute r\u00e9duction du rendement ou des performances attendues qui n'est pas li\u00e9e \u00e0 une panne directe n'est pas consid\u00e9r\u00e9e comme une perturbation notable des performances du produit."
+          }
+        }
+      }
+    }
+  }
+}

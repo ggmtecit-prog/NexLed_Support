@@ -16,6 +16,7 @@
         fr: { lang: 'fr', label: 'French' },
     };
     let flyoutConfigPromise = null;
+    let siteCopyPromise = null;
 
     function langToSelectorCode(lang) {
         return lang === 'en' ? 'gb' : lang;
@@ -37,6 +38,20 @@
 
         flyoutConfigPromise = Utils.fetchJSON('data/flyouts.json');
         return flyoutConfigPromise;
+    }
+
+    function getSiteCopy() {
+        if (siteCopyPromise) {
+            return siteCopyPromise;
+        }
+
+        if (!window.Utils || typeof Utils.fetchJSON !== 'function') {
+            siteCopyPromise = Promise.resolve(null);
+            return siteCopyPromise;
+        }
+
+        siteCopyPromise = Utils.fetchJSON('data/site-copy.json');
+        return siteCopyPromise;
     }
 
     function getTextValue(value, fallback = '') {
@@ -73,6 +88,29 @@
         }
 
         return href;
+    }
+
+    function getByPath(source, path) {
+        return String(path || '')
+            .split('.')
+            .filter(Boolean)
+            .reduce((value, segment) => (value && value[segment] !== undefined ? value[segment] : undefined), source);
+    }
+
+    function resolveLocalizedValue(node, lang, fallback = '') {
+        if (node === undefined || node === null) {
+            return fallback;
+        }
+
+        if (typeof node === 'string') {
+            return node;
+        }
+
+        if (window.Utils && typeof Utils.t === 'function' && typeof node === 'object') {
+            return Utils.t(node, lang, fallback);
+        }
+
+        return fallback;
     }
 
     function buildFlyoutMarkup(menuKey, flyout) {
@@ -356,9 +394,50 @@
         });
     }
 
+    function getCurrentLang() {
+        return window.Utils && typeof Utils.getLang === 'function' ? Utils.getLang() : 'pt';
+    }
+
+    function withLang(url, lang, preserveQueryKeys = []) {
+        if (!url || url.startsWith('#')) {
+            return url;
+        }
+
+        let parsedUrl;
+        try {
+            parsedUrl = new URL(url, window.location.href);
+        } catch (error) {
+            return url;
+        }
+
+        if (parsedUrl.origin !== window.location.origin) {
+            return url;
+        }
+
+        if (!/\.html?$/i.test(parsedUrl.pathname) && !/\.php$/i.test(parsedUrl.pathname)) {
+            return url;
+        }
+
+        const currentParams = new URLSearchParams(window.location.search);
+        preserveQueryKeys.forEach((key) => {
+            if (!parsedUrl.searchParams.has(key) && currentParams.has(key)) {
+                parsedUrl.searchParams.set(key, currentParams.get(key));
+            }
+        });
+
+        parsedUrl.searchParams.set('lang', lang);
+
+        const isSameOrigin = parsedUrl.origin === window.location.origin;
+        return isSameOrigin ? `${parsedUrl.pathname.split('/').pop()}${parsedUrl.search}${parsedUrl.hash}` : parsedUrl.toString();
+    }
+
     function hydrateRouteTarget(element) {
         const routeKey = element.dataset.supportRoute;
-        const target = ROUTES[routeKey] || '#';
+        const preserveQueryKeys = (element.dataset.supportPreserveQuery || '')
+            .split(',')
+            .map((key) => key.trim())
+            .filter(Boolean);
+        const target = withLang(ROUTES[routeKey] || '#', getCurrentLang(), preserveQueryKeys);
 
         if (element.tagName === 'A') {
             element.setAttribute('href', target);
@@ -374,8 +453,96 @@
         });
     }
 
+    function hydrateInternalLangLinks() {
+        const currentLang = getCurrentLang();
+
+        document.querySelectorAll('a[href]').forEach((link) => {
+            if (link.dataset.supportRoute) {
+                return;
+            }
+
+            const href = link.getAttribute('href');
+            if (!href) {
+                return;
+            }
+
+            const preserveQueryKeys = (link.dataset.supportPreserveQuery || '')
+                .split(',')
+                .map((key) => key.trim())
+                .filter(Boolean);
+            const hydratedHref = withLang(href, currentLang, preserveQueryKeys);
+
+            if (hydratedHref && hydratedHref !== href) {
+                link.setAttribute('href', hydratedHref);
+            }
+        });
+    }
+
+    async function hydratePageCopy(options = {}) {
+        const siteCopy = await getSiteCopy();
+        if (!siteCopy || typeof siteCopy !== 'object') {
+            return;
+        }
+
+        const pageKey = options.pageKey || document.body?.dataset.supportPage;
+        if (!pageKey) {
+            return;
+        }
+
+        const lang = getCurrentLang();
+        const pageCopy = siteCopy[pageKey];
+        const sharedCopy = siteCopy.shared || {};
+        if (!pageCopy || typeof pageCopy !== 'object') {
+            return;
+        }
+
+        const resolveKey = (key, fallback = '') => {
+            const pageValue = getByPath(pageCopy, key);
+            if (pageValue !== undefined) {
+                return resolveLocalizedValue(pageValue, lang, fallback);
+            }
+
+            const sharedValue = getByPath(sharedCopy, key);
+            return resolveLocalizedValue(sharedValue, lang, fallback);
+        };
+
+        const pageTitle = resolveKey('meta.title');
+        if (pageTitle) {
+            document.title = pageTitle;
+        }
+
+        document.querySelectorAll('[data-i18n]').forEach((element) => {
+            const value = resolveKey(element.dataset.i18n, element.textContent);
+            if (value !== undefined && value !== null) {
+                element.textContent = value;
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+            const value = resolveKey(element.dataset.i18nHtml, element.innerHTML);
+            if (value !== undefined && value !== null) {
+                element.innerHTML = value;
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+            const value = resolveKey(element.dataset.i18nPlaceholder, element.getAttribute('placeholder') || '');
+            if (value) {
+                element.setAttribute('placeholder', value);
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+            const value = resolveKey(element.dataset.i18nAriaLabel, element.getAttribute('aria-label') || '');
+            if (value) {
+                element.setAttribute('aria-label', value);
+            }
+        });
+    }
+
     function hydrateLinks() {
         document.querySelectorAll('[data-support-route]').forEach(hydrateRouteTarget);
+        hydrateInternalLangLinks();
 
         document.querySelectorAll('[data-support-mail]').forEach((link) => {
             const email = link.dataset.supportMail;
@@ -402,7 +569,7 @@
 
     function initPage(options = {}) {
         const preserveQueryKeys = Array.isArray(options.preserveQueryKeys) ? options.preserveQueryKeys : [];
-        const currentLang = window.Utils && typeof Utils.getLang === 'function' ? Utils.getLang() : 'pt';
+        const currentLang = getCurrentLang();
         const selector = document.querySelector('.language-selector');
 
         document.documentElement.lang = currentLang;
@@ -414,12 +581,14 @@
 
         hydrateLinks();
         hydrateFlyouts();
+        hydratePageCopy(options);
     }
 
     window.SupportSite = {
         ROUTES,
         initPage,
         hydrateFlyouts,
+        hydratePageCopy,
         syncLanguageSelector,
         bindLanguageSelector,
         langToSelectorCode,
