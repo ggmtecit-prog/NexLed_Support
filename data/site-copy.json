@@ -1,5 +1,33 @@
 {
   "shared": {
+    "nav": {
+      "repairGuides": {
+        "pt": "Guias de Reparação",
+        "en": "Repair Guides",
+        "es": "Guías de Reparación",
+        "fr": "Guides de réparation"
+      },
+      "downloadFiles": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      }
+    },
+    "breadcrumb": {
+      "home": {
+        "pt": "Início",
+        "en": "Home",
+        "es": "Inicio",
+        "fr": "Accueil"
+      },
+      "support": {
+        "pt": "Suporte",
+        "en": "Support",
+        "es": "Soporte",
+        "fr": "Assistance"
+      }
+    },
     "header": {
       "supportPage": {
         "pt": "P\u00e1gina de Suporte",
@@ -348,6 +376,536 @@
             "fr": "Les produits Nexled sont con\u00e7us pour offrir des performances durables et s\u00fbres lorsqu'ils sont utilis\u00e9s dans les conditions recommand\u00e9es. Toute r\u00e9duction du rendement ou des performances attendues qui n'est pas li\u00e9e \u00e0 une panne directe n'est pas consid\u00e9r\u00e9e comme une perturbation notable des performances du produit."
           }
         }
+      }
+    }
+  },
+  "downloads": {
+    "meta": {
+      "title": {
+        "pt": "Ficheiros para Download - Suporte Nexled",
+        "en": "Download Files - Nexled Support",
+        "es": "Archivos de Descarga - Soporte Nexled",
+        "fr": "Fichiers à télécharger - Support Nexled"
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      },
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias de produto, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including product guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de producto, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides produit, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "sections": {
+      "downlights": {
+        "title": {
+          "pt": "Downlights",
+          "en": "Downlights",
+          "es": "Downlights",
+          "fr": "Downlights"
+        }
+      },
+      "bars": {
+        "title": {
+          "pt": "Barras 24V",
+          "en": "24V Bars",
+          "es": "Barras 24V",
+          "fr": "Barres 24V"
+        }
+      }
+    },
+    "products": {
+      "square200": {
+        "title": {
+          "pt": "Square Downlight 200",
+          "en": "Square Downlight 200",
+          "es": "Square Downlight 200",
+          "fr": "Square Downlight 200"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Square Downlight 200",
+          "en": "Complete technical documentation for the Square Downlight 200",
+          "es": "Documentación técnica completa para el Square Downlight 200",
+          "fr": "Documentation technique complète pour le Square Downlight 200"
+        },
+        "alt": {
+          "pt": "Documentação do Square Downlight 200",
+          "en": "Square Downlight 200 documentation",
+          "es": "Documentación del Square Downlight 200",
+          "fr": "Documentation du Square Downlight 200"
+        }
+      },
+      "square240": {
+        "title": {
+          "pt": "Square Downlight 240",
+          "en": "Square Downlight 240",
+          "es": "Square Downlight 240",
+          "fr": "Square Downlight 240"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Square Downlight 240",
+          "en": "Complete technical documentation for the Square Downlight 240",
+          "es": "Documentación técnica completa para el Square Downlight 240",
+          "fr": "Documentation technique complète pour le Square Downlight 240"
+        },
+        "alt": {
+          "pt": "Documentação do Square Downlight 240",
+          "en": "Square Downlight 240 documentation",
+          "es": "Documentación del Square Downlight 240",
+          "fr": "Documentation du Square Downlight 240"
+        }
+      },
+      "round230": {
+        "title": {
+          "pt": "Round Downlight 230",
+          "en": "Round Downlight 230",
+          "es": "Round Downlight 230",
+          "fr": "Round Downlight 230"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Round Downlight 230",
+          "en": "Complete technical documentation for the Round Downlight 230",
+          "es": "Documentación técnica completa para el Round Downlight 230",
+          "fr": "Documentation technique complète pour le Round Downlight 230"
+        },
+        "alt": {
+          "pt": "Documentação do Round Downlight 230",
+          "en": "Round Downlight 230 documentation",
+          "es": "Documentación del Round Downlight 230",
+          "fr": "Documentation du Round Downlight 230"
+        }
+      },
+      "round320": {
+        "title": {
+          "pt": "Round Downlight 320",
+          "en": "Round Downlight 320",
+          "es": "Round Downlight 320",
+          "fr": "Round Downlight 320"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Round Downlight 320",
+          "en": "Complete technical documentation for the Round Downlight 320",
+          "es": "Documentación técnica completa para el Round Downlight 320",
+          "fr": "Documentation technique complète pour le Round Downlight 320"
+        },
+        "alt": {
+          "pt": "Documentação do Round Downlight 320",
+          "en": "Round Downlight 320 documentation",
+          "es": "Documentación del Round Downlight 320",
+          "fr": "Documentation du Round Downlight 320"
+        }
+      },
+      "bar60": {
+        "title": {
+          "pt": "Barra 24V Modelo 60",
+          "en": "24V Bar Model 60",
+          "es": "Barra 24V Modelo 60",
+          "fr": "Barre 24V Modèle 60"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 60",
+          "en": "Complete technical documentation for the 24V Bar Model 60",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 60",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 60"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 60",
+          "en": "24V Bar Model 60 documentation",
+          "es": "Documentación de la Barra 24V Modelo 60",
+          "fr": "Documentation de la Barre 24V Modèle 60"
+        }
+      },
+      "bar120": {
+        "title": {
+          "pt": "Barra 24V Modelo 120",
+          "en": "24V Bar Model 120",
+          "es": "Barra 24V Modelo 120",
+          "fr": "Barre 24V Modèle 120"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 120",
+          "en": "Complete technical documentation for the 24V Bar Model 120",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 120",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 120"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 120",
+          "en": "24V Bar Model 120 documentation",
+          "es": "Documentación de la Barra 24V Modelo 120",
+          "fr": "Documentation de la Barre 24V Modèle 120"
+        }
+      },
+      "bar145": {
+        "title": {
+          "pt": "Barra 24V Modelo 145",
+          "en": "24V Bar Model 145",
+          "es": "Barra 24V Modelo 145",
+          "fr": "Barre 24V Modèle 145"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 145",
+          "en": "Complete technical documentation for the 24V Bar Model 145",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 145",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 145"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 145",
+          "en": "24V Bar Model 145 documentation",
+          "es": "Documentación de la Barra 24V Modelo 145",
+          "fr": "Documentation de la Barre 24V Modèle 145"
+        }
+      }
+    },
+    "links": {
+      "datasheet": {
+        "pt": "Ficha Técnica",
+        "en": "Datasheet",
+        "es": "Ficha Técnica",
+        "fr": "Fiche technique"
+      },
+      "installationManual": {
+        "pt": "Manual de Instalação",
+        "en": "Installation Manual",
+        "es": "Manual de Instalación",
+        "fr": "Manuel d'installation"
+      },
+      "ledModuleReport": {
+        "pt": "Relatório do Módulo LED",
+        "en": "LED Module Report",
+        "es": "Informe del Módulo LED",
+        "fr": "Rapport du module LED"
+      },
+      "luminaireReport": {
+        "pt": "Relatório da Luminária",
+        "en": "Luminaire Report",
+        "es": "Informe de la Luminaria",
+        "fr": "Rapport du luminaire"
+      },
+      "mountingOptions": {
+        "pt": "Opções de Fixação",
+        "en": "Mounting Options",
+        "es": "Opciones de Montaje",
+        "fr": "Options de montage"
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": {
+        "pt": "Contacte-nos - Suporte Nexled",
+        "en": "Contact Us - Nexled Support",
+        "es": "Contáctenos - Soporte Nexled",
+        "fr": "Contactez-nous - Support Nexled"
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Contacte-nos",
+        "en": "Contact Us",
+        "es": "Contáctenos",
+        "fr": "Contactez-nous"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Contacte-nos",
+        "en": "Contact Us",
+        "es": "Contáctenos",
+        "fr": "Contactez-nous"
+      },
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "form": {
+      "title": {
+        "pt": "Envie-nos uma Mensagem",
+        "en": "Send Us a Message",
+        "es": "Envíenos un Mensaje",
+        "fr": "Envoyez-nous un message"
+      },
+      "description": {
+        "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
+        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed."
+      },
+      "fields": {
+        "name": {
+          "label": {
+            "pt": "Nome Completo",
+            "en": "Full Name",
+            "es": "Nombre Completo",
+            "fr": "Nom complet"
+          },
+          "placeholder": {
+            "pt": "Introduza o seu nome",
+            "en": "Enter your name",
+            "es": "Introduzca su nombre",
+            "fr": "Saisissez votre nom"
+          },
+          "hint": {
+            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        },
+        "email": {
+          "label": {
+            "pt": "Endereço de Email",
+            "en": "Email Address",
+            "es": "Dirección de Correo",
+            "fr": "Adresse e-mail"
+          },
+          "placeholder": {
+            "pt": "Introduza o seu email",
+            "en": "Enter your email",
+            "es": "Introduzca su correo",
+            "fr": "Saisissez votre e-mail"
+          },
+          "hint": {
+            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        },
+        "subject": {
+          "label": {
+            "pt": "Assunto",
+            "en": "Subject",
+            "es": "Asunto",
+            "fr": "Objet"
+          },
+          "placeholder": {
+            "pt": "Introduza o assunto",
+            "en": "Enter the subject",
+            "es": "Introduzca el asunto",
+            "fr": "Saisissez l'objet"
+          },
+          "hint": {
+            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        },
+        "message": {
+          "label": {
+            "pt": "Mensagem Curta",
+            "en": "Short Message",
+            "es": "Mensaje Corto",
+            "fr": "Message court"
+          },
+          "placeholder": {
+            "pt": "Escreva a sua mensagem curta",
+            "en": "Write your short message",
+            "es": "Escriba su mensaje corto",
+            "fr": "Rédigez votre court message"
+          },
+          "hint": {
+            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        },
+        "details": {
+          "label": {
+            "pt": "Detalhes Adicionais",
+            "en": "Additional Details",
+            "es": "Detalles Adicionales",
+            "fr": "Détails supplémentaires"
+          },
+          "placeholder": {
+            "pt": "Adicione quaisquer detalhes adicionais",
+            "en": "Add any additional details",
+            "es": "Añada cualquier detalle adicional",
+            "fr": "Ajoutez tout détail supplémentaire"
+          },
+          "hint": {
+            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        }
+      },
+      "submit": {
+        "pt": "Enviar Ticket",
+        "en": "Send Your Ticket",
+        "es": "Enviar Ticket",
+        "fr": "Envoyer votre ticket"
+      }
+    },
+    "aside": {
+      "title": {
+        "pt": "Contactos",
+        "en": "Contacts",
+        "es": "Contactos",
+        "fr": "Contacts"
+      },
+      "description": {
+        "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
+        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat."
+      },
+      "items": {
+        "generalSupport": {
+          "title": {
+            "pt": "Suporte Geral",
+            "en": "General Support",
+            "es": "Soporte General",
+            "fr": "Assistance générale"
+          }
+        },
+        "salesTeam": {
+          "title": {
+            "pt": "Equipa Comercial",
+            "en": "Sales Team",
+            "es": "Equipo Comercial",
+            "fr": "Équipe commerciale"
+          }
+        },
+        "technicalSupport": {
+          "title": {
+            "pt": "Suporte Técnico",
+            "en": "Technical Support",
+            "es": "Soporte Técnico",
+            "fr": "Assistance technique"
+          }
+        },
+        "mainOffice": {
+          "title": {
+            "pt": "Escritório Principal",
+            "en": "Main Office",
+            "es": "Oficina Principal",
+            "fr": "Bureau principal"
+          }
+        },
+        "scheduling": {
+          "title": {
+            "pt": "Agendamento",
+            "en": "Scheduling",
+            "es": "Programación",
+            "fr": "Planification"
+          },
+          "value": {
+            "pt": "Segunda a Sexta, 09:00 - 18:00",
+            "en": "Monday to Friday, 09:00 - 18:00",
+            "es": "Lunes a Viernes, 09:00 - 18:00",
+            "fr": "Du lundi au vendredi, 09:00 - 18:00"
+          }
+        }
+      }
+    }
+  },
+  "repair": {
+    "hero": {
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Reparações",
+        "en": "Repairs",
+        "es": "Reparaciones",
+        "fr": "Réparations"
+      }
+    }
+  },
+  "steps": {
+    "breadcrumb": {
+      "current": {
+        "pt": "Guia",
+        "en": "Guide",
+        "es": "Guía",
+        "fr": "Guide"
+      }
+    },
+    "hero": {
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents."
+      }
+    },
+    "cards": {
+      "timeTitle": {
+        "pt": "Tempo Estimado e Dificuldade",
+        "en": "Estimated Time & Difficulty",
+        "es": "Tiempo Estimado y Dificultad",
+        "fr": "Temps estimé et difficulté"
+      },
+      "requiredPartsTitle": {
+        "pt": "Peças e Ferramentas Necessárias",
+        "en": "Required Parts and Tools",
+        "es": "Piezas y Herramientas Necesarias",
+        "fr": "Pièces et outils nécessaires"
+      },
+      "requiredPartsDescription": {
+        "pt": "Alguns destes itens também podem ser adquiridos diretamente na nossa loja online.",
+        "en": "Some of these items might also be purchased directly from our online store.",
+        "es": "Algunos de estos artículos también pueden adquirirse directamente en nuestra tienda online.",
+        "fr": "Certains de ces articles peuvent également être achetés directement sur notre boutique en ligne."
+      },
+      "printTitle": {
+        "pt": "Imprimir Etapas Desta Página",
+        "en": "Print Step In This Page",
+        "es": "Imprimir Pasos de Esta Página",
+        "fr": "Imprimer les étapes de cette page"
+      },
+      "printDescription": {
+        "pt": "Pode utilizar o botão abaixo para imprimir todas as etapas diretamente em papel para consulta mais fácil durante o processo.",
+        "en": "You can use the button below to print all the steps directly onto paper for easier reference during the process.",
+        "es": "Puede utilizar el botón siguiente para imprimir todos los pasos directamente en papel y consultarlos más fácilmente durante el proceso.",
+        "fr": "Vous pouvez utiliser le bouton ci-dessous pour imprimer toutes les étapes directement sur papier afin de faciliter la consultation pendant le processus."
+      },
+      "printButton": {
+        "pt": "Imprimir Página",
+        "en": "Print Page",
+        "es": "Imprimir Página",
+        "fr": "Imprimer la page"
+      }
+    },
+    "sections": {
+      "stepsTitle": {
+        "pt": "Etapas",
+        "en": "Steps",
+        "es": "Pasos",
+        "fr": "Étapes"
+      }
+    },
+    "states": {
+      "loadingGuide": {
+        "pt": "A carregar detalhes do guia...",
+        "en": "Loading guide details...",
+        "es": "Cargando detalles de la guía...",
+        "fr": "Chargement des détails du guide..."
       }
     }
   }

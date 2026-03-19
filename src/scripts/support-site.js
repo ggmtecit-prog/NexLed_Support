@@ -540,6 +540,13 @@
                 element.setAttribute('aria-label', value);
             }
         });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+            const value = resolveKey(element.dataset.i18nAlt, element.getAttribute('alt') || '');
+            if (value) {
+                element.setAttribute('alt', value);
+            }
+        });
     }
 
     function hydrateLinks() {

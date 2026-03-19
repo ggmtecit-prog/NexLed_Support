@@ -25,14 +25,14 @@
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="bg-grey-tertiary text-black flex min-h-screen flex-col">
+<body class="bg-grey-tertiary text-black flex min-h-screen flex-col" data-support-page="repair">
     <div class="w-full max-w-wide mx-auto px-32 py-24">
         <header class="nav-bar">
             <a href="#" class="flex items-center gap-12 group" data-support-route="home">
                 <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
                 <div class="flex flex-col">
                     <span class="font-semibold text-h3 leading-none tracking-tight text-black">NexLed</span>
-                    <span class="font-regular text-body-sm text-black tracking-wider">Support Page</span>
+                    <span class="font-regular text-body-sm text-black tracking-wider" data-i18n="header.supportPage">Support Page</span>
                 </div>
             </a>
 
@@ -40,7 +40,7 @@
                 <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
                     <button type="button" class="dropdown-trigger" data-support-route="repair" aria-haspopup="dialog"
                         aria-expanded="false">
-                        <span class="dropdown-value">Repair Guides</span>
+                        <span class="dropdown-value" data-i18n="nav.repairGuides">Repair Guides</span>
                         <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-menu flyout flyout-products" role="dialog"
@@ -57,7 +57,7 @@
                 <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
                     <button type="button" class="dropdown-trigger" data-support-route="downloads" aria-haspopup="dialog"
                         aria-expanded="false">
-                        <span class="dropdown-value">Download Files</span>
+                        <span class="dropdown-value" data-i18n="nav.downloadFiles">Download Files</span>
                         <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-menu flyout flyout-products" role="dialog"
@@ -73,10 +73,10 @@
             </nav>
 
             <div class="flex items-center gap-12">
-                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact">Get in touch</button>
+                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact" data-i18n="header.getInTouch">Get in touch</button>
                 <button type="button" class="btn btn-primary btn-xs" data-support-route="store">
                     <i class="ri-store-line text-icon-md" aria-hidden="true"></i>
-                    Store
+                    <span data-i18n="header.store">Store</span>
                 </button>
                 <div class="language-selector language-selector-icon language-selector-xs has-value">
                     <button type="button" class="language-selector-trigger" aria-haspopup="listbox"
@@ -118,26 +118,26 @@
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="index.html" class="link-navigation link-sm"><span class="link-label">Home</span></a>
+                        <a href="index.html" class="link-navigation link-sm"><span class="link-label" data-i18n="breadcrumb.home">Home</span></a>
                     </li>
                     <li class="breadcrumb-separator">
                         <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="index.html" class="link-navigation link-sm"><span class="link-label">Support</span></a>
+                        <a href="index.html" class="link-navigation link-sm"><span class="link-label" data-i18n="breadcrumb.support">Support</span></a>
                     </li>
                     <li class="breadcrumb-separator">
                         <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
                     </li>
                     <li class="breadcrumb-item" aria-current="page">
-                        <span class="link-label">Repairs</span>
+                        <span class="link-label" data-i18n="breadcrumb.current">Repairs</span>
                     </li>
                 </ol>
             </nav>
 
             <header class="page-header-hero">
                 <h1 id="page-hero-title" class="text-display font-semibold text-black">Repairs Guide</h1>
-                <p id="page-hero-desc" class="max-w-readable text-body-lg font-light text-grey-primary">
+                <p id="page-hero-desc" class="max-w-readable text-body-lg font-light text-grey-primary" data-i18n="hero.description">
                     Here you will find a complete collection of support materials, including procedural guides, product
                     datasheets, and relevant warnings. These resources are designed to assist in understanding system
                     features, ensuring proper handling of product information, and maintaining compliance with required
@@ -172,34 +172,34 @@
                         <h3 class="footer-brand-title">Nexled</h3>
                         <ul class="footer-links flex-1 mb-16">
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Sobre N&oacute;s</span></a></li>
+                                        class="link-label" data-i18n="footer.about">Sobre N&oacute;s</span></a></li>
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Carrinho</span></a></li>
+                                        class="link-label" data-i18n="footer.cart">Carrinho</span></a></li>
                             <li><a href="#" class="link-text-icon link-sm"><i class="ri-linkedin-fill"></i><span
-                                        class="link-label">Subscrever Newsletter</span></a></li>
+                                        class="link-label" data-i18n="footer.newsletter">Subscrever Newsletter</span></a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="#" class="link-navigation link-lg">
-                                <span class="link-label">Categorias</span>
+                                <span class="link-label" data-i18n="footer.categoriesTitle">Categorias</span>
                             </a>
                         </h4>
                         <ul class="footer-links">
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Retalho</span></a></li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Interior</span></a>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.retail">Retalho</span></a></li>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.interior">Interior</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Industrial</span></a>
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.industrial">Industrial</span></a>
                             </li>
-                            <li><a href="#" class="link-subtle link-sm"><span class="link-label">Fontes
+                            <li><a href="#" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.powerSupplies">Fontes
                                         Alimenta&ccedil;&atilde;o</span></a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
-                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label">Contactos</span></a>
+                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label" data-i18n="footer.contacts">Contactos</span></a>
                         </h4>
                         <ul class="footer-links">
                             <li><a href="mailto:comercial@tecit.pt" class="link-subtle link-sm"><span class="link-label">comercial@tecit.pt</span></a></li>
@@ -212,7 +212,7 @@
                     <div class="footer-col">
                         <h4 class="mb-12">
                             <a href="#" class="link-navigation link-lg">
-                                <span class="link-label">Localiza&ccedil;&atilde;o</span>
+                                <span class="link-label" data-i18n="footer.location">Localiza&ccedil;&atilde;o</span>
                             </a>
                         </h4>
                         <address class="footer-links not-italic mb-16">
@@ -220,16 +220,16 @@
                             <p>4455-427 Perafita,</p>
                             <p>Matosinhos - Portugal</p>
                         </address>
-                        <h4 class="text-body-lg font-normal text-black mb-4">Hor&aacute;rio</h4>
-                        <p class="text-body-sm font-light text-black">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
+                        <h4 class="text-body-lg font-normal text-black mb-4" data-i18n="footer.hours">Hor&aacute;rio</h4>
+                        <p class="text-body-sm font-light text-black" data-i18n="footer.officeHours">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
                     </div>
 
                     <div class="footer-col">
                         <h4 class="mb-12">
-                            <a href="repair.html" class="link-navigation link-lg"><span class="link-label">Suporte</span></a>
+                            <a href="repair.html" class="link-navigation link-lg"><span class="link-label" data-i18n="footer.support">Suporte</span></a>
                         </h4>
                         <ul class="footer-links">
-                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label">Instru&ccedil;&otilde;es Repara&ccedil;&atilde;o</span></a></li>
+                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label" data-i18n="footer.repairInstructions">Instru&ccedil;&otilde;es Repara&ccedil;&atilde;o</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -239,7 +239,6 @@
     <script src="src/scripts/utils.js"></script>
     <script src="src/scripts/support-site.js"></script>
     <script>
-        const REPAIR_PAGE_DESCRIPTION = 'Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.';
         const REPAIR_CARD_ANCHORS = {
             'Square Downlight 200': 'square-downlight-200',
             'Square Downlight 240': 'square-downlight-240',
@@ -412,8 +411,6 @@
             const lang = Utils.getLang();
             const repairCategories = document.getElementById('repair-categories');
             repairCategories.innerHTML = getRepairSpinnerMarkup();
-            document.getElementById('page-hero-desc').textContent = REPAIR_PAGE_DESCRIPTION;
-
             const data = await Utils.fetchJSON('data/repairs.json');
             if (!data) {
                 renderRepairError();
