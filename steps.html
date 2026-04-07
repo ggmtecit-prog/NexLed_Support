@@ -123,14 +123,24 @@
             <section class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section">
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
-                        <h2 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h2>
+                        <div class="card-header">
+                            <span class="card-icon icon-box icon-box-card">
+                                <i class="ri-timer-line text-icon-md" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h2>
+                        </div>
                         <p id="time-text" class="card-text">Loading guide details...</p>
                     </div>
                 </article>
 
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
-                        <h2 class="card-title" data-i18n="cards.requiredPartsTitle">Required Parts and Tools</h2>
+                        <div class="card-header">
+                            <span class="card-icon icon-box icon-box-card">
+                                <i class="ri-tools-line text-icon-md" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="card-title" data-i18n="cards.requiredPartsTitle">Required Parts and Tools</h2>
+                        </div>
                         <p class="card-text" data-i18n="cards.requiredPartsDescription">Some of these items might also
                             be purchased directly from our online store.</p>
                         <ul id="parts-list" class="space-y-12" aria-live="polite">
@@ -142,13 +152,18 @@
 
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
-                        <h2 class="card-title" data-i18n="cards.printTitle">Print Step In This Page</h2>
+                        <div class="card-header">
+                            <span class="card-icon icon-box icon-box-card">
+                                <i class="ri-printer-line text-icon-md" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="card-title" data-i18n="cards.printTitle">Print Step In This Page</h2>
+                        </div>
                         <p class="card-text" data-i18n="cards.printDescription">
                             You can use the button below to print all the steps directly onto paper for easier
                             reference during the process.
                         </p>
                         <div class="flex justify-end">
-                            <button type="button" onclick="window.print()" class="btn btn-primary btn-sm"
+                            <button type="button" class="btn btn-primary btn-sm" data-steps-print
                                 data-i18n="cards.printButton">Print Page</button>
                         </div>
                     </div>
@@ -156,7 +171,9 @@
             </section>
 
             <section id="steps" class="space-y-24" data-reveal="section">
-                <h2 class="text-h3 font-semibold text-black" data-i18n="sections.stepsTitle">Steps</h2>
+                <div class="panel-wrap-head">
+                    <h2 class="panel-wrap-title text-black" data-i18n="sections.stepsTitle">Steps</h2>
+                </div>
                 <div id="steps-container" class="space-y-24" aria-live="polite">
                     <div class="flex justify-center py-32">
                         <div class="spinner spinner-md" aria-hidden="true">
@@ -399,7 +416,7 @@
 
             if (!Array.isArray(parts) || !parts.length) {
                 const emptyItem = document.createElement('li');
-                emptyItem.className = 'card-text';
+                emptyItem.className = 'text-body-sm text-grey-primary';
                 emptyItem.textContent = getStepUiLabel('noParts', lang, 'No parts or tools were specified.');
                 partsList.appendChild(emptyItem);
                 return;
@@ -407,7 +424,7 @@
 
             parts.forEach((part) => {
                 const item = document.createElement('li');
-                item.className = 'card-text';
+                item.className = 'text-body-sm text-black';
                 item.textContent = Utils.t(part.name, lang, getStepUiLabel('partFallback', lang, 'Part'));
                 partsList.appendChild(item);
             });
@@ -427,8 +444,13 @@
             const mediaColumn = document.createElement('div');
             mediaColumn.className = 'md:col-span-5';
 
+            const mediaInset = document.createElement('div');
+            mediaInset.className = 'p-12 overflow-hidden';
+
+            const mediaFrame = document.createElement('div');
+
             const image = document.createElement('img');
-            image.className = 'text-style-media-frame w-full object-cover';
+            image.className = 'card-product-image';
             image.src = resolveGuideImagePath(step.image);
             image.alt = Utils.t(
                 step.image_alt,
@@ -437,28 +459,34 @@
             );
 
             const contentColumn = document.createElement('div');
-            contentColumn.className = 'space-y-8 md:col-span-7';
+            contentColumn.className = 'space-y-24 md:col-span-7';
 
-            const eyebrow = document.createElement('p');
-            eyebrow.className = 'text-label';
-            eyebrow.textContent = `${index + 1}.`;
+            const eyebrow = document.createElement('span');
+            eyebrow.className = 'badge badge-neutral badge-sm';
+            eyebrow.textContent = `${getStepUiLabel('stepFallback', lang, 'Step')} ${index + 1}`;
 
             const title = document.createElement('h3');
             title.className = 'card-title';
             title.textContent = stripStepPrefix(Utils.t(step.title, lang, getStepUiLabel('stepFallback', lang, 'Step')));
 
-            mediaColumn.appendChild(image);
+            const copyGroup = document.createElement('div');
+            copyGroup.className = 'space-y-16';
+
+            mediaFrame.appendChild(image);
+            mediaInset.appendChild(mediaFrame);
+            mediaColumn.appendChild(mediaInset);
             contentColumn.appendChild(eyebrow);
-            contentColumn.appendChild(title);
+            copyGroup.appendChild(title);
 
             const descriptionText = Utils.t(step.description, lang, '');
             if (descriptionText) {
                 const description = document.createElement('p');
                 description.className = 'card-text';
                 description.textContent = descriptionText;
-                contentColumn.appendChild(description);
+                copyGroup.appendChild(description);
             }
 
+            contentColumn.appendChild(copyGroup);
             layout.appendChild(mediaColumn);
             layout.appendChild(contentColumn);
             body.appendChild(layout);
@@ -472,13 +500,18 @@
             stepsContainer.innerHTML = '';
 
             if (!Array.isArray(steps) || !steps.length) {
-                const emptyCard = document.createElement('article');
-                emptyCard.className = 'card';
+                const emptyCard = document.createElement('div');
+                emptyCard.className = 'empty-state empty-state-md w-full';
                 emptyCard.dataset.reveal = 'section';
+                emptyCard.setAttribute('role', 'status');
+                emptyCard.setAttribute('aria-live', 'polite');
                 emptyCard.innerHTML = `
-                    <div class="card-body">
-                        <h3 class="card-title">${getStepUiLabel('noStepsTitle', lang, 'No steps available')}</h3>
-                        <p class="card-text">${getStepUiLabel('noStepsDescription', lang, 'This guide does not include any step instructions.')}</p>
+                    <div class="empty-state-icon icon-box icon-box-empty-state">
+                        <i class="ri-file-list-3-line text-icon-lg" aria-hidden="true"></i>
+                    </div>
+                    <div class="empty-state-body">
+                        <h3 class="empty-state-title">${getStepUiLabel('noStepsTitle', lang, 'No steps available')}</h3>
+                        <p class="empty-state-text">${getStepUiLabel('noStepsDescription', lang, 'This guide does not include any step instructions.')}</p>
                     </div>
                 `;
                 stepsContainer.appendChild(emptyCard);
@@ -500,16 +533,19 @@
             document.getElementById('time-text').textContent = getStepUiLabel('timeNotSpecified', lang, 'Time not specified');
 
             const partsList = document.getElementById('parts-list');
-            partsList.innerHTML = `<li class="card-text">${getStepUiLabel('unableToLoadParts', lang, 'Unable to load parts.')}</li>`;
+            partsList.innerHTML = `<li class="text-body-sm text-grey-primary">${getStepUiLabel('unableToLoadParts', lang, 'Unable to load parts.')}</li>`;
 
             const stepsContainer = document.getElementById('steps-container');
             stepsContainer.innerHTML = `
-                <article class="card" data-reveal="section">
-                    <div class="card-body">
-                        <h3 class="card-title">${getStepUiLabel('loadErrorTitle', lang, 'Unable to load guide')}</h3>
-                        <p class="card-text">${getStepUiLabel('loadErrorDescription', lang, 'The requested guide file could not be loaded.')}</p>
+                <div class="empty-state empty-state-md w-full" data-reveal="section" role="status" aria-live="polite">
+                    <div class="empty-state-icon icon-box icon-box-empty-state">
+                        <i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>
                     </div>
-                </article>
+                    <div class="empty-state-body">
+                        <h3 class="empty-state-title">${getStepUiLabel('loadErrorTitle', lang, 'Unable to load guide')}</h3>
+                        <p class="empty-state-text">${getStepUiLabel('loadErrorDescription', lang, 'The requested guide file could not be loaded.')}</p>
+                    </div>
+                </div>
             `;
             SupportSite.observeRevealTargets(stepsContainer);
         }
@@ -541,6 +577,10 @@
             renderParts(content.parts, lang);
             renderSteps(content.steps, lang);
         }
+
+        document.querySelector('[data-steps-print]')?.addEventListener('click', () => {
+            window.print();
+        });
 
         initStepsPage();
     </script>
