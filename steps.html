@@ -120,7 +120,7 @@
                 </p>
             </header>
 
-            <section class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section">
+            <section id="guide-summary-cards" class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section">
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h3>
@@ -361,6 +361,24 @@
                 es: 'No se pudieron cargar las piezas.',
                 fr: 'Impossible de charger les pièces.',
             },
+            manufacturerSupportTitle: {
+                pt: 'Precisa de ajuda da equipa NexLed?',
+                en: 'Need help from the NexLed support team?',
+                es: '¿Necesita ayuda del equipo de soporte de NexLed?',
+                fr: 'Besoin de l’aide de l’équipe support NexLed ?',
+            },
+            manufacturerSupportDescription: {
+                pt: 'Use a página de suporte para entrar em contacto com a equipa, rever opções de assistência e avançar com o próximo passo.',
+                en: 'Use the support page to contact the team, review assistance options, and move forward with the next step.',
+                es: 'Use la página de soporte para contactar con el equipo, revisar las opciones de asistencia y avanzar con el siguiente paso.',
+                fr: 'Utilisez la page de support pour contacter l’équipe, consulter les options d’assistance et avancer vers l’étape suivante.',
+            },
+            manufacturerSupportButton: {
+                pt: 'Abrir página de suporte',
+                en: 'Open support page',
+                es: 'Abrir página de soporte',
+                fr: 'Ouvrir la page de support',
+            },
         };
 
         SupportSite.initPage({ preserveQueryKeys: ['file'] });
@@ -424,6 +442,99 @@
                 item.appendChild(link);
                 partsList.appendChild(item);
             });
+        }
+
+        function isManufacturerOnlyGuide(content, lang) {
+            if (!Array.isArray(content?.steps) || content.steps.length !== 1) {
+                return false;
+            }
+
+            const firstStep = content.steps[0];
+            const stepTitle = Utils.t(firstStep?.title, lang, '').toLowerCase();
+
+            return stepTitle.includes('manufacturer-only repair')
+                || stepTitle.includes('reparação exclusiva pelo fabricante')
+                || stepTitle.includes('reparación exclusiva por el fabricante')
+                || stepTitle.includes('réparation réservée au fabricant');
+        }
+
+        function createManufacturerInfoCard(step, lang) {
+            const article = document.createElement('article');
+            article.className = 'card h-full';
+            article.dataset.reveal = 'section';
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const header = document.createElement('div');
+            header.className = 'card-header';
+
+            const icon = document.createElement('div');
+            icon.className = 'card-icon';
+            icon.innerHTML = '<i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>';
+
+            const title = document.createElement('h3');
+            title.className = 'card-title';
+            title.textContent = stripStepPrefix(Utils.t(step.title, lang, getStepUiLabel('stepFallback', lang, 'Step')));
+
+            const description = document.createElement('p');
+            description.className = 'card-text';
+            description.textContent = Utils.t(step.description, lang, '');
+
+            header.appendChild(icon);
+            header.appendChild(title);
+            body.appendChild(header);
+            body.appendChild(description);
+            article.appendChild(body);
+
+            return article;
+        }
+
+        function createManufacturerSupportCard(lang) {
+            const article = document.createElement('article');
+            article.className = 'card h-full';
+            article.dataset.reveal = 'section';
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const title = document.createElement('h3');
+            title.className = 'card-title';
+            title.textContent = getStepUiLabel('manufacturerSupportTitle', lang, 'Need help from the NexLed support team?');
+
+            const description = document.createElement('p');
+            description.className = 'card-text';
+            description.textContent = getStepUiLabel('manufacturerSupportDescription', lang, 'Use the support page to contact the team, review assistance options, and move forward with the next step.');
+
+            const actions = document.createElement('div');
+            actions.className = 'card-actions justify-end';
+
+            const cta = document.createElement('a');
+            cta.className = 'btn btn-primary btn-sm';
+            cta.href = `index.html?lang=${encodeURIComponent(lang)}`;
+            cta.textContent = getStepUiLabel('manufacturerSupportButton', lang, 'Open support page');
+
+            actions.appendChild(cta);
+            body.appendChild(title);
+            body.appendChild(description);
+            body.appendChild(actions);
+            article.appendChild(body);
+
+            return article;
+        }
+
+        function renderManufacturerOnlyOverview(content, lang) {
+            const summarySection = document.getElementById('guide-summary-cards');
+            const stepsSection = document.getElementById('steps');
+            const firstStep = content.steps[0];
+
+            summarySection.className = 'grid grid-cols-1 gap-24 md:grid-cols-2';
+            summarySection.innerHTML = '';
+            summarySection.appendChild(createManufacturerInfoCard(firstStep, lang));
+            summarySection.appendChild(createManufacturerSupportCard(lang));
+
+            stepsSection.hidden = true;
+            SupportSite.observeRevealTargets(summarySection);
         }
 
         function createStepCard(step, index, lang) {
@@ -569,6 +680,11 @@
             SupportSite.setBreadcrumbCurrent(headingTitle);
             document.getElementById('main-title').textContent = headingTitle;
             document.getElementById('time-text').textContent = timeText || getStepUiLabel('timeNotSpecified', lang, 'Time not specified');
+
+            if (isManufacturerOnlyGuide(content, lang)) {
+                renderManufacturerOnlyOverview(content, lang);
+                return;
+            }
 
             renderParts(content.parts, lang);
             renderSteps(content.steps, lang);
