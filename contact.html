@@ -122,147 +122,159 @@
             </header>
 
             <section aria-labelledby="contact-section-title" data-reveal="section">
-                <div class="grid grid-cols-1 gap-32 lg:grid-cols-12">
-                    <article class="card lg:col-span-8" data-reveal="section">
-                        <div class="card-body">
-                            <div class="space-y-24">
-                                <header class="space-y-8">
-                                    <h2 id="contact-section-title" class="card-title" data-i18n="form.title">Send Us a
-                                        Message</h2>
-                                    <p class="card-text max-w-readable" data-i18n="form.description">Explain what you
-                                        need and include the key product details so the support team can route your
-                                        request quickly.</p>
-                                </header>
+                <div class="grid grid-cols-1 gap-24 lg:grid-cols-12">
+                    <article class="panel p-24 flex flex-col gap-24 w-full lg:col-span-8" data-reveal="section">
+                        <header class="space-y-8">
+                            <h2 id="contact-section-title" class="text-card-title text-black" data-i18n="form.title">Send Us a
+                                Message</h2>
+                            <p class="text-body text-grey-primary max-w-readable" data-i18n="form.description">Explain what you
+                                need and include the key product details so the support team can route your
+                                request quickly.</p>
+                        </header>
 
-                                <form class="space-y-24">
-                                    <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
-                                        <div class="space-y-8">
-                                            <label for="contact-name" class="input-label"
-                                                data-i18n="form.fields.name.label">Full Name</label>
-                                            <input type="text" id="contact-name" placeholder="Enter your name"
-                                                data-i18n-placeholder="form.fields.name.placeholder"
-                                                class="input input-md" aria-describedby="contact-name-hint">
-                                            <p id="contact-name-hint" class="input-hint"
-                                                data-i18n="form.fields.name.hint">Use the full name of the person
-                                                responsible for the request.</p>
-                                        </div>
+                        <form class="space-y-24">
+                            <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+                                <div class="space-y-8">
+                                    <label for="contact-name" class="input-label ml-12"
+                                        data-i18n="form.fields.name.label">Full Name</label>
+                                    <input type="text" id="contact-name" placeholder="Enter your name"
+                                        data-i18n-placeholder="form.fields.name.placeholder"
+                                        class="input input-md" aria-describedby="contact-name-hint">
+                                    <p id="contact-name-hint" class="input-hint ml-12"
+                                        data-i18n="form.fields.name.hint">Use the full name of the person
+                                        responsible for the request.</p>
+                                </div>
 
-                                        <div class="space-y-8">
-                                            <label for="contact-email" class="input-label"
-                                                data-i18n="form.fields.email.label">Email Address</label>
-                                            <input type="email" id="contact-email" placeholder="Enter your email"
-                                                data-i18n-placeholder="form.fields.email.placeholder"
-                                                class="input input-md" aria-describedby="contact-email-hint">
-                                            <p id="contact-email-hint" class="input-hint"
-                                                data-i18n="form.fields.email.hint">We will use this email to reply and
-                                                share the next steps.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-8">
-                                        <label for="contact-subject" class="input-label"
-                                            data-i18n="form.fields.subject.label">Subject</label>
-                                        <input type="text" id="contact-subject" placeholder="Enter the subject"
-                                            data-i18n-placeholder="form.fields.subject.placeholder" class="input input-md"
-                                            aria-describedby="contact-subject-hint">
-                                        <p id="contact-subject-hint" class="input-hint"
-                                            data-i18n="form.fields.subject.hint">Summarize the issue, product family,
-                                            or request in one line.</p>
-                                    </div>
-
-                                    <div class="space-y-8">
-                                        <label for="contact-message" class="input-label"
-                                            data-i18n="form.fields.message.label">Short Message</label>
-                                        <textarea id="contact-message" rows="6" placeholder="Write your short message"
-                                            data-i18n-placeholder="form.fields.message.placeholder" class="input input-md"
-                                            aria-describedby="contact-message-hint"></textarea>
-                                        <p id="contact-message-hint" class="input-hint"
-                                            data-i18n="form.fields.message.hint">Describe the issue, the expected
-                                            behavior, and what is happening now.</p>
-                                    </div>
-
-                                    <div class="space-y-8">
-                                        <label for="contact-details" class="input-label"
-                                            data-i18n="form.fields.details.label">Additional
-                                            Details</label>
-                                        <textarea id="contact-details" rows="8" placeholder="Add any additional details"
-                                            data-i18n-placeholder="form.fields.details.placeholder" class="input input-md"
-                                            aria-describedby="contact-details-hint"></textarea>
-                                        <p id="contact-details-hint" class="input-hint"
-                                            data-i18n="form.fields.details.hint">Add serial numbers, order references,
-                                            installation notes, or troubleshooting already completed.</p>
-                                    </div>
-
-                                    <div class="flex justify-end">
-                                        <button type="submit" class="btn btn-primary btn-md"
-                                            data-i18n="form.submit">Send Your Ticket</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </article>
-
-                    <aside class="lg:col-span-4">
-                        <article class="card h-full" data-reveal="section">
-                            <div class="card-body">
-                                <div class="space-y-24">
-                                    <header class="space-y-8">
-                                        <h2 class="card-title" data-i18n="aside.title">Contacts</h2>
-                                        <p class="card-text" data-i18n="aside.description">Choose the contact channel
-                                            that best fits your request and keep the product reference nearby.</p>
-                                    </header>
-
-                                    <div class="space-y-20">
-                                        <div class="space-y-4">
-                                            <h3 class="text-body-sm font-semibold text-black"
-                                                data-i18n="aside.items.generalSupport.title">General Support</h3>
-                                            <a href="mailto:comercial@tecit.pt" class="link-text-icon link-sm" data-support-mail="comercial@tecit.pt">
-                                                <i class="ri-mail-line" aria-hidden="true"></i>
-                                                <span class="link-label">comercial@tecit.pt</span>
-                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-
-                                        <div class="space-y-4">
-                                            <h3 class="text-body-sm font-semibold text-black"
-                                                data-i18n="aside.items.salesTeam.title">Sales Team</h3>
-                                            <a href="tel:+351229999230" class="link-text-icon link-sm" data-support-tel="+351229999230">
-                                                <i class="ri-phone-line" aria-hidden="true"></i>
-                                                <span class="link-label">+351 229 999 230</span>
-                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-
-                                        <div class="space-y-4">
-                                            <h3 class="text-body-sm font-semibold text-black"
-                                                data-i18n="aside.items.technicalSupport.title">Technical Support</h3>
-                                            <a href="tel:+351919989354" class="link-text-icon link-sm" data-support-tel="+351919989354">
-                                                <i class="ri-customer-service-2-line" aria-hidden="true"></i>
-                                                <span class="link-label">+351 919 989 354</span>
-                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-
-                                        <div class="space-y-4">
-                                            <h3 class="text-body-sm font-semibold text-black"
-                                                data-i18n="aside.items.mainOffice.title">Main Office</h3>
-                                            <div class="card-text">
-                                                <p>Travessa Cabo do Mundo, 681</p>
-                                                <p>4455-427 Perafita</p>
-                                                <p>Matosinhos - Portugal</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="space-y-4">
-                                            <h3 class="text-body-sm font-semibold text-black"
-                                                data-i18n="aside.items.scheduling.title">Scheduling</h3>
-                                            <p class="card-text" data-i18n="aside.items.scheduling.value">Monday to
-                                                Friday, 09:00 - 18:00</p>
-                                        </div>
-                                    </div>
+                                <div class="space-y-8">
+                                    <label for="contact-email" class="input-label ml-12"
+                                        data-i18n="form.fields.email.label">Email Address</label>
+                                    <input type="email" id="contact-email" placeholder="Enter your email"
+                                        data-i18n-placeholder="form.fields.email.placeholder"
+                                        class="input input-md" aria-describedby="contact-email-hint">
+                                    <p id="contact-email-hint" class="input-hint ml-12"
+                                        data-i18n="form.fields.email.hint">We will use this email to reply and
+                                        share the next steps.</p>
                                 </div>
                             </div>
+
+                            <div class="space-y-8">
+                                <label for="contact-subject" class="input-label ml-12"
+                                    data-i18n="form.fields.subject.label">Subject</label>
+                                <input type="text" id="contact-subject" placeholder="Enter the subject"
+                                    data-i18n-placeholder="form.fields.subject.placeholder" class="input input-md"
+                                    aria-describedby="contact-subject-hint">
+                                <p id="contact-subject-hint" class="input-hint ml-12"
+                                    data-i18n="form.fields.subject.hint">Summarize the issue, product family,
+                                    or request in one line.</p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <label for="contact-message" class="input-label ml-12"
+                                    data-i18n="form.fields.message.label">Short Message</label>
+                                <div class="text-field-shell text-field-shell-meta">
+                                    <textarea id="contact-message" rows="6" placeholder="Write your short message"
+                                        data-i18n-placeholder="form.fields.message.placeholder" class="input input-md"
+                                        aria-describedby="contact-message-hint"></textarea>
+                                    <span class="text-field-shell-meta-icon" aria-hidden="true">
+                                        <i class="ri-expand-diagonal-s-2-fill text-icon-sm"></i>
+                                    </span>
+                                </div>
+                                <p id="contact-message-hint" class="input-hint ml-12"
+                                    data-i18n="form.fields.message.hint">Describe the issue, the expected
+                                    behavior, and what is happening now.</p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <label for="contact-details" class="input-label ml-12"
+                                    data-i18n="form.fields.details.label">Additional Details</label>
+                                <div class="text-field-shell text-field-shell-meta">
+                                    <textarea id="contact-details" rows="8" placeholder="Add any additional details"
+                                        data-i18n-placeholder="form.fields.details.placeholder" class="input input-md"
+                                        aria-describedby="contact-details-hint"></textarea>
+                                    <span class="text-field-shell-meta-icon" aria-hidden="true">
+                                        <i class="ri-expand-diagonal-s-2-fill text-icon-sm"></i>
+                                    </span>
+                                </div>
+                                <p id="contact-details-hint" class="input-hint ml-12"
+                                    data-i18n="form.fields.details.hint">Add serial numbers, order references,
+                                    installation notes, or troubleshooting already completed.</p>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit" class="btn btn-primary btn-md"
+                                    data-i18n="form.submit">Send Your Ticket</button>
+                            </div>
+                        </form>
+                    </article>
+
+                    <aside class="space-y-24 lg:col-span-4">
+                        <article class="panel p-24 flex flex-col gap-16 w-full" data-reveal="section">
+                            <h2 class="text-card-title text-black" data-i18n="aside.title">Contacts</h2>
+                            <p class="text-body text-grey-primary max-w-readable" data-i18n="aside.description">Choose the contact channel
+                                that best fits your request and keep the product reference nearby.</p>
                         </article>
+
+                        <div class="grid grid-cols-1 gap-16" data-reveal="section">
+                            <article class="card">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="ri-mail-line text-icon-lg" aria-hidden="true"></i>
+                                        </div>
+                                        <h3 class="card-title" data-i18n="aside.items.generalSupport.title">General Support</h3>
+                                    </div>
+                                    <a href="mailto:comercial@tecit.pt" class="link link-md" data-support-mail="comercial@tecit.pt">
+                                        <span class="link-label">comercial@tecit.pt</span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="ri-phone-line text-icon-lg" aria-hidden="true"></i>
+                                        </div>
+                                        <h3 class="card-title" data-i18n="aside.items.salesTeam.title">Sales Team</h3>
+                                    </div>
+                                    <a href="tel:+351229999230" class="link link-md" data-support-tel="+351229999230">
+                                        <span class="link-label">+351 229 999 230</span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <div class="card-icon">
+                                            <i class="ri-customer-service-2-line text-icon-lg" aria-hidden="true"></i>
+                                        </div>
+                                        <h3 class="card-title" data-i18n="aside.items.technicalSupport.title">Technical Support</h3>
+                                    </div>
+                                    <a href="tel:+351919989354" class="link link-md" data-support-tel="+351919989354">
+                                        <span class="link-label">+351 919 989 354</span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title" data-i18n="aside.items.mainOffice.title">Main Office</h3>
+                                    <div class="card-text">
+                                        <p>Travessa Cabo do Mundo, 681</p>
+                                        <p>4455-427 Perafita</p>
+                                        <p>Matosinhos - Portugal</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title" data-i18n="aside.items.scheduling.title">Scheduling</h3>
+                                    <p class="card-text" data-i18n="aside.items.scheduling.value">Monday to Friday, 09:00 - 18:00</p>
+                                </div>
+                            </article>
+                        </div>
                     </aside>
                 </div>
             </section>
