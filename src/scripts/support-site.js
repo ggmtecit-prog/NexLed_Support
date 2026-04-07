@@ -411,6 +411,34 @@
         });
     }
 
+    function supportsHoverFlyouts() {
+        return typeof window.matchMedia === 'function'
+            && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    }
+
+    function bindHoverOnlySupportFlyouts() {
+        if (!supportsHoverFlyouts()) {
+            return;
+        }
+
+        document.querySelectorAll('[data-support-flyout] [data-flyout-toggle]').forEach((toggle) => {
+            if (toggle.dataset.supportHoverOnlyBound === 'true') {
+                return;
+            }
+
+            toggle.dataset.supportHoverOnlyBound = 'true';
+            toggle.addEventListener('click', (event) => {
+                // Keep keyboard activation intact; block pointer clicks so desktop flyouts stay hover-driven.
+                if (event.detail === 0) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            }, true);
+        });
+    }
+
     async function hydrateFlyouts() {
         const flyoutConfig = await getFlyoutConfig();
         if (!flyoutConfig || typeof flyoutConfig !== 'object') {
@@ -1122,6 +1150,7 @@
         }
 
         hydrateLinks();
+        bindHoverOnlySupportFlyouts();
         hydrateBreadcrumbs(options);
         hydrateFlyouts();
         hydratePageCopy(options);
