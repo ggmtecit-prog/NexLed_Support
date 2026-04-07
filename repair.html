@@ -379,11 +379,18 @@
 
             const imagePath = Utils.sanitizeImagePath(card.image || '');
             if (imagePath) {
+                const mediaInset = document.createElement('div');
+                mediaInset.className = 'p-12 overflow-hidden';
+
+                const mediaFrame = document.createElement('div');
+
                 const image = document.createElement('img');
-                image.className = 'text-style-media-frame w-full object-cover';
+                image.className = 'card-product-image';
                 image.src = imagePath;
                 image.alt = `${Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'))} guide`;
-                mediaColumn.appendChild(image);
+                mediaFrame.appendChild(image);
+                mediaInset.appendChild(mediaFrame);
+                mediaColumn.appendChild(mediaInset);
             } else {
                 const icon = document.createElement('i');
                 icon.className = 'ri-image-line text-h1 text-grey-primary';
