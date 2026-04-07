@@ -361,18 +361,6 @@
                 es: 'No se pudieron cargar las piezas.',
                 fr: 'Impossible de charger les pièces.',
             },
-            manufacturerSupportTitle: {
-                pt: 'Precisa de ajuda da equipa NexLed?',
-                en: 'Need help from the NexLed support team?',
-                es: '¿Necesita ayuda del equipo de soporte de NexLed?',
-                fr: 'Besoin de l’aide de l’équipe support NexLed ?',
-            },
-            manufacturerSupportDescription: {
-                pt: 'Use a página de suporte para entrar em contacto com a equipa, rever opções de assistência e avançar com o próximo passo.',
-                en: 'Use the support page to contact the team, review assistance options, and move forward with the next step.',
-                es: 'Use la página de soporte para contactar con el equipo, revisar las opciones de asistencia y avanzar con el siguiente paso.',
-                fr: 'Utilisez la page de support pour contacter l’équipe, consulter les options d’assistance et avancer vers l’étape suivante.',
-            },
             manufacturerSupportButton: {
                 pt: 'Abrir página de suporte',
                 en: 'Open support page',
@@ -458,69 +446,32 @@
                 || stepTitle.includes('réparation réservée au fabricant');
         }
 
-        function createManufacturerInfoCard(step, lang) {
-            const article = document.createElement('article');
-            article.className = 'card h-full';
-            article.dataset.reveal = 'section';
+        function createManufacturerOnlyEmptyState(step, lang) {
+            const emptyState = document.createElement('div');
+            emptyState.className = 'empty-state empty-state-lg w-full';
+            emptyState.dataset.reveal = 'section';
+            emptyState.setAttribute('role', 'status');
+            emptyState.setAttribute('aria-live', 'polite');
 
-            const body = document.createElement('div');
-            body.className = 'card-body';
+            const title = stripStepPrefix(Utils.t(step.title, lang, getStepUiLabel('stepFallback', lang, 'Step')));
+            const description = Utils.t(step.description, lang, '');
 
-            const header = document.createElement('div');
-            header.className = 'card-header';
+            emptyState.innerHTML = `
+                <span class="empty-state-icon icon-box icon-box-empty-state">
+                    <i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>
+                </span>
+                <div class="empty-state-copy">
+                    <h3 class="empty-state-title">${title}</h3>
+                    <p class="empty-state-text">${description}</p>
+                </div>
+                <div class="empty-state-actions">
+                    <a href="index.html?lang=${encodeURIComponent(lang)}" class="btn btn-primary btn-sm">
+                        ${getStepUiLabel('manufacturerSupportButton', lang, 'Open support page')}
+                    </a>
+                </div>
+            `;
 
-            const icon = document.createElement('div');
-            icon.className = 'card-icon';
-            icon.innerHTML = '<i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>';
-
-            const title = document.createElement('h3');
-            title.className = 'card-title';
-            title.textContent = stripStepPrefix(Utils.t(step.title, lang, getStepUiLabel('stepFallback', lang, 'Step')));
-
-            const description = document.createElement('p');
-            description.className = 'card-text';
-            description.textContent = Utils.t(step.description, lang, '');
-
-            header.appendChild(icon);
-            header.appendChild(title);
-            body.appendChild(header);
-            body.appendChild(description);
-            article.appendChild(body);
-
-            return article;
-        }
-
-        function createManufacturerSupportCard(lang) {
-            const article = document.createElement('article');
-            article.className = 'card h-full';
-            article.dataset.reveal = 'section';
-
-            const body = document.createElement('div');
-            body.className = 'card-body';
-
-            const title = document.createElement('h3');
-            title.className = 'card-title';
-            title.textContent = getStepUiLabel('manufacturerSupportTitle', lang, 'Need help from the NexLed support team?');
-
-            const description = document.createElement('p');
-            description.className = 'card-text';
-            description.textContent = getStepUiLabel('manufacturerSupportDescription', lang, 'Use the support page to contact the team, review assistance options, and move forward with the next step.');
-
-            const actions = document.createElement('div');
-            actions.className = 'card-actions justify-end';
-
-            const cta = document.createElement('a');
-            cta.className = 'btn btn-primary btn-sm';
-            cta.href = `index.html?lang=${encodeURIComponent(lang)}`;
-            cta.textContent = getStepUiLabel('manufacturerSupportButton', lang, 'Open support page');
-
-            actions.appendChild(cta);
-            body.appendChild(title);
-            body.appendChild(description);
-            body.appendChild(actions);
-            article.appendChild(body);
-
-            return article;
+            return emptyState;
         }
 
         function renderManufacturerOnlyOverview(content, lang) {
@@ -528,10 +479,9 @@
             const stepsSection = document.getElementById('steps');
             const firstStep = content.steps[0];
 
-            summarySection.className = 'grid grid-cols-1 gap-24 md:grid-cols-2';
+            summarySection.className = 'w-full';
             summarySection.innerHTML = '';
-            summarySection.appendChild(createManufacturerInfoCard(firstStep, lang));
-            summarySection.appendChild(createManufacturerSupportCard(lang));
+            summarySection.appendChild(createManufacturerOnlyEmptyState(firstStep, lang));
 
             stepsSection.hidden = true;
             SupportSite.observeRevealTargets(summarySection);
