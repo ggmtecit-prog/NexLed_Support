@@ -345,6 +345,23 @@
             return REPAIR_CARD_ANCHORS[card?.title?.en || ''] || '';
         }
 
+        function getRepairCardImageMeta(titleText) {
+            const normalizedTitle = String(titleText || '').trim();
+            const titleMatch = normalizedTitle.match(/^(.*?)(\d+)\s*$/);
+
+            if (!titleMatch) {
+                return {
+                    highlight: normalizedTitle,
+                    code: '',
+                };
+            }
+
+            return {
+                highlight: titleMatch[1].trim(),
+                code: titleMatch[2].trim(),
+            };
+        }
+
         function scrollToRepairHash() {
             const targetId = decodeURIComponent(window.location.hash.replace(/^#/, ''));
             if (!targetId) {
@@ -377,18 +394,35 @@
             const mediaColumn = document.createElement('div');
             mediaColumn.className = 'md:col-span-3';
 
+            const cardTitleText = Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'));
+            const imageMeta = getRepairCardImageMeta(cardTitleText);
             const imagePath = Utils.sanitizeImagePath(card.image || '');
             if (imagePath) {
                 const mediaInset = document.createElement('div');
                 mediaInset.className = 'p-12 overflow-hidden';
 
                 const mediaFrame = document.createElement('div');
+                mediaFrame.className = 'relative';
 
                 const image = document.createElement('img');
                 image.className = 'card-product-image';
                 image.src = imagePath;
-                image.alt = `${Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'))} guide`;
+                image.alt = `${cardTitleText} guide`;
                 mediaFrame.appendChild(image);
+
+                if (imageMeta.code) {
+                    const codeBadge = document.createElement('span');
+                    codeBadge.className = 'card-product-badge';
+                    codeBadge.textContent = imageMeta.code;
+                    mediaFrame.appendChild(codeBadge);
+                }
+
+                if (imageMeta.highlight) {
+                    const titleBadge = document.createElement('span');
+                    titleBadge.className = 'badge badge-neutral badge-sm absolute left-12 bottom-12';
+                    titleBadge.textContent = imageMeta.highlight;
+                    mediaFrame.appendChild(titleBadge);
+                }
                 mediaInset.appendChild(mediaFrame);
                 mediaColumn.appendChild(mediaInset);
             } else {
@@ -406,7 +440,7 @@
 
             const title = document.createElement('h3');
             title.className = 'card-title';
-            title.textContent = Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'));
+            title.textContent = cardTitleText;
 
             copyGroup.appendChild(title);
 
