@@ -193,54 +193,40 @@
                     <div class="lg:col-span-8">
                         <article class="card">
                             <div class="card-body">
-                                <div class="accordion accordion-md">
-                                    <div class="accordion-item is-open">
-                                        <button type="button" id="faq-start-trigger" class="accordion-trigger"
-                                            aria-expanded="true" aria-controls="faq-start-panel">
-                                            <span class="accordion-label" data-i18n="faq.items.start.question">How do I start a support request?</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="faq-start-panel" class="accordion-content" role="region"
-                                            aria-labelledby="faq-start-trigger">
-                                            <div class="accordion-body" data-i18n="faq.items.start.answer">Visit the contact page or use the scheduling option to book a session.</div>
-                                        </div>
-                                    </div>
+                                <div class="text-style text-style-faq">
+                                    <ul class="text-style-faq-list">
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="faq.items.start.question">How do I start a support request?</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="faq.items.start.answer">Visit the contact page or use the scheduling option to book a session.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="faq-duration-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="faq-duration-panel">
-                                            <span class="accordion-label" data-i18n="faq.items.duration.question">How long does a repair take?</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="faq-duration-panel" class="accordion-content" role="region"
-                                            aria-labelledby="faq-duration-trigger">
-                                            <div class="accordion-body" data-i18n="faq.items.duration.answer">The time depends on the type of repair. See the repair article for estimates.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="faq.items.duration.question">How long does a repair take?</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="faq.items.duration.answer">The time depends on the type of repair. See the repair article for estimates.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="faq-manuals-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="faq-manuals-panel">
-                                            <span class="accordion-label" data-i18n="faq.items.manuals.question">Where can I get manuals?</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="faq-manuals-panel" class="accordion-content" role="region"
-                                            aria-labelledby="faq-manuals-trigger">
-                                            <div class="accordion-body" data-i18n="faq.items.manuals.answer">Manuals are available in the Downloads/Manuals section.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="faq.items.manuals.question">Where can I get manuals?</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="faq.items.manuals.answer">Manuals are available in the Downloads/Manuals section.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="faq-warranty-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="faq-warranty-panel">
-                                            <span class="accordion-label" data-i18n="faq.items.warranty.question">Do Nexled products include a warranty?</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="faq-warranty-panel" class="accordion-content" role="region"
-                                            aria-labelledby="faq-warranty-trigger">
-                                            <div class="accordion-body" data-i18n="faq.items.warranty.answer">Yes, warranty details are listed in each product's documentation.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="faq.items.warranty.question">Do Nexled products include a warranty?</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="faq.items.warranty.answer">Yes, warranty details are listed in each product's documentation.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </article>
@@ -265,66 +251,48 @@
                     <div class="lg:col-span-8">
                         <article class="card">
                             <div class="card-body">
-                                <div class="accordion accordion-md">
-                                    <div class="accordion-item is-open">
-                                        <button type="button" id="warranty-coverage-trigger" class="accordion-trigger"
-                                            aria-expanded="true" aria-controls="warranty-coverage-panel">
-                                            <span class="accordion-label" data-i18n="warranty.items.coverage.question">Coverage</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="warranty-coverage-panel" class="accordion-content" role="region"
-                                            aria-labelledby="warranty-coverage-trigger">
-                                            <div class="accordion-body" data-i18n="warranty.items.coverage.answer">The warranty applies to defects in materials and workmanship when the product is used under normal operating conditions. It does not cover damages that stem from misuse or environmental factors.</div>
-                                        </div>
-                                    </div>
+                                <div class="text-style text-style-faq">
+                                    <ul class="text-style-faq-list">
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="warranty.items.coverage.question">Coverage</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="warranty.items.coverage.answer">The warranty applies to defects in materials and workmanship when the product is used under normal operating conditions. It does not cover damages that stem from misuse or environmental factors.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="warranty-exclusions-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="warranty-exclusions-panel">
-                                            <span class="accordion-label" data-i18n="warranty.items.exclusions.question">Exclusions</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="warranty-exclusions-panel" class="accordion-content" role="region"
-                                            aria-labelledby="warranty-exclusions-trigger">
-                                            <div class="accordion-body" data-i18n="warranty.items.exclusions.answer">This warranty does not cover damage resulting from misuse, improper installation, accidents, unauthorized modifications, or exposure to conditions outside the recommended operating envelope. Products altered or repaired without Nexled authorization are generally not covered for warranty review.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="warranty.items.exclusions.question">Exclusions</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="warranty.items.exclusions.answer">This warranty does not cover damage resulting from misuse, improper installation, accidents, unauthorized modifications, or exposure to conditions outside the recommended operating envelope. Products altered or repaired without Nexled authorization are generally not covered for warranty review.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="warranty-service-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="warranty-service-panel">
-                                            <span class="accordion-label" data-i18n="warranty.items.service.question">Request Warranty Service</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="warranty-service-panel" class="accordion-content" role="region"
-                                            aria-labelledby="warranty-service-trigger">
-                                            <div class="accordion-body" data-i18n="warranty.items.service.answer">To request warranty service, gather the product model, serial number, and proof of purchase, then contact the support team. Support will send detailed instructions on how to return the product or obtain a direct service if applicable.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="warranty.items.service.question">Request Warranty Service</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="warranty.items.service.answer">To request warranty service, gather the product model, serial number, and proof of purchase, then contact the support team. Support will send detailed instructions on how to return the product or obtain a direct service if applicable.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="warranty-documentation-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="warranty-documentation-panel">
-                                            <span class="accordion-label" data-i18n="warranty.items.documentation.question">Required Documentation</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="warranty-documentation-panel" class="accordion-content" role="region"
-                                            aria-labelledby="warranty-documentation-trigger">
-                                            <div class="accordion-body" data-i18n="warranty.items.documentation.answer">You must provide proof of purchase, a clear description of the issue, a copy of the date, and the product serial number. Keep this information handy prior to contacting our warranty service department.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="warranty.items.documentation.question">Required Documentation</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="warranty.items.documentation.answer">You must provide proof of purchase, a clear description of the issue, a copy of the date, and the product serial number. Keep this information handy prior to contacting our warranty service department.</p>
+                                            </div>
+                                        </li>
 
-                                    <div class="accordion-item">
-                                        <button type="button" id="warranty-lifespan-trigger" class="accordion-trigger"
-                                            aria-expanded="false" aria-controls="warranty-lifespan-panel">
-                                            <span class="accordion-label" data-i18n="warranty.items.lifespan.question">Product Lifespan &amp; Performance Expectations</span>
-                                            <i class="accordion-icon ri-arrow-down-s-line" aria-hidden="true"></i>
-                                        </button>
-                                        <div id="warranty-lifespan-panel" class="accordion-content" role="region"
-                                            aria-labelledby="warranty-lifespan-trigger">
-                                            <div class="accordion-body" data-i18n="warranty.items.lifespan.answer">Nexled products are designed to deliver lasting, safe performance when used under recommended conditions. Any reduction in output or expected performance that is not associated to a direct performance lapse or fault is not considered a notable product performance disturbance.</div>
-                                        </div>
-                                    </div>
+                                        <li class="text-style-faq-item">
+                                            <span class="text-style-faq-bullet">&bull;</span>
+                                            <div class="text-style-faq-content">
+                                                <h4 class="text-style-faq-question text-content-question" data-i18n="warranty.items.lifespan.question">Product Lifespan &amp; Performance Expectations</h4>
+                                                <p class="text-style-faq-answer text-content-answer" data-i18n="warranty.items.lifespan.answer">Nexled products are designed to deliver lasting, safe performance when used under recommended conditions. Any reduction in output or expected performance that is not associated to a direct performance lapse or fault is not considered a notable product performance disturbance.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </article>
