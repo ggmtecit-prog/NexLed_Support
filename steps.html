@@ -412,8 +412,16 @@
 
             parts.forEach((part) => {
                 const item = document.createElement('li');
-                item.className = 'text-body-sm text-black';
-                item.textContent = Utils.t(part.name, lang, getStepUiLabel('partFallback', lang, 'Part'));
+                const link = document.createElement('a');
+                link.className = 'link link-sm';
+                link.href = '';
+
+                const label = document.createElement('span');
+                label.className = 'link-label';
+                label.textContent = Utils.t(part.name, lang, getStepUiLabel('partFallback', lang, 'Part'));
+
+                link.appendChild(label);
+                item.appendChild(link);
                 partsList.appendChild(item);
             });
         }
