@@ -1018,6 +1018,7 @@
                 .split(',')
                 .map((key) => key.trim())
                 .filter(Boolean);
+            const currentHref = escapeHTML(`${window.location.pathname}${window.location.search}${window.location.hash}`);
 
             const itemsMarkup = trail.map((item, index) => {
                 const isLast = index === trail.length - 1;
@@ -1031,17 +1032,19 @@
                     const href = escapeHTML(withLang(ROUTES[item.route] || '#', lang, preserveQueryKeys));
                     return `
                         <li class="breadcrumb-item">
-                            <a href="${href}" class="link-navigation link-sm"><span class="link-label">${escapedLabel}</span></a>
+                            <a href="${href}" class="breadcrumb-link link-navigation link-md"><span class="link-label">${escapedLabel}</span></a>
                         </li>
                         <li class="breadcrumb-separator">
-                            <i class="ri-arrow-right-s-line text-icon-md" aria-hidden="true"></i>
+                            <i class="ri-arrow-right-s-line icon icon-md" aria-hidden="true"></i>
                         </li>
                     `;
                 }
 
                 return `
-                    <li class="breadcrumb-item" aria-current="page">
-                        <span class="link-label" data-support-breadcrumb-current-label>${escapedLabel}</span>
+                    <li class="breadcrumb-item">
+                        <a href="${currentHref}" class="breadcrumb-link link-navigation link-md" aria-current="page">
+                            <span class="link-label" data-support-breadcrumb-current-label>${escapedLabel}</span>
+                        </a>
                     </li>
                 `;
             }).join('');
