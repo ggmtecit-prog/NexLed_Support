@@ -1158,6 +1158,83 @@
         });
     }
 
+    const canObserveRevealTargets = typeof window !== 'undefined'
+        && typeof document !== 'undefined'
+        && typeof window.IntersectionObserver === 'function'
+        && (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    let supportRevealObserver = null;
+
+    function markRevealTarget(target) {
+        if (!target) {
+            return;
+        }
+
+        target.classList.add('is-revealed');
+    }
+
+    function getRevealObserver() {
+        if (!canObserveRevealTargets) {
+            return null;
+        }
+
+        if (!supportRevealObserver) {
+            supportRevealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    markRevealTarget(entry.target);
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.16,
+            });
+        }
+
+        return supportRevealObserver;
+    }
+
+    function collectRevealTargets(root) {
+        if (!root) {
+            return [];
+        }
+
+        const targets = [];
+
+        if (root.nodeType === 1 && typeof root.matches === 'function' && root.matches('[data-reveal]')) {
+            targets.push(root);
+        }
+
+        if (typeof root.querySelectorAll === 'function') {
+            targets.push(...root.querySelectorAll('[data-reveal]'));
+        }
+
+        return targets;
+    }
+
+    function observeRevealTargets(root = document) {
+        const targets = Array.from(new Set(collectRevealTargets(root)));
+        if (!targets.length) {
+            return;
+        }
+
+        if (!canObserveRevealTargets) {
+            targets.forEach(markRevealTarget);
+            return;
+        }
+
+        const observer = getRevealObserver();
+        targets.forEach((target) => {
+            if (target.classList.contains('is-revealed')) {
+                return;
+            }
+
+            observer.observe(target);
+        });
+    }
+
     function initPage(options = {}) {
         const preserveQueryKeys = Array.isArray(options.preserveQueryKeys) ? options.preserveQueryKeys : [];
         const currentLang = getCurrentLang();
@@ -1188,6 +1265,7 @@
         setBreadcrumbCurrent,
         syncLanguageSelector,
         bindLanguageSelector,
+        observeRevealTargets,
         langToSelectorCode,
         selectorCodeToLang,
     };
