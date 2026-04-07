@@ -439,13 +439,19 @@
 
             toggle.dataset.supportHoverOnlyBound = 'true';
             toggle.addEventListener('click', (event) => {
-                // Keep keyboard activation intact; block pointer clicks so desktop flyouts stay hover-driven.
+                // Keep keyboard activation intact; pointer clicks should navigate to the parent support page.
                 if (event.detail === 0) {
                     return;
                 }
 
+                const routeKey = toggle.closest('[data-support-flyout]')?.dataset.supportFlyout;
+                const target = withLang(ROUTES[routeKey] || '#', getCurrentLang());
                 event.preventDefault();
                 event.stopImmediatePropagation();
+
+                if (target !== '#') {
+                    window.location.assign(target);
+                }
             }, true);
         });
     }
