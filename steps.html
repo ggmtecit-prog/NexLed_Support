@@ -367,6 +367,12 @@
                 es: 'Abrir página de soporte',
                 fr: 'Ouvrir la page de support',
             },
+            manufacturerRepairButton: {
+                pt: 'Voltar às reparações',
+                en: 'Back to repair guides',
+                es: 'Volver a las reparaciones',
+                fr: 'Retour aux guides de réparation',
+            },
         };
 
         SupportSite.initPage({ preserveQueryKeys: ['file'] });
@@ -457,7 +463,7 @@
             const description = Utils.t(step.description, lang, '');
 
             emptyState.innerHTML = `
-                <span class="empty-state-icon icon-box icon-box-empty-state">
+                <span class="empty-state-icon icon-box bg-red-primary text-white">
                     <i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>
                 </span>
                 <div class="empty-state-copy">
@@ -467,6 +473,9 @@
                 <div class="empty-state-actions">
                     <a href="index.html?lang=${encodeURIComponent(lang)}" class="btn btn-primary btn-sm">
                         ${getStepUiLabel('manufacturerSupportButton', lang, 'Open support page')}
+                    </a>
+                    <a href="repair.html?lang=${encodeURIComponent(lang)}" class="btn btn-secondary btn-sm">
+                        ${getStepUiLabel('manufacturerRepairButton', lang, 'Back to repair guides')}
                     </a>
                 </div>
             `;
