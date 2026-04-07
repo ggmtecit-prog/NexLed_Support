@@ -296,6 +296,7 @@
             const isActive = index === 0;
             const categoryId = normalizeFlyoutId(category?.id, `category-${index + 1}`);
             const categoryLabel = escapeHTML(getTextValue(category?.label, `Category ${index + 1}`));
+            const categoryLabelClass = categoryId === 'downlights' ? ' class="panel-wrap-title"' : '';
 
             return `
                 <button type="button" class="flyout-nav-item${isActive ? ' is-active' : ''}"
@@ -303,7 +304,7 @@
                     aria-selected="${isActive ? 'true' : 'false'}"
                     aria-controls="support-${safeMenuKey}-flyout-panel-${categoryId}"
                     data-flyout-category="${categoryId}" tabindex="${isActive ? '0' : '-1'}">
-                    <span>${categoryLabel}</span>
+                    <span${categoryLabelClass}>${categoryLabel}</span>
                     <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
                 </button>
             `;
