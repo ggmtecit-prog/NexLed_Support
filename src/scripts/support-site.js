@@ -1049,7 +1049,7 @@
 
                 return `
                     <li class="breadcrumb-item">
-                        <a href="${currentHref}" class="breadcrumb-link link-navigation link-md" aria-current="page">
+                        <a href="${currentHref}" class="breadcrumb-link link-navigation link-md is-active" aria-current="page">
                             <span class="link-label" data-support-breadcrumb-current-label>${escapedLabel}</span>
                         </a>
                     </li>
