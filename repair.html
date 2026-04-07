@@ -464,12 +464,15 @@
         function renderRepairError(lang) {
             document.title = `${getRepairUiLabel('errorTitle', lang, 'Unable to load repairs')} - Nexled Support`;
             document.getElementById('repair-categories').innerHTML = `
-                <article class="card" data-reveal="section">
-                    <div class="card-body">
-                        <h2 class="card-title">${getRepairUiLabel('errorTitle', lang, 'Unable to load repairs')}</h2>
-                        <p class="card-text">${getRepairUiLabel('errorDescription', lang, 'The repair catalog could not be loaded.')}</p>
+                <div class="empty-state empty-state-lg w-full" data-reveal="section" role="status" aria-live="polite">
+                    <span class="empty-state-icon icon-box icon-box-empty-state">
+                        <i class="ri-error-warning-line text-icon-lg" aria-hidden="true"></i>
+                    </span>
+                    <div class="empty-state-copy">
+                        <h3 class="empty-state-title">${getRepairUiLabel('errorTitle', lang, 'Unable to load repairs')}</h3>
+                        <p class="empty-state-text">${getRepairUiLabel('errorDescription', lang, 'The repair catalog could not be loaded.')}</p>
                     </div>
-                </article>
+                </div>
             `;
             SupportSite.observeRevealTargets(document.getElementById('repair-categories'));
         }
