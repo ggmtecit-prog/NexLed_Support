@@ -25,103 +25,95 @@
     <script src="https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3"></script>
 </head>
 
-<body class="bg-grey-tertiary text-black flex min-h-screen flex-col" data-support-page="repair">
-    <div class="w-full max-w-wide mx-auto px-32 py-24">
-        <header class="nav-bar">
-            <a href="#" class="flex items-center gap-12 group" data-support-route="home">
-                <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
-                <div class="flex flex-col">
-                    <span class="font-semibold text-h3 leading-none tracking-tight text-black">NexLed</span>
-                    <span class="font-regular text-body-sm text-black tracking-wider"
-                        data-i18n="header.supportPage">Support Page</span>
-                </div>
-            </a>
+<body class="bg-grey-tertiary text-black selection:bg-green-primary/10" data-support-page="repair">
+    <div class="min-h-screen flex flex-col gap-24 py-24">
+        <div class="container-balanced">
+            <div class="w-full mx-auto">
+                <header class="nav-bar">
+                    <a href="#" class="flex items-center gap-12 group" data-support-route="home">
+                        <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
+                        <div class="flex flex-col">
+                            <span class="text-card-title leading-none tracking-tight text-black">NexLed</span>
+                            <span class="text-label text-black tracking-wider" data-i18n="header.supportPage">Support Page</span>
+                        </div>
+                    </a>
 
-            <nav class="hidden md:flex items-center gap-24 h-full" aria-label="Primary">
-                <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
-                    <button type="button" class="dropdown-trigger" data-support-route="repair" aria-haspopup="dialog"
-                        aria-expanded="false">
-                        <span class="dropdown-value" data-i18n="nav.repairGuides">Repair Guides</span>
-                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu flyout flyout-products" role="dialog"
-                        aria-label="Repair Guides navigation">
-                        <div class="flyout-body">
-                            <nav class="flyout-nav" aria-label="Repair guide categories" role="tablist"></nav>
-                            <div class="flyout-copy">
-                                <div class="flyout-grid" aria-hidden="true"></div>
-                            </div>
+                    <nav class="flex flex-wrap items-center h-full" aria-label="Primary">
+                        <div class="dropdown-minimal dropdown-sm" data-flyout-root data-support-flyout="repair">
+                            <button type="button" class="dropdown-trigger" data-flyout-toggle aria-haspopup="dialog"
+                                aria-expanded="false">
+                                <span class="dropdown-value" data-i18n="nav.repairGuides">Repair Guides</span>
+                                <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
+                            </button>
+                            <div class="flyout flyout-products" data-flyout-surface data-support-flyout-products
+                                role="dialog" aria-label="Repair Guides navigation"></div>
+                        </div>
+
+                        <div class="dropdown-minimal dropdown-sm" data-flyout-root data-support-flyout="downloads">
+                            <button type="button" class="dropdown-trigger" data-flyout-toggle aria-haspopup="dialog"
+                                aria-expanded="false">
+                                <span class="dropdown-value" data-i18n="nav.downloadFiles">Download Files</span>
+                                <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
+                            </button>
+                            <div class="flyout flyout-products" data-flyout-surface data-support-flyout-products
+                                role="dialog" aria-label="Download Files navigation"></div>
+                        </div>
+                    </nav>
+
+                    <div class="flex flex-wrap items-center justify-end gap-12">
+                        <button type="button" class="btn btn-ghost btn-icon btn-xs" aria-label="Search"
+                            data-search-overlay-target="supportSearchOverlay">
+                            <i class="ri-search-line text-icon-md" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact"
+                            data-i18n="header.getInTouch">Get in touch</button>
+                        <button type="button" class="btn btn-primary btn-xs" data-support-route="store">
+                            <i class="ri-store-line text-icon-md" aria-hidden="true"></i>
+                            <span data-i18n="header.store">Store</span>
+                        </button>
+                        <div class="language-selector language-selector-icon language-selector-xs has-value">
+                            <button type="button" class="language-selector-trigger" aria-haspopup="listbox"
+                                aria-expanded="false" aria-label="Current language: English">
+                                <span class="language-selector-current">
+                                    <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
+                                        srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
+                                </span>
+                                <i class="ri-arrow-down-s-line language-selector-arrow" aria-hidden="true"></i>
+                            </button>
+                            <ul class="language-selector-menu custom-scrollbar" role="listbox"
+                                aria-label="Icon-only extra small language options">
+                                <li class="language-selector-option" role="option" aria-selected="true" data-code="gb">
+                                    <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
+                                        srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
+                                    <span>English</span>
+                                    <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                                </li>
+                                <li class="language-selector-option" role="option" aria-selected="false" data-code="pt">
+                                    <img class="language-selector-flag" src="https://flagcdn.com/w40/pt.png"
+                                        srcset="https://flagcdn.com/w80/pt.png 2x" width="20" height="20" alt="">
+                                    <span>Portugu&#234;s</span>
+                                    <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                                </li>
+                                <li class="language-selector-option" role="option" aria-selected="false" data-code="es">
+                                    <img class="language-selector-flag" src="https://flagcdn.com/w40/es.png"
+                                        srcset="https://flagcdn.com/w80/es.png 2x" width="20" height="20" alt="">
+                                    <span>Espa&#241;ol</span>
+                                    <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-
-                <div class="dropdown dropdown-minimal dropdown-xs dropdown-flyout" data-dropdown-trigger="hover">
-                    <button type="button" class="dropdown-trigger" data-support-route="downloads" aria-haspopup="dialog"
-                        aria-expanded="false">
-                        <span class="dropdown-value" data-i18n="nav.downloadFiles">Download Files</span>
-                        <i class="ri-arrow-down-s-line dropdown-arrow" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu flyout flyout-products" role="dialog"
-                        aria-label="Download Files navigation">
-                        <div class="flyout-body">
-                            <nav class="flyout-nav" aria-label="Download categories" role="tablist"></nav>
-                            <div class="flyout-copy">
-                                <div class="flyout-grid" aria-hidden="true"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="flex items-center gap-12">
-                <button type="button" class="btn btn-secondary btn-xs" data-support-route="contact"
-                    data-i18n="header.getInTouch">Get in touch</button>
-                <button type="button" class="btn btn-primary btn-xs" data-support-route="store">
-                    <i class="ri-store-line text-icon-md" aria-hidden="true"></i>
-                    <span data-i18n="header.store">Store</span>
-                </button>
-                <div class="language-selector language-selector-icon language-selector-xs has-value">
-                    <button type="button" class="language-selector-trigger" aria-haspopup="listbox"
-                        aria-expanded="false" aria-label="Current language: English">
-                        <span class="language-selector-current">
-                            <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
-                                srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
-                        </span>
-                        <i class="ri-arrow-down-s-line language-selector-arrow" aria-hidden="true"></i>
-                    </button>
-                    <ul class="language-selector-menu custom-scrollbar" role="listbox"
-                        aria-label="Icon-only extra small language options">
-                        <li class="language-selector-option" role="option" aria-selected="true" data-code="gb">
-                            <img class="language-selector-flag" src="https://flagcdn.com/w40/gb.png"
-                                srcset="https://flagcdn.com/w80/gb.png 2x" width="20" height="20" alt="">
-                            <span>English</span>
-                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
-                        </li>
-                        <li class="language-selector-option" role="option" aria-selected="false" data-code="pt">
-                            <img class="language-selector-flag" src="https://flagcdn.com/w40/pt.png"
-                                srcset="https://flagcdn.com/w80/pt.png 2x" width="20" height="20" alt="">
-                            <span>Portugu&#234;s</span>
-                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
-                        </li>
-                        <li class="language-selector-option" role="option" aria-selected="false" data-code="es">
-                            <img class="language-selector-flag" src="https://flagcdn.com/w40/es.png"
-                                srcset="https://flagcdn.com/w80/es.png 2x" width="20" height="20" alt="">
-                            <span>Espa&#241;ol</span>
-                            <i class="ri-check-line language-selector-check" aria-hidden="true"></i>
-                        </li>
-                    </ul>
-                </div>
+                </header>
             </div>
-        </header>
-    </div>
+        </div>
 
-    <main class="flex-1 w-full">
-        <div class="w-full max-w-standard mx-auto px-32 pt-8 pb-48 space-y-64">
+        <main class="container-standard flex-1">
+            <div class="w-full mx-auto space-y-48">
             <nav aria-label="Breadcrumb" data-support-breadcrumb></nav>
 
             <header class="page-header-hero">
-                <h1 id="page-hero-title" class="text-display font-semibold text-black">Repairs Guide</h1>
-                <p id="page-hero-desc" class="max-w-readable text-body-lg font-light text-grey-primary"
+                <h1 id="page-hero-title" class="text-hero-title text-black" data-i18n="breadcrumb.current">Repair Guides</h1>
+                <p id="page-hero-desc" class="text-hero-subtitle text-black max-w-readable"
                     data-i18n="hero.description">
                     Here you will find a complete collection of support materials, including procedural guides, product
                     datasheets, and relevant warnings. These resources are designed to assist in understanding system
@@ -141,95 +133,122 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+            </div>
+        </main>
 
-    <div class="w-full max-w-wide mx-auto px-32 pb-64">
-        <footer class="footer">
-            <div class="footer-body">
-                <div class="footer-grid">
-                    <div class="flex flex-col items-center text-center">
-                        <img src="favicon.svg" alt="NexLed Logo" class="w-thumb-md h-thumb-md mb-8">
-                    </div>
+        <div class="container-balanced">
+            <footer class="footer">
+                <div class="footer-body">
+                    <div class="footer-grid">
+                        <div class="footer-col footer-col-brand">
+                            <div class="footer-brand">
+                                <div class="footer-stack justify-items-center">
+                                    <span class="footer-brand-mark">
+                                        <img src="favicon.svg" alt="NexLed logo" class="footer-brand-logo">
+                                    </span>
+                                    <p class="footer-copy" data-i18n="header.supportPage">Support Page</p>
+                                </div>
+                                <div class="footer-brand-copy">
+                                    <h3 class="footer-brand-title">NexLed</h3>
+                                    <ul class="footer-links">
+                                        <li>
+                                            <a href="index.html" class="link-navigation link-sm flex items-center gap-8" data-support-route="home">
+                                                <i class="ri-home-4-line icon icon-sm text-grey-primary" aria-hidden="true"></i>
+                                                <span class="link-label" data-i18n="header.supportPage">Support Page</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="repair.html" class="link-navigation link-sm flex items-center gap-8" data-support-route="repair">
+                                                <i class="ri-tools-line icon icon-sm text-grey-primary" aria-hidden="true"></i>
+                                                <span class="link-label" data-i18n="nav.repairGuides">Repair Guides</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="downloads.html" class="link-navigation link-sm flex items-center gap-8" data-support-route="downloads">
+                                                <i class="ri-download-2-line icon icon-sm text-grey-primary" aria-hidden="true"></i>
+                                                <span class="link-label" data-i18n="nav.downloadFiles">Download Files</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="flex flex-col">
-                        <h3 class="footer-brand-title">Nexled</h3>
-                        <ul class="footer-links flex-1 mb-16">
-                            <li><a href="index.html" class="link-text-icon link-sm"><i class="ri-home-4-line"></i><span
-                                        class="link-label">P&aacute;gina de Suporte</span></a></li>
-                            <li><a href="repair.html" class="link-text-icon link-sm"><i class="ri-tools-line"></i><span
-                                        class="link-label">Guias de Repara&ccedil;&atilde;o</span></a></li>
-                            <li><a href="downloads.html" class="link-text-icon link-sm"><i class="ri-download-2-line"></i><span
-                                        class="link-label">Ficheiros para Download</span></a></li>
-                        </ul>
-                    </div>
+                        <div class="footer-col">
+                            <h4 class="footer-heading" data-support-shell-copy="resources">Resources</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html#faq" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="faq">Frequently Asked Questions</span></a></li>
+                                <li><a href="index.html#warranty" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="warranty">Warranty</span></a></li>
+                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="contactUs">Contact Us</span></a></li>
+                                <li><a href="index.html" class="link-subtle link-sm" data-support-route="home"><span class="link-label" data-support-shell-copy="homePage">Home Page</span></a></li>
+                            </ul>
+                        </div>
 
-                    <div class="footer-col">
-                        <h4 class="mb-12">
-                            <a href="index.html" class="link-navigation link-lg">
-                                <span class="link-label">Recursos</span>
-                            </a>
-                        </h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html#faq" class="link-subtle link-sm"><span class="link-label">Perguntas Frequentes</span></a></li>
-                            <li><a href="index.html#warranty" class="link-subtle link-sm"><span class="link-label">Garantia</span></a>
-                            </li>
-                            <li><a href="contact.html" class="link-subtle link-sm"><span class="link-label">Contacte-nos</span></a>
-                            </li>
-                            <li><a href="index.html" class="link-subtle link-sm"><span class="link-label">P&aacute;gina Inicial</span></a></li>
-                        </ul>
-                    </div>
+                        <div class="footer-col">
+                            <h4 class="footer-heading"><span data-i18n="footer.contacts">Contactos</span></h4>
+                            <ul class="footer-links">
+                                <li><a href="mailto:comercial@tecit.pt" class="link-subtle link-sm"><span class="link-label">comercial@tecit.pt</span></a></li>
+                                <li><a href="tel:+351229999230" class="link-subtle link-sm"><span class="link-label">+351 229 999 230</span></a></li>
+                                <li><a href="tel:+351919989354" class="link-subtle link-sm"><span class="link-label">+351 919 989 354</span></a></li>
+                                <li><a href="tel:+351917321988" class="link-subtle link-sm"><span class="link-label">+351 917 321 988</span></a></li>
+                            </ul>
+                        </div>
 
-                    <div class="footer-col">
-                        <h4 class="mb-12">
-                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label"
-                                    data-i18n="footer.contacts">Contactos</span></a>
-                        </h4>
-                        <ul class="footer-links">
-                            <li><a href="mailto:comercial@tecit.pt" class="link-subtle link-sm"><span
-                                        class="link-label">comercial@tecit.pt</span></a></li>
-                            <li><a href="tel:+351229999230" class="link-subtle link-sm"><span class="link-label">+351
-                                        229 999 230</span></a></li>
-                            <li><a href="tel:+351919989354" class="link-subtle link-sm"><span class="link-label">+351
-                                        919 989 354</span></a></li>
-                            <li><a href="tel:+351917321988" class="link-subtle link-sm"><span class="link-label">+351
-                                        917 321 988</span></a></li>
-                        </ul>
-                    </div>
+                        <div class="footer-col">
+                            <h4 class="footer-heading"><span data-i18n="footer.location">Localiza&ccedil;&atilde;o</span></h4>
+                            <address class="footer-links footer-address not-italic">
+                                <p>Travessa Cabo do Mundo, 681</p>
+                                <p>4455-427 Perafita</p>
+                                <p>Matosinhos - Portugal</p>
+                            </address>
+                            <p class="footer-heading mt-24" data-i18n="footer.hours">Hor&aacute;rio</p>
+                            <p class="footer-bottom-text" data-i18n="footer.officeHours">09:00h &agrave;s 18:00h Dias &uacute;teis</p>
+                        </div>
 
-                    <div class="footer-col">
-                        <h4 class="mb-12">
-                            <a href="#" class="link-navigation link-lg">
-                                <span class="link-label" data-i18n="footer.location">Localiza&ccedil;&atilde;o</span>
-                            </a>
-                        </h4>
-                        <address class="footer-links not-italic mb-16">
-                            <p>Travessa Cabo do Mundo, 681</p>
-                            <p>4455-427 Perafita,</p>
-                            <p>Matosinhos - Portugal</p>
-                        </address>
-                        <h4 class="text-body-lg font-normal text-black mb-4" data-i18n="footer.hours">Hor&aacute;rio
-                        </h4>
-                        <p class="text-body-sm font-light text-black" data-i18n="footer.officeHours">09:00h &agrave;s
-                            18:00h Dias &uacute;teis</p>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4 class="mb-12">
-                            <a href="contact.html" class="link-navigation link-lg"><span class="link-label">Ajuda R&aacute;pida</span></a>
-                        </h4>
-                        <ul class="footer-links">
-                            <li><a href="contact.html" class="link-subtle link-sm"><span class="link-label">Abrir Pedido de Suporte</span></a>
-                            </li>
-                            <li><a href="repair.html" class="link-subtle link-sm"><span class="link-label">Ver Guias de Repara&ccedil;&atilde;o</span></a>
-                            </li>
-                            <li><a href="downloads.html" class="link-subtle link-sm"><span class="link-label">Ver Downloads</span></a>
-                            </li>
-                        </ul>
+                        <div class="footer-col">
+                            <h4 class="footer-heading" data-support-shell-copy="quickHelp">Quick Help</h4>
+                            <ul class="footer-links">
+                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="openSupportRequest">Open Support Request</span></a></li>
+                                <li><a href="repair.html" class="link-subtle link-sm" data-support-route="repair"><span class="link-label" data-support-shell-copy="viewRepairGuides">View Repair Guides</span></a></li>
+                                <li><a href="downloads.html" class="link-subtle link-sm" data-support-route="downloads"><span class="link-label" data-support-shell-copy="viewDownloads">View Downloads</span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </footer>
+        </div>
+
+        <div class="search-overlay" id="supportSearchOverlay" data-search-overlay-modal="true" aria-hidden="true">
+            <div class="search-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="supportSearchOverlayTitle" tabindex="-1">
+                <div class="search-overlay-header">
+                    <div>
+                        <h2 id="supportSearchOverlayTitle" class="modal-title" data-support-search-title>Find pages, sections, and guides</h2>
+                    </div>
+                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close aria-label="Close search overlay">
+                        <i class="ri-close-line text-icon-md" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="input-icon-wrapper input-md w-full">
+                    <span class="input-icon-area" aria-hidden="true">
+                        <i class="ri-search-line"></i>
+                    </span>
+                    <input type="text" id="supportSearchOverlayInput" class="input-icon-field"
+                        data-search-overlay-input placeholder="Search pages, products, or repair guides"
+                        aria-label="Search pages, products, or repair guides" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="search-overlay-results" data-support-search-results hidden>
+                    <div class="search-overlay-group" data-support-search-list role="list" aria-label="Search results" aria-live="polite"></div>
+                </div>
+                <div class="search-overlay-empty" data-support-search-empty-state hidden>
+                    <i class="ri-search-line text-icon-md" aria-hidden="true"></i>
+                    <p class="text-body-sm" data-support-search-empty>No matching support results found.</p>
+                </div>
+                <div class="search-overlay-footer">
+                    <p class="text-body-xs" data-support-search-helper>Search primary pages, product sections, and repair guides.</p>
+                </div>
             </div>
-        </footer>
+        </div>
     </div>
     <script src="src/scripts/utils.js"></script>
     <script src="src/scripts/support-site.js"></script>
@@ -243,17 +262,71 @@
             '24V Bar Model 120': '24v-bar-model-120',
             '24V Bar Model 145': '24v-bar-model-145',
         };
+        const REPAIR_UI = {
+            loading: {
+                pt: 'A carregar guias de reparação...',
+                en: 'Loading repair guides...',
+                es: 'Cargando guías de reparación...',
+                fr: 'Chargement des guides de réparation...',
+            },
+            errorTitle: {
+                pt: 'Não foi possível carregar as reparações',
+                en: 'Unable to load repairs',
+                es: 'No se pudieron cargar las reparaciones',
+                fr: 'Impossible de charger les réparations',
+            },
+            errorDescription: {
+                pt: 'O catálogo de reparações não pôde ser carregado.',
+                en: 'The repair catalog could not be loaded.',
+                es: 'No se pudo cargar el catálogo de reparaciones.',
+                fr: 'Le catalogue des réparations n’a pas pu être chargé.',
+            },
+            guideFallback: {
+                pt: 'Guia de reparação',
+                en: 'Repair guide',
+                es: 'Guía de reparación',
+                fr: 'Guide de réparation',
+            },
+            openGuide: {
+                pt: 'Abrir guia',
+                en: 'Open guide',
+                es: 'Abrir guía',
+                fr: 'Ouvrir le guide',
+            },
+            categoryFallback: {
+                pt: 'Categoria',
+                en: 'Category',
+                es: 'Categoría',
+                fr: 'Catégorie',
+            },
+        };
 
-        function getRepairSpinnerMarkup() {
+        function getRepairUiLabel(key, lang, fallback = '') {
+            return Utils.t(REPAIR_UI[key], lang, fallback);
+        }
+
+        function isPlaceholderRepairDescription(value) {
+            return [
+                'short description',
+                'descrição curta',
+                'descripción breve',
+                'brève description',
+            ].includes(String(value || '').trim().toLowerCase());
+        }
+
+        function getRepairSpinnerMarkup(lang) {
             return `
-                <div class="flex justify-center py-32">
-                    <div class="spinner spinner-md" aria-hidden="true">
-                        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <path class="spinner-track" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
-                            <path class="spinner-anim" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
-                        </svg>
+                <article class="card">
+                    <div class="card-body flex flex-col items-center gap-16 py-32 text-center">
+                        <div class="spinner spinner-md" aria-hidden="true">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                <path class="spinner-track" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                                <path class="spinner-anim" d="M 50 5 L 75 5 A 20 20 0 0 1 95 25 L 95 75 A 20 20 0 0 1 75 95 L 25 95 A 20 20 0 0 1 5 75 L 5 25 A 20 20 0 0 1 25 5 L 50 5 Z" />
+                            </svg>
+                        </div>
+                        <p class="card-text">${getRepairUiLabel('loading', lang, 'Loading repair guides...')}</p>
                     </div>
-                </div>
+                </article>
             `;
         }
 
@@ -264,7 +337,7 @@
 
             const label = document.createElement('span');
             label.className = 'link-label';
-            label.textContent = Utils.t(repair.label, lang, 'Open guide');
+            label.textContent = Utils.t(repair.label, lang, getRepairUiLabel('openGuide', lang, 'Open guide'));
 
             anchor.appendChild(label);
             return anchor;
@@ -309,9 +382,9 @@
             const imagePath = Utils.sanitizeImagePath(card.image || '');
             if (imagePath) {
                 const image = document.createElement('img');
-                image.className = 'text-style-media-frame w-full rounded-md object-cover';
+                image.className = 'text-style-media-frame w-full object-cover';
                 image.src = imagePath;
-                image.alt = `${Utils.t(card.title, lang, 'Repair guide')} repair guide`;
+                image.alt = `${Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'))} guide`;
                 mediaColumn.appendChild(image);
             } else {
                 const icon = document.createElement('i');
@@ -328,14 +401,17 @@
 
             const title = document.createElement('h3');
             title.className = 'card-title';
-            title.textContent = Utils.t(card.title, lang, 'Repair guide');
-
-            const description = document.createElement('p');
-            description.className = 'card-text';
-            description.textContent = Utils.t(card.description, lang, 'Short description');
+            title.textContent = Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'));
 
             copyGroup.appendChild(title);
-            copyGroup.appendChild(description);
+
+            const descriptionText = Utils.t(card.description, lang, '');
+            if (descriptionText && !isPlaceholderRepairDescription(descriptionText)) {
+                const description = document.createElement('p');
+                description.className = 'card-text';
+                description.textContent = descriptionText;
+                copyGroup.appendChild(description);
+            }
 
             const repairList = document.createElement('ul');
             repairList.className = 'grid grid-cols-1 gap-12 sm:grid-cols-2 xl:grid-cols-3';
@@ -356,14 +432,13 @@
             return article;
         }
 
-        function renderRepairError() {
-            document.title = 'Repairs - Nexled Support';
-            document.getElementById('page-hero-title').textContent = 'Repairs Guide';
+        function renderRepairError(lang) {
+            document.title = `${getRepairUiLabel('errorTitle', lang, 'Unable to load repairs')} - Nexled Support`;
             document.getElementById('repair-categories').innerHTML = `
                 <article class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Unable to load repairs</h2>
-                        <p class="card-text">The repair catalog could not be loaded.</p>
+                        <h2 class="card-title">${getRepairUiLabel('errorTitle', lang, 'Unable to load repairs')}</h2>
+                        <p class="card-text">${getRepairUiLabel('errorDescription', lang, 'The repair catalog could not be loaded.')}</p>
                     </div>
                 </article>
             `;
@@ -385,7 +460,7 @@
 
                 const heading = document.createElement('h2');
                 heading.className = 'text-h2 font-semibold text-black';
-                heading.textContent = Utils.t(category.title, lang, 'Category');
+                heading.textContent = Utils.t(category.title, lang, getRepairUiLabel('categoryFallback', lang, 'Category'));
 
                 const cardsWrapper = document.createElement('div');
                 cardsWrapper.className = 'space-y-24';
@@ -405,16 +480,15 @@
 
             const lang = Utils.getLang();
             const repairCategories = document.getElementById('repair-categories');
-            repairCategories.innerHTML = getRepairSpinnerMarkup();
+            repairCategories.innerHTML = getRepairSpinnerMarkup(lang);
             const data = await Utils.fetchJSON('data/repairs.json');
             if (!data) {
-                renderRepairError();
+                renderRepairError(lang);
                 return;
             }
 
             const pageTitle = Utils.t(data.meta?.title, lang, 'Repairs - Nexled Support');
             document.title = pageTitle;
-            document.getElementById('page-hero-title').textContent = pageTitle;
 
             renderRepairCategories(data.categories, lang);
             requestAnimationFrame(scrollToRepairHash);

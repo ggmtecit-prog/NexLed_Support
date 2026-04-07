@@ -642,10 +642,10 @@
         "fr": "Envoyez-nous un message"
       },
       "description": {
-        "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
-        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed.",
-        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida ante, at tincidunt orci pulvinar sed."
+        "pt": "Explique o que necessita e inclua os principais dados do produto para que a equipa de suporte encaminhe o pedido rapidamente.",
+        "en": "Explain what you need and include the key product details so the support team can route your request quickly.",
+        "es": "Explique lo que necesita e incluya los datos principales del producto para que el equipo de soporte dirija su solicitud r\u00e1pidamente.",
+        "fr": "Expliquez votre besoin et ajoutez les informations essentielles du produit afin que l'\u00e9quipe d'assistance oriente rapidement votre demande."
       },
       "fields": {
         "name": {
@@ -662,10 +662,10 @@
             "fr": "Saisissez votre nom"
           },
           "hint": {
-            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "pt": "Utilize o nome completo da pessoa respons\u00e1vel pelo pedido.",
+            "en": "Use the full name of the person responsible for the request.",
+            "es": "Utilice el nombre completo de la persona responsable de la solicitud.",
+            "fr": "Utilisez le nom complet de la personne responsable de la demande."
           }
         },
         "email": {
@@ -682,10 +682,10 @@
             "fr": "Saisissez votre e-mail"
           },
           "hint": {
-            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "pt": "Usaremos este email para responder e partilhar os pr\u00f3ximos passos.",
+            "en": "We will use this email to reply and share the next steps.",
+            "es": "Usaremos este correo para responder y compartir los siguientes pasos.",
+            "fr": "Nous utiliserons cet e-mail pour r\u00e9pondre et partager les prochaines \u00e9tapes."
           }
         },
         "subject": {
@@ -702,10 +702,10 @@
             "fr": "Saisissez l'objet"
           },
           "hint": {
-            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "pt": "Resuma o problema, a fam\u00edlia do produto ou o pedido numa linha.",
+            "en": "Summarize the issue, product family, or request in one line.",
+            "es": "Resuma el problema, la familia del producto o la solicitud en una sola l\u00ednea.",
+            "fr": "R\u00e9sumez le probl\u00e8me, la famille de produits ou la demande en une ligne."
           }
         },
         "message": {
@@ -722,10 +722,10 @@
             "fr": "Rédigez votre court message"
           },
           "hint": {
-            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "pt": "Descreva o problema, o comportamento esperado e o que acontece neste momento.",
+            "en": "Describe the issue, the expected behavior, and what is happening now.",
+            "es": "Describa el problema, el comportamiento esperado y lo que ocurre ahora.",
+            "fr": "D\u00e9crivez le probl\u00e8me, le comportement attendu et ce qui se passe actuellement."
           }
         },
         "details": {
@@ -742,10 +742,10 @@
             "fr": "Ajoutez tout détail supplémentaire"
           },
           "hint": {
-            "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "pt": "Adicione n\u00fameros de s\u00e9rie, refer\u00eancias de encomenda, notas de instala\u00e7\u00e3o ou testes j\u00e1 realizados.",
+            "en": "Add serial numbers, order references, installation notes, or troubleshooting already completed.",
+            "es": "A\u00f1ada n\u00fameros de serie, referencias de pedido, notas de instalaci\u00f3n o pruebas ya realizadas.",
+            "fr": "Ajoutez les num\u00e9ros de s\u00e9rie, les r\u00e9f\u00e9rences de commande, les notes d'installation ou les tests d\u00e9j\u00e0 effectu\u00e9s."
           }
         }
       },
@@ -764,10 +764,10 @@
         "fr": "Contacts"
       },
       "description": {
-        "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
-        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat.",
-        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper erat."
+        "pt": "Escolha o canal de contacto mais adequado ao pedido e tenha a refer\u00eancia do produto por perto.",
+        "en": "Choose the contact channel that best fits your request and keep the product reference nearby.",
+        "es": "Elija el canal de contacto que mejor se adapte a su solicitud y tenga a mano la referencia del producto.",
+        "fr": "Choisissez le canal de contact le plus adapt\u00e9 \u00e0 votre demande et gardez la r\u00e9f\u00e9rence produit \u00e0 port\u00e9e de main."
       },
       "items": {
         "generalSupport": {
