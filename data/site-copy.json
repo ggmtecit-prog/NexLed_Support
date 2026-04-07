@@ -849,6 +849,12 @@
         "es": "Tiempo Estimado y Dificultad",
         "fr": "Temps estimé et difficulté"
       },
+      "timeDescription": {
+        "pt": "Aproximadamente 5 a 10 minutos, e a reparação pode ser feita por qualquer pessoa. A duração pode variar consoante a familiaridade do utilizador com o processo e se todos os passos decorrerem conforme previsto.",
+        "en": "Approximately 5 to 10 minutes, and the repair can be done by everybody. The duration may vary depending on the user's familiarity with the process and whether all steps proceed smoothly as planned.",
+        "es": "Aproximadamente de 5 a 10 minutos, y la reparación puede realizarla cualquier persona. La duración puede variar según la familiaridad del usuario con el proceso y si todos los pasos se desarrollan según lo previsto.",
+        "fr": "Environ 5 à 10 minutes, et la réparation peut être effectuée par tout le monde. La durée peut varier selon la familiarité de l'utilisateur avec le processus et selon que toutes les étapes se déroulent comme prévu."
+      },
       "requiredPartsTitle": {
         "pt": "Peças e Ferramentas Necessárias",
         "en": "Required Parts and Tools",
