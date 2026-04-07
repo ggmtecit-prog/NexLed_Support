@@ -364,6 +364,7 @@
                 return;
             }
 
+            const hoverEnabled = supportsHoverFlyouts();
             const activateCategory = (category) => {
                 tabs.forEach((tab) => {
                     const isActive = tab.dataset.flyoutCategory === category;
@@ -379,6 +380,16 @@
 
             tabs.forEach((tab, index) => {
                 tab.addEventListener('click', () => {
+                    activateCategory(tab.dataset.flyoutCategory);
+                });
+
+                if (hoverEnabled) {
+                    tab.addEventListener('mouseenter', () => {
+                        activateCategory(tab.dataset.flyoutCategory);
+                    });
+                }
+
+                tab.addEventListener('focus', () => {
                     activateCategory(tab.dataset.flyoutCategory);
                 });
 
