@@ -130,18 +130,6 @@
             es: 'P\u00e1gina de Inicio',
             fr: 'Page d\u2019accueil',
         },
-        footerCompany: {
-            pt: 'TEC it',
-            en: 'TEC it',
-            es: 'TEC it',
-            fr: 'TEC it',
-        },
-        copyright: {
-            pt: 'Copyright TEC it 2026',
-            en: 'Copyright TEC it 2026',
-            es: 'Copyright TEC it 2026',
-            fr: 'Copyright TEC it 2026',
-        },
         quickHelp: {
             pt: 'Ajuda R\u00e1pida',
             en: 'Quick Help',
