@@ -109,18 +109,6 @@
         "es": "Ubicaci\u00f3n",
         "fr": "Localisation"
       },
-      "hours": {
-        "pt": "Hor\u00e1rio",
-        "en": "Hours",
-        "es": "Horario",
-        "fr": "Horaires"
-      },
-      "officeHours": {
-        "pt": "09:00h \u00e0s 18:00h Dias \u00fateis",
-        "en": "09:00 to 18:00 on business days",
-        "es": "09:00 a 18:00 en d\u00edas laborables",
-        "fr": "09h00 \u00e0 18h00 les jours ouvrables"
-      },
       "support": {
         "pt": "Suporte",
         "en": "Support",
