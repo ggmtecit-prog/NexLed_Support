@@ -98,16 +98,16 @@
         "fr": "Alimentations"
       },
       "contacts": {
-        "pt": "Contactos",
-        "en": "Contacts",
-        "es": "Contacto",
-        "fr": "Contacts"
+        "pt": "Contactos de Suporte",
+        "en": "Support Contacts",
+        "es": "Contactos de Soporte",
+        "fr": "Contacts d’assistance"
       },
       "location": {
-        "pt": "Localiza\u00e7\u00e3o",
-        "en": "Location",
-        "es": "Ubicaci\u00f3n",
-        "fr": "Localisation"
+        "pt": "Sede",
+        "en": "Head Office",
+        "es": "Sede",
+        "fr": "Si\u00e8ge"
       },
       "support": {
         "pt": "Suporte",
