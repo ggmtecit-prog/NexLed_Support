@@ -615,6 +615,24 @@
             SupportSite.observeRevealTargets(stepsContainer);
         }
 
+        function revealPrintableContent() {
+            document.documentElement.classList.remove('has-scroll-reveal');
+            document.querySelectorAll('[data-reveal]').forEach((element) => {
+                element.classList.add('is-revealed');
+            });
+
+            const stepsSection = document.getElementById('steps');
+            if (stepsSection) {
+                stepsSection.hidden = false;
+            }
+        }
+
+        async function triggerStepPrint() {
+            revealPrintableContent();
+            await new Promise((resolve) => window.requestAnimationFrame(resolve));
+            window.print();
+        }
+
         async function initStepsPage() {
             const lang = Utils.getLang();
             stepSiteCopy = await Utils.fetchJSON('data/site-copy.json');
@@ -649,8 +667,10 @@
             renderSteps(content.steps, lang);
         }
 
+        window.addEventListener('beforeprint', revealPrintableContent);
+
         document.querySelector('[data-steps-print]')?.addEventListener('click', () => {
-            window.print();
+            triggerStepPrint();
         });
 
         initStepsPage();
