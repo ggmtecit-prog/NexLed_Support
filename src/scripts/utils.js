@@ -51,7 +51,15 @@ const Utils = {
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return await response.json();
+            const buffer = await response.arrayBuffer();
+            const decoder = typeof TextDecoder === 'function'
+                ? new TextDecoder('utf-8')
+                : null;
+            const text = decoder
+                ? decoder.decode(buffer)
+                : Array.from(new Uint8Array(buffer), (byte) => String.fromCharCode(byte)).join('');
+
+            return JSON.parse(text.replace(/^\uFEFF/, ''));
         } catch (e) {
             console.error('Could not fetch JSON:', e);
             return null;

@@ -1,7 +1,7 @@
 /**
  * NEXLED INTERACTIVE COMPONENTS
  * Supports Accordion, Dropdown, Modal, Stepper, and Custom Scrollbar
- * VERSÂO ATUALIZADA 02/04/2026
+ * VERSAO ATUALIZADA 02/04/2026
  */
 
 const canUseScrollReveal = typeof window !== 'undefined'

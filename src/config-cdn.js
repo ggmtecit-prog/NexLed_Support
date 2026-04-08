@@ -139,7 +139,7 @@ const DESIGN_TOKENS = {
             'default': '1.5px',
             'bold': '2px',
         },
-        // Semantic aliases â€” values intentionally match main colors for icon-specific Tailwind utilities
+        // Semantic aliases - values intentionally match main colors for icon-specific Tailwind utilities
         colors: {
             'primary': '#03683D',    // = colors.green-primary
             'secondary': '#878787',  // = colors.grey-primary
@@ -148,7 +148,7 @@ const DESIGN_TOKENS = {
             'success': '#03683D',    // = colors.green-primary (same as primary)
             'on-dark': '#FCFCFC',    // = colors.white
         },
-        // Semantic aliases â€” values intentionally match main spacing for icon-specific gap utilities
+        // Semantic aliases - values intentionally match main spacing for icon-specific gap utilities
         gaps: {
             'xs': '4px',   // = spacing.4
             'sm': '8px',   // = spacing.8
