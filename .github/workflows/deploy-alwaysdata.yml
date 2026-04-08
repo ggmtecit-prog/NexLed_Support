@@ -1,0 +1,79 @@
+name: Deploy To alwaysdata
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      ALWAYSDATA_HOST: ${{ secrets.ALWAYSDATA_HOST }}
+      ALWAYSDATA_PORT: ${{ secrets.ALWAYSDATA_PORT }}
+      ALWAYSDATA_TARGET_DIR: ${{ secrets.ALWAYSDATA_TARGET_DIR }}
+      ALWAYSDATA_USER: ${{ secrets.ALWAYSDATA_USER }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+
+      - name: Lint PHP files
+        shell: bash
+        run: |
+          while IFS= read -r -d '' file; do
+            php -l "$file"
+          done < <(find . -name '*.php' -print0)
+
+      - name: Validate required secrets
+        shell: bash
+        run: |
+          test -n "$ALWAYSDATA_HOST"
+          test -n "$ALWAYSDATA_PORT"
+          test -n "$ALWAYSDATA_TARGET_DIR"
+          test -n "$ALWAYSDATA_USER"
+          test -n "${{ secrets.ALWAYSDATA_SSH_KEY }}"
+
+      - name: Configure SSH key
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.ALWAYSDATA_SSH_KEY }}" > ~/.ssh/alwaysdata
+          chmod 600 ~/.ssh/alwaysdata
+
+      - name: Trust alwaysdata host key
+        shell: bash
+        run: |
+          ssh-keyscan -p "$ALWAYSDATA_PORT" "$ALWAYSDATA_HOST" >> ~/.ssh/known_hosts
+
+      - name: Ensure remote target exists
+        shell: bash
+        run: |
+          ssh -i ~/.ssh/alwaysdata -p "$ALWAYSDATA_PORT" "$ALWAYSDATA_USER@$ALWAYSDATA_HOST" "mkdir -p '$ALWAYSDATA_TARGET_DIR'"
+
+      - name: Deploy site with rsync
+        shell: bash
+        run: |
+          rsync -az --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.env' \
+            --exclude '.env.example' \
+            --exclude 'UI_SYSTEM/' \
+            --exclude 'old/' \
+            --exclude '.codex-worktree-contact-panel-sticky/' \
+            --exclude 'docs/' \
+            --exclude '*.md' \
+            -e "ssh -i ~/.ssh/alwaysdata -p $ALWAYSDATA_PORT" \
+            ./ "$ALWAYSDATA_USER@$ALWAYSDATA_HOST:$ALWAYSDATA_TARGET_DIR/"

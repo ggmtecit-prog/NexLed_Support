@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+require __DIR__ . '/src/SupportRuntimeEnv.php';
 require __DIR__ . '/src/SupportRequestValidator.php';
 require __DIR__ . '/src/SupportEmailService.php';
+
+SupportRuntimeEnv::load(__DIR__ . '/.env');
 
 /**
  * @param array<string, mixed> $payload
