@@ -102,14 +102,12 @@ Only disable GitHub Pages after alwaysdata is verified. Keep the old GitHub Page
 
 After that, disable GitHub Pages in the repository settings and update any public links to the alwaysdata URL.
 
-## Important Note About NexLed UI Assets
+## NexLed UI Assets
 
-This repo still loads NexLed design-system assets from:
+The support pages now load the NexLed design-system assets locally from:
 
-- `https://ggmtecit-prog.github.io/NexLed_UI_System/src/config-cdn.js?v=1.3`
-- `https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.css?v=1.3`
-- `https://ggmtecit-prog.github.io/NexLed_UI_System/src/nexled.js?v=1.3`
+- `src/config-cdn.js`
+- `src/nexled.css`
+- `src/nexled.js`
 
-That is separate from hosting NexLed Support itself on alwaysdata.
-
-If you also want to remove the design-system dependency on GitHub Pages, the next step is to host those NexLed assets on alwaysdata or vendor them locally in this repo and then update all page `<head>` blocks.
+Those files were copied from the canonical `UI_SYSTEM/src/` sources so the live app no longer depends on the separate NexLed UI System GitHub Pages host at runtime.

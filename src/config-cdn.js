@@ -1,6 +1,7 @@
 /**
  * SHARED TAILWIND CONFIGURATION (CDN MODE)
  * Consolidates all design tokens into a single source of truth.
+ * VERSÃ‚O ATUALIZADA
  */
 
 const DESIGN_TOKENS = {
@@ -12,13 +13,18 @@ const DESIGN_TOKENS = {
         'blue-primary': '#386789',
         'blue-secondary': '#5B8BAA',
         'black': '#121212',
-        'white': '#FCFCFC',
+        'white': '#fcfcfc',
         'grey-primary': '#878787',
         'grey-secondary': '#D9D9D9',
         'grey-tertiary': '#EDEDED',
         'link-visited': '#4C1D95',
         'red-primary': '#B1242F',
         'red-secondary': '#C94A55',
+        'yellow-primary': '#D97706',
+        'yellow-secondary': '#F59E0B',
+        'info-primary': '#2563EB',
+        'info-secondary': '#3B82F6',
+        'success-primary': '#03683D',
     },
     spacing: {
         '4': '4px',
@@ -40,10 +46,18 @@ const DESIGN_TOKENS = {
         },
         fontSizes: {
             'display': '48px',
+            'hero-title': '50px',
+            'hero-subtitle': '22px',
             'button-lg': '32px',
+            'nav-bar-h1': '40px',
             'h1': '36px',
+            'section-title': '45px',
+            'content-question': '38px',
+            'card-title': '35px',
+            'content-answer': '25px',
             'h2': '30px',
             'h3': '24px',
+            'body-xl': '20px',
             'body-lg': '18px',
             'body': '16px',
             'body-sm': '14px',
@@ -79,6 +93,7 @@ const DESIGN_TOKENS = {
             'regular': '400',
             'medium': '500',
             'semibold': '600',
+            'bold': '700',
         },
         spacing: {
             'heading-top': '32px',
@@ -96,13 +111,18 @@ const DESIGN_TOKENS = {
         'lg': '16px',
         'xl': '24px',
         'btn': '20px',
+        'btn-xl': '20px',
+        'btn-lg': '20px',
+        'btn-md': '18px',
+        'btn-sm': '14px',
+        'btn-xs': '10px',
         'full': '9999px',
     },
     shadows: {
         'default': '0 6px 14px rgba(135, 135, 135, 0.20)',
         'hover': '0 18px 36px rgba(190, 224, 210, 0.40), 0 6px 18px rgba(135, 135, 135, 0.15)',
         'active': '0 4px 10px rgba(0, 0, 0, 0.2)',
-        'glow': '0 20px 40px rgba(16, 185, 129, 0.22)',
+        'glow': '0 20px 40px rgba(5, 140, 83, 0.22)',
         'hover-active': '0 18px 36px rgba(5, 140, 83, 0.35)',
     },
     icons: {
@@ -119,19 +139,21 @@ const DESIGN_TOKENS = {
             'default': '1.5px',
             'bold': '2px',
         },
+        // Semantic aliases â€” values intentionally match main colors for icon-specific Tailwind utilities
         colors: {
-            'primary': '#03683D',
-            'secondary': '#878787',
-            'muted': '#D9D9D9',
-            'danger': '#B1242F',
-            'success': '#03683D',
-            'on-dark': '#FCFCFC',
+            'primary': '#03683D',    // = colors.green-primary
+            'secondary': '#878787',  // = colors.grey-primary
+            'muted': '#D9D9D9',      // = colors.grey-secondary
+            'danger': '#B1242F',     // = colors.red-primary
+            'success': '#03683D',    // = colors.green-primary (same as primary)
+            'on-dark': '#FCFCFC',    // = colors.white
         },
+        // Semantic aliases â€” values intentionally match main spacing for icon-specific gap utilities
         gaps: {
-            'xs': '4px',
-            'sm': '8px',
-            'md': '12px',
-            'lg': '20px',
+            'xs': '4px',   // = spacing.4
+            'sm': '8px',   // = spacing.8
+            'md': '12px',  // = spacing.12
+            'lg': '20px',  // = spacing.20
         }
     },
     sizing: {
@@ -147,10 +169,16 @@ const DESIGN_TOKENS = {
         'btn-icon-lg': '94px',
         'btn-icon-md': '72px',
         'btn-icon-sm': '56px',
+        'btn-icon-xs': '40px',
+        'btn-xs-w': '200px',
+        'btn-xs-h': '40px',
         'thumb-md': '120px',
+        'carousel-h': '380px',
         'checkbox-sm': '16px',
         'checkbox-md': '22px',
         'checkbox-lg': '28px',
+        'sidebar-w': '311px',
+        'sidebar-h': '900px',
     },
     breakpoints: {
         'mobile': '480px',
@@ -168,12 +196,18 @@ const DESIGN_TOKENS = {
     },
     layout: {
         'standard': '1280px',
+        'balanced': '1600px',
         'wide': '1440px',
         'narrow': '768px',
         'readable': '65ch',
     },
     motion: {
+        'duration-fast': '150ms',
         'duration-default': '400ms',
+        'duration-slow': '500ms',
+        'ease-out': 'cubic-bezier(0.33, 1, 0.68, 1)',
+        'ease-in': 'cubic-bezier(0.32, 0, 0.67, 0)',
+        'ease-in-out': 'cubic-bezier(0.65, 0, 0.35, 1)',
         'ease-premium': 'cubic-bezier(0.16, 1, 0.3, 1)',
     },
     opacity: {
@@ -271,10 +305,15 @@ tailwind.config = {
                 'icon-stroke-bold': DESIGN_TOKENS.icons.strokes.bold,
             },
             transitionDuration: {
+                'fast': DESIGN_TOKENS.motion['duration-fast'],
                 'default': DESIGN_TOKENS.motion['duration-default'],
                 '400': DESIGN_TOKENS.motion['duration-default'],
+                'slow': DESIGN_TOKENS.motion['duration-slow'],
             },
             transitionTimingFunction: {
+                'out': DESIGN_TOKENS.motion['ease-out'],
+                'in': DESIGN_TOKENS.motion['ease-in'],
+                'in-out': DESIGN_TOKENS.motion['ease-in-out'],
                 'premium': DESIGN_TOKENS.motion['ease-premium'],
                 'button-ease': DESIGN_TOKENS.motion['ease-premium'],
             },
@@ -292,7 +331,10 @@ tailwind.config = {
                 'btn-icon-lg': DESIGN_TOKENS.sizing['btn-icon-lg'],
                 'btn-icon-md': DESIGN_TOKENS.sizing['btn-icon-md'],
                 'btn-icon-sm': DESIGN_TOKENS.sizing['btn-icon-sm'],
+                'btn-icon-xs': DESIGN_TOKENS.sizing['btn-icon-xs'],
+                'btn-xs': DESIGN_TOKENS.sizing['btn-xs-w'],
                 'thumb-md': DESIGN_TOKENS.sizing['thumb-md'],
+                'carousel-h': DESIGN_TOKENS.sizing['carousel-h'],
                 'icon-xs': DESIGN_TOKENS.icons.sizes.xs,
                 'icon-sm': DESIGN_TOKENS.icons.sizes.sm,
                 'icon-md': DESIGN_TOKENS.icons.sizes.md,
@@ -302,6 +344,7 @@ tailwind.config = {
                 'checkbox-sm': DESIGN_TOKENS.sizing['checkbox-sm'],
                 'checkbox-md': DESIGN_TOKENS.sizing['checkbox-md'],
                 'checkbox-lg': DESIGN_TOKENS.sizing['checkbox-lg'],
+                'sidebar': DESIGN_TOKENS.sizing['sidebar-w'],
             },
             height: {
                 'btn-xl': DESIGN_TOKENS.sizing['btn-xl-h'],
@@ -312,7 +355,10 @@ tailwind.config = {
                 'btn-icon-lg': DESIGN_TOKENS.sizing['btn-icon-lg'],
                 'btn-icon-md': DESIGN_TOKENS.sizing['btn-icon-md'],
                 'btn-icon-sm': DESIGN_TOKENS.sizing['btn-icon-sm'],
+                'btn-icon-xs': DESIGN_TOKENS.sizing['btn-icon-xs'],
+                'btn-xs': DESIGN_TOKENS.sizing['btn-xs-h'],
                 'thumb-md': DESIGN_TOKENS.sizing['thumb-md'],
+                'carousel-h': DESIGN_TOKENS.sizing['carousel-h'],
                 'icon-xs': DESIGN_TOKENS.icons.sizes.xs,
                 'icon-sm': DESIGN_TOKENS.icons.sizes.sm,
                 'icon-md': DESIGN_TOKENS.icons.sizes.md,
@@ -322,6 +368,7 @@ tailwind.config = {
                 'checkbox-sm': DESIGN_TOKENS.sizing['checkbox-sm'],
                 'checkbox-md': DESIGN_TOKENS.sizing['checkbox-md'],
                 'checkbox-lg': DESIGN_TOKENS.sizing['checkbox-lg'],
+                'sidebar': DESIGN_TOKENS.sizing['sidebar-h'],
             },
             ringWidth: {
                 'DEFAULT': DESIGN_TOKENS.focus['ring-width'],
