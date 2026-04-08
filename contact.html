@@ -207,74 +207,67 @@
                         </form>
                     </article>
 
-                    <aside class="space-y-24 lg:col-span-4">
-                        <article class="panel p-24 flex flex-col gap-16 w-full" data-reveal="section">
-                            <h2 class="text-card-title text-black" data-i18n="aside.title">Contacts</h2>
-                            <p class="text-body text-grey-primary max-w-readable" data-i18n="aside.description">Choose the contact channel
-                                that best fits your request and keep the product reference nearby.</p>
+                    <aside class="lg:col-span-4">
+                        <article class="card h-full" data-reveal="section">
+                            <div class="card-body">
+                                <div class="space-y-24">
+                                    <header class="space-y-8">
+                                        <h2 class="card-title" data-i18n="aside.title">Contacts</h2>
+                                        <p class="card-text" data-i18n="aside.description">Choose the contact channel
+                                            that best fits your request and keep the product reference nearby.</p>
+                                    </header>
+
+                                    <div class="space-y-20">
+                                        <div class="space-y-4">
+                                            <h3 class="text-body-sm font-semibold text-black"
+                                                data-i18n="aside.items.generalSupport.title">General Support</h3>
+                                            <a href="mailto:comercial@tecit.pt" class="link-text-icon link-sm" data-support-mail="comercial@tecit.pt">
+                                                <i class="ri-mail-line" aria-hidden="true"></i>
+                                                <span class="link-label">comercial@tecit.pt</span>
+                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="text-body-sm font-semibold text-black"
+                                                data-i18n="aside.items.salesTeam.title">Sales Team</h3>
+                                            <a href="tel:+351229999230" class="link-text-icon link-sm" data-support-tel="+351229999230">
+                                                <i class="ri-phone-line" aria-hidden="true"></i>
+                                                <span class="link-label">+351 229 999 230</span>
+                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="text-body-sm font-semibold text-black"
+                                                data-i18n="aside.items.technicalSupport.title">Technical Support</h3>
+                                            <a href="tel:+351919989354" class="link-text-icon link-sm" data-support-tel="+351919989354">
+                                                <i class="ri-customer-service-2-line" aria-hidden="true"></i>
+                                                <span class="link-label">+351 919 989 354</span>
+                                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="text-body-sm font-semibold text-black"
+                                                data-i18n="aside.items.mainOffice.title">Main Office</h3>
+                                            <div class="card-text">
+                                                <p>Travessa Cabo do Mundo, 681</p>
+                                                <p>4455-427 Perafita</p>
+                                                <p>Matosinhos - Portugal</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-4">
+                                            <h3 class="text-body-sm font-semibold text-black"
+                                                data-i18n="aside.items.scheduling.title">Scheduling</h3>
+                                            <p class="card-text" data-i18n="aside.items.scheduling.value">Monday to
+                                                Friday, 09:00 - 18:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-
-                        <div class="grid grid-cols-1 gap-16" data-reveal="section">
-                            <article class="card">
-                                <div class="card-body">
-                                    <div class="card-header">
-                                        <div class="card-icon">
-                                            <i class="ri-mail-line text-icon-lg" aria-hidden="true"></i>
-                                        </div>
-                                        <h3 class="card-title" data-i18n="aside.items.generalSupport.title">General Support</h3>
-                                    </div>
-                                    <a href="mailto:comercial@tecit.pt" class="link link-md" data-support-mail="comercial@tecit.pt">
-                                        <span class="link-label">comercial@tecit.pt</span>
-                                    </a>
-                                </div>
-                            </article>
-
-                            <article class="card">
-                                <div class="card-body">
-                                    <div class="card-header">
-                                        <div class="card-icon">
-                                            <i class="ri-phone-line text-icon-lg" aria-hidden="true"></i>
-                                        </div>
-                                        <h3 class="card-title" data-i18n="aside.items.salesTeam.title">Sales Team</h3>
-                                    </div>
-                                    <a href="tel:+351229999230" class="link link-md" data-support-tel="+351229999230">
-                                        <span class="link-label">+351 229 999 230</span>
-                                    </a>
-                                </div>
-                            </article>
-
-                            <article class="card">
-                                <div class="card-body">
-                                    <div class="card-header">
-                                        <div class="card-icon">
-                                            <i class="ri-customer-service-2-line text-icon-lg" aria-hidden="true"></i>
-                                        </div>
-                                        <h3 class="card-title" data-i18n="aside.items.technicalSupport.title">Technical Support</h3>
-                                    </div>
-                                    <a href="tel:+351919989354" class="link link-md" data-support-tel="+351919989354">
-                                        <span class="link-label">+351 919 989 354</span>
-                                    </a>
-                                </div>
-                            </article>
-
-                            <article class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title" data-i18n="aside.items.mainOffice.title">Main Office</h3>
-                                    <div class="card-text">
-                                        <p>Travessa Cabo do Mundo, 681</p>
-                                        <p>4455-427 Perafita</p>
-                                        <p>Matosinhos - Portugal</p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title" data-i18n="aside.items.scheduling.title">Scheduling</h3>
-                                    <p class="card-text" data-i18n="aside.items.scheduling.value">Monday to Friday, 09:00 - 18:00</p>
-                                </div>
-                            </article>
-                        </div>
                     </aside>
                 </div>
             </section>
