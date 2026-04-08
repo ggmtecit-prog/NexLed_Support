@@ -1,22 +1,22 @@
 (() => {
     const FALLBACK_FEEDBACK = {
         submitted: {
-            title: 'Request received',
-            message: 'We received your request. The support team will review the information and reply using the email address you provided.',
+            title: 'Request sent',
+            message: 'Your request has been sent. Our team will review the information and follow up using the email address you provided.',
             variant: 'success',
             icon: 'ri-checkbox-circle-line',
             role: 'status',
         },
         validation_summary: {
-            title: 'Review the highlighted fields',
-            message: 'Correct the indicated fields and submit the request again.',
+            title: 'Check the highlighted fields',
+            message: 'Correct the indicated fields before sending your request again.',
             variant: 'danger',
             icon: 'ri-close-circle-line',
             role: 'alert',
         },
         submit_failed: {
-            title: 'We could not submit the request',
-            message: 'The request could not be sent right now. Please try again shortly or use one of the direct contacts on this page.',
+            title: 'We could not send the request',
+            message: 'Please try again in a moment or use one of the direct support contacts shown on this page.',
             variant: 'danger',
             icon: 'ri-close-circle-line',
             role: 'alert',

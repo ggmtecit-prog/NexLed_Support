@@ -15,7 +15,7 @@
         ],
         contact: [
             { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
-            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Contact Support' },
+            { type: 'current', labelPath: 'breadcrumb.current', fallback: 'Contact Us' },
         ],
         repair: [
             { type: 'route', route: 'home', labelPath: 'breadcrumb.home', fallback: 'Home' },
@@ -39,22 +39,22 @@
     let searchIndexPromise = null;
     const SEARCH_COPY = {
         trigger: {
-            pt: 'Abrir pesquisa de suporte',
-            en: 'Open support search',
-            es: 'Abrir b\u00fasqueda de soporte',
-            fr: 'Ouvrir la recherche d\u2019assistance',
+            pt: 'Abrir pesquisa',
+            en: 'Open search',
+            es: 'Abrir b\u00fasqueda',
+            fr: 'Ouvrir la recherche',
         },
         close: {
-            pt: 'Fechar pesquisa de suporte',
-            en: 'Close support search',
-            es: 'Cerrar b\u00fasqueda de soporte',
-            fr: 'Fermer la recherche d\u2019assistance',
+            pt: 'Fechar pesquisa',
+            en: 'Close search',
+            es: 'Cerrar b\u00fasqueda',
+            fr: 'Fermer la recherche',
         },
         title: {
-            pt: 'Pesquisar p\u00e1ginas e guias de suporte',
-            en: 'Search support pages and guides',
-            es: 'Buscar p\u00e1ginas y gu\u00edas de soporte',
-            fr: 'Rechercher des pages et guides d\u2019assistance',
+            pt: 'Encontrar p\u00e1ginas, sec\u00e7\u00f5es e guias',
+            en: 'Find pages, sections, and guides',
+            es: 'Encontrar p\u00e1ginas, secciones y gu\u00edas',
+            fr: 'Trouver des pages, sections et guides',
         },
         placeholder: {
             pt: 'Pesquisar p\u00e1ginas, produtos ou guias de repara\u00e7\u00e3o',
@@ -63,16 +63,16 @@
             fr: 'Rechercher des pages, produits ou guides de r\u00e9paration',
         },
         empty: {
-            pt: 'Nenhum resultado de suporte corresponde \u00e0 pesquisa.',
-            en: 'No support results matched your search.',
-            es: 'Ning\u00fan resultado de soporte coincide con su b\u00fasqueda.',
-            fr: 'Aucun r\u00e9sultat d\u2019assistance ne correspond \u00e0 votre recherche.',
+            pt: 'N\u00e3o foram encontrados resultados de suporte.',
+            en: 'No matching support results found.',
+            es: 'No se encontraron resultados de soporte.',
+            fr: 'Aucun r\u00e9sultat d\u2019assistance trouv\u00e9.',
         },
         helper: {
-            pt: 'Pesquise p\u00e1ginas de suporte, sec\u00e7\u00f5es de produto e guias de repara\u00e7\u00e3o.',
-            en: 'Search support pages, product sections, and repair guides.',
-            es: 'Busque p\u00e1ginas de soporte, secciones de producto y gu\u00edas de reparaci\u00f3n.',
-            fr: 'Recherchez des pages d\u2019assistance, des sections produit et des guides de r\u00e9paration.',
+            pt: 'Pesquise p\u00e1ginas principais, sec\u00e7\u00f5es de produto e guias de repara\u00e7\u00e3o.',
+            en: 'Search primary pages, product sections, and repair guides.',
+            es: 'Busque p\u00e1ginas principales, secciones de producto y gu\u00edas de reparaci\u00f3n.',
+            fr: 'Recherchez des pages principales, sections produit et guides de r\u00e9paration.',
         },
         results: {
             pt: 'Resultados da pesquisa',
@@ -281,15 +281,6 @@
         return resolveLocalizedValue(getByPath(sharedCopy, key), lang, fallback);
     }
 
-    function getSharedCopyValue(siteCopy, key, lang, fallback = '') {
-        if (!key) {
-            return fallback;
-        }
-
-        const sharedCopy = siteCopy && typeof siteCopy === 'object' ? siteCopy.shared || {} : {};
-        return resolveLocalizedValue(getByPath(sharedCopy, key), lang, fallback);
-    }
-
     function buildFlyoutMarkup(menuKey, flyout) {
         const categories = Array.isArray(flyout?.categories) ? flyout.categories : [];
         if (!categories.length) {
@@ -305,7 +296,6 @@
             const isActive = index === 0;
             const categoryId = normalizeFlyoutId(category?.id, `category-${index + 1}`);
             const categoryLabel = escapeHTML(getTextValue(category?.label, `Category ${index + 1}`));
-
 
             return `
                 <button type="button" class="flyout-nav-item${isActive ? ' is-active' : ''}"
@@ -537,8 +527,8 @@
     function buildSearchPageItems(siteCopy, lang) {
         const items = [];
         const registry = new Set();
-        const pageType = getSharedCopyValue(siteCopy, 'search.page', lang, getDictionaryValue(SEARCH_COPY.page, lang, 'Page'));
-        const sectionType = getSharedCopyValue(siteCopy, 'search.section', lang, getDictionaryValue(SEARCH_COPY.section, lang, 'Section'));
+        const pageType = getDictionaryValue(SEARCH_COPY.page, lang, 'Page');
+        const sectionType = getDictionaryValue(SEARCH_COPY.section, lang, 'Section');
         const primaryPages = [
             { pageKey: 'index', href: withLang(ROUTES.home, lang), titlePath: 'hero.title', extraPath: 'header.supportPage' },
             { pageKey: 'repair', href: withLang(ROUTES.repair, lang), titlePath: 'breadcrumb.current', extraPath: 'nav.repairGuides' },
@@ -576,7 +566,7 @@
             return;
         }
 
-        const sectionType = getSharedCopyValue(siteCopy, 'search.section', lang, getDictionaryValue(SEARCH_COPY.section, lang, 'Section'));
+        const sectionType = getDictionaryValue(SEARCH_COPY.section, lang, 'Section');
 
         Object.entries(flyoutConfig).forEach(([routeKey, flyout]) => {
             const routeLabelPath = routeKey === 'repair' ? 'nav.repairGuides' : 'nav.downloadFiles';
@@ -601,12 +591,12 @@
         });
     }
 
-    function buildSearchRepairGuideItems(items, registry, siteCopy, repairsData, lang) {
+    function buildSearchRepairGuideItems(items, registry, repairsData, lang) {
         if (!repairsData || !Array.isArray(repairsData.categories)) {
             return;
         }
 
-        const repairGuideType = getSharedCopyValue(siteCopy, 'search.repairGuide', lang, getDictionaryValue(SEARCH_COPY.repairGuide, lang, 'Repair guide'));
+        const repairGuideType = getDictionaryValue(SEARCH_COPY.repairGuide, lang, 'Repair guide');
 
         repairsData.categories.forEach((category) => {
             (category.cards || []).forEach((card) => {
@@ -643,16 +633,15 @@
             const lang = getCurrentLang();
             const { items, registry } = buildSearchPageItems(siteCopy || {}, lang);
             buildSearchProductItems(items, registry, siteCopy || {}, flyoutConfig, lang);
-            buildSearchRepairGuideItems(items, registry, siteCopy || {}, repairsData, lang);
+            buildSearchRepairGuideItems(items, registry, repairsData, lang);
             return items;
         });
 
         return searchIndexPromise;
     }
 
-    async function updateSearchOverlayCopy(overlay) {
+    function updateSearchOverlayCopy(overlay) {
         const lang = getCurrentLang();
-        const siteCopy = await getSiteCopy();
         const title = overlay.querySelector('[data-support-search-title]');
         const input = overlay.querySelector('[data-search-overlay-input]');
         const closeButton = overlay.querySelector('[data-search-overlay-close]');
@@ -663,23 +652,23 @@
         document.querySelectorAll('[data-search-overlay-target="supportSearchOverlay"]').forEach((trigger) => {
             trigger.setAttribute(
                 'aria-label',
-                getSharedCopyValue(siteCopy, 'search.trigger', lang, getDictionaryValue(SEARCH_COPY.trigger, lang, 'Open support search'))
+                getDictionaryValue(SEARCH_COPY.trigger, lang, 'Open search')
             );
         });
 
         if (title) {
-            title.textContent = getSharedCopyValue(siteCopy, 'search.title', lang, getDictionaryValue(SEARCH_COPY.title, lang, 'Search support pages and guides'));
+            title.textContent = getDictionaryValue(SEARCH_COPY.title, lang, 'Find pages, sections, and guides');
         }
 
         if (closeButton) {
             closeButton.setAttribute(
                 'aria-label',
-                getSharedCopyValue(siteCopy, 'search.close', lang, getDictionaryValue(SEARCH_COPY.close, lang, 'Close support search'))
+                getDictionaryValue(SEARCH_COPY.close, lang, 'Close search')
             );
         }
 
         if (input) {
-            const placeholder = getSharedCopyValue(siteCopy, 'search.placeholder', lang, getDictionaryValue(SEARCH_COPY.placeholder, lang, 'Search pages, products, or repair guides'));
+            const placeholder = getDictionaryValue(SEARCH_COPY.placeholder, lang, 'Search pages, products, or repair guides');
             input.setAttribute('placeholder', placeholder);
             input.setAttribute('aria-label', placeholder);
         }
@@ -687,16 +676,16 @@
         if (list) {
             list.setAttribute(
                 'aria-label',
-                getSharedCopyValue(siteCopy, 'search.results', lang, getDictionaryValue(SEARCH_COPY.results, lang, 'Search results'))
+                getDictionaryValue(SEARCH_COPY.results, lang, 'Search results')
             );
         }
 
         if (empty) {
-            empty.textContent = getSharedCopyValue(siteCopy, 'search.empty', lang, getDictionaryValue(SEARCH_COPY.empty, lang, 'No support results matched your search.'));
+            empty.textContent = getDictionaryValue(SEARCH_COPY.empty, lang, 'No matching support results found.');
         }
 
         if (helper) {
-            helper.textContent = getSharedCopyValue(siteCopy, 'search.helper', lang, getDictionaryValue(SEARCH_COPY.helper, lang, 'Search support pages, product sections, and repair guides.'));
+            helper.textContent = getDictionaryValue(SEARCH_COPY.helper, lang, 'Search primary pages, product sections, and repair guides.');
         }
     }
 
@@ -748,7 +737,7 @@
             return;
         }
 
-        await updateSearchOverlayCopy(overlay);
+        updateSearchOverlayCopy(overlay);
 
         const input = overlay.querySelector('[data-search-overlay-input]');
         const results = overlay.querySelector('[data-support-search-results]');
@@ -789,9 +778,8 @@
         }).observe(overlay, { attributes: true, attributeFilter: ['class'] });
     }
 
-    async function applySupportShellCopy() {
+    function applySupportShellCopy() {
         const lang = getCurrentLang();
-        const siteCopy = await getSiteCopy();
 
         document.querySelectorAll('[data-support-shell-copy]').forEach((element) => {
             const key = element.dataset.supportShellCopy;
@@ -799,11 +787,10 @@
                 return;
             }
 
-            element.textContent = getSharedCopyValue(
-                siteCopy,
-                `supportShell.${key}`,
+            element.textContent = getDictionaryValue(
+                SUPPORT_SHELL_COPY[key],
                 lang,
-                getDictionaryValue(SUPPORT_SHELL_COPY[key], lang, element.textContent)
+                element.textContent
             );
         });
     }

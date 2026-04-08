@@ -1,1270 +1,976 @@
 ﻿{
-    "shared":  {
-                   "nav":  {
-                               "repairGuides":  {
-                                                    "pt":  "Guias de ReparaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o",
-                                                    "en":  "Repair Guides",
-                                                    "es":  "GuÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­as de ReparaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
-                                                    "fr":  "Guides de rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©paration"
-                                                },
-                               "downloadFiles":  {
-                                                     "pt":  "Ficheiros para Download",
-                                                     "en":  "Download Files",
-                                                     "es":  "Archivos de Descarga",
-                                                     "fr":  "Fichiers ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©lÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©charger"
-                                                 }
-                           },
-                   "breadcrumb":  {
-                                      "home":  {
-                                                   "pt":  "Centro de Suporte",
-                                                   "en":  "Support Hub",
-                                                   "es":  "Centro de Soporte",
-                                                   "fr":  "Centre d\u0027assistance"
-                                               },
-                                      "support":  {
-                                                      "pt":  "Suporte",
-                                                      "en":  "Support",
-                                                      "es":  "Soporte",
-                                                      "fr":  "Assistance"
-                                                  }
-                                  },
-                   "header":  {
-                                  "supportPage":  {
-                                                      "pt":  "Centro de Suporte",
-                                                      "en":  "Support Hub",
-                                                      "es":  "Centro de Soporte",
-                                                      "fr":  "Centre d\u0027assistance"
-                                                  },
-                                  "getInTouch":  {
-                                                     "pt":  "Contactar o Suporte",
-                                                     "en":  "Contact Support",
-                                                     "es":  "Contactar Soporte",
-                                                     "fr":  "Contacter l\u0027assistance"
-                                                 },
-                                  "store":  {
-                                                "pt":  "Loja",
-                                                "en":  "Store",
-                                                "es":  "Tienda",
-                                                "fr":  "Boutique"
-                                            }
-                              },
-                   "footer":  {
-                                  "about":  {
-                                                "pt":  "Sobre NÃƒÆ’Ã‚Â³s",
-                                                "en":  "About Us",
-                                                "es":  "Sobre Nosotros",
-                                                "fr":  "ÃƒÆ’Ã¢â€šÂ¬ propos"
-                                            },
-                                  "cart":  {
-                                               "pt":  "Carrinho",
-                                               "en":  "Cart",
-                                               "es":  "Carrito",
-                                               "fr":  "Panier"
-                                           },
-                                  "newsletter":  {
-                                                     "pt":  "Subscrever Newsletter",
-                                                     "en":  "Subscribe to Newsletter",
-                                                     "es":  "Suscribirse al boletÃƒÆ’Ã‚Â­n",
-                                                     "fr":  "S\u0027abonner ÃƒÆ’Ã‚Â  la newsletter"
-                                                 },
-                                  "categoriesTitle":  {
-                                                          "pt":  "Categorias",
-                                                          "en":  "Categories",
-                                                          "es":  "CategorÃƒÆ’Ã‚Â­as",
-                                                          "fr":  "CatÃƒÆ’Ã‚Â©gories"
-                                                      },
-                                  "retail":  {
-                                                 "pt":  "Retalho",
-                                                 "en":  "Retail",
-                                                 "es":  "Retail",
-                                                 "fr":  "Retail"
-                                             },
-                                  "interior":  {
-                                                   "pt":  "Interior",
-                                                   "en":  "Interior",
-                                                   "es":  "Interior",
-                                                   "fr":  "IntÃƒÆ’Ã‚Â©rieur"
-                                               },
-                                  "industrial":  {
-                                                     "pt":  "Industrial",
-                                                     "en":  "Industrial",
-                                                     "es":  "Industrial",
-                                                     "fr":  "Industriel"
-                                                 },
-                                  "powerSupplies":  {
-                                                        "pt":  "Fontes de AlimentaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                        "en":  "Power Supplies",
-                                                        "es":  "Fuentes de AlimentaciÃƒÆ’Ã‚Â³n",
-                                                        "fr":  "Alimentations"
-                                                    },
-                                  "contacts":  {
-                                                   "pt":  "Contactos",
-                                                   "en":  "Contacts",
-                                                   "es":  "Contactos",
-                                                   "fr":  "Contacts dÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢assistance"
-                                               },
-                                  "location":  {
-                                                   "pt":  "Sede",
-                                                   "en":  "Head Office",
-                                                   "es":  "Sede",
-                                                   "fr":  "SiÃƒÆ’Ã‚Â¨ge"
-                                               },
-                                  "support":  {
-                                                  "pt":  "Suporte",
-                                                  "en":  "Support",
-                                                  "es":  "Soporte",
-                                                  "fr":  "Assistance"
-                                              },
-                                  "repairInstructions":  {
-                                                             "pt":  "InstruÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes ReparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                             "en":  "Repair Instructions",
-                                                             "es":  "Instrucciones de ReparaciÃƒÆ’Ã‚Â³n",
-                                                             "fr":  "Instructions de rÃƒÆ’Ã‚Â©paration"
-                                                         }
-                              },
-                   "search":  {
-                                  "trigger":  {
-                                                  "pt":  "Abrir pesquisa de suporte",
-                                                  "en":  "Open support search",
-                                                  "es":  "Abrir bÃƒÆ’Ã‚Âºsqueda de soporte",
-                                                  "fr":  "Ouvrir la recherche d\u0027assistance"
-                                              },
-                                  "close":  {
-                                                "pt":  "Fechar pesquisa de suporte",
-                                                "en":  "Close support search",
-                                                "es":  "Cerrar bÃƒÆ’Ã‚Âºsqueda de soporte",
-                                                "fr":  "Fermer la recherche d\u0027assistance"
-                                            },
-                                  "title":  {
-                                                "pt":  "Pesquisar pÃƒÆ’Ã‚Â¡ginas e guias de suporte",
-                                                "en":  "Search support pages and guides",
-                                                "es":  "Buscar pÃƒÆ’Ã‚Â¡ginas y guÃƒÆ’Ã‚Â­as de soporte",
-                                                "fr":  "Rechercher des pages et guides d\u0027assistance"
-                                            },
-                                  "placeholder":  {
-                                                      "pt":  "Pesquisar pÃƒÆ’Ã‚Â¡ginas, produtos ou guias de reparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                      "en":  "Search pages, products, or repair guides",
-                                                      "es":  "Buscar pÃƒÆ’Ã‚Â¡ginas, productos o guÃƒÆ’Ã‚Â­as de reparaciÃƒÆ’Ã‚Â³n",
-                                                      "fr":  "Rechercher des pages, produits ou guides de rÃƒÆ’Ã‚Â©paration"
-                                                  },
-                                  "empty":  {
-                                                "pt":  "Nenhum resultado de suporte corresponde ÃƒÆ’Ã‚Â  pesquisa.",
-                                                "en":  "No support results matched your search.",
-                                                "es":  "NingÃƒÆ’Ã‚Âºn resultado de soporte coincide con su bÃƒÆ’Ã‚Âºsqueda.",
-                                                "fr":  "Aucun rÃƒÆ’Ã‚Â©sultat d\u0027assistance ne correspond ÃƒÆ’Ã‚Â  votre recherche."
-                                            },
-                                  "helper":  {
-                                                 "pt":  "Pesquise pÃƒÆ’Ã‚Â¡ginas de suporte, secÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes de produto e guias de reparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o.",
-                                                 "en":  "Search support pages, product sections, and repair guides.",
-                                                 "es":  "Busque pÃƒÆ’Ã‚Â¡ginas de soporte, secciones de producto y guÃƒÆ’Ã‚Â­as de reparaciÃƒÆ’Ã‚Â³n.",
-                                                 "fr":  "Recherchez des pages d\u0027assistance, des sections produit et des guides de rÃƒÆ’Ã‚Â©paration."
-                                             },
-                                  "results":  {
-                                                  "pt":  "Resultados da pesquisa",
-                                                  "en":  "Search results",
-                                                  "es":  "Resultados de la bÃƒÆ’Ã‚Âºsqueda",
-                                                  "fr":  "RÃƒÆ’Ã‚Â©sultats de la recherche"
-                                              },
-                                  "page":  {
-                                               "pt":  "PÃƒÆ’Ã‚Â¡gina",
-                                               "en":  "Page",
-                                               "es":  "PÃƒÆ’Ã‚Â¡gina",
-                                               "fr":  "Page"
-                                           },
-                                  "section":  {
-                                                  "pt":  "SecÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                  "en":  "Section",
-                                                  "es":  "SecciÃƒÆ’Ã‚Â³n",
-                                                  "fr":  "Section"
-                                              },
-                                  "repairGuide":  {
-                                                      "pt":  "Guia de reparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                      "en":  "Repair guide",
-                                                      "es":  "GuÃƒÆ’Ã‚Â­a de reparaciÃƒÆ’Ã‚Â³n",
-                                                      "fr":  "Guide de rÃƒÆ’Ã‚Â©paration"
-                                                  }
-                              },
-                   "supportShell":  {
-                                        "resources":  {
-                                                          "pt":  "Recursos",
-                                                          "en":  "Resources",
-                                                          "es":  "Recursos",
-                                                          "fr":  "Ressources"
-                                                      },
-                                        "faq":  {
-                                                    "pt":  "FAQs",
-                                                    "en":  "FAQs",
-                                                    "es":  "FAQs",
-                                                    "fr":  "FAQ"
-                                                },
-                                        "warranty":  {
-                                                         "pt":  "Cobertura da Garantia",
-                                                         "en":  "Warranty Coverage",
-                                                         "es":  "Cobertura de GarantÃƒÆ’Ã‚Â­a",
-                                                         "fr":  "Couverture de garantie"
-                                                     },
-                                        "contactUs":  {
-                                                          "pt":  "Contactar o Suporte",
-                                                          "en":  "Contact Support",
-                                                          "es":  "Contactar Soporte",
-                                                          "fr":  "Contacter l\u0027assistance"
-                                                      },
-                                        "homePage":  {
-                                                         "pt":  "PÃƒÆ’Ã‚Â¡gina NexLed",
-                                                         "en":  "NexLed Home",
-                                                         "es":  "PÃƒÆ’Ã‚Â¡gina NexLed",
-                                                         "fr":  "Accueil NexLed"
-                                                     },
-                                        "quickHelp":  {
-                                                          "pt":  "Comece Aqui",
-                                                          "en":  "Start Here",
-                                                          "es":  "Empiece AquÃƒÆ’Ã‚Â­",
-                                                          "fr":  "Commencez ici"
-                                                      },
-                                        "openSupportRequest":  {
-                                                                   "pt":  "Enviar Pedido de Suporte",
-                                                                   "en":  "Submit a Support Request",
-                                                                   "es":  "Enviar solicitud de soporte",
-                                                                   "fr":  "Envoyer une demande d\u0027assistance"
-                                                               },
-                                        "viewRepairGuides":  {
-                                                                 "pt":  "Explorar Guias de ReparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                                 "en":  "Browse Repair Guides",
-                                                                 "es":  "Explorar guÃƒÆ’Ã‚Â­as de reparaciÃƒÆ’Ã‚Â³n",
-                                                                 "fr":  "Parcourir les guides de rÃƒÆ’Ã‚Â©paration"
-                                                             },
-                                        "viewDownloads":  {
-                                                              "pt":  "Explorar Downloads",
-                                                              "en":  "Browse Downloads",
-                                                              "es":  "Explorar descargas",
-                                                              "fr":  "Parcourir les tÃƒÆ’Ã‚Â©lÃƒÆ’Ã‚Â©chargements"
-                                                          }
-                                    }
-               },
-    "index":  {
-                  "meta":  {
-                               "title":  {
-                                             "pt":  "Suporte Nexled",
-                                             "en":  "Nexled Support",
-                                             "es":  "Soporte Nexled",
-                                             "fr":  "Support Nexled"
-                                         }
-                           },
-                  "hero":  {
-                               "title":  {
-                                             "pt":  "Suporte Nexled",
-                                             "en":  "Nexled Support",
-                                             "es":  "Soporte Nexled",
-                                             "fr":  "Support Nexled"
-                                         },
-                               "description":  {
-                                                   "pt":  "Encontre rapidamente guias de reparaÃƒÂ§ÃƒÂ£o, documentaÃƒÂ§ÃƒÂ£o tÃƒÂ©cnica, informaÃƒÂ§ÃƒÂ£o de garantia e contactos diretos de suporte para os produtos NexLed.",
-                                                   "en":  "Find repair guides, technical documents, warranty information, and direct support contacts for NexLed products.",
-                                                   "es":  "Encuentre guÃƒÂ­as de reparaciÃƒÂ³n, documentaciÃƒÂ³n tÃƒÂ©cnica, informaciÃƒÂ³n de garantÃƒÂ­a y contactos directos de soporte para los productos NexLed.",
-                                                   "fr":  "Trouvez les guides de rÃƒÂ©paration, les documents techniques, les informations de garantie et les contacts d\u0027assistance pour les produits NexLed."
-                                               }
-                           },
-                  "actions":  {
-                                  "repair":  {
-                                                 "title":  {
-                                                               "pt":  "Guias de ReparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o",
-                                                               "en":  "Repair Guides",
-                                                               "es":  "GuÃƒÆ’Ã‚Â­as de ReparaciÃƒÆ’Ã‚Â³n",
-                                                               "fr":  "Guides de rÃƒÆ’Ã‚Â©paration"
-                                                           },
-                                                 "description":  {
-                                                                     "pt":  "Consulte os procedimentos disponÃƒÂ­veis, confirme se a intervenÃƒÂ§ÃƒÂ£o pode ser feita no local e veja quais as peÃƒÂ§as ou ferramentas necessÃƒÂ¡rias.",
-                                                                     "en":  "Review the available procedures, confirm whether the intervention can be handled on site, and check which parts or tools may be required.",
-                                                                     "es":  "Revise los procedimientos disponibles, confirme si la intervenciÃƒÂ³n puede realizarse in situ y compruebe quÃƒÂ© piezas o herramientas pueden ser necesarias.",
-                                                                     "fr":  "Consultez les procÃƒÂ©dures disponibles, vÃƒÂ©rifiez si l\u0027intervention peut ÃƒÂªtre rÃƒÂ©alisÃƒÂ©e sur site et identifiez les piÃƒÂ¨ces ou outils nÃƒÂ©cessaires."
-                                                                 },
-                                                 "cta":  {
-                                                             "pt":  "Explorar Guias de ReparaÃƒÂ§ÃƒÂ£o",
-                                                             "en":  "Browse Repair Guides",
-                                                             "es":  "Explorar GuÃƒÂ­as de ReparaciÃƒÂ³n",
-                                                             "fr":  "Parcourir les guides de rÃƒÂ©paration"
-                                                         }
-                                             },
-                                  "downloads":  {
-                                                    "title":  {
-                                                                  "pt":  "Ficheiros para Download",
-                                                                  "en":  "Download Files",
-                                                                  "es":  "Archivos de Descarga",
-                                                                  "fr":  "Fichiers ÃƒÆ’Ã‚Â  tÃƒÆ’Ã‚Â©lÃƒÆ’Ã‚Â©charger"
-                                                              },
-                                                    "description":  {
-                                                                        "pt":  "Aceda ÃƒÂ  documentaÃƒÂ§ÃƒÂ£o tÃƒÂ©cnica disponÃƒÂ­vel por famÃƒÂ­lia de produto, incluindo manuais de instalaÃƒÂ§ÃƒÂ£o, fichas tÃƒÂ©cnicas e relatÃƒÂ³rios de suporte.",
-                                                                        "en":  "Open the technical documents available by product family, including installation manuals, datasheets, and support reports.",
-                                                                        "es":  "Acceda a la documentaciÃƒÂ³n tÃƒÂ©cnica disponible por familia de producto, incluidos manuales de instalaciÃƒÂ³n, fichas tÃƒÂ©cnicas e informes de soporte.",
-                                                                        "fr":  "AccÃƒÂ©dez ÃƒÂ  la documentation technique disponible par famille de produits, notamment les manuels d\u0027installation, fiches techniques et rapports de support."
-                                                                    },
-                                                    "cta":  {
-                                                                "pt":  "Explorar Downloads",
-                                                                "en":  "Browse Downloads",
-                                                                "es":  "Explorar Descargas",
-                                                                "fr":  "Parcourir les tÃƒÂ©lÃƒÂ©chargements"
-                                                            }
-                                                },
-                                  "contact":  {
-                                                  "title":  {
-                                                                "pt":  "Contactar o Suporte",
-                                                                "en":  "Contact Support",
-                                                                "es":  "Contactar Soporte",
-                                                                "fr":  "Contacter l\u0027assistance"
-                                                            },
-                                                  "description":  {
-                                                                      "pt":  "Envie um pedido com o modelo, a referÃƒÂªncia do produto e uma descriÃƒÂ§ÃƒÂ£o clara do problema para agilizar o encaminhamento.",
-                                                                      "en":  "Send a request with the product model, reference, and a clear issue summary so the support team can route it faster.",
-                                                                      "es":  "EnvÃƒÂ­e una solicitud con el modelo, la referencia del producto y un resumen claro del problema para agilizar la derivaciÃƒÂ³n.",
-                                                                      "fr":  "Envoyez une demande avec le modÃƒÂ¨le, la rÃƒÂ©fÃƒÂ©rence produit et un rÃƒÂ©sumÃƒÂ© clair du problÃƒÂ¨me pour accÃƒÂ©lÃƒÂ©rer l\u0027orientation."
-                                                                  },
-                                                  "cta":  {
-                                                              "pt":  "Contactar o Suporte",
-                                                              "en":  "Contact Support",
-                                                              "es":  "Contactar Soporte",
-                                                              "fr":  "Contacter l\u0027assistance"
-                                                          }
-                                              }
-                              },
-                  "faq":  {
-                              "title":  {
-                                            "pt":  "FAQ e QuestÃƒÆ’Ã‚Âµes Principais",
-                                            "en":  "FAQ \u0026 Main Questions",
-                                            "es":  "FAQ y Preguntas Principales",
-                                            "fr":  "FAQ et Questions Principales"
-                                        },
-                              "subtitle":  {
-                                               "pt":  "Encontre respostas diretas para as dÃƒÂºvidas de suporte mais comuns, incluindo pedidos de assistÃƒÂªncia, manuais, tempos de reparaÃƒÂ§ÃƒÂ£o e garantia.",
-                                               "en":  "Find direct answers to common support questions, including requests, manuals, repair timing, and warranty references.",
-                                               "es":  "Encuentre respuestas directas a las preguntas de soporte mÃƒÂ¡s comunes, incluidas solicitudes, manuales, tiempos de reparaciÃƒÂ³n y referencias de garantÃƒÂ­a.",
-                                               "fr":  "Trouvez des rÃƒÂ©ponses directes aux questions d\u0027assistance les plus courantes, notamment sur les demandes, les manuels, les dÃƒÂ©lais de rÃƒÂ©paration et la garantie."
-                                           },
-                              "items":  {
-                                            "start":  {
-                                                          "question":  {
-                                                                           "pt":  "Como inicio um pedido de suporte?",
-                                                                           "en":  "How do I start a support request?",
-                                                                           "es":  "Ãƒâ€šÃ‚Â¿CÃƒÆ’Ã‚Â³mo inicio una solicitud de soporte?",
-                                                                           "fr":  "Comment dÃƒÆ’Ã‚Â©marrer une demande d\u0027assistance ?"
-                                                                       },
-                                                          "answer":  {
-                                                                         "pt":  "Utilize a pÃƒÂ¡gina de contacto e inclua o modelo do produto, o nÃƒÂºmero de sÃƒÂ©rie e uma descriÃƒÂ§ÃƒÂ£o breve do problema.",
-                                                                         "en":  "Use the contact page and include the product model, serial number, and a short description of the issue.",
-                                                                         "es":  "Utilice la pÃƒÂ¡gina de contacto e incluya el modelo del producto, el nÃƒÂºmero de serie y una breve descripciÃƒÂ³n del problema.",
-                                                                         "fr":  "Utilisez la page de contact et indiquez le modÃƒÂ¨le du produit, le numÃƒÂ©ro de sÃƒÂ©rie et une brÃƒÂ¨ve description du problÃƒÂ¨me."
-                                                                     }
-                                                      },
-                                            "duration":  {
-                                                             "question":  {
-                                                                              "pt":  "Quanto tempo demora uma reparaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o?",
-                                                                              "en":  "How long does a repair take?",
-                                                                              "es":  "Ãƒâ€šÃ‚Â¿CuÃƒÆ’Ã‚Â¡nto tiempo tarda una reparaciÃƒÆ’Ã‚Â³n?",
-                                                                              "fr":  "Combien de temps prend une rÃƒÆ’Ã‚Â©paration ?"
-                                                                          },
-                                                             "answer":  {
-                                                                            "pt":  "O tempo depende do produto e da intervenÃƒÂ§ÃƒÂ£o necessÃƒÂ¡ria. Consulte primeiro o guia de reparaÃƒÂ§ÃƒÂ£o para verificar a duraÃƒÂ§ÃƒÂ£o estimada e os materiais necessÃƒÂ¡rios.",
-                                                                            "en":  "Repair time depends on the product and the intervention required. Check the repair guide first for the expected duration and required materials.",
-                                                                            "es":  "El tiempo depende del producto y de la intervenciÃƒÂ³n necesaria. Consulte primero la guÃƒÂ­a de reparaciÃƒÂ³n para revisar la duraciÃƒÂ³n estimada y los materiales necesarios.",
-                                                                            "fr":  "La durÃƒÂ©e dÃƒÂ©pend du produit et de l\u0027intervention nÃƒÂ©cessaire. Consultez d\u0027abord le guide de rÃƒÂ©paration pour vÃƒÂ©rifier le temps estimÃƒÂ© et le matÃƒÂ©riel requis."
-                                                                        }
-                                                         },
-                                            "manuals":  {
-                                                            "question":  {
-                                                                             "pt":  "Onde posso obter manuais?",
-                                                                             "en":  "Where can I get manuals?",
-                                                                             "es":  "Ãƒâ€šÃ‚Â¿DÃƒÆ’Ã‚Â³nde puedo obtener manuales?",
-                                                                             "fr":  "OÃƒÆ’Ã‚Â¹ puis-je obtenir les manuels ?"
-                                                                         },
-                                                            "answer":  {
-                                                                           "pt":  "Abra a pÃƒÂ¡gina de Downloads e selecione a famÃƒÂ­lia de produto para aceder aos manuais e aos documentos tÃƒÂ©cnicos disponÃƒÂ­veis.",
-                                                                           "en":  "Open the Downloads page and select the product family to access the available manuals and technical documents.",
-                                                                           "es":  "Abra la pÃƒÂ¡gina de Descargas y seleccione la familia de producto para acceder a los manuales y documentos tÃƒÂ©cnicos disponibles.",
-                                                                           "fr":  "Ouvrez la page TÃƒÂ©lÃƒÂ©chargements et sÃƒÂ©lectionnez la famille de produits pour accÃƒÂ©der aux manuels et documents techniques disponibles."
-                                                                       }
-                                                        },
-                                            "warranty":  {
-                                                             "question":  {
-                                                                              "pt":  "Os produtos Nexled incluem garantia?",
-                                                                              "en":  "Do Nexled products include a warranty?",
-                                                                              "es":  "Ãƒâ€šÃ‚Â¿Los productos Nexled incluyen garantÃƒÆ’Ã‚Â­a?",
-                                                                              "fr":  "Les produits Nexled incluent-ils une garantie ?"
-                                                                          },
-                                                             "answer":  {
-                                                                            "pt":  "Sim. A cobertura e as exclusÃƒÂµes estÃƒÂ£o descritas na documentaÃƒÂ§ÃƒÂ£o do produto e na secÃƒÂ§ÃƒÂ£o de garantia desta pÃƒÂ¡gina.",
-                                                                            "en":  "Yes. Coverage and exclusions are described in the product documentation and in the warranty section on this page.",
-                                                                            "es":  "SÃƒÂ­. La cobertura y las exclusiones se describen en la documentaciÃƒÂ³n del producto y en la secciÃƒÂ³n de garantÃƒÂ­a de esta pÃƒÂ¡gina.",
-                                                                            "fr":  "Oui. La couverture et les exclusions sont dÃƒÂ©crites dans la documentation du produit et dans la section garantie de cette page."
-                                                                        }
-                                                         }
-                                        }
-                          },
-                  "warranty":  {
-                                   "title":  {
-                                                 "pt":  "Garantia e Cobertura",
-                                                 "en":  "Warranty \u0026 Coverage",
-                                                 "es":  "GarantÃƒÆ’Ã‚Â­a y Cobertura",
-                                                 "fr":  "Garantie et couverture"
-                                             },
-                                   "subtitle":  {
-                                                    "pt":  "Reveja a cobertura, as exclusÃƒÂµes e a informaÃƒÂ§ÃƒÂ£o necessÃƒÂ¡ria antes de submeter um pedido de garantia.",
-                                                    "en":  "Review coverage, exclusions, and the information required before you submit a warranty request.",
-                                                    "es":  "Revise la cobertura, las exclusiones y la informaciÃƒÂ³n necesaria antes de enviar una solicitud de garantÃƒÂ­a.",
-                                                    "fr":  "Consultez la couverture, les exclusions et les informations requises avant d\u0027envoyer une demande de garantie."
-                                                },
-                                   "items":  {
-                                                 "coverage":  {
-                                                                  "question":  {
-                                                                                   "pt":  "Cobertura",
-                                                                                   "en":  "Coverage",
-                                                                                   "es":  "Cobertura",
-                                                                                   "fr":  "Couverture"
-                                                                               },
-                                                                  "answer":  {
-                                                                                 "pt":  "A garantia cobre defeitos de material e de fabrico quando o produto ÃƒÂ© utilizado nas condiÃƒÂ§ÃƒÂµes normais de funcionamento. Danos causados por uso indevido ou fatores ambientais ficam fora da cobertura.",
-                                                                                 "en":  "The warranty covers material and workmanship defects when the product is used under normal operating conditions. Damage caused by misuse or environmental factors is outside the warranty scope.",
-                                                                                 "es":  "La garantÃƒÂ­a cubre defectos de material y fabricaciÃƒÂ³n cuando el producto se utiliza en condiciones normales de funcionamiento. Los daÃƒÂ±os causados por un uso indebido o por factores ambientales quedan fuera de la cobertura.",
-                                                                                 "fr":  "La garantie couvre les dÃƒÂ©fauts de matÃƒÂ©riau et de fabrication lorsque le produit est utilisÃƒÂ© dans des conditions normales de fonctionnement. Les dommages causÃƒÂ©s par une mauvaise utilisation ou par des facteurs environnementaux sont exclus."
-                                                                             }
-                                                              },
-                                                 "exclusions":  {
-                                                                    "question":  {
-                                                                                     "pt":  "ExclusÃƒÆ’Ã‚Âµes",
-                                                                                     "en":  "Exclusions",
-                                                                                     "es":  "Exclusiones",
-                                                                                     "fr":  "Exclusions"
-                                                                                 },
-                                                                    "answer":  {
-                                                                                   "pt":  "A garantia nÃƒÂ£o cobre danos resultantes de utilizaÃƒÂ§ÃƒÂ£o indevida, instalaÃƒÂ§ÃƒÂ£o incorreta, acidentes, modificaÃƒÂ§ÃƒÂµes nÃƒÂ£o autorizadas ou exposiÃƒÂ§ÃƒÂ£o a condiÃƒÂ§ÃƒÂµes fora das recomendaÃƒÂ§ÃƒÂµes do produto. Produtos alterados ou reparados sem autorizaÃƒÂ§ÃƒÂ£o da NexLed normalmente nÃƒÂ£o sÃƒÂ£o elegÃƒÂ­veis para anÃƒÂ¡lise em garantia.",
-                                                                                   "en":  "The warranty does not cover damage caused by misuse, incorrect installation, accidents, unauthorized modifications, or exposure to conditions outside the recommended operating range. Products altered or repaired without NexLed authorization are generally not eligible for warranty review.",
-                                                                                   "es":  "La garantÃƒÂ­a no cubre daÃƒÂ±os causados por uso indebido, instalaciÃƒÂ³n incorrecta, accidentes, modificaciones no autorizadas o exposiciÃƒÂ³n a condiciones fuera del rango de funcionamiento recomendado. Los productos modificados o reparados sin autorizaciÃƒÂ³n de NexLed generalmente no son elegibles para revisiÃƒÂ³n de garantÃƒÂ­a.",
-                                                                                   "fr":  "La garantie ne couvre pas les dommages causÃƒÂ©s par une mauvaise utilisation, une installation incorrecte, des accidents, des modifications non autorisÃƒÂ©es ou une exposition ÃƒÂ  des conditions hors des limites recommandÃƒÂ©es. Les produits modifiÃƒÂ©s ou rÃƒÂ©parÃƒÂ©s sans autorisation de NexLed ne sont gÃƒÂ©nÃƒÂ©ralement pas ÃƒÂ©ligibles ÃƒÂ  une analyse au titre de la garantie."
-                                                                               }
-                                                                },
-                                                 "service":  {
-                                                                 "question":  {
-                                                                                  "pt":  "Solicitar AssistÃƒÆ’Ã‚Âªncia em Garantia",
-                                                                                  "en":  "Request Warranty Service",
-                                                                                  "es":  "Solicitar Servicio de GarantÃƒÆ’Ã‚Â­a",
-                                                                                  "fr":  "Demander un service sous garantie"
-                                                                              },
-                                                                 "answer":  {
-                                                                                "pt":  "ReÃƒÂºna o modelo do produto, o nÃƒÂºmero de sÃƒÂ©rie, a prova de compra e um resumo claro da ocorrÃƒÂªncia antes de contactar o suporte. A equipa irÃƒÂ¡ indicar os prÃƒÂ³ximos passos para devoluÃƒÂ§ÃƒÂ£o, anÃƒÂ¡lise ou assistÃƒÂªncia direta, quando aplicÃƒÂ¡vel.",
-                                                                                "en":  "Gather the product model, serial number, proof of purchase, and a clear issue summary before contacting support. The team will confirm the next steps for return, inspection, or direct service when applicable.",
-                                                                                "es":  "ReÃƒÂºna el modelo del producto, el nÃƒÂºmero de serie, la prueba de compra y un resumen claro de la incidencia antes de contactar con soporte. El equipo confirmarÃƒÂ¡ los siguientes pasos para devoluciÃƒÂ³n, anÃƒÂ¡lisis o servicio directo cuando corresponda.",
-                                                                                "fr":  "Rassemblez le modÃƒÂ¨le du produit, le numÃƒÂ©ro de sÃƒÂ©rie, la preuve d\u0027achat et un rÃƒÂ©sumÃƒÂ© clair du problÃƒÂ¨me avant de contacter l\u0027assistance. L\u0027ÃƒÂ©quipe confirmera les prochaines ÃƒÂ©tapes de retour, d\u0027analyse ou d\u0027intervention directe, selon le cas."
-                                                                            }
-                                                             },
-                                                 "documentation":  {
-                                                                       "question":  {
-                                                                                        "pt":  "DocumentaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o NecessÃƒÆ’Ã‚Â¡ria",
-                                                                                        "en":  "Required Documentation",
-                                                                                        "es":  "DocumentaciÃƒÆ’Ã‚Â³n Necesaria",
-                                                                                        "fr":  "Documentation requise"
-                                                                                    },
-                                                                       "answer":  {
-                                                                                      "pt":  "ForneÃƒÂ§a a prova de compra, o nÃƒÂºmero de sÃƒÂ©rie do produto e uma descriÃƒÂ§ÃƒÂ£o clara do problema. Sempre que possÃƒÂ­vel, inclua tambÃƒÂ©m a data de compra e qualquer referÃƒÂªncia relevante da instalaÃƒÂ§ÃƒÂ£o.",
-                                                                                      "en":  "Provide proof of purchase, the product serial number, and a clear description of the issue. When possible, include the purchase date and any relevant installation reference.",
-                                                                                      "es":  "Facilite la prueba de compra, el nÃƒÂºmero de serie del producto y una descripciÃƒÂ³n clara del problema. Siempre que sea posible, incluya tambiÃƒÂ©n la fecha de compra y cualquier referencia relevante de la instalaciÃƒÂ³n.",
-                                                                                      "fr":  "Fournissez la preuve d\u0027achat, le numÃƒÂ©ro de sÃƒÂ©rie du produit et une description claire du problÃƒÂ¨me. Lorsque c\u0027est possible, ajoutez ÃƒÂ©galement la date d\u0027achat et toute rÃƒÂ©fÃƒÂ©rence d\u0027installation pertinente."
-                                                                                  }
-                                                                   },
-                                                 "lifespan":  {
-                                                                  "question":  {
-                                                                                   "pt":  "Vida ÃƒÆ’Ã…Â¡til e Expectativas de Desempenho",
-                                                                                   "en":  "Product Lifespan \u0026 Performance Expectations",
-                                                                                   "es":  "Vida ÃƒÆ’Ã‚Âºtil y Expectativas de Rendimiento",
-                                                                                   "fr":  "DurÃƒÆ’Ã‚Â©e de vie et attentes de performance"
-                                                                               },
-                                                                  "answer":  {
-                                                                                 "pt":  "Os produtos NexLed sÃƒÂ£o concebidos para oferecer um desempenho fiÃƒÂ¡vel quando utilizados nas condiÃƒÂ§ÃƒÂµes recomendadas. VariaÃƒÂ§ÃƒÂµes graduais de saÃƒÂ­da que nÃƒÂ£o estejam associadas a uma falha direta nÃƒÂ£o sÃƒÂ£o tratadas como avaria do produto.",
-                                                                                 "en":  "NexLed products are designed to deliver reliable performance when used under the recommended conditions. Gradual output variation that is not linked to a direct fault is not treated as a product failure.",
-                                                                                 "es":  "Los productos NexLed estÃƒÂ¡n diseÃƒÂ±ados para ofrecer un rendimiento fiable cuando se utilizan en las condiciones recomendadas. La variaciÃƒÂ³n gradual de salida que no estÃƒÂ© vinculada a un fallo directo no se considera una averÃƒÂ­a del producto.",
-                                                                                 "fr":  "Les produits NexLed sont conÃƒÂ§us pour offrir des performances fiables lorsqu\u0027ils sont utilisÃƒÂ©s dans les conditions recommandÃƒÂ©es. Une variation progressive du flux qui n\u0027est pas liÃƒÂ©e ÃƒÂ  une dÃƒÂ©faillance directe n\u0027est pas considÃƒÂ©rÃƒÂ©e comme une panne du produit."
-                                                                             }
-                                                              }
-                                             }
-                               }
-              },
-    "downloads":  {
-                      "meta":  {
-                                   "title":  {
-                                                 "pt":  "Ficheiros para Download - Suporte Nexled",
-                                                 "en":  "Download Files - Nexled Support",
-                                                 "es":  "Archivos de Descarga - Soporte Nexled",
-                                                 "fr":  "Fichiers ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©lÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©charger - Support Nexled"
-                                             }
-                               },
-                      "breadcrumb":  {
-                                         "current":  {
-                                                         "pt":  "Ficheiros para Download",
-                                                         "en":  "Download Files",
-                                                         "es":  "Archivos de Descarga",
-                                                         "fr":  "Fichiers ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©lÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©charger"
-                                                     }
-                                     },
-                      "hero":  {
-                                   "title":  {
-                                                 "pt":  "Ficheiros para Download",
-                                                 "en":  "Download Files",
-                                                 "es":  "Archivos de Descarga",
-                                                 "fr":  "Fichiers ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©lÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©charger"
-                                             },
-                                   "description":  {
-                                                       "pt":  "Consulte a documentação técnica disponível por família de produto, incluindo manuais de instalação, fichas técnicas e relatórios de suporte.",
-                                                       "en":  "Open the technical documents available by product family, including installation manuals, datasheets, and support reports.",
-                                                       "es":  "Consulte la documentación técnica disponible por familia de producto, incluidos manuales de instalación, fichas técnicas e informes de soporte.",
-                                                       "fr":  "Consultez la documentation technique disponible par famille de produits, notamment les manuels d\u0027installation, fiches techniques et rapports de support."
-                                                   }
-                               },
-                      "sections":  {
-                                       "downlights":  {
-                                                          "title":  {
-                                                                        "pt":  "Downlights",
-                                                                        "en":  "Downlights",
-                                                                        "es":  "Downlights",
-                                                                        "fr":  "Downlights"
-                                                                    }
-                                                      },
-                                       "bars":  {
-                                                    "title":  {
-                                                                  "pt":  "Barras 24V",
-                                                                  "en":  "24V Bars",
-                                                                  "es":  "Barras 24V",
-                                                                  "fr":  "Barres 24V"
-                                                              }
-                                                }
-                                   },
-                      "products":  {
-                                       "square200":  {
-                                                         "title":  {
-                                                                       "pt":  "Square Downlight 200",
-                                                                       "en":  "Square Downlight 200",
-                                                                       "es":  "Square Downlight 200",
-                                                                       "fr":  "Square Downlight 200"
-                                                                   },
-                                                         "description":  {
-                                                                             "pt":  "Documentos técnicos disponíveis para o Square Downlight 200.",
-                                                                             "en":  "Available technical documents for the Square Downlight 200.",
-                                                                             "es":  "Documentos técnicos disponibles para el Square Downlight 200.",
-                                                                             "fr":  "Documents techniques disponibles pour le Square Downlight 200."
-                                                                         },
-                                                         "alt":  {
-                                                                     "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o do Square Downlight 200",
-                                                                     "en":  "Square Downlight 200 documentation",
-                                                                     "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n del Square Downlight 200",
-                                                                     "fr":  "Documentation du Square Downlight 200"
-                                                                 }
-                                                     },
-                                       "square240":  {
-                                                         "title":  {
-                                                                       "pt":  "Square Downlight 240",
-                                                                       "en":  "Square Downlight 240",
-                                                                       "es":  "Square Downlight 240",
-                                                                       "fr":  "Square Downlight 240"
-                                                                   },
-                                                         "description":  {
-                                                                             "pt":  "Documentos técnicos disponíveis para o Square Downlight 240.",
-                                                                             "en":  "Available technical documents for the Square Downlight 240.",
-                                                                             "es":  "Documentos técnicos disponibles para el Square Downlight 240.",
-                                                                             "fr":  "Documents techniques disponibles pour le Square Downlight 240."
-                                                                         },
-                                                         "alt":  {
-                                                                     "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o do Square Downlight 240",
-                                                                     "en":  "Square Downlight 240 documentation",
-                                                                     "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n del Square Downlight 240",
-                                                                     "fr":  "Documentation du Square Downlight 240"
-                                                                 }
-                                                     },
-                                       "round230":  {
-                                                        "title":  {
-                                                                      "pt":  "Round Downlight 230",
-                                                                      "en":  "Round Downlight 230",
-                                                                      "es":  "Round Downlight 230",
-                                                                      "fr":  "Round Downlight 230"
-                                                                  },
-                                                        "description":  {
-                                                                            "pt":  "Documentos técnicos disponíveis para o Round Downlight 230.",
-                                                                            "en":  "Available technical documents for the Round Downlight 230.",
-                                                                            "es":  "Documentos técnicos disponibles para el Round Downlight 230.",
-                                                                            "fr":  "Documents techniques disponibles pour le Round Downlight 230."
-                                                                        },
-                                                        "alt":  {
-                                                                    "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o do Round Downlight 230",
-                                                                    "en":  "Round Downlight 230 documentation",
-                                                                    "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n del Round Downlight 230",
-                                                                    "fr":  "Documentation du Round Downlight 230"
-                                                                }
-                                                    },
-                                       "round320":  {
-                                                        "title":  {
-                                                                      "pt":  "Round Downlight 320",
-                                                                      "en":  "Round Downlight 320",
-                                                                      "es":  "Round Downlight 320",
-                                                                      "fr":  "Round Downlight 320"
-                                                                  },
-                                                        "description":  {
-                                                                            "pt":  "Documentos técnicos disponíveis para o Round Downlight 320.",
-                                                                            "en":  "Available technical documents for the Round Downlight 320.",
-                                                                            "es":  "Documentos técnicos disponibles para el Round Downlight 320.",
-                                                                            "fr":  "Documents techniques disponibles pour le Round Downlight 320."
-                                                                        },
-                                                        "alt":  {
-                                                                    "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o do Round Downlight 320",
-                                                                    "en":  "Round Downlight 320 documentation",
-                                                                    "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n del Round Downlight 320",
-                                                                    "fr":  "Documentation du Round Downlight 320"
-                                                                }
-                                                    },
-                                       "bar60":  {
-                                                     "title":  {
-                                                                   "pt":  "Barra 24V Modelo 60",
-                                                                   "en":  "24V Bar Model 60",
-                                                                   "es":  "Barra 24V Modelo 60",
-                                                                   "fr":  "Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 60"
-                                                               },
-                                                     "description":  {
-                                                                         "pt":  "Documentos técnicos disponíveis para o Barra 24V Modelo 60.",
-                                                                         "en":  "Available technical documents for the 24V Bar Model 60.",
-                                                                         "es":  "Documentos técnicos disponibles para el Barra 24V Modelo 60.",
-                                                                         "fr":  "Documents techniques disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 60."
-                                                                     },
-                                                     "alt":  {
-                                                                 "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o da Barra 24V Modelo 60",
-                                                                 "en":  "24V Bar Model 60 documentation",
-                                                                 "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n de la Barra 24V Modelo 60",
-                                                                 "fr":  "Documentation de la Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 60"
-                                                             }
-                                                 },
-                                       "bar120":  {
-                                                      "title":  {
-                                                                    "pt":  "Barra 24V Modelo 120",
-                                                                    "en":  "24V Bar Model 120",
-                                                                    "es":  "Barra 24V Modelo 120",
-                                                                    "fr":  "Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 120"
-                                                                },
-                                                      "description":  {
-                                                                          "pt":  "Documentos técnicos disponíveis para o Barra 24V Modelo 120.",
-                                                                          "en":  "Available technical documents for the 24V Bar Model 120.",
-                                                                          "es":  "Documentos técnicos disponibles para el Barra 24V Modelo 120.",
-                                                                          "fr":  "Documents techniques disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 120."
-                                                                      },
-                                                      "alt":  {
-                                                                  "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o da Barra 24V Modelo 120",
-                                                                  "en":  "24V Bar Model 120 documentation",
-                                                                  "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n de la Barra 24V Modelo 120",
-                                                                  "fr":  "Documentation de la Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 120"
-                                                              }
-                                                  },
-                                       "bar145":  {
-                                                      "title":  {
-                                                                    "pt":  "Barra 24V Modelo 145",
-                                                                    "en":  "24V Bar Model 145",
-                                                                    "es":  "Barra 24V Modelo 145",
-                                                                    "fr":  "Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 145"
-                                                                },
-                                                      "description":  {
-                                                                          "pt":  "Documentos técnicos disponíveis para o Barra 24V Modelo 145.",
-                                                                          "en":  "Available technical documents for the 24V Bar Model 145.",
-                                                                          "es":  "Documentos técnicos disponibles para el Barra 24V Modelo 145.",
-                                                                          "fr":  "Documents techniques disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 145."
-                                                                      },
-                                                      "alt":  {
-                                                                  "pt":  "DocumentaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o da Barra 24V Modelo 145",
-                                                                  "en":  "24V Bar Model 145 documentation",
-                                                                  "es":  "DocumentaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n de la Barra 24V Modelo 145",
-                                                                  "fr":  "Documentation de la Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 145"
-                                                              }
-                                                  }
-                                   },
-                      "links":  {
-                                    "datasheet":  {
-                                                      "pt":  "Ficha TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cnica",
-                                                      "en":  "Datasheet",
-                                                      "es":  "Ficha TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cnica",
-                                                      "fr":  "Fiche technique"
-                                                  },
-                                    "installationManual":  {
-                                                               "pt":  "Manual de InstalaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o",
-                                                               "en":  "Installation Manual",
-                                                               "es":  "Manual de InstalaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
-                                                               "fr":  "Manuel d\u0027installation"
-                                                           },
-                                    "ledModuleReport":  {
-                                                            "pt":  "RelatÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rio do MÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³dulo LED",
-                                                            "en":  "LED Module Report",
-                                                            "es":  "Informe del MÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³dulo LED",
-                                                            "fr":  "Rapport du module LED"
-                                                        },
-                                    "luminaireReport":  {
-                                                            "pt":  "RelatÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rio da LuminÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ria",
-                                                            "en":  "Luminaire Report",
-                                                            "es":  "Informe de la Luminaria",
-                                                            "fr":  "Rapport du luminaire"
-                                                        },
-                                    "mountingOptions":  {
-                                                            "pt":  "OpÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âµes de FixaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o",
-                                                            "en":  "Mounting Options",
-                                                            "es":  "Opciones de Montaje",
-                                                            "fr":  "Options de montage"
-                                                        }
-                                }
-                  },
-    "contact":  {
-                    "meta":  {
-                                 "title":  {
-                                               "pt":  "Contactar o Suporte - Nexled Support",
-                                               "en":  "Contact Support - Nexled Support",
-                                               "es":  "Contactar Soporte - Soporte Nexled",
-                                               "fr":  "Contacter l\u0027assistance - Support Nexled"
-                                           }
-                             },
-                    "breadcrumb":  {
-                                       "current":  {
-                                                       "pt":  "Contactar o Suporte",
-                                                       "en":  "Contact Support",
-                                                       "es":  "Contactar Soporte",
-                                                       "fr":  "Contacter l\u0027assistance"
-                                                   }
-                                   },
-                    "hero":  {
-                                 "title":  {
-                                               "pt":  "Contactar o Suporte",
-                                               "en":  "Contact Support",
-                                               "es":  "Contactar Soporte",
-                                               "fr":  "Contacter l\u0027assistance"
-                                           },
-                                 "description":  {
-                                                     "pt":  "Utilize este formulÃ¡rio para enviar um pedido de suporte com a referÃªncia do produto, o resumo do problema e as notas de instalaÃ§Ã£o relevantes.",
-                                                     "en":  "Use this form to send a support request with the product reference, issue summary, and any installation notes that help us review the case.",
-                                                     "es":  "Utilice este formulario para enviar una solicitud de soporte con la referencia del producto, el resumen del problema y las notas de instalaciÃ³n relevantes.",
-                                                     "fr":  "Utilisez ce formulaire pour envoyer une demande d\u0027assistance avec la rÃ©fÃ©rence du produit, le rÃ©sumÃ© du problÃ¨me et les notes d\u0027installation utiles Ã  l\u0027analyse."
-                                                 }
-                             },
-                    "form":  {
-                                 "title":  {
-                                               "pt":  "Enviar Pedido de Suporte",
-                                               "en":  "Submit a Support Request",
-                                               "es":  "Enviar Solicitud de Soporte",
-                                               "fr":  "Envoyer une demande d\u0027assistance"
-                                           },
-                                 "description":  {
-                                                     "pt":  "Descreva a situaÃ§Ã£o de forma objetiva e inclua os dados do produto necessÃ¡rios para uma anÃ¡lise rÃ¡pida.",
-                                                     "en":  "Describe the issue clearly and include the product details needed for a faster review.",
-                                                     "es":  "Describa la situaciÃ³n con claridad e incluya los datos del producto necesarios para una revisiÃ³n mÃ¡s rÃ¡pida.",
-                                                     "fr":  "DÃ©crivez la situation clairement et ajoutez les informations produit nÃ©cessaires Ã  une analyse plus rapide."
-                                                 },
-                                 "fields":  {
-                                                "name":  {
-                                                             "label":  {
-                                                                           "pt":  "Nome Completo",
-                                                                           "en":  "Full Name",
-                                                                           "es":  "Nombre Completo",
-                                                                           "fr":  "Nom complet"
-                                                                       },
-                                                             "placeholder":  {
-                                                                                 "pt":  "Introduza o nome",
-                                                                                 "en":  "Enter the name",
-                                                                                 "es":  "Introduzca el nombre",
-                                                                                 "fr":  "Saisissez le nom"
-                                                                             },
-                                                             "hint":  {
-                                                                          "pt":  "Indique o nome da pessoa responsÃ¡vel pelo acompanhamento do pedido.",
-                                                                          "en":  "Enter the name of the person responsible for following the request.",
-                                                                          "es":  "Indique el nombre de la persona responsable de hacer el seguimiento de la solicitud.",
-                                                                          "fr":  "Indiquez le nom de la personne responsable du suivi de la demande."
-                                                                      }
-                                                         },
-                                                "email":  {
-                                                              "label":  {
-                                                                            "pt":  "EndereÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§o de Email",
-                                                                            "en":  "Email Address",
-                                                                            "es":  "DirecciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n de Correo",
-                                                                            "fr":  "Adresse e-mail"
-                                                                        },
-                                                              "placeholder":  {
-                                                                                  "pt":  "Introduza o email",
-                                                                                  "en":  "Enter the email",
-                                                                                  "es":  "Introduzca el correo",
-                                                                                  "fr":  "Saisissez l\u0027e-mail"
-                                                                              },
-                                                              "hint":  {
-                                                                           "pt":  "Responderemos para este endereÃ§o e utilizaremos este contacto para indicar os prÃ³ximos passos.",
-                                                                           "en":  "We will reply to this address and use it to confirm the next steps.",
-                                                                           "es":  "Responderemos a esta direcciÃ³n y la utilizaremos para confirmar los siguientes pasos.",
-                                                                           "fr":  "Nous rÃ©pondrons Ã  cette adresse et l\u0027utiliserons pour confirmer les prochaines Ã©tapes."
-                                                                       }
-                                                          },
-                                                "subject":  {
-                                                                "label":  {
-                                                                              "pt":  "Assunto",
-                                                                              "en":  "Subject",
-                                                                              "es":  "Asunto",
-                                                                              "fr":  "Objet"
-                                                                          },
-                                                                "placeholder":  {
-                                                                                    "pt":  "Introduza o assunto",
-                                                                                    "en":  "Enter the subject",
-                                                                                    "es":  "Introduzca el asunto",
-                                                                                    "fr":  "Saisissez l\u0027objet"
-                                                                                },
-                                                                "hint":  {
-                                                                             "pt":  "Indique o produto, a instalaÃ§Ã£o ou o tema do pedido numa linha.",
-                                                                             "en":  "State the product, installation, or request topic in one line.",
-                                                                             "es":  "Indique el producto, la instalaciÃ³n o el tema de la solicitud en una sola lÃ­nea.",
-                                                                             "fr":  "Indiquez le produit, l\u0027installation ou le sujet de la demande en une seule ligne."
-                                                                         }
-                                                            },
-                                                "message":  {
-                                                                "label":  {
-                                                                              "pt":  "Mensagem Curta",
-                                                                              "en":  "Short Message",
-                                                                              "es":  "Mensaje Corto",
-                                                                              "fr":  "Message court"
-                                                                          },
-                                                                "placeholder":  {
-                                                                                    "pt":  "Escreva a mensagem curta",
-                                                                                    "en":  "Write the short message",
-                                                                                    "es":  "Escriba el mensaje corto",
-                                                                                    "fr":  "RÃ©digez le message court"
-                                                                                },
-                                                                "hint":  {
-                                                                             "pt":  "Explique o problema, o resultado esperado e o que estÃ¡ a acontecer neste momento.",
-                                                                             "en":  "Explain the issue, the expected result, and what is happening at the moment.",
-                                                                             "es":  "Explique el problema, el resultado esperado y lo que estÃ¡ ocurriendo en este momento.",
-                                                                             "fr":  "Expliquez le problÃ¨me, le rÃ©sultat attendu et ce qui se passe actuellement."
-                                                                         }
-                                                            },
-                                                "details":  {
-                                                                "label":  {
-                                                                              "pt":  "Detalhes Adicionais",
-                                                                              "en":  "Additional Details",
-                                                                              "es":  "Detalles Adicionales",
-                                                                              "fr":  "DÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©tails supplÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©mentaires"
-                                                                          },
-                                                                "placeholder":  {
-                                                                                    "pt":  "Adicione detalhes adicionais",
-                                                                                    "en":  "Add any additional details",
-                                                                                    "es":  "AÃ±ada detalles adicionales",
-                                                                                    "fr":  "Ajoutez des dÃ©tails supplÃ©mentaires"
-                                                                                },
-                                                                "hint":  {
-                                                                             "pt":  "Adicione nÃºmeros de sÃ©rie, referÃªncias de encomenda, notas de instalaÃ§Ã£o ou verificaÃ§Ãµes jÃ¡ efetuadas.",
-                                                                             "en":  "Add serial numbers, order references, installation notes, or checks already completed.",
-                                                                             "es":  "AÃ±ada nÃºmeros de serie, referencias de pedido, notas de instalaciÃ³n o comprobaciones ya realizadas.",
-                                                                             "fr":  "Ajoutez les numÃ©ros de sÃ©rie, rÃ©fÃ©rences de commande, notes d\u0027installation ou vÃ©rifications dÃ©jÃ  effectuÃ©es."
-                                                                         }
-                                                            }
-                                            },
-                                 "submit":  {
-                                                "pt":  "Enviar Pedido de Suporte",
-                                                "en":  "Submit Support Request",
-                                                "es":  "Enviar Solicitud de Soporte",
-                                                "fr":  "Envoyer la demande d\u0027assistance"
-                                            },
-                                 "submitting":  {
-                                                    "pt":  "A enviar pedido de suporte...",
-                                                    "en":  "Sending support request...",
-                                                    "es":  "Enviando solicitud de soporte...",
-                                                    "fr":  "Envoi de la demande d\u0027assistance..."
-                                                },
-                                 "feedback":  {
-                                                  "submitted":  {
-                                                                    "title":  {
-                                                                                  "pt":  "Pedido recebido",
-                                                                                  "en":  "Request received",
-                                                                                  "es":  "Solicitud recibida",
-                                                                                  "fr":  "Demande reÃ§ue"
-                                                                              },
-                                                                    "message":  {
-                                                                                    "pt":  "Recebemos o seu pedido. A equipa de suporte irÃ¡ analisar a informaÃ§Ã£o e responder para o email indicado.",
-                                                                                    "en":  "We received your request. The support team will review the information and reply using the email address you provided.",
-                                                                                    "es":  "Hemos recibido su solicitud. El equipo de soporte revisarÃ¡ la informaciÃ³n y responderÃ¡ al correo electrÃ³nico facilitado.",
-                                                                                    "fr":  "Nous avons bien reÃ§u votre demande. L\u0027Ã©quipe d\u0027assistance examinera les informations et rÃ©pondra Ã  l\u0027adresse e-mail indiquÃ©e."
-                                                                                }
-                                                                },
-                                                  "validation_summary":  {
-                                                                             "title":  {
-                                                                                           "pt":  "Reveja os campos assinalados",
-                                                                                           "en":  "Review the highlighted fields",
-                                                                                           "es":  "Revise los campos resaltados",
-                                                                                           "fr":  "VÃ©rifiez les champs signalÃ©s"
-                                                                                       },
-                                                                             "message":  {
-                                                                                             "pt":  "Corrija os campos indicados e volte a submeter o pedido.",
-                                                                                             "en":  "Correct the indicated fields and submit the request again.",
-                                                                                             "es":  "Corrija los campos indicados y vuelva a enviar la solicitud.",
-                                                                                             "fr":  "Corrigez les champs indiquÃ©s puis renvoyez la demande."
-                                                                                         }
-                                                                         },
-                                                  "submit_failed":  {
-                                                                        "title":  {
-                                                                                      "pt":  "NÃ£o foi possÃ­vel submeter o pedido",
-                                                                                      "en":  "We could not submit the request",
-                                                                                      "es":  "No se pudo enviar la solicitud",
-                                                                                      "fr":  "La demande n\u0027a pas pu Ãªtre envoyÃ©e"
-                                                                                  },
-                                                                        "message":  {
-                                                                                        "pt":  "O pedido nÃ£o pÃ´de ser enviado de momento. Tente novamente dentro de instantes ou utilize um contacto direto desta pÃ¡gina.",
-                                                                                        "en":  "The request could not be sent right now. Please try again shortly or use one of the direct contacts on this page.",
-                                                                                        "es":  "La solicitud no pudo enviarse en este momento. IntÃ©ntelo de nuevo en unos instantes o utilice uno de los contactos directos de esta pÃ¡gina.",
-                                                                                        "fr":  "La demande ne peut pas Ãªtre envoyÃ©e pour le moment. Veuillez rÃ©essayer dans quelques instants ou utiliser l\u0027un des contacts directs de cette page."
-                                                                                    }
-                                                                    }
-                                              },
-                                 "errors":  {
-                                                "required":  {
-                                                                 "pt":  "Este campo ÃƒÆ’Ã‚Â© obrigatÃƒÆ’Ã‚Â³rio.",
-                                                                 "en":  "This field is required.",
-                                                                 "es":  "Este campo es obligatorio.",
-                                                                 "fr":  "Ce champ est obligatoire."
-                                                             },
-                                                "invalid_email":  {
-                                                                      "pt":  "Introduza um endereÃƒÆ’Ã‚Â§o de email vÃƒÆ’Ã‚Â¡lido.",
-                                                                      "en":  "Enter a valid email address.",
-                                                                      "es":  "Introduzca una direcciÃƒÆ’Ã‚Â³n de correo vÃƒÆ’Ã‚Â¡lida.",
-                                                                      "fr":  "Saisissez une adresse e-mail valide."
-                                                                  },
-                                                "max_length":  {
-                                                                   "pt":  "O conteÃƒÆ’Ã‚Âºdo excede o tamanho permitido.",
-                                                                   "en":  "This content exceeds the allowed length.",
-                                                                   "es":  "Este contenido supera la longitud permitida.",
-                                                                   "fr":  "Ce contenu dÃƒÆ’Ã‚Â©passe la longueur autorisÃƒÆ’Ã‚Â©e."
-                                                               }
-                                            }
-                             },
-                    "aside":  {
-                                  "title":  {
-                                                "pt":  "Contactos",
-                                                "en":  "Contacts",
-                                                "es":  "Contactos",
-                                                "fr":  "Contacts"
-                                            },
-                                  "description":  {
-                                                      "pt":  "Utilize o contacto direto mais adequado quando jÃ¡ souber a equipa responsÃ¡vel ou quando precisar de uma resposta imediata.",
-                                                      "en":  "Use the direct contact details below when you already know the team you need or when the form is unavailable.",
-                                                      "es":  "Utilice los contactos directos cuando ya conozca el equipo que necesita o cuando el formulario no estÃ© disponible.",
-                                                      "fr":  "Utilisez les contacts directs ci-dessous lorsque vous connaissez dÃ©jÃ  l\u0027Ã©quipe concernÃ©e ou lorsque le formulaire n\u0027est pas disponible."
-                                                  },
-                                  "items":  {
-                                                "generalSupport":  {
-                                                                       "title":  {
-                                                                                     "pt":  "Suporte Geral",
-                                                                                     "en":  "General Support",
-                                                                                     "es":  "Soporte General",
-                                                                                     "fr":  "Assistance gÃ©nÃ©rale"
-                                                                                 }
-                                                                   },
-                                                "salesTeam":  {
-                                                                  "title":  {
-                                                                                "pt":  "Equipa Comercial",
-                                                                                "en":  "Sales Team",
-                                                                                "es":  "Equipo Comercial",
-                                                                                "fr":  "Ã‰quipe commerciale"
-                                                                            }
-                                                              },
-                                                "technicalSupport":  {
-                                                                         "title":  {
-                                                                                       "pt":  "Suporte TÃ©cnico",
-                                                                                       "en":  "Technical Support",
-                                                                                       "es":  "Soporte TÃ©cnico",
-                                                                                       "fr":  "Assistance technique"
-                                                                                   }
-                                                                     },
-                                                "mainOffice":  {
-                                                                   "title":  {
-                                                                                 "pt":  "EscritÃ³rio Principal",
-                                                                                 "en":  "Main Office",
-                                                                                 "es":  "Oficina Principal",
-                                                                                 "fr":  "Bureau principal"
-                                                                             }
-                                                               },
-                                                "scheduling":  {
-                                                                   "title":  {
-                                                                                 "pt":  "HorÃ¡rio de Atendimento",
-                                                                                 "en":  "Support Hours",
-                                                                                 "es":  "Horario de AtenciÃ³n",
-                                                                                 "fr":  "Horaires d\u0027assistance"
-                                                                             },
-                                                                   "value":  {
-                                                                                 "pt":  "Segunda a Sexta, 09:00 - 18:00",
-                                                                                 "en":  "Monday to Friday, 09:00 - 18:00",
-                                                                                 "es":  "Lunes a Viernes, 09:00 - 18:00",
-                                                                                 "fr":  "Du lundi au vendredi, 09:00 - 18:00"
-                                                                             }
-                                                               }
-                                            }
-                              }
-                },
-    "repair":  {
-                   "hero":  {
-                                "description":  {
-                                                    "pt":  "Selecione a família de produto para consultar os guias de reparação disponíveis, a complexidade da intervenção e os próximos passos.",
-                                                    "en":  "Choose a product family to review the available repair guides, the intervention scope, and the next steps.",
-                                                    "es":  "Seleccione la familia de producto para revisar las guías de reparación disponibles, el alcance de la intervención y los siguientes pasos.",
-                                                    "fr":  "Sélectionnez la famille de produits pour consulter les guides de réparation disponibles, l\u0027ampleur de l\u0027intervention et les prochaines étapes."
-                                                }
-                            },
-                   "breadcrumb":  {
-                                      "current":  {
-                                                      "pt":  "Guias de ReparaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o",
-                                                      "en":  "Repair Guides",
-                                                      "es":  "GuÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­as de ReparaciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n",
-                                                      "fr":  "Guides de rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©paration"
-                                                  }
-                                  },
-                   "products":  {
-                                    "square200":  {
-                                                      "description":  {
-                                                                          "pt":  "Procedimentos de reparação disponíveis para o Square Downlight 200.",
-                                                                          "en":  "Available repair procedures for the Square Downlight 200.",
-                                                                          "es":  "Procedimientos de reparación disponibles para el Square Downlight 200.",
-                                                                          "fr":  "Procédures de réparation disponibles pour le Square Downlight 200."
-                                                                      }
-                                                  },
-                                    "square240":  {
-                                                      "description":  {
-                                                                          "pt":  "Procedimentos de reparação disponíveis para o Square Downlight 240.",
-                                                                          "en":  "Available repair procedures for the Square Downlight 240.",
-                                                                          "es":  "Procedimientos de reparación disponibles para el Square Downlight 240.",
-                                                                          "fr":  "Procédures de réparation disponibles pour le Square Downlight 240."
-                                                                      }
-                                                  },
-                                    "round230":  {
-                                                     "description":  {
-                                                                         "pt":  "Procedimentos de reparação disponíveis para o Round Downlight 230.",
-                                                                         "en":  "Available repair procedures for the Round Downlight 230.",
-                                                                         "es":  "Procedimientos de reparación disponibles para el Round Downlight 230.",
-                                                                         "fr":  "Procédures de réparation disponibles pour le Round Downlight 230."
-                                                                     }
-                                                 },
-                                    "round320":  {
-                                                     "description":  {
-                                                                         "pt":  "Procedimentos de reparação disponíveis para o Round Downlight 320.",
-                                                                         "en":  "Available repair procedures for the Round Downlight 320.",
-                                                                         "es":  "Procedimientos de reparación disponibles para el Round Downlight 320.",
-                                                                         "fr":  "Procédures de réparation disponibles pour le Round Downlight 320."
-                                                                     }
-                                                 },
-                                    "bar60":  {
-                                                  "description":  {
-                                                                      "pt":  "Procedimentos de reparação disponíveis para o Barra 24V Modelo 60.",
-                                                                      "en":  "Available repair procedures for the 24V Bar Model 60.",
-                                                                      "es":  "Procedimientos de reparación disponibles para el Barra 24V Modelo 60.",
-                                                                      "fr":  "Procédures de réparation disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 60."
-                                                                  }
-                                              },
-                                    "bar120":  {
-                                                   "description":  {
-                                                                       "pt":  "Procedimentos de reparação disponíveis para o Barra 24V Modelo 120.",
-                                                                       "en":  "Available repair procedures for the 24V Bar Model 120.",
-                                                                       "es":  "Procedimientos de reparación disponibles para el Barra 24V Modelo 120.",
-                                                                       "fr":  "Procédures de réparation disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 120."
-                                                                   }
-                                               },
-                                    "bar145":  {
-                                                   "description":  {
-                                                                       "pt":  "Procedimentos de reparação disponíveis para o Barra 24V Modelo 145.",
-                                                                       "en":  "Available repair procedures for the 24V Bar Model 145.",
-                                                                       "es":  "Procedimientos de reparación disponibles para el Barra 24V Modelo 145.",
-                                                                       "fr":  "Procédures de réparation disponibles pour le Barre 24V ModÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨le 145."
-                                                                   }
-                                               }
-                                },
-                   "ui":  {
-                              "loading":  {
-                                              "pt":  "A carregar os guias de reparação...",
-                                              "en":  "Loading repair guides...",
-                                              "es":  "Cargando las guías de reparación...",
-                                              "fr":  "Chargement des guides de réparation..."
-                                          },
-                              "errorTitle":  {
-                                                 "pt":  "Guias de reparação indisponíveis",
-                                                 "en":  "Repair guides unavailable",
-                                                 "es":  "Guías de reparación no disponibles",
-                                                 "fr":  "Guides de réparation indisponibles"
-                                             },
-                              "errorDescription":  {
-                                                       "pt":  "O catálogo de reparação não pôde ser carregado. Atualize a página ou contacte o suporte se o problema continuar.",
-                                                       "en":  "The repair catalog could not be loaded. Refresh the page or contact support if the problem continues.",
-                                                       "es":  "No se pudo cargar el catálogo de reparación. Actualice la página o contacte con soporte si el problema continúa.",
-                                                       "fr":  "Le catalogue de réparation n\u0027a pas pu être chargé. Actualisez la page ou contactez l\u0027assistance si le problème persiste."
-                                                   },
-                              "guideFallback":  {
-                                                    "pt":  "Guia de reparação",
-                                                    "en":  "Repair guide",
-                                                    "es":  "Guía de reparación",
-                                                    "fr":  "Guide de réparation"
-                                                },
-                              "openGuide":  {
-                                                "pt":  "Abrir guia",
-                                                "en":  "Open guide",
-                                                "es":  "Abrir guía",
-                                                "fr":  "Ouvrir le guide"
-                                            },
-                              "categoryFallback":  {
-                                                       "pt":  "Família de produto",
-                                                       "en":  "Product family",
-                                                       "es":  "Familia de producto",
-                                                       "fr":  "Famille de produits"
-                                                   }
-                          }
-               },
-    "steps":  {
-                  "breadcrumb":  {
-                                     "current":  {
-                                                     "pt":  "Guia de Reparação",
-                                                     "en":  "Repair Guide",
-                                                     "es":  "Guía de Reparación",
-                                                     "fr":  "Guide de réparation"
-                                                 }
-                                 },
-                  "hero":  {
-                               "description":  {
-                                                   "pt":  "Reveja o guia antes de iniciar a intervenção. Confirme o tempo estimado, as peças necessárias e cada passo pela ordem indicada.",
-                                                   "en":  "Review the guide before starting the intervention. Confirm the estimated time, the required parts, and each step in order.",
-                                                   "es":  "Revise la guía antes de iniciar la intervención. Confirme el tiempo estimado, las piezas necesarias y cada paso en el orden indicado.",
-                                                   "fr":  "Consultez le guide avant de commencer l\u0027intervention. Vérifiez le temps estimé, les pièces nécessaires et chaque étape dans l\u0027ordre indiqué."
-                                               }
-                           },
-                  "cards":  {
-                                "timeTitle":  {
-                                                  "pt":  "Tempo Estimado e Dificuldade",
-                                                  "en":  "Estimated Time \u0026 Difficulty",
-                                                  "es":  "Tiempo Estimado y Dificultad",
-                                                  "fr":  "Temps estimÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© et difficultÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©"
-                                              },
-                                "timeDescription":  {
-                                                        "pt":  "Utilize o tempo estimado como referência de preparação. A duração real depende do acesso ao produto, das ferramentas disponíveis e da familiaridade com o processo.",
-                                                        "en":  "Use the estimated time as a planning reference. The real duration depends on product access, tool readiness, and familiarity with the procedure.",
-                                                        "es":  "Utilice el tiempo estimado como referencia de planificación. La duración real depende del acceso al producto, de la disponibilidad de herramientas y de la familiaridad con el procedimiento.",
-                                                        "fr":  "Utilisez le temps estimé comme référence de préparation. La durée réelle dépend de l\u0027accès au produit, des outils disponibles et de la familiarité avec la procédure."
-                                                    },
-                                "requiredPartsTitle":  {
-                                                           "pt":  "PeÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§as e Ferramentas NecessÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡rias",
-                                                           "en":  "Required Parts and Tools",
-                                                           "es":  "Piezas y Herramientas Necesarias",
-                                                           "fr":  "PiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ces et outils nÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cessaires"
-                                                       },
-                                "requiredPartsDescription":  {
-                                                                 "pt":  "Confirme a lista antes de iniciar a intervenção e prepare todos os itens necessários.",
-                                                                 "en":  "Review the list before starting the intervention and prepare every required item.",
-                                                                 "es":  "Revise la lista antes de iniciar la intervención y prepare todos los elementos necesarios.",
-                                                                 "fr":  "Vérifiez la liste avant de commencer l\u0027intervention et préparez tous les éléments nécessaires."
-                                                             },
-                                "printTitle":  {
-                                                   "pt":  "Imprimir Este Guia",
-                                                   "en":  "Print This Guide",
-                                                   "es":  "Imprimir Esta Guía",
-                                                   "fr":  "Imprimer ce guide"
-                                               },
-                                "printDescription":  {
-                                                         "pt":  "Imprima o guia se precisar de uma referência em papel durante a intervenção.",
-                                                         "en":  "Print the guide if you need a paper reference during the intervention.",
-                                                         "es":  "Imprima la guía si necesita una referencia en papel durante la intervención.",
-                                                         "fr":  "Imprimez le guide si vous avez besoin d\u0027une référence papier pendant l\u0027intervention."
-                                                     },
-                                "printButton":  {
-                                                    "pt":  "Imprimir Guia",
-                                                    "en":  "Print Guide",
-                                                    "es":  "Imprimir Guía",
-                                                    "fr":  "Imprimer le guide"
-                                                }
-                            },
-                  "sections":  {
-                                   "stepsTitle":  {
-                                                      "pt":  "Etapas",
-                                                      "en":  "Steps",
-                                                      "es":  "Pasos",
-                                                      "fr":  "Étapes"
-                                                  }
-                               },
-                  "states":  {
-                                 "loadingGuide":  {
-                                                      "pt":  "A carregar detalhes do guia...",
-                                                      "en":  "Loading guide details...",
-                                                      "es":  "Cargando detalles de la guÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­a...",
-                                                      "fr":  "Chargement des dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©tails du guide..."
-                                                  }
-                             },
-                  "ui":  {
-                             "loadingTitle":  {
-                                                  "pt":  "A carregar guia de reparação...",
-                                                  "en":  "Loading repair guide...",
-                                                  "es":  "Cargando guía de reparación...",
-                                                  "fr":  "Chargement du guide de réparation..."
-                                              },
-                             "loadingDetails":  {
-                                                    "pt":  "A carregar detalhes do guia...",
-                                                    "en":  "Loading guide details...",
-                                                    "es":  "Cargando detalles de la guía...",
-                                                    "fr":  "Chargement des détails du guide..."
-                                                },
-                             "timeNotSpecified":  {
-                                                      "pt":  "Tempo estimado indisponível",
-                                                      "en":  "Estimated time unavailable",
-                                                      "es":  "Tiempo estimado no disponible",
-                                                      "fr":  "Temps estimé indisponible"
-                                                  },
-                             "noParts":  {
-                                             "pt":  "Não existem peças ou ferramentas listadas para este guia.",
-                                             "en":  "No parts or tools are listed for this guide.",
-                                             "es":  "No hay piezas ni herramientas indicadas para esta guía.",
-                                             "fr":  "Aucune pièce ni aucun outil ne sont listés pour ce guide."
-                                         },
-                             "partFallback":  {
-                                                  "pt":  "Peça",
-                                                  "en":  "Part",
-                                                  "es":  "Pieza",
-                                                  "fr":  "Pièce"
-                                              },
-                             "stepFallback":  {
-                                                  "pt":  "Etapa",
-                                                  "en":  "Step",
-                                                  "es":  "Paso",
-                                                  "fr":  "Étape"
-                                              },
-                             "noStepsTitle":  {
-                                                  "pt":  "Sem etapas disponíveis",
-                                                  "en":  "No procedure steps available",
-                                                  "es":  "No hay pasos disponibles",
-                                                  "fr":  "Aucune étape disponible"
-                                              },
-                             "noStepsDescription":  {
-                                                        "pt":  "Este guia não inclui instruções passo a passo.",
-                                                        "en":  "This guide does not include step-by-step instructions.",
-                                                        "es":  "Esta guía no incluye instrucciones paso a paso.",
-                                                        "fr":  "Ce guide ne contient pas d\u0027instructions étape par étape."
-                                                    },
-                             "loadErrorTitle":  {
-                                                    "pt":  "Guia indisponível",
-                                                    "en":  "Guide unavailable",
-                                                    "es":  "Guía no disponible",
-                                                    "fr":  "Guide indisponible"
-                                                },
-                             "loadErrorDescription":  {
-                                                          "pt":  "O guia solicitado não pôde ser carregado. Volte à página de reparações e tente novamente.",
-                                                          "en":  "The requested guide could not be loaded. Return to Repair Guides and try again.",
-                                                          "es":  "No se pudo cargar la guía solicitada. Vuelva a Guías de Reparación e inténtelo de nuevo.",
-                                                          "fr":  "Le guide demandé n\u0027a pas pu être chargé. Revenez aux guides de réparation et réessayez."
-                                                      },
-                             "unableToLoadParts":  {
-                                                       "pt":  "Não foi possível carregar a lista de peças.",
-                                                       "en":  "The parts list could not be loaded.",
-                                                       "es":  "No se pudo cargar la lista de piezas.",
-                                                       "fr":  "La liste des pièces n\u0027a pas pu être chargée."
-                                                   },
-                             "manufacturerSupportButton":  {
-                                                               "pt":  "Abrir página de suporte",
-                                                               "en":  "Open support page",
-                                                               "es":  "Abrir página de soporte",
-                                                               "fr":  "Ouvrir la page de support"
-                                                           },
-                             "manufacturerRepairButton":  {
-                                                              "pt":  "Voltar aos guias de reparação",
-                                                              "en":  "Back to repair guides",
-                                                              "es":  "Volver a las guías de reparación",
-                                                              "fr":  "Retour aux guides de réparation"
-                                                          }
-                         }
-              }
+  "shared": {
+    "nav": {
+      "repairGuides": {
+        "pt": "Guias de Reparação",
+        "en": "Repair Guides",
+        "es": "Guías de Reparación",
+        "fr": "Guides de réparation"
+      },
+      "downloadFiles": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      }
+    },
+    "breadcrumb": {
+      "home": {
+        "pt": "Início",
+        "en": "Home",
+        "es": "Inicio",
+        "fr": "Accueil"
+      },
+      "support": {
+        "pt": "Suporte",
+        "en": "Support",
+        "es": "Soporte",
+        "fr": "Assistance"
+      }
+    },
+    "header": {
+      "supportPage": {
+        "pt": "P\u00e1gina de Suporte",
+        "en": "Support Page",
+        "es": "P\u00e1gina de Soporte",
+        "fr": "Page d'assistance"
+      },
+      "getInTouch": {
+        "pt": "Entrar em contacto",
+        "en": "Get in touch",
+        "es": "Contactar",
+        "fr": "Nous contacter"
+      },
+      "store": {
+        "pt": "Loja",
+        "en": "Store",
+        "es": "Tienda",
+        "fr": "Boutique"
+      }
+    },
+    "footer": {
+      "about": {
+        "pt": "Sobre N\u00f3s",
+        "en": "About Us",
+        "es": "Sobre Nosotros",
+        "fr": "\u00c0 propos"
+      },
+      "cart": {
+        "pt": "Carrinho",
+        "en": "Cart",
+        "es": "Carrito",
+        "fr": "Panier"
+      },
+      "newsletter": {
+        "pt": "Subscrever Newsletter",
+        "en": "Subscribe to Newsletter",
+        "es": "Suscribirse al bolet\u00edn",
+        "fr": "S'abonner \u00e0 la newsletter"
+      },
+      "categoriesTitle": {
+        "pt": "Categorias",
+        "en": "Categories",
+        "es": "Categor\u00edas",
+        "fr": "Cat\u00e9gories"
+      },
+      "retail": {
+        "pt": "Retalho",
+        "en": "Retail",
+        "es": "Retail",
+        "fr": "Retail"
+      },
+      "interior": {
+        "pt": "Interior",
+        "en": "Interior",
+        "es": "Interior",
+        "fr": "Int\u00e9rieur"
+      },
+      "industrial": {
+        "pt": "Industrial",
+        "en": "Industrial",
+        "es": "Industrial",
+        "fr": "Industriel"
+      },
+      "powerSupplies": {
+        "pt": "Fontes de Alimenta\u00e7\u00e3o",
+        "en": "Power Supplies",
+        "es": "Fuentes de Alimentaci\u00f3n",
+        "fr": "Alimentations"
+      },
+      "contacts": {
+        "pt": "Contactos",
+        "en": "Contacts",
+        "es": "Contactos",
+        "fr": "Contacts d’assistance"
+      },
+      "location": {
+        "pt": "Sede",
+        "en": "Head Office",
+        "es": "Sede",
+        "fr": "Si\u00e8ge"
+      },
+      "support": {
+        "pt": "Suporte",
+        "en": "Support",
+        "es": "Soporte",
+        "fr": "Assistance"
+      },
+      "repairInstructions": {
+        "pt": "Instru\u00e7\u00f5es Repara\u00e7\u00e3o",
+        "en": "Repair Instructions",
+        "es": "Instrucciones de Reparaci\u00f3n",
+        "fr": "Instructions de r\u00e9paration"
+      }
+    }
+  },
+  "index": {
+    "meta": {
+      "title": {
+        "pt": "Suporte Nexled",
+        "en": "Nexled Support",
+        "es": "Soporte Nexled",
+        "fr": "Support Nexled"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Suporte Nexled",
+        "en": "Nexled Support",
+        "es": "Soporte Nexled",
+        "fr": "Support Nexled"
+      },
+      "description": {
+        "pt": "Aqui encontrar\u00e1 uma cole\u00e7\u00e3o abrangente de recursos de suporte, incluindo respostas \u00e0s perguntas mais frequentes. Estes recursos foram concebidos para o ajudar a encontrar rapidamente solu\u00e7\u00f5es para problemas comuns, instalar e configurar produtos e resolver dificuldades que possam surgir ao longo do tempo.",
+        "en": "Here you will find a comprehensive collection of support resources, including answers to the most frequently asked questions. These resources are designed to help you quickly find solutions to common issues, install and configure products, and troubleshoot problems that may arise over time.",
+        "es": "Aqu\u00ed encontrar\u00e1 una colecci\u00f3n completa de recursos de soporte, incluidas respuestas a las preguntas m\u00e1s frecuentes. Estos recursos est\u00e1n dise\u00f1ados para ayudarle a encontrar r\u00e1pidamente soluciones a problemas comunes, instalar y configurar productos y resolver incidencias que puedan surgir con el tiempo.",
+        "fr": "Vous trouverez ici une collection compl\u00e8te de ressources d'assistance, y compris des r\u00e9ponses aux questions les plus fr\u00e9quentes. Ces ressources sont con\u00e7ues pour vous aider \u00e0 trouver rapidement des solutions aux probl\u00e8mes courants, installer et configurer les produits et r\u00e9soudre les difficult\u00e9s pouvant survenir au fil du temps."
+      }
+    },
+    "actions": {
+      "repair": {
+        "title": {
+          "pt": "Guias de Repara\u00e7\u00e3o",
+          "en": "Repair Guides",
+          "es": "Gu\u00edas de Reparaci\u00f3n",
+          "fr": "Guides de r\u00e9paration"
+        },
+        "description": {
+          "pt": "Este guia ajuda-o a compreender as op\u00e7\u00f5es de suporte dispon\u00edveis, incluindo como solicitar repara\u00e7\u00f5es, substitui\u00e7\u00f5es e informa\u00e7\u00f5es sobre pe\u00e7as.",
+          "en": "This guide will help you understand the support options available to you, including how to request repairs, replacements and information on our parts.",
+          "es": "Esta gu\u00eda le ayudar\u00e1 a comprender las opciones de soporte disponibles, incluyendo c\u00f3mo solicitar reparaciones, sustituciones e informaci\u00f3n sobre nuestras piezas.",
+          "fr": "Ce guide vous aidera \u00e0 comprendre les options d'assistance disponibles, y compris la mani\u00e8re de demander des r\u00e9parations, des remplacements et des informations sur nos pi\u00e8ces."
+        },
+        "cta": {
+          "pt": "Ir para Guias de Repara\u00e7\u00e3o",
+          "en": "Go to Repair Guides",
+          "es": "Ir a Gu\u00edas de Reparaci\u00f3n",
+          "fr": "Voir les guides de r\u00e9paration"
+        }
+      },
+      "downloads": {
+        "title": {
+          "pt": "Ficheiros para Download",
+          "en": "Download Files",
+          "es": "Archivos de Descarga",
+          "fr": "Fichiers \u00e0 t\u00e9l\u00e9charger"
+        },
+        "description": {
+          "pt": "Aqui encontrar\u00e1 todas as etiquetas EPREL em formato PDF e PNG, bem como as Fichas de Produto dispon\u00edveis em cada idioma suportado para download.",
+          "en": "Here you will find all the EPREL labels in PDF and PNG format, as well as the Product Fiches available in each supported language for download.",
+          "es": "Aqu\u00ed encontrar\u00e1 todas las etiquetas EPREL en formato PDF y PNG, as\u00ed como las fichas de producto disponibles para descargar en cada idioma compatible.",
+          "fr": "Vous trouverez ici toutes les \u00e9tiquettes EPREL au format PDF et PNG, ainsi que les fiches produit disponibles au t\u00e9l\u00e9chargement dans chaque langue prise en charge."
+        },
+        "cta": {
+          "pt": "Ir para Ficheiros para Download",
+          "en": "Go to Download Files",
+          "es": "Ir a Archivos de Descarga",
+          "fr": "Voir les fichiers \u00e0 t\u00e9l\u00e9charger"
+        }
+      },
+      "contact": {
+        "title": {
+          "pt": "Contacte-nos",
+          "en": "Contact Us",
+          "es": "Cont\u00e1ctenos",
+          "fr": "Contactez-nous"
+        },
+        "description": {
+          "pt": "Entre em contacto com um dos nossos especialistas de suporte. Estamos aqui para o ajudar a resolver qualquer problema t\u00e9cnico e garantir que os seus produtos funcionam como esperado.",
+          "en": "Get in touch with one of our support specialists. We are here to help you resolve any technical issues and ensure your products are working as expected.",
+          "es": "P\u00f3ngase en contacto con uno de nuestros especialistas de soporte. Estamos aqu\u00ed para ayudarle a resolver cualquier problema t\u00e9cnico y garantizar que sus productos funcionen como se espera.",
+          "fr": "Prenez contact avec l'un de nos sp\u00e9cialistes de l'assistance. Nous sommes l\u00e0 pour vous aider \u00e0 r\u00e9soudre tout probl\u00e8me technique et \u00e0 garantir que vos produits fonctionnent comme pr\u00e9vu."
+        },
+        "cta": {
+          "pt": "Ir para Contacte-nos",
+          "en": "Go to Contact Us",
+          "es": "Ir a Cont\u00e1ctenos",
+          "fr": "Voir la page contact"
+        }
+      }
+    },
+    "faq": {
+      "title": {
+        "pt": "FAQ e Quest\u00f5es Principais",
+        "en": "FAQ & Main Questions",
+        "es": "FAQ y Preguntas Principales",
+        "fr": "FAQ et Questions Principales"
+      },
+      "subtitle": {
+        "pt": "Abaixo encontra perguntas frequentes com respostas claras e concisas. Este conte\u00fado oferece acesso r\u00e1pido \u00e0 informa\u00e7\u00e3o essencial, ajudando a esclarecer d\u00favidas comuns e fornecendo orienta\u00e7\u00f5es objetivas sobre os temas mais importantes.",
+        "en": "Find quick answers to the most common support topics, from opening a request to locating manuals and checking warranty information.",
+        "es": "A continuaci\u00f3n encontrar\u00e1 preguntas frecuentes junto con respuestas claras y concisas. Ofrece acceso r\u00e1pido a informaci\u00f3n esencial, ayuda a aclarar dudas comunes y proporciona orientaci\u00f3n directa sobre los temas m\u00e1s importantes.",
+        "fr": "Vous trouverez ci-dessous les questions les plus fr\u00e9quentes accompagn\u00e9es de r\u00e9ponses claires et concises. Elles donnent un acc\u00e8s rapide aux informations essentielles, aident \u00e0 clarifier les doutes courants et fournissent des indications directes sur les sujets les plus importants."
+      },
+      "items": {
+        "start": {
+          "question": {
+            "pt": "Como inicio um pedido de suporte?",
+            "en": "How do I start a support request?",
+            "es": "\u00bfC\u00f3mo inicio una solicitud de soporte?",
+            "fr": "Comment d\u00e9marrer une demande d'assistance ?"
+          },
+          "answer": {
+            "pt": "Visite a p\u00e1gina de contacto ou utilize a op\u00e7\u00e3o de agendamento para marcar uma sess\u00e3o.",
+            "en": "Visit the contact page or use the scheduling option to book a session.",
+            "es": "Visite la p\u00e1gina de contacto o utilice la opci\u00f3n de programaci\u00f3n para reservar una sesi\u00f3n.",
+            "fr": "Visitez la page de contact ou utilisez l'option de planification pour r\u00e9server une session."
+          }
+        },
+        "duration": {
+          "question": {
+            "pt": "Quanto tempo demora uma repara\u00e7\u00e3o?",
+            "en": "How long does a repair take?",
+            "es": "\u00bfCu\u00e1nto tiempo tarda una reparaci\u00f3n?",
+            "fr": "Combien de temps prend une r\u00e9paration ?"
+          },
+          "answer": {
+            "pt": "O tempo depende do tipo de repara\u00e7\u00e3o. Consulte o artigo de repara\u00e7\u00e3o para estimativas.",
+            "en": "The time depends on the type of repair. See the repair article for estimates.",
+            "es": "El tiempo depende del tipo de reparaci\u00f3n. Consulte el art\u00edculo de reparaci\u00f3n para ver estimaciones.",
+            "fr": "Le temps d\u00e9pend du type de r\u00e9paration. Consultez l'article de r\u00e9paration pour les estimations."
+          }
+        },
+        "manuals": {
+          "question": {
+            "pt": "Onde posso obter manuais?",
+            "en": "Where can I get manuals?",
+            "es": "\u00bfD\u00f3nde puedo obtener manuales?",
+            "fr": "O\u00f9 puis-je obtenir les manuels ?"
+          },
+          "answer": {
+            "pt": "Os manuais est\u00e3o dispon\u00edveis na sec\u00e7\u00e3o Downloads/Manuais.",
+            "en": "Manuals are available in the Downloads/Manuals section.",
+            "es": "Los manuales est\u00e1n disponibles en la secci\u00f3n Descargas/Manuales.",
+            "fr": "Les manuels sont disponibles dans la section T\u00e9l\u00e9chargements/Manuels."
+          }
+        },
+        "warranty": {
+          "question": {
+            "pt": "Os produtos Nexled incluem garantia?",
+            "en": "Do Nexled products include a warranty?",
+            "es": "\u00bfLos productos Nexled incluyen garant\u00eda?",
+            "fr": "Les produits Nexled incluent-ils une garantie ?"
+          },
+          "answer": {
+            "pt": "Sim, os detalhes da garantia est\u00e3o indicados na documenta\u00e7\u00e3o de cada produto.",
+            "en": "Yes, warranty details are listed in each product's documentation.",
+            "es": "S\u00ed, los detalles de la garant\u00eda se indican en la documentaci\u00f3n de cada producto.",
+            "fr": "Oui, les d\u00e9tails de la garantie figurent dans la documentation de chaque produit."
+          }
+        }
+      }
+    },
+    "warranty": {
+      "title": {
+        "pt": "Garantia e Cobertura",
+        "en": "Warranty & Guarantee",
+        "es": "Garant\u00eda y Cobertura",
+        "fr": "Garantie et Couverture"
+      },
+      "subtitle": {
+        "pt": "Abaixo encontra informa\u00e7\u00f5es essenciais sobre a garantia dos produtos, exclus\u00f5es, documenta\u00e7\u00e3o necess\u00e1ria e expectativas de desempenho.",
+        "en": "Review the main warranty terms, exclusions, required documentation, and the expected service path before you submit a claim.",
+        "es": "A continuaci\u00f3n encontrar\u00e1 informaci\u00f3n esencial sobre la garant\u00eda del producto, exclusiones, documentaci\u00f3n necesaria y expectativas de rendimiento.",
+        "fr": "Vous trouverez ci-dessous les informations essentielles sur la garantie du produit, les exclusions, la documentation requise et les attentes de performance."
+      },
+      "items": {
+        "coverage": {
+          "question": {
+            "pt": "Cobertura",
+            "en": "Coverage",
+            "es": "Cobertura",
+            "fr": "Couverture"
+          },
+          "answer": {
+            "pt": "A garantia aplica-se a defeitos de materiais e de fabrico quando o produto \u00e9 utilizado em condi\u00e7\u00f5es normais de funcionamento. N\u00e3o cobre danos resultantes de utiliza\u00e7\u00e3o indevida ou fatores ambientais.",
+            "en": "The warranty applies to defects in materials and workmanship when the product is used under normal operating conditions. It does not cover damages that stem from misuse or environmental factors.",
+            "es": "La garant\u00eda se aplica a defectos de materiales y fabricaci\u00f3n cuando el producto se utiliza en condiciones normales de funcionamiento. No cubre da\u00f1os derivados de un uso indebido o de factores ambientales.",
+            "fr": "La garantie s'applique aux d\u00e9fauts de mat\u00e9riaux et de fabrication lorsque le produit est utilis\u00e9 dans des conditions normales de fonctionnement. Elle ne couvre pas les dommages provenant d'une mauvaise utilisation ou de facteurs environnementaux."
+          }
+        },
+        "exclusions": {
+          "question": {
+            "pt": "Exclus\u00f5es",
+            "en": "Exclusions",
+            "es": "Exclusiones",
+            "fr": "Exclusions"
+          },
+          "answer": {
+            "pt": "Esta garantia n\u00e3o cobre danos resultantes de utiliza\u00e7\u00e3o indevida, instala\u00e7\u00e3o incorreta, acidentes, modifica\u00e7\u00f5es n\u00e3o autorizadas ou exposi\u00e7\u00e3o a condi\u00e7\u00f5es fora do recomendado. Produtos alterados ou reparados sem autoriza\u00e7\u00e3o da Nexled geralmente n\u00e3o s\u00e3o eleg\u00edveis para an\u00e1lise de garantia.",
+            "en": "This warranty does not cover damage resulting from misuse, improper installation, accidents, unauthorized modifications, or exposure to conditions outside the recommended operating envelope. Products altered or repaired without Nexled authorization are generally not covered for warranty review.",
+            "es": "Esta garant\u00eda no cubre da\u00f1os derivados del uso indebido, instalaci\u00f3n incorrecta, accidentes, modificaciones no autorizadas o exposici\u00f3n a condiciones fuera de las recomendadas. Los productos alterados o reparados sin autorizaci\u00f3n de Nexled generalmente no est\u00e1n cubiertos para revisi\u00f3n de garant\u00eda.",
+            "fr": "Cette garantie ne couvre pas les dommages r\u00e9sultant d'une mauvaise utilisation, d'une installation incorrecte, d'accidents, de modifications non autoris\u00e9es ou d'une exposition \u00e0 des conditions hors des limites recommand\u00e9es. Les produits modifi\u00e9s ou r\u00e9par\u00e9s sans autorisation de Nexled ne sont g\u00e9n\u00e9ralement pas couverts au titre de la garantie."
+          }
+        },
+        "service": {
+          "question": {
+            "pt": "Solicitar Assist\u00eancia em Garantia",
+            "en": "Request Warranty Service",
+            "es": "Solicitar Servicio de Garant\u00eda",
+            "fr": "Demander un service sous garantie"
+          },
+          "answer": {
+            "pt": "Para solicitar assist\u00eancia em garantia, re\u00fana o modelo do produto, o n\u00famero de s\u00e9rie e a prova de compra, e depois contacte a equipa de suporte. O suporte enviar\u00e1 instru\u00e7\u00f5es detalhadas sobre como devolver o produto ou obter assist\u00eancia direta, se aplic\u00e1vel.",
+            "en": "To request warranty service, gather the product model, serial number, and proof of purchase, then contact the support team. Support will send detailed instructions on how to return the product or obtain a direct service if applicable.",
+            "es": "Para solicitar servicio de garant\u00eda, re\u00fana el modelo del producto, el n\u00famero de serie y la prueba de compra, y despu\u00e9s contacte con el equipo de soporte. El soporte le enviar\u00e1 instrucciones detalladas sobre c\u00f3mo devolver el producto u obtener servicio directo si procede.",
+            "fr": "Pour demander un service sous garantie, rassemblez le mod\u00e8le du produit, le num\u00e9ro de s\u00e9rie et la preuve d'achat, puis contactez l'\u00e9quipe d'assistance. L'assistance vous enverra des instructions d\u00e9taill\u00e9es sur la proc\u00e9dure de retour ou sur l'obtention d'un service direct si applicable."
+          }
+        },
+        "documentation": {
+          "question": {
+            "pt": "Documenta\u00e7\u00e3o Necess\u00e1ria",
+            "en": "Required Documentation",
+            "es": "Documentaci\u00f3n Necesaria",
+            "fr": "Documentation requise"
+          },
+          "answer": {
+            "pt": "Deve fornecer prova de compra, uma descri\u00e7\u00e3o clara do problema, a data e o n\u00famero de s\u00e9rie do produto. Tenha esta informa\u00e7\u00e3o dispon\u00edvel antes de contactar o nosso departamento de garantia.",
+            "en": "You must provide proof of purchase, a clear description of the issue, a copy of the date, and the product serial number. Keep this information handy prior to contacting our warranty service department.",
+            "es": "Debe proporcionar prueba de compra, una descripci\u00f3n clara del problema, la fecha y el n\u00famero de serie del producto. Mantenga esta informaci\u00f3n a mano antes de contactar con nuestro departamento de garant\u00eda.",
+            "fr": "Vous devez fournir une preuve d'achat, une description claire du probl\u00e8me, la date et le num\u00e9ro de s\u00e9rie du produit. Gardez ces informations \u00e0 port\u00e9e de main avant de contacter notre service de garantie."
+          }
+        },
+        "lifespan": {
+          "question": {
+            "pt": "Vida \u00datil e Expectativas de Desempenho",
+            "en": "Product Lifespan & Performance Expectations",
+            "es": "Vida \u00fatil y Expectativas de Rendimiento",
+            "fr": "Dur\u00e9e de vie et attentes de performance"
+          },
+          "answer": {
+            "pt": "Os produtos Nexled s\u00e3o concebidos para oferecer desempenho duradouro e seguro quando utilizados nas condi\u00e7\u00f5es recomendadas. Qualquer redu\u00e7\u00e3o de sa\u00edda ou desempenho esperado que n\u00e3o esteja associada a uma falha direta n\u00e3o \u00e9 considerada uma perturba\u00e7\u00e3o relevante do desempenho do produto.",
+            "en": "Nexled products are designed to deliver lasting, safe performance when used under recommended conditions. Any reduction in output or expected performance that is not associated to a direct performance lapse or fault is not considered a notable product performance disturbance.",
+            "es": "Los productos Nexled est\u00e1n dise\u00f1ados para ofrecer un rendimiento duradero y seguro cuando se utilizan en las condiciones recomendadas. Cualquier reducci\u00f3n en la salida o el rendimiento esperado que no est\u00e9 asociada a un fallo directo no se considera una perturbaci\u00f3n relevante del rendimiento del producto.",
+            "fr": "Les produits Nexled sont con\u00e7us pour offrir des performances durables et s\u00fbres lorsqu'ils sont utilis\u00e9s dans les conditions recommand\u00e9es. Toute r\u00e9duction du rendement ou des performances attendues qui n'est pas li\u00e9e \u00e0 une panne directe n'est pas consid\u00e9r\u00e9e comme une perturbation notable des performances du produit."
+          }
+        }
+      }
+    }
+  },
+  "downloads": {
+    "meta": {
+      "title": {
+        "pt": "Ficheiros para Download - Suporte Nexled",
+        "en": "Download Files - Nexled Support",
+        "es": "Archivos de Descarga - Soporte Nexled",
+        "fr": "Fichiers à télécharger - Support Nexled"
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Ficheiros para Download",
+        "en": "Download Files",
+        "es": "Archivos de Descarga",
+        "fr": "Fichiers à télécharger"
+      },
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias de produto, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including product guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de producto, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides produit, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "sections": {
+      "downlights": {
+        "title": {
+          "pt": "Downlights",
+          "en": "Downlights",
+          "es": "Downlights",
+          "fr": "Downlights"
+        }
+      },
+      "bars": {
+        "title": {
+          "pt": "Barras 24V",
+          "en": "24V Bars",
+          "es": "Barras 24V",
+          "fr": "Barres 24V"
+        }
+      }
+    },
+    "products": {
+      "square200": {
+        "title": {
+          "pt": "Square Downlight 200",
+          "en": "Square Downlight 200",
+          "es": "Square Downlight 200",
+          "fr": "Square Downlight 200"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Square Downlight 200",
+          "en": "Complete technical documentation for the Square Downlight 200",
+          "es": "Documentación técnica completa para el Square Downlight 200",
+          "fr": "Documentation technique complète pour le Square Downlight 200"
+        },
+        "alt": {
+          "pt": "Documentação do Square Downlight 200",
+          "en": "Square Downlight 200 documentation",
+          "es": "Documentación del Square Downlight 200",
+          "fr": "Documentation du Square Downlight 200"
+        }
+      },
+      "square240": {
+        "title": {
+          "pt": "Square Downlight 240",
+          "en": "Square Downlight 240",
+          "es": "Square Downlight 240",
+          "fr": "Square Downlight 240"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Square Downlight 240",
+          "en": "Complete technical documentation for the Square Downlight 240",
+          "es": "Documentación técnica completa para el Square Downlight 240",
+          "fr": "Documentation technique complète pour le Square Downlight 240"
+        },
+        "alt": {
+          "pt": "Documentação do Square Downlight 240",
+          "en": "Square Downlight 240 documentation",
+          "es": "Documentación del Square Downlight 240",
+          "fr": "Documentation du Square Downlight 240"
+        }
+      },
+      "round230": {
+        "title": {
+          "pt": "Round Downlight 230",
+          "en": "Round Downlight 230",
+          "es": "Round Downlight 230",
+          "fr": "Round Downlight 230"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Round Downlight 230",
+          "en": "Complete technical documentation for the Round Downlight 230",
+          "es": "Documentación técnica completa para el Round Downlight 230",
+          "fr": "Documentation technique complète pour le Round Downlight 230"
+        },
+        "alt": {
+          "pt": "Documentação do Round Downlight 230",
+          "en": "Round Downlight 230 documentation",
+          "es": "Documentación del Round Downlight 230",
+          "fr": "Documentation du Round Downlight 230"
+        }
+      },
+      "round320": {
+        "title": {
+          "pt": "Round Downlight 320",
+          "en": "Round Downlight 320",
+          "es": "Round Downlight 320",
+          "fr": "Round Downlight 320"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para o Round Downlight 320",
+          "en": "Complete technical documentation for the Round Downlight 320",
+          "es": "Documentación técnica completa para el Round Downlight 320",
+          "fr": "Documentation technique complète pour le Round Downlight 320"
+        },
+        "alt": {
+          "pt": "Documentação do Round Downlight 320",
+          "en": "Round Downlight 320 documentation",
+          "es": "Documentación del Round Downlight 320",
+          "fr": "Documentation du Round Downlight 320"
+        }
+      },
+      "bar60": {
+        "title": {
+          "pt": "Barra 24V Modelo 60",
+          "en": "24V Bar Model 60",
+          "es": "Barra 24V Modelo 60",
+          "fr": "Barre 24V Modèle 60"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 60",
+          "en": "Complete technical documentation for the 24V Bar Model 60",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 60",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 60"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 60",
+          "en": "24V Bar Model 60 documentation",
+          "es": "Documentación de la Barra 24V Modelo 60",
+          "fr": "Documentation de la Barre 24V Modèle 60"
+        }
+      },
+      "bar120": {
+        "title": {
+          "pt": "Barra 24V Modelo 120",
+          "en": "24V Bar Model 120",
+          "es": "Barra 24V Modelo 120",
+          "fr": "Barre 24V Modèle 120"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 120",
+          "en": "Complete technical documentation for the 24V Bar Model 120",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 120",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 120"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 120",
+          "en": "24V Bar Model 120 documentation",
+          "es": "Documentación de la Barra 24V Modelo 120",
+          "fr": "Documentation de la Barre 24V Modèle 120"
+        }
+      },
+      "bar145": {
+        "title": {
+          "pt": "Barra 24V Modelo 145",
+          "en": "24V Bar Model 145",
+          "es": "Barra 24V Modelo 145",
+          "fr": "Barre 24V Modèle 145"
+        },
+        "description": {
+          "pt": "Documentação técnica completa para a Barra 24V Modelo 145",
+          "en": "Complete technical documentation for the 24V Bar Model 145",
+          "es": "Documentación técnica completa para la Barra 24V Modelo 145",
+          "fr": "Documentation technique complète pour la Barre 24V Modèle 145"
+        },
+        "alt": {
+          "pt": "Documentação da Barra 24V Modelo 145",
+          "en": "24V Bar Model 145 documentation",
+          "es": "Documentación de la Barra 24V Modelo 145",
+          "fr": "Documentation de la Barre 24V Modèle 145"
+        }
+      }
+    },
+    "links": {
+      "datasheet": {
+        "pt": "Ficha Técnica",
+        "en": "Datasheet",
+        "es": "Ficha Técnica",
+        "fr": "Fiche technique"
+      },
+      "installationManual": {
+        "pt": "Manual de Instalação",
+        "en": "Installation Manual",
+        "es": "Manual de Instalación",
+        "fr": "Manuel d'installation"
+      },
+      "ledModuleReport": {
+        "pt": "Relatório do Módulo LED",
+        "en": "LED Module Report",
+        "es": "Informe del Módulo LED",
+        "fr": "Rapport du module LED"
+      },
+      "luminaireReport": {
+        "pt": "Relatório da Luminária",
+        "en": "Luminaire Report",
+        "es": "Informe de la Luminaria",
+        "fr": "Rapport du luminaire"
+      },
+      "mountingOptions": {
+        "pt": "Opções de Fixação",
+        "en": "Mounting Options",
+        "es": "Opciones de Montaje",
+        "fr": "Options de montage"
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": {
+        "pt": "Contacte-nos - Suporte Nexled",
+        "en": "Contact Us - Nexled Support",
+        "es": "Contáctenos - Soporte Nexled",
+        "fr": "Contactez-nous - Support Nexled"
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Contacte-nos",
+        "en": "Contact Us",
+        "es": "Contáctenos",
+        "fr": "Contactez-nous"
+      }
+    },
+    "hero": {
+      "title": {
+        "pt": "Contacte-nos",
+        "en": "Contact Us",
+        "es": "Contáctenos",
+        "fr": "Contactez-nous"
+      },
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "form": {
+      "title": {
+        "pt": "Envie-nos uma Mensagem",
+        "en": "Send Us a Message",
+        "es": "Envíenos un Mensaje",
+        "fr": "Envoyez-nous un message"
+      },
+      "description": {
+        "pt": "Explique o que necessita e inclua os principais dados do produto para que a equipa de suporte encaminhe o pedido rapidamente.",
+        "en": "Explain what you need and include the key product details so the support team can route your request quickly.",
+        "es": "Explique lo que necesita e incluya los datos principales del producto para que el equipo de soporte dirija su solicitud r\u00e1pidamente.",
+        "fr": "Expliquez votre besoin et ajoutez les informations essentielles du produit afin que l'\u00e9quipe d'assistance oriente rapidement votre demande."
+      },
+      "fields": {
+        "name": {
+          "label": {
+            "pt": "Nome Completo",
+            "en": "Full Name",
+            "es": "Nombre Completo",
+            "fr": "Nom complet"
+          },
+          "placeholder": {
+            "pt": "Introduza o seu nome",
+            "en": "Enter your name",
+            "es": "Introduzca su nombre",
+            "fr": "Saisissez votre nom"
+          },
+          "hint": {
+            "pt": "Utilize o nome completo da pessoa respons\u00e1vel pelo pedido.",
+            "en": "Use the full name of the person responsible for the request.",
+            "es": "Utilice el nombre completo de la persona responsable de la solicitud.",
+            "fr": "Utilisez le nom complet de la personne responsable de la demande."
+          }
+        },
+        "email": {
+          "label": {
+            "pt": "Endereço de Email",
+            "en": "Email Address",
+            "es": "Dirección de Correo",
+            "fr": "Adresse e-mail"
+          },
+          "placeholder": {
+            "pt": "Introduza o seu email",
+            "en": "Enter your email",
+            "es": "Introduzca su correo",
+            "fr": "Saisissez votre e-mail"
+          },
+          "hint": {
+            "pt": "Usaremos este email para responder e partilhar os pr\u00f3ximos passos.",
+            "en": "We will use this email to reply and share the next steps.",
+            "es": "Usaremos este correo para responder y compartir los siguientes pasos.",
+            "fr": "Nous utiliserons cet e-mail pour r\u00e9pondre et partager les prochaines \u00e9tapes."
+          }
+        },
+        "subject": {
+          "label": {
+            "pt": "Assunto",
+            "en": "Subject",
+            "es": "Asunto",
+            "fr": "Objet"
+          },
+          "placeholder": {
+            "pt": "Introduza o assunto",
+            "en": "Enter the subject",
+            "es": "Introduzca el asunto",
+            "fr": "Saisissez l'objet"
+          },
+          "hint": {
+            "pt": "Resuma o problema, a fam\u00edlia do produto ou o pedido numa linha.",
+            "en": "Summarize the issue, product family, or request in one line.",
+            "es": "Resuma el problema, la familia del producto o la solicitud en una sola l\u00ednea.",
+            "fr": "R\u00e9sumez le probl\u00e8me, la famille de produits ou la demande en une ligne."
+          }
+        },
+        "message": {
+          "label": {
+            "pt": "Mensagem Curta",
+            "en": "Short Message",
+            "es": "Mensaje Corto",
+            "fr": "Message court"
+          },
+          "placeholder": {
+            "pt": "Escreva a sua mensagem curta",
+            "en": "Write your short message",
+            "es": "Escriba su mensaje corto",
+            "fr": "Rédigez votre court message"
+          },
+          "hint": {
+            "pt": "Descreva o problema, o comportamento esperado e o que acontece neste momento.",
+            "en": "Describe the issue, the expected behavior, and what is happening now.",
+            "es": "Describa el problema, el comportamiento esperado y lo que ocurre ahora.",
+            "fr": "D\u00e9crivez le probl\u00e8me, le comportement attendu et ce qui se passe actuellement."
+          }
+        },
+        "details": {
+          "label": {
+            "pt": "Detalhes Adicionais",
+            "en": "Additional Details",
+            "es": "Detalles Adicionales",
+            "fr": "Détails supplémentaires"
+          },
+          "placeholder": {
+            "pt": "Adicione quaisquer detalhes adicionais",
+            "en": "Add any additional details",
+            "es": "Añada cualquier detalle adicional",
+            "fr": "Ajoutez tout détail supplémentaire"
+          },
+          "hint": {
+            "pt": "Adicione n\u00fameros de s\u00e9rie, refer\u00eancias de encomenda, notas de instala\u00e7\u00e3o ou testes j\u00e1 realizados.",
+            "en": "Add serial numbers, order references, installation notes, or troubleshooting already completed.",
+            "es": "A\u00f1ada n\u00fameros de serie, referencias de pedido, notas de instalaci\u00f3n o pruebas ya realizadas.",
+            "fr": "Ajoutez les num\u00e9ros de s\u00e9rie, les r\u00e9f\u00e9rences de commande, les notes d'installation ou les tests d\u00e9j\u00e0 effectu\u00e9s."
+          }
+        }
+      },
+      "submit": {
+        "pt": "Enviar Ticket",
+        "en": "Send Your Ticket",
+        "es": "Enviar Ticket",
+        "fr": "Envoyer votre ticket"
+      },
+      "submitting": {
+        "pt": "A enviar pedido...",
+        "en": "Sending request...",
+        "es": "Enviando solicitud...",
+        "fr": "Envoi de la demande..."
+      },
+      "feedback": {
+        "submitted": {
+          "title": {
+            "pt": "Pedido enviado",
+            "en": "Request sent",
+            "es": "Solicitud enviada",
+            "fr": "Demande envoy\u00e9e"
+          },
+          "message": {
+            "pt": "O seu pedido foi enviado. A nossa equipa vai analisar a informa\u00e7\u00e3o e responder para o email indicado.",
+            "en": "Your request has been sent. Our team will review the information and follow up using the email address you provided.",
+            "es": "Su solicitud ha sido enviada. Nuestro equipo revisar\u00e1 la informaci\u00f3n y responder\u00e1 al correo electr\u00f3nico facilitado.",
+            "fr": "Votre demande a \u00e9t\u00e9 envoy\u00e9e. Notre \u00e9quipe examinera les informations et vous r\u00e9pondra \u00e0 l'adresse e-mail fournie."
+          }
+        },
+        "validation_summary": {
+          "title": {
+            "pt": "Verifique os campos assinalados",
+            "en": "Check the highlighted fields",
+            "es": "Revise los campos resaltados",
+            "fr": "V\u00e9rifiez les champs signal\u00e9s"
+          },
+          "message": {
+            "pt": "Corrija os campos indicados antes de voltar a enviar o pedido.",
+            "en": "Correct the indicated fields before sending your request again.",
+            "es": "Corrija los campos indicados antes de volver a enviar su solicitud.",
+            "fr": "Corrigez les champs indiqu\u00e9s avant de renvoyer votre demande."
+          }
+        },
+        "submit_failed": {
+          "title": {
+            "pt": "N\u00e3o foi poss\u00edvel enviar o pedido",
+            "en": "We could not send the request",
+            "es": "No se pudo enviar la solicitud",
+            "fr": "La demande n'a pas pu \u00eatre envoy\u00e9e"
+          },
+          "message": {
+            "pt": "Tente novamente dentro de momentos ou utilize um dos contactos diretos apresentados nesta p\u00e1gina.",
+            "en": "Please try again in a moment or use one of the direct support contacts shown on this page.",
+            "es": "Int\u00e9ntelo de nuevo en unos instantes o utilice uno de los contactos directos de soporte mostrados en esta p\u00e1gina.",
+            "fr": "Veuillez r\u00e9essayer dans un instant ou utiliser l'un des contacts directs affich\u00e9s sur cette page."
+          }
+        }
+      },
+      "errors": {
+        "required": {
+          "pt": "Este campo \u00e9 obrigat\u00f3rio.",
+          "en": "This field is required.",
+          "es": "Este campo es obligatorio.",
+          "fr": "Ce champ est obligatoire."
+        },
+        "invalid_email": {
+          "pt": "Introduza um endere\u00e7o de email v\u00e1lido.",
+          "en": "Enter a valid email address.",
+          "es": "Introduzca una direcci\u00f3n de correo v\u00e1lida.",
+          "fr": "Saisissez une adresse e-mail valide."
+        },
+        "max_length": {
+          "pt": "O conte\u00fado excede o tamanho permitido.",
+          "en": "This content exceeds the allowed length.",
+          "es": "Este contenido supera la longitud permitida.",
+          "fr": "Ce contenu d\u00e9passe la longueur autoris\u00e9e."
+        }
+      }
+    },
+    "aside": {
+      "title": {
+        "pt": "Contactos",
+        "en": "Contacts",
+        "es": "Contactos",
+        "fr": "Contacts"
+      },
+      "description": {
+        "pt": "Escolha o canal de contacto mais adequado ao pedido e tenha a refer\u00eancia do produto por perto.",
+        "en": "Choose the contact channel that best fits your request and keep the product reference nearby.",
+        "es": "Elija el canal de contacto que mejor se adapte a su solicitud y tenga a mano la referencia del producto.",
+        "fr": "Choisissez le canal de contact le plus adapt\u00e9 \u00e0 votre demande et gardez la r\u00e9f\u00e9rence produit \u00e0 port\u00e9e de main."
+      },
+      "items": {
+        "generalSupport": {
+          "title": {
+            "pt": "Suporte Geral",
+            "en": "General Support",
+            "es": "Soporte General",
+            "fr": "Assistance générale"
+          }
+        },
+        "salesTeam": {
+          "title": {
+            "pt": "Equipa Comercial",
+            "en": "Sales Team",
+            "es": "Equipo Comercial",
+            "fr": "Équipe commerciale"
+          }
+        },
+        "technicalSupport": {
+          "title": {
+            "pt": "Suporte Técnico",
+            "en": "Technical Support",
+            "es": "Soporte Técnico",
+            "fr": "Assistance technique"
+          }
+        },
+        "mainOffice": {
+          "title": {
+            "pt": "Escritório Principal",
+            "en": "Main Office",
+            "es": "Oficina Principal",
+            "fr": "Bureau principal"
+          }
+        },
+        "scheduling": {
+          "title": {
+            "pt": "Agendamento",
+            "en": "Scheduling",
+            "es": "Programación",
+            "fr": "Planification"
+          },
+          "value": {
+            "pt": "Segunda a Sexta, 09:00 - 18:00",
+            "en": "Monday to Friday, 09:00 - 18:00",
+            "es": "Lunes a Viernes, 09:00 - 18:00",
+            "fr": "Du lundi au vendredi, 09:00 - 18:00"
+          }
+        }
+      }
+    }
+  },
+  "repair": {
+    "hero": {
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes. Estes recursos foram concebidos para ajudar a compreender as funcionalidades do sistema, garantir o tratamento correto da informação do produto e manter a conformidade com as normas exigidas.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings. These resources are designed to assist in understanding system features, ensuring proper handling of product information, and maintaining compliance with required standards.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes. Estos recursos están diseñados para ayudar a comprender las funciones del sistema, garantizar el manejo correcto de la información del producto y mantener el cumplimiento de las normas exigidas.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents. Ces ressources sont conçues pour aider à comprendre les fonctionnalités du système, assurer une bonne gestion des informations produit et maintenir la conformité aux normes requises."
+      }
+    },
+    "breadcrumb": {
+      "current": {
+        "pt": "Guias de Reparação",
+        "en": "Repair Guides",
+        "es": "Guías de Reparación",
+        "fr": "Guides de réparation"
+      }
+    }
+  },
+  "steps": {
+    "breadcrumb": {
+      "current": {
+        "pt": "Guia",
+        "en": "Guide",
+        "es": "Guía",
+        "fr": "Guide"
+      }
+    },
+    "hero": {
+      "description": {
+        "pt": "Aqui encontrará uma coleção completa de materiais de suporte, incluindo guias processuais, fichas técnicas e avisos relevantes.",
+        "en": "Here you will find a complete collection of support materials, including procedural guides, product datasheets, and relevant warnings.",
+        "es": "Aquí encontrará una colección completa de materiales de soporte, incluyendo guías de procedimiento, fichas técnicas y avisos relevantes.",
+        "fr": "Vous trouverez ici une collection complète de documents d'assistance, y compris des guides de procédure, des fiches techniques et des avertissements pertinents."
+      }
+    },
+    "cards": {
+      "timeTitle": {
+        "pt": "Tempo Estimado e Dificuldade",
+        "en": "Estimated Time & Difficulty",
+        "es": "Tiempo Estimado y Dificultad",
+        "fr": "Temps estimé et difficulté"
+      },
+      "timeDescription": {
+        "pt": "Aproximadamente 5 a 10 minutos, e a reparação pode ser feita por qualquer pessoa. A duração pode variar consoante a familiaridade do utilizador com o processo e se todos os passos decorrerem conforme previsto.",
+        "en": "Approximately 5 to 10 minutes, and the repair can be done by everybody. The duration may vary depending on the user's familiarity with the process and whether all steps proceed smoothly as planned.",
+        "es": "Aproximadamente de 5 a 10 minutos, y la reparación puede realizarla cualquier persona. La duración puede variar según la familiaridad del usuario con el proceso y si todos los pasos se desarrollan según lo previsto.",
+        "fr": "Environ 5 à 10 minutes, et la réparation peut être effectuée par tout le monde. La durée peut varier selon la familiarité de l'utilisateur avec le processus et selon que toutes les étapes se déroulent comme prévu."
+      },
+      "requiredPartsTitle": {
+        "pt": "Peças e Ferramentas Necessárias",
+        "en": "Required Parts and Tools",
+        "es": "Piezas y Herramientas Necesarias",
+        "fr": "Pièces et outils nécessaires"
+      },
+      "requiredPartsDescription": {
+        "pt": "Alguns destes itens também podem ser adquiridos diretamente na nossa loja online.",
+        "en": "Some of these items might also be purchased directly from our online store.",
+        "es": "Algunos de estos artículos también pueden adquirirse directamente en nuestra tienda online.",
+        "fr": "Certains de ces articles peuvent également être achetés directement sur notre boutique en ligne."
+      },
+      "printTitle": {
+        "pt": "Imprimir Etapas Desta Página",
+        "en": "Print Step In This Page",
+        "es": "Imprimir Pasos de Esta Página",
+        "fr": "Imprimer les étapes de cette page"
+      },
+      "printDescription": {
+        "pt": "Pode utilizar o botão abaixo para imprimir todas as etapas diretamente em papel para consulta mais fácil durante o processo.",
+        "en": "You can use the button below to print all the steps directly onto paper for easier reference during the process.",
+        "es": "Puede utilizar el botón siguiente para imprimir todos los pasos directamente en papel y consultarlos más fácilmente durante el proceso.",
+        "fr": "Vous pouvez utiliser le bouton ci-dessous pour imprimer toutes les étapes directement sur papier afin de faciliter la consultation pendant le processus."
+      },
+      "printButton": {
+        "pt": "Imprimir Página",
+        "en": "Print Page",
+        "es": "Imprimir Página",
+        "fr": "Imprimer la page"
+      }
+    },
+    "sections": {
+      "stepsTitle": {
+        "pt": "Etapas",
+        "en": "Steps",
+        "es": "Pasos",
+        "fr": "Étapes"
+      }
+    },
+    "states": {
+      "loadingGuide": {
+        "pt": "A carregar detalhes do guia...",
+        "en": "Loading guide details...",
+        "es": "Cargando detalles de la guía...",
+        "fr": "Chargement des détails du guide..."
+      }
+    }
+  }
 }
