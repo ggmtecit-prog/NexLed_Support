@@ -142,6 +142,19 @@
                                     autocomplete="off">
                             </div>
 
+                            <div hidden data-contact-status-host>
+                                <div class="alert alert-md" role="status" tabindex="-1" data-contact-status>
+                                    <span class="alert-icon">
+                                        <i class="ri-information-line" aria-hidden="true"
+                                            data-contact-status-icon></i>
+                                    </span>
+                                    <div class="alert-copy">
+                                        <p class="alert-title" data-contact-status-title></p>
+                                        <p class="alert-text" data-contact-status-text></p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
                                 <div class="space-y-8">
                                     <label for="contact-name" class="input-label ml-12"
@@ -226,19 +239,6 @@
                             </div>
 
                             <div class="space-y-16">
-                                <div hidden data-contact-status-host>
-                                    <div class="alert alert-md" role="status" data-contact-status>
-                                        <span class="alert-icon">
-                                            <i class="ri-information-line" aria-hidden="true"
-                                                data-contact-status-icon></i>
-                                        </span>
-                                        <div class="alert-copy">
-                                            <p class="alert-title" data-contact-status-title></p>
-                                            <p class="alert-text" data-contact-status-text></p>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="flex justify-end">
                                     <button type="submit" class="btn btn-primary btn-md"
                                         data-contact-submit-button>

@@ -180,6 +180,11 @@
             statusText.textContent = copy.message;
             statusIcon.className = copy.icon;
             statusHost.hidden = false;
+
+            if (copy.role === 'alert') {
+                statusElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                statusElement.focus();
+            }
         }
 
         async function applyErrors(errors) {
