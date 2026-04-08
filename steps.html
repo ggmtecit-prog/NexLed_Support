@@ -463,19 +463,16 @@
             const description = Utils.t(step.description, lang, '');
 
             emptyState.innerHTML = `
-                <span class="empty-state-icon icon-box bg-red-primary text-white">
-                    <i class="ri-error-warning-line text-icon-xl" aria-hidden="true"></i>
-                </span>
-                <div class="empty-state-copy max-w-readable">
+                <div class="empty-state-copy max-w-readable space-y-16">
                     <h3 class="empty-state-title">${title}</h3>
                     <p class="empty-state-text">${description}</p>
                 </div>
-                <div class="empty-state-actions">
-                    <a href="index.html?lang=${encodeURIComponent(lang)}" class="btn btn-primary btn-sm">
-                        ${getStepUiLabel('manufacturerSupportButton', lang, 'Open support page')}
-                    </a>
+                <div class="empty-state-actions mt-24 gap-24">
                     <a href="repair.html?lang=${encodeURIComponent(lang)}" class="btn btn-secondary btn-sm">
                         ${getStepUiLabel('manufacturerRepairButton', lang, 'Back to repair guides')}
+                    </a>
+                    <a href="index.html?lang=${encodeURIComponent(lang)}" class="btn btn-primary btn-sm">
+                        ${getStepUiLabel('manufacturerSupportButton', lang, 'Open support page')}
                     </a>
                 </div>
             `;
