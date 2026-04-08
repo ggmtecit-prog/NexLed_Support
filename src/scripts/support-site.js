@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
     const ROUTES = {
         home: 'index.html',
         repair: 'repair.html',
@@ -101,9 +101,9 @@
     };
     const SUPPORT_SHELL_COPY = {
         resources: {
-            pt: 'Recursos de Suporte',
-            en: 'Support Resources',
-            es: 'Recursos de Soporte',
+            pt: 'Recursos',
+            en: 'Resources',
+            es: 'Recursos',
             fr: 'Ressources d’assistance',
         },
         faq: {

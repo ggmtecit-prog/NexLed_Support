@@ -1,4 +1,4 @@
-{
+﻿{
     "shared":  {
                    "nav":  {
                                "repairGuides":  {
@@ -98,9 +98,9 @@
                                                         "fr":  "Alimentations"
                                                     },
                                   "contacts":  {
-                                                   "pt":  "Contactos de Suporte",
-                                                   "en":  "Support Contacts",
-                                                   "es":  "Contactos de Soporte",
+                                                   "pt":  "Contactos",
+                                                   "en":  "Contacts",
+                                                   "es":  "Contactos",
                                                    "fr":  "Contacts dÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢assistance"
                                                },
                                   "location":  {
@@ -186,10 +186,10 @@
                               },
                    "supportShell":  {
                                         "resources":  {
-                                                          "pt":  "Recursos de Suporte",
-                                                          "en":  "Support Resources",
-                                                          "es":  "Recursos de Soporte",
-                                                          "fr":  "Ressources d\u0027assistance"
+                                                          "pt":  "Recursos",
+                                                          "en":  "Resources",
+                                                          "es":  "Recursos",
+                                                          "fr":  "Ressources"
                                                       },
                                         "faq":  {
                                                     "pt":  "FAQs",
@@ -934,10 +934,10 @@
                              },
                     "aside":  {
                                   "title":  {
-                                                "pt":  "Contactos de Suporte",
-                                                "en":  "Support Contacts",
-                                                "es":  "Contactos de Soporte",
-                                                "fr":  "Contacts d\u0027assistance"
+                                                "pt":  "Contactos",
+                                                "en":  "Contacts",
+                                                "es":  "Contactos",
+                                                "fr":  "Contacts"
                                             },
                                   "description":  {
                                                       "pt":  "Utilize o contacto direto mais adequado quando jÃ¡ souber a equipa responsÃ¡vel ou quando precisar de uma resposta imediata.",
