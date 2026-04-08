@@ -60,7 +60,14 @@ jobs:
       - name: Ensure remote target exists
         shell: bash
         run: |
-          ssh -i ~/.ssh/alwaysdata -p "$ALWAYSDATA_PORT" "$ALWAYSDATA_USER@$ALWAYSDATA_HOST" "mkdir -p '$ALWAYSDATA_TARGET_DIR'"
+          ssh \
+            -i ~/.ssh/alwaysdata \
+            -p "$ALWAYSDATA_PORT" \
+            -o IdentitiesOnly=yes \
+            -o PreferredAuthentications=publickey \
+            -o PubkeyAuthentication=yes \
+            "$ALWAYSDATA_USER@$ALWAYSDATA_HOST" \
+            "mkdir -p '$ALWAYSDATA_TARGET_DIR'"
 
       - name: Deploy site with rsync
         shell: bash
@@ -75,5 +82,5 @@ jobs:
             --exclude '.codex-worktree-contact-panel-sticky/' \
             --exclude 'docs/' \
             --exclude '*.md' \
-            -e "ssh -i ~/.ssh/alwaysdata -p $ALWAYSDATA_PORT" \
+            -e "ssh -i ~/.ssh/alwaysdata -p $ALWAYSDATA_PORT -o IdentitiesOnly=yes -o PreferredAuthentications=publickey -o PubkeyAuthentication=yes" \
             ./ "$ALWAYSDATA_USER@$ALWAYSDATA_HOST:$ALWAYSDATA_TARGET_DIR/"
