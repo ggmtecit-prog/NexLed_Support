@@ -392,7 +392,7 @@
             }
 
             const body = document.createElement('div');
-            body.className = 'card-body';
+            body.className = 'card-body py-48';
 
             const layout = document.createElement('div');
             layout.className = 'grid grid-cols-1 gap-24 md:grid-cols-12 md:items-center';
@@ -497,7 +497,7 @@
                 heading.textContent = Utils.t(category.title, lang, getRepairUiLabel('categoryFallback', lang, 'Category'));
 
                 const cardsWrapper = document.createElement('div');
-                cardsWrapper.className = 'space-y-24';
+                cardsWrapper.className = 'space-y-40';
 
                 (category.cards || []).forEach((card) => {
                     cardsWrapper.appendChild(createRepairCard(card, lang, siteCopy));
