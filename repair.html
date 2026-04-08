@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
@@ -34,7 +34,7 @@
                         <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
                         <div class="flex flex-col">
                             <span class="text-card-title leading-none tracking-tight text-black">NexLed</span>
-                            <span class="text-label text-black tracking-wider" data-i18n="header.supportPage">Support Page</span>
+                            <span class="text-label text-black tracking-wider" data-i18n="header.supportPage">Support Hub</span>
                         </div>
                     </a>
 
@@ -115,10 +115,8 @@
                 <h1 id="page-hero-title" class="text-hero-title text-black" data-i18n="breadcrumb.current">Repair Guides</h1>
                 <p id="page-hero-desc" class="text-hero-subtitle text-black max-w-readable"
                     data-i18n="hero.description">
-                    Here you will find a complete collection of support materials, including procedural guides, product
-                    datasheets, and relevant warnings. These resources are designed to assist in understanding system
-                    features, ensuring proper handling of product information, and maintaining compliance with required
-                    standards.
+                    Choose a product family to review the available repair guides, the intervention scope, and the
+                    next steps.
                 </p>
             </header>
             <div id="repair-categories" class="space-y-48" aria-live="polite" data-reveal="section">
@@ -154,7 +152,7 @@
                                         <li>
                                             <a href="index.html" class="link-navigation link-sm flex items-center gap-8" data-support-route="home">
                                                 <i class="ri-home-4-line icon icon-sm text-grey-primary" aria-hidden="true"></i>
-                                                <span class="link-label" data-i18n="header.supportPage">Support Page</span>
+                                                <span class="link-label" data-i18n="header.supportPage">Support Hub</span>
                                             </a>
                                         </li>
                                         <li>
@@ -178,7 +176,7 @@
                             <ul class="footer-links">
                                 <li><a href="index.html#faq" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="faq">Frequently Asked Questions</span></a></li>
                                 <li><a href="index.html#warranty" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="warranty">Warranty</span></a></li>
-                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="contactUs">Contact Us</span></a></li>
+                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="contactUs">Contact Support</span></a></li>
                                 <li><a href="index.html" class="link-subtle link-sm" data-support-route="home"><span class="link-label" data-support-shell-copy="homePage">Home Page</span></a></li>
                             </ul>
                         </div>
@@ -221,7 +219,7 @@
                     <div>
                         <h2 id="supportSearchOverlayTitle" class="modal-title" data-support-search-title>Find pages, sections, and guides</h2>
                     </div>
-                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close aria-label="Close search overlay">
+                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close aria-label="Close support search">
                         <i class="ri-close-line text-icon-md" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -239,10 +237,10 @@
                 </div>
                 <div class="search-overlay-empty" data-support-search-empty-state hidden>
                     <i class="ri-search-line text-icon-md" aria-hidden="true"></i>
-                    <p class="text-body-sm" data-support-search-empty>No matching support results found.</p>
+                    <p class="text-body-sm" data-support-search-empty>No support results matched your search.</p>
                 </div>
                 <div class="search-overlay-footer">
-                    <p class="text-body-xs" data-support-search-helper>Search primary pages, product sections, and repair guides.</p>
+                    <p class="text-body-xs" data-support-search-helper>Search support pages, product sections, and repair guides.</p>
                 </div>
             </div>
         </div>
@@ -259,24 +257,25 @@
             '24V Bar Model 120': '24v-bar-model-120',
             '24V Bar Model 145': '24v-bar-model-145',
         };
+        let repairSiteCopy = null;
         const REPAIR_UI = {
             loading: {
-                pt: 'A carregar guias de reparação...',
+                pt: 'A carregar os guias de reparação...',
                 en: 'Loading repair guides...',
-                es: 'Cargando guías de reparación...',
+                es: 'Cargando las guías de reparación...',
                 fr: 'Chargement des guides de réparation...',
             },
             errorTitle: {
-                pt: 'Não foi possível carregar as reparações',
-                en: 'Unable to load repairs',
-                es: 'No se pudieron cargar las reparaciones',
-                fr: 'Impossible de charger les réparations',
+                pt: 'Guias de reparação indisponíveis',
+                en: 'Repair guides unavailable',
+                es: 'Guías de reparación no disponibles',
+                fr: 'Guides de réparation indisponibles',
             },
             errorDescription: {
-                pt: 'O catálogo de reparações não pôde ser carregado.',
-                en: 'The repair catalog could not be loaded.',
-                es: 'No se pudo cargar el catálogo de reparaciones.',
-                fr: 'Le catalogue des réparations n’a pas pu être chargé.',
+                pt: 'O catálogo de reparações não pôde ser carregado. Atualize a página ou contacte o suporte se o problema continuar.',
+                en: 'The repair catalog could not be loaded. Refresh the page or contact support if the problem continues.',
+                es: 'No se pudo cargar el catálogo de reparaciones. Actualice la página o contacte con soporte si el problema continúa.',
+                fr: 'Le catalogue de réparation n’a pas pu être chargé. Actualisez la page ou contactez l’assistance si le problème persiste.',
             },
             guideFallback: {
                 pt: 'Guia de reparação',
@@ -291,10 +290,10 @@
                 fr: 'Ouvrir le guide',
             },
             categoryFallback: {
-                pt: 'Categoria',
-                en: 'Category',
-                es: 'Categoría',
-                fr: 'Catégorie',
+                pt: 'Família de produto',
+                en: 'Product family',
+                es: 'Familia de producto',
+                fr: 'Famille de produits',
             },
         };
         const REPAIR_DOWNLOAD_PRODUCT_KEYS = {
@@ -308,7 +307,7 @@
         };
 
         function getRepairUiLabel(key, lang, fallback = '') {
-            return Utils.t(REPAIR_UI[key], lang, fallback);
+            return Utils.t(repairSiteCopy?.repair?.ui?.[key] || REPAIR_UI[key], lang, fallback);
         }
 
         function isPlaceholderRepairDescription(value) {
@@ -354,12 +353,17 @@
         }
 
         function getRepairCardDescription(card, siteCopy, lang) {
+            const productKey = REPAIR_DOWNLOAD_PRODUCT_KEYS[card?.title?.en || ''];
+            const repairDescriptionText = Utils.t(siteCopy?.repair?.products?.[productKey]?.description, lang, '');
+            if (repairDescriptionText) {
+                return repairDescriptionText;
+            }
+
             const descriptionText = Utils.t(card.description, lang, '');
             if (descriptionText && !isPlaceholderRepairDescription(descriptionText)) {
                 return descriptionText;
             }
 
-            const productKey = REPAIR_DOWNLOAD_PRODUCT_KEYS[card?.title?.en || ''];
             if (!productKey) {
                 return '';
             }
@@ -515,12 +519,10 @@
 
             const lang = Utils.getLang();
             const repairCategories = document.getElementById('repair-categories');
+            repairSiteCopy = await Utils.fetchJSON('data/site-copy.json');
             repairCategories.innerHTML = getRepairSpinnerMarkup(lang);
             SupportSite.observeRevealTargets(repairCategories);
-            const [data, siteCopy] = await Promise.all([
-                Utils.fetchJSON('data/repairs.json'),
-                Utils.fetchJSON('data/site-copy.json'),
-            ]);
+            const data = await Utils.fetchJSON('data/repairs.json');
             if (!data) {
                 renderRepairError(lang);
                 return;
@@ -529,7 +531,7 @@
             const pageTitle = Utils.t(data.meta?.title, lang, 'Repairs - Nexled Support');
             document.title = pageTitle;
 
-            renderRepairCategories(data.categories, lang, siteCopy || null);
+            renderRepairCategories(data.categories, lang, repairSiteCopy || null);
             requestAnimationFrame(scrollToRepairHash);
         }
 

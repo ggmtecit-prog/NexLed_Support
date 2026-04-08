@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
@@ -34,7 +34,7 @@
                         <img src="favicon.svg" alt="NexLed" class="w-56 h-56">
                         <div class="flex flex-col">
                             <span class="text-card-title leading-none tracking-tight text-black">NexLed</span>
-                            <span class="text-label text-black tracking-wider" data-i18n="header.supportPage">Support Page</span>
+                            <span class="text-label text-black tracking-wider" data-i18n="header.supportPage">Support Hub</span>
                         </div>
                     </a>
 
@@ -112,11 +112,11 @@
             <nav aria-label="Breadcrumb" class="w-full" data-support-breadcrumb data-reveal="section"></nav>
 
             <header class="page-header-hero" data-reveal="hero">
-                <h1 id="main-title" class="text-hero-title text-black">Loading guide...</h1>
+                <h1 id="main-title" class="text-hero-title text-black">Loading repair guide...</h1>
                 <p id="main-desc" class="text-hero-subtitle text-black max-w-readable"
                     data-i18n="hero.description">
-                    Here you will find a complete collection of support materials, including procedural guides, product
-                    datasheets, and relevant warnings.
+                    Review the guide before starting the intervention. Confirm the estimated time, the required parts,
+                    and each step in order.
                 </p>
             </header>
 
@@ -126,7 +126,8 @@
                         <h3 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h3>
                         <p id="time-text" class="card-text">Loading guide details...</p>
                         <p class="card-text" data-i18n="cards.timeDescription">
-                            Approximately 5 to 10 minutes, and the repair can be done by everybody. The duration may vary depending on the user's familiarity with the process and whether all steps proceed smoothly as planned.
+                            Use the estimated time as a planning reference. The real duration depends on product
+                            access, tool readiness, and familiarity with the procedure.
                         </p>
                     </div>
                 </article>
@@ -134,8 +135,8 @@
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.requiredPartsTitle">Required Parts and Tools</h3>
-                        <p class="card-text" data-i18n="cards.requiredPartsDescription">Some of these items might also
-                            be purchased directly from our online store.</p>
+                        <p class="card-text" data-i18n="cards.requiredPartsDescription">Review the list before
+                            starting the intervention and prepare every required item.</p>
                         <ul id="parts-list" class="space-y-12" aria-live="polite">
                             <li class="text-body-sm font-light text-grey-primary" data-i18n="states.loadingGuide">
                                 Loading guide details...</li>
@@ -145,14 +146,13 @@
 
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
-                        <h3 class="card-title" data-i18n="cards.printTitle">Print Step In This Page</h3>
+                        <h3 class="card-title" data-i18n="cards.printTitle">Print This Guide</h3>
                         <p class="card-text" data-i18n="cards.printDescription">
-                            You can use the button below to print all the steps directly onto paper for easier
-                            reference during the process.
+                            Print the guide if you need a paper reference during the intervention.
                         </p>
                         <div class="flex justify-end">
                             <button type="button" class="btn btn-primary btn-sm" data-steps-print
-                                data-i18n="cards.printButton">Print Page</button>
+                                data-i18n="cards.printButton">Print Guide</button>
                         </div>
                     </div>
                 </article>
@@ -196,7 +196,7 @@
                                         <li>
                                             <a href="index.html" class="link-navigation link-sm flex items-center gap-8" data-support-route="home">
                                                 <i class="ri-home-4-line icon icon-sm text-grey-primary" aria-hidden="true"></i>
-                                                <span class="link-label" data-i18n="header.supportPage">Support Page</span>
+                                                <span class="link-label" data-i18n="header.supportPage">Support Hub</span>
                                             </a>
                                         </li>
                                         <li>
@@ -220,7 +220,7 @@
                             <ul class="footer-links">
                                 <li><a href="index.html#faq" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="faq">Frequently Asked Questions</span></a></li>
                                 <li><a href="index.html#warranty" class="link-subtle link-sm"><span class="link-label" data-support-shell-copy="warranty">Warranty</span></a></li>
-                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="contactUs">Contact Us</span></a></li>
+                                <li><a href="contact.html" class="link-subtle link-sm" data-support-route="contact"><span class="link-label" data-support-shell-copy="contactUs">Contact Support</span></a></li>
                                 <li><a href="index.html" class="link-subtle link-sm" data-support-route="home"><span class="link-label" data-support-shell-copy="homePage">Home Page</span></a></li>
                             </ul>
                         </div>
@@ -263,7 +263,7 @@
                     <div>
                         <h2 id="supportSearchOverlayTitle" class="modal-title" data-support-search-title>Find pages, sections, and guides</h2>
                     </div>
-                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close aria-label="Close search overlay">
+                    <button type="button" class="btn btn-ghost btn-icon btn-xs" data-search-overlay-close aria-label="Close support search">
                         <i class="ri-close-line text-icon-md" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -281,10 +281,10 @@
                 </div>
                 <div class="search-overlay-empty" data-support-search-empty-state hidden>
                     <i class="ri-search-line text-icon-md" aria-hidden="true"></i>
-                    <p class="text-body-sm" data-support-search-empty>No matching support results found.</p>
+                    <p class="text-body-sm" data-support-search-empty>No support results matched your search.</p>
                 </div>
                 <div class="search-overlay-footer">
-                    <p class="text-body-xs" data-support-search-helper>Search primary pages, product sections, and repair guides.</p>
+                    <p class="text-body-xs" data-support-search-helper>Search support pages, product sections, and repair guides.</p>
                 </div>
             </div>
         </div>
@@ -293,12 +293,13 @@
     <script src="src/scripts/support-site.js"></script>
     <script>
         const DEFAULT_STEP_FILE = 'DQ/DQ_5.json';
+        let stepSiteCopy = null;
         const STEP_UI = {
             loadingTitle: {
-                pt: 'A carregar guia...',
-                en: 'Loading guide...',
-                es: 'Cargando guía...',
-                fr: 'Chargement du guide...',
+                pt: 'A carregar guia de reparação...',
+                en: 'Loading repair guide...',
+                es: 'Cargando guía de reparación...',
+                fr: 'Chargement du guide de réparation...',
             },
             loadingDetails: {
                 pt: 'A carregar detalhes do guia...',
@@ -307,16 +308,16 @@
                 fr: 'Chargement des détails du guide...',
             },
             timeNotSpecified: {
-                pt: 'Tempo não especificado',
-                en: 'Time not specified',
-                es: 'Tiempo no especificado',
-                fr: 'Temps non précisé',
+                pt: 'Tempo estimado indisponível',
+                en: 'Estimated time unavailable',
+                es: 'Tiempo estimado no disponible',
+                fr: 'Temps estimé indisponible',
             },
             noParts: {
-                pt: 'Não foram especificadas peças ou ferramentas.',
-                en: 'No parts or tools were specified.',
-                es: 'No se especificaron piezas ni herramientas.',
-                fr: 'Aucune pièce ni outil spécifié.',
+                pt: 'Não existem peças ou ferramentas listadas para este guia.',
+                en: 'No parts or tools are listed for this guide.',
+                es: 'No hay piezas ni herramientas indicadas para esta guía.',
+                fr: 'Aucune pièce ni aucun outil ne sont listés pour ce guide.',
             },
             partFallback: {
                 pt: 'Peça',
@@ -332,33 +333,33 @@
             },
             noStepsTitle: {
                 pt: 'Sem etapas disponíveis',
-                en: 'No steps available',
+                en: 'No procedure steps available',
                 es: 'No hay pasos disponibles',
                 fr: 'Aucune étape disponible',
             },
             noStepsDescription: {
-                pt: 'Este guia não inclui instruções por etapas.',
-                en: 'This guide does not include any step instructions.',
+                pt: 'Este guia não inclui instruções passo a passo.',
+                en: 'This guide does not include step-by-step instructions.',
                 es: 'Esta guía no incluye instrucciones paso a paso.',
-                fr: 'Ce guide ne contient aucune instruction étape par étape.',
+                fr: 'Ce guide ne contient pas d’instructions étape par étape.',
             },
             loadErrorTitle: {
-                pt: 'Não foi possível carregar o guia',
-                en: 'Unable to load guide',
-                es: 'No se pudo cargar la guía',
-                fr: 'Impossible de charger le guide',
+                pt: 'Guia indisponível',
+                en: 'Guide unavailable',
+                es: 'Guía no disponible',
+                fr: 'Guide indisponible',
             },
             loadErrorDescription: {
-                pt: 'O ficheiro do guia solicitado não pôde ser carregado.',
-                en: 'The requested guide file could not be loaded.',
-                es: 'No se pudo cargar el archivo de guía solicitado.',
-                fr: 'Le fichier guide demandé n’a pas pu être chargé.',
+                pt: 'O guia solicitado não pôde ser carregado. Volte à página de reparações e tente novamente.',
+                en: 'The requested guide could not be loaded. Return to Repair Guides and try again.',
+                es: 'No se pudo cargar la guía solicitada. Vuelva a Guías de Reparación e inténtelo de nuevo.',
+                fr: 'Le guide demandé n’a pas pu être chargé. Revenez aux guides de réparation et réessayez.',
             },
             unableToLoadParts: {
-                pt: 'Não foi possível carregar as peças.',
-                en: 'Unable to load parts.',
-                es: 'No se pudieron cargar las piezas.',
-                fr: 'Impossible de charger les pièces.',
+                pt: 'Não foi possível carregar a lista de peças.',
+                en: 'The parts list could not be loaded.',
+                es: 'No se pudo cargar la lista de piezas.',
+                fr: 'La liste des pièces n’a pas pu être chargée.',
             },
             manufacturerSupportButton: {
                 pt: 'Abrir página de suporte',
@@ -367,9 +368,9 @@
                 fr: 'Ouvrir la page de support',
             },
             manufacturerRepairButton: {
-                pt: 'Voltar às reparações',
+                pt: 'Voltar aos guias de reparação',
                 en: 'Back to repair guides',
-                es: 'Volver a las reparaciones',
+                es: 'Volver a las guías de reparación',
                 fr: 'Retour aux guides de réparation',
             },
         };
@@ -377,7 +378,7 @@
         SupportSite.initPage({ preserveQueryKeys: ['file'] });
 
         function getStepUiLabel(key, lang, fallback = '') {
-            return Utils.t(STEP_UI[key], lang, fallback);
+            return Utils.t(stepSiteCopy?.steps?.ui?.[key] || STEP_UI[key], lang, fallback);
         }
 
         function getSpinnerMarkup(lang) {
@@ -590,7 +591,7 @@
 
         function renderErrorState(lang) {
             document.title = `${getStepUiLabel('loadErrorTitle', lang, 'Unable to load guide')} - Nexled Support`;
-            SupportSite.setBreadcrumbCurrent(getStepUiLabel('stepFallback', lang, 'Guide'));
+            SupportSite.setBreadcrumbCurrent(Utils.t(stepSiteCopy?.steps?.breadcrumb?.current, lang, 'Repair Guide'));
             document.getElementById('main-title').textContent = getStepUiLabel('loadErrorTitle', lang, 'Unable to load guide');
             document.getElementById('time-text').textContent = getStepUiLabel('timeNotSpecified', lang, 'Time not specified');
 
@@ -614,6 +615,7 @@
 
         async function initStepsPage() {
             const lang = Utils.getLang();
+            stepSiteCopy = await Utils.fetchJSON('data/site-copy.json');
             document.getElementById('main-title').textContent = getStepUiLabel('loadingTitle', lang, 'Loading guide...');
             document.getElementById('time-text').textContent = getStepUiLabel('loadingDetails', lang, 'Loading guide details...');
             document.getElementById('steps-container').innerHTML = getSpinnerMarkup(lang);
