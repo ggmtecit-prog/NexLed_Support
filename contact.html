@@ -132,17 +132,29 @@
                                 request quickly.</p>
                         </header>
 
-                        <form class="space-y-24">
+                        <form class="space-y-24" action="contact-submit.php" method="post" novalidate
+                            data-contact-form>
+                            <input type="hidden" name="submitted_at" value="" data-contact-submitted-at>
+                            <input type="hidden" name="lang" value="" data-contact-lang>
+                            <div class="hidden" aria-hidden="true">
+                                <label for="contact-company">Company</label>
+                                <input type="text" id="contact-company" name="company" tabindex="-1"
+                                    autocomplete="off">
+                            </div>
+
                             <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
                                 <div class="space-y-8">
                                     <label for="contact-name" class="input-label ml-12"
                                         data-i18n="form.fields.name.label">Full Name</label>
                                     <input type="text" id="contact-name" placeholder="Enter your name"
                                         data-i18n-placeholder="form.fields.name.placeholder"
-                                        class="input input-md" aria-describedby="contact-name-hint">
+                                        class="input input-md" aria-describedby="contact-name-hint contact-name-error"
+                                        name="full_name" autocomplete="name" data-contact-field="full_name">
                                     <p id="contact-name-hint" class="input-hint ml-12"
                                         data-i18n="form.fields.name.hint">Use the full name of the person
                                         responsible for the request.</p>
+                                    <p id="contact-name-error" class="input-hint input-error ml-12 hidden"
+                                        data-contact-error="full_name"></p>
                                 </div>
 
                                 <div class="space-y-8">
@@ -150,10 +162,14 @@
                                         data-i18n="form.fields.email.label">Email Address</label>
                                     <input type="email" id="contact-email" placeholder="Enter your email"
                                         data-i18n-placeholder="form.fields.email.placeholder"
-                                        class="input input-md" aria-describedby="contact-email-hint">
+                                        class="input input-md"
+                                        aria-describedby="contact-email-hint contact-email-error" name="email"
+                                        autocomplete="email" data-contact-field="email">
                                     <p id="contact-email-hint" class="input-hint ml-12"
                                         data-i18n="form.fields.email.hint">We will use this email to reply and
                                         share the next steps.</p>
+                                    <p id="contact-email-error" class="input-hint input-error ml-12 hidden"
+                                        data-contact-error="email"></p>
                                 </div>
                             </div>
 
@@ -162,10 +178,13 @@
                                     data-i18n="form.fields.subject.label">Subject</label>
                                 <input type="text" id="contact-subject" placeholder="Enter the subject"
                                     data-i18n-placeholder="form.fields.subject.placeholder" class="input input-md"
-                                    aria-describedby="contact-subject-hint">
+                                    aria-describedby="contact-subject-hint contact-subject-error" name="subject"
+                                    autocomplete="off" data-contact-field="subject">
                                 <p id="contact-subject-hint" class="input-hint ml-12"
                                     data-i18n="form.fields.subject.hint">Summarize the issue, product family,
                                     or request in one line.</p>
+                                <p id="contact-subject-error" class="input-hint input-error ml-12 hidden"
+                                    data-contact-error="subject"></p>
                             </div>
 
                             <div class="space-y-8">
@@ -174,7 +193,8 @@
                                 <div class="text-field-shell text-field-shell-meta">
                                     <textarea id="contact-message" rows="6" placeholder="Write your short message"
                                         data-i18n-placeholder="form.fields.message.placeholder" class="input input-md"
-                                        aria-describedby="contact-message-hint"></textarea>
+                                        aria-describedby="contact-message-hint contact-message-error" name="message"
+                                        data-contact-field="message"></textarea>
                                     <span class="text-field-shell-meta-icon" aria-hidden="true">
                                         <i class="ri-expand-diagonal-s-2-fill text-icon-sm"></i>
                                     </span>
@@ -182,6 +202,8 @@
                                 <p id="contact-message-hint" class="input-hint ml-12"
                                     data-i18n="form.fields.message.hint">Describe the issue, the expected
                                     behavior, and what is happening now.</p>
+                                <p id="contact-message-error" class="input-hint input-error ml-12 hidden"
+                                    data-contact-error="message"></p>
                             </div>
 
                             <div class="space-y-8">
@@ -190,7 +212,8 @@
                                 <div class="text-field-shell text-field-shell-meta">
                                     <textarea id="contact-details" rows="8" placeholder="Add any additional details"
                                         data-i18n-placeholder="form.fields.details.placeholder" class="input input-md"
-                                        aria-describedby="contact-details-hint"></textarea>
+                                        aria-describedby="contact-details-hint contact-details-error" name="details"
+                                        data-contact-field="details"></textarea>
                                     <span class="text-field-shell-meta-icon" aria-hidden="true">
                                         <i class="ri-expand-diagonal-s-2-fill text-icon-sm"></i>
                                     </span>
@@ -198,11 +221,30 @@
                                 <p id="contact-details-hint" class="input-hint ml-12"
                                     data-i18n="form.fields.details.hint">Add serial numbers, order references,
                                     installation notes, or troubleshooting already completed.</p>
+                                <p id="contact-details-error" class="input-hint input-error ml-12 hidden"
+                                    data-contact-error="details"></p>
                             </div>
 
-                            <div class="flex justify-end">
-                                <button type="submit" class="btn btn-primary btn-md"
-                                    data-i18n="form.submit">Send Your Ticket</button>
+                            <div class="space-y-16">
+                                <div hidden data-contact-status-host>
+                                    <div class="alert alert-md" role="status" data-contact-status>
+                                        <span class="alert-icon">
+                                            <i class="ri-information-line" aria-hidden="true"
+                                                data-contact-status-icon></i>
+                                        </span>
+                                        <div class="alert-copy">
+                                            <p class="alert-title" data-contact-status-title></p>
+                                            <p class="alert-text" data-contact-status-text></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-end">
+                                    <button type="submit" class="btn btn-primary btn-md"
+                                        data-contact-submit-button>
+                                        <span data-contact-submit-label data-i18n="form.submit">Send Your Ticket</span>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </article>
@@ -388,8 +430,10 @@
     </div>
     <script src="src/scripts/utils.js"></script>
     <script src="src/scripts/support-site.js"></script>
+    <script src="src/scripts/contact-form.js"></script>
     <script>
         SupportSite.initPage();
+        SupportContactForm.init();
     </script>
 </body>
 

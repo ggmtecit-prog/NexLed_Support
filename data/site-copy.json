@@ -742,6 +742,76 @@
         "en": "Send Your Ticket",
         "es": "Enviar Ticket",
         "fr": "Envoyer votre ticket"
+      },
+      "submitting": {
+        "pt": "A enviar pedido...",
+        "en": "Sending request...",
+        "es": "Enviando solicitud...",
+        "fr": "Envoi de la demande..."
+      },
+      "feedback": {
+        "submitted": {
+          "title": {
+            "pt": "Pedido enviado",
+            "en": "Request sent",
+            "es": "Solicitud enviada",
+            "fr": "Demande envoy\u00e9e"
+          },
+          "message": {
+            "pt": "O seu pedido foi enviado. A nossa equipa vai analisar a informa\u00e7\u00e3o e responder para o email indicado.",
+            "en": "Your request has been sent. Our team will review the information and follow up using the email address you provided.",
+            "es": "Su solicitud ha sido enviada. Nuestro equipo revisar\u00e1 la informaci\u00f3n y responder\u00e1 al correo electr\u00f3nico facilitado.",
+            "fr": "Votre demande a \u00e9t\u00e9 envoy\u00e9e. Notre \u00e9quipe examinera les informations et vous r\u00e9pondra \u00e0 l'adresse e-mail fournie."
+          }
+        },
+        "validation_summary": {
+          "title": {
+            "pt": "Verifique os campos assinalados",
+            "en": "Check the highlighted fields",
+            "es": "Revise los campos resaltados",
+            "fr": "V\u00e9rifiez les champs signal\u00e9s"
+          },
+          "message": {
+            "pt": "Corrija os campos indicados antes de voltar a enviar o pedido.",
+            "en": "Correct the indicated fields before sending your request again.",
+            "es": "Corrija los campos indicados antes de volver a enviar su solicitud.",
+            "fr": "Corrigez les champs indiqu\u00e9s avant de renvoyer votre demande."
+          }
+        },
+        "submit_failed": {
+          "title": {
+            "pt": "N\u00e3o foi poss\u00edvel enviar o pedido",
+            "en": "We could not send the request",
+            "es": "No se pudo enviar la solicitud",
+            "fr": "La demande n'a pas pu \u00eatre envoy\u00e9e"
+          },
+          "message": {
+            "pt": "Tente novamente dentro de momentos ou utilize um dos contactos diretos apresentados nesta p\u00e1gina.",
+            "en": "Please try again in a moment or use one of the direct support contacts shown on this page.",
+            "es": "Int\u00e9ntelo de nuevo en unos instantes o utilice uno de los contactos directos de soporte mostrados en esta p\u00e1gina.",
+            "fr": "Veuillez r\u00e9essayer dans un instant ou utiliser l'un des contacts directs affich\u00e9s sur cette page."
+          }
+        }
+      },
+      "errors": {
+        "required": {
+          "pt": "Este campo \u00e9 obrigat\u00f3rio.",
+          "en": "This field is required.",
+          "es": "Este campo es obligatorio.",
+          "fr": "Ce champ est obligatoire."
+        },
+        "invalid_email": {
+          "pt": "Introduza um endere\u00e7o de email v\u00e1lido.",
+          "en": "Enter a valid email address.",
+          "es": "Introduzca una direcci\u00f3n de correo v\u00e1lida.",
+          "fr": "Saisissez une adresse e-mail valide."
+        },
+        "max_length": {
+          "pt": "O conte\u00fado excede o tamanho permitido.",
+          "en": "This content exceeds the allowed length.",
+          "es": "Este contenido supera la longitud permitida.",
+          "fr": "Ce contenu d\u00e9passe la longueur autoris\u00e9e."
+        }
       }
     },
     "aside": {
