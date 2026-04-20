@@ -34,13 +34,6 @@
         "es": "Reparación exclusiva por el fabricante",
         "fr": "Réparation réservée au fabricant"
       },
-      "image": "../img/danger.webp",
-      "image_alt": {
-        "pt": "Reparação pelo fabricante",
-        "en": "Manufacturer repair",
-        "es": "Reparación por el fabricante",
-        "fr": "Réparation par le fabricant"
-      },
       "description": {
         "pt": "A reparação desta fonte de alimentação apenas pode ser efetuada pelo fabricante; contacte o fabricante para assistência técnica, para agendar a intervenção e para instruções sobre o envio do equipamento.",
         "en": "The repair of this power supply for the LED bar can only be performed by the manufacturer; contact the manufacturer for technical assistance, to schedule the intervention and for instructions on shipping the equipment.",

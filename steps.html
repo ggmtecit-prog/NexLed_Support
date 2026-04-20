@@ -403,12 +403,7 @@
         }
 
         function resolveGuideImagePath(src) {
-            const safePath = Utils.sanitizeImagePath(src || '');
-            if (!safePath) {
-                return 'favicon.svg';
-            }
-
-            return safePath.replace(/^(\.\.\/)+/, '');
+            return Utils.resolveImagePath(src || '', 'favicon.svg');
         }
 
         function renderParts(parts, lang) {
@@ -640,7 +635,12 @@
             SupportSite.observeRevealTargets(document.getElementById('steps-container'));
 
             const relativeFile = Utils.getParam('file') || DEFAULT_STEP_FILE;
-            const content = await Utils.fetchJSON(`data/${relativeFile}`);
+            const [, content] = await Promise.all([
+                typeof Utils.preloadDamImageManifest === 'function'
+                    ? Utils.preloadDamImageManifest()
+                    : Promise.resolve(null),
+                Utils.fetchJSON(`data/${relativeFile}`),
+            ]);
 
             if (!content) {
                 renderErrorState(lang);

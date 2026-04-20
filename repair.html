@@ -403,7 +403,7 @@
             mediaColumn.className = 'md:col-span-3';
 
             const cardTitleText = Utils.t(card.title, lang, getRepairUiLabel('guideFallback', lang, 'Repair guide'));
-            const imagePath = Utils.sanitizeImagePath(card.image || '');
+            const imagePath = Utils.resolveImagePath(card.image || '');
             if (imagePath) {
                 const mediaInset = document.createElement('div');
                 mediaInset.className = 'p-12 overflow-hidden';
@@ -524,6 +524,9 @@
             const [data, siteCopy] = await Promise.all([
                 Utils.fetchJSON('data/repairs.json'),
                 Utils.fetchJSON('data/site-copy.json'),
+                typeof Utils.preloadDamImageManifest === 'function'
+                    ? Utils.preloadDamImageManifest()
+                    : Promise.resolve(null),
             ]);
             if (!data) {
                 renderRepairError(lang);
