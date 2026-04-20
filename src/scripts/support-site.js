@@ -313,7 +313,7 @@
             const categoryId = normalizeFlyoutId(category?.id, `category-${index + 1}`);
             const itemsMarkup = (category.items || []).map((item) => {
                 const itemLabel = escapeHTML(getTextValue(item?.label, 'Product'));
-                const imagePath = Utils.sanitizeImagePath(getTextValue(item?.image, ''));
+                const imagePath = Utils.resolveImagePath(getTextValue(item?.image, ''));
                 const imageMarkup = imagePath
                     ? `<img src="${escapeHTML(imagePath)}" alt="${escapeHTML(getTextValue(item?.alt, getTextValue(item?.label, 'Product image')))}">`
                     : '';
@@ -457,7 +457,12 @@
     }
 
     async function hydrateFlyouts() {
-        const flyoutConfig = await getFlyoutConfig();
+        const [flyoutConfig] = await Promise.all([
+            getFlyoutConfig(),
+            window.Utils && typeof Utils.preloadDamImageManifest === 'function'
+                ? Utils.preloadDamImageManifest()
+                : Promise.resolve(null),
+        ]);
         if (!flyoutConfig || typeof flyoutConfig !== 'object') {
             return;
         }

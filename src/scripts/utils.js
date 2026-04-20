@@ -4,6 +4,10 @@
  */
 
 const Utils = {
+    _damImageManifestPromise: null,
+    _damImageManifest: null,
+    _trustedImageHosts: new Set(['res.cloudinary.com']),
+
     /**
      * Gets a URL parameter by name.
      */
@@ -67,11 +71,94 @@ const Utils = {
     },
 
     /**
-     * Sanitizes image paths (preventing external links and ensuring local resolution).
+     * Preloads DAM image manifest once and caches it for sync lookups during render.
+     */
+    async preloadDamImageManifest() {
+        if (this._damImageManifestPromise) {
+            return this._damImageManifestPromise;
+        }
+
+        this._damImageManifestPromise = this.fetchJSON('data/dam-images.json')
+            .then((manifest) => {
+                this._damImageManifest = manifest && typeof manifest === 'object' ? manifest : {};
+                return this._damImageManifest;
+            })
+            .catch(() => {
+                this._damImageManifest = {};
+                return this._damImageManifest;
+            });
+
+        return this._damImageManifestPromise;
+    },
+
+    /**
+     * Returns cached DAM image manifest.
+     */
+    getDamImageManifest() {
+        return this._damImageManifest && typeof this._damImageManifest === 'object'
+            ? this._damImageManifest
+            : {};
+    },
+
+    /**
+     * Allows only trusted public DAM URLs.
+     */
+    isTrustedImageUrl(src) {
+        if (typeof src !== 'string') return false;
+
+        const value = src.trim();
+        if (!value || (!value.startsWith('http://') && !value.startsWith('https://') && !value.startsWith('//'))) {
+            return false;
+        }
+
+        try {
+            const url = new URL(value, window.location.href);
+            return ['http:', 'https:'].includes(url.protocol) && this._trustedImageHosts.has(url.hostname);
+        } catch (e) {
+            return false;
+        }
+    },
+
+    /**
+     * Normalizes legacy support image paths before DAM lookup.
+     */
+    normalizeImagePath(src) {
+        if (typeof src !== 'string') return '';
+
+        const value = src.trim();
+        if (!value) return '';
+        if (this.isTrustedImageUrl(value)) return value;
+        if (value.startsWith('http://') || value.startsWith('https://') || value.startsWith('//')) return '';
+
+        return value
+            .replace(/\\/g, '/')
+            .replace(/^\.\//, '')
+            .replace(/^(?:\.\.\/)+/, '')
+            .replace(/^\/+/, '');
+    },
+
+    /**
+     * Resolves legacy local image paths to DAM URLs when mapped.
+     */
+    resolveImagePath(src, fallback = '') {
+        if (this.isTrustedImageUrl(src)) {
+            return src.trim();
+        }
+
+        const normalized = this.normalizeImagePath(src);
+        if (!normalized) {
+            return fallback;
+        }
+
+        const manifest = this.getDamImageManifest();
+        return manifest[normalized] || normalized;
+    },
+
+    /**
+     * Sanitizes image paths while allowing trusted DAM URLs and local fallback.
      */
     sanitizeImagePath(src) {
-        if (!src || src.startsWith('http') || src.startsWith('//')) return '';
-        return src;
+        return this.resolveImagePath(src, '');
     },
 
     /**
