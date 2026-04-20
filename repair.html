@@ -426,10 +426,10 @@
             }
 
             const contentColumn = document.createElement('div');
-            contentColumn.className = 'space-y-64 md:col-span-9';
+            contentColumn.className = 'space-y-48 md:col-span-9';
 
             const copyGroup = document.createElement('div');
-            copyGroup.className = 'space-y-64';
+            copyGroup.className = 'space-y-32';
 
             const title = document.createElement('h3');
             title.className = 'card-title';
@@ -446,7 +446,7 @@
             }
 
             const repairList = document.createElement('ul');
-            repairList.className = 'grid grid-cols-1 gap-64 sm:grid-cols-2 xl:grid-cols-3';
+            repairList.className = 'grid grid-cols-1 gap-32 sm:grid-cols-2 xl:grid-cols-3';
 
             (card.repairs || []).forEach((repair) => {
                 const item = document.createElement('li');
