@@ -499,17 +499,21 @@
 
             const layout = document.createElement('div');
             layout.className = 'grid grid-cols-1 gap-24 md:grid-cols-12 md:items-center';
+            layout.dataset.stepLayout = '';
 
             const mediaColumn = document.createElement('div');
             mediaColumn.className = 'md:col-span-5';
+            mediaColumn.dataset.stepMediaColumn = '';
 
             const mediaInset = document.createElement('div');
             mediaInset.className = 'p-12 overflow-hidden';
+            mediaInset.dataset.stepMediaInset = '';
 
             const mediaFrame = document.createElement('div');
 
             const image = document.createElement('img');
             image.className = 'card-product-image';
+            image.dataset.stepImage = '';
             image.src = resolveGuideImagePath(step.image);
             image.alt = Utils.t(
                 step.image_alt,
@@ -521,16 +525,19 @@
 
             const contentColumn = document.createElement('div');
             contentColumn.className = 'space-y-24 md:col-span-7';
+            contentColumn.dataset.stepContentColumn = '';
 
             const copyGroup = document.createElement('div');
             copyGroup.className = 'space-y-16';
 
             const eyebrow = document.createElement('span');
             eyebrow.className = 'badge badge-neutral badge-sm';
+            eyebrow.dataset.stepEyebrow = '';
             eyebrow.textContent = `${getStepUiLabel('stepFallback', lang, 'Step')} ${index + 1}`;
 
             const title = document.createElement('h3');
             title.className = 'card-title';
+            title.dataset.stepTitle = '';
             title.textContent = stripStepPrefix(Utils.t(step.title, lang, getStepUiLabel('stepFallback', lang, 'Step')));
 
             mediaColumn.appendChild(mediaInset);
@@ -541,6 +548,7 @@
             if (descriptionText) {
                 const description = document.createElement('p');
                 description.className = 'card-text';
+                description.dataset.stepDescription = '';
                 description.textContent = descriptionText;
                 copyGroup.appendChild(description);
             }
@@ -711,7 +719,17 @@
                 bodyPadding: card.querySelector('.card-body')?.style.getPropertyValue('padding') || '',
                 bodyPaddingPriority: card.querySelector('.card-body')?.style.getPropertyPriority('padding') || '',
                 layoutGap: card.querySelector('.card-body > .grid')?.style.getPropertyValue('gap') || '',
-                layoutGapPriority: card.querySelector('.card-body > .grid')?.style.getPropertyPriority('gap') || ''
+                layoutGapPriority: card.querySelector('.card-body > .grid')?.style.getPropertyPriority('gap') || '',
+                layoutTemplateColumns: card.querySelector('[data-step-layout]')?.style.getPropertyValue('grid-template-columns') || '',
+                layoutTemplateColumnsPriority: card.querySelector('[data-step-layout]')?.style.getPropertyPriority('grid-template-columns') || '',
+                mediaColumnGridColumn: card.querySelector('[data-step-media-column]')?.style.getPropertyValue('grid-column') || '',
+                mediaColumnGridColumnPriority: card.querySelector('[data-step-media-column]')?.style.getPropertyPriority('grid-column') || '',
+                contentColumnGridColumn: card.querySelector('[data-step-content-column]')?.style.getPropertyValue('grid-column') || '',
+                contentColumnGridColumnPriority: card.querySelector('[data-step-content-column]')?.style.getPropertyPriority('grid-column') || '',
+                mediaInsetPadding: card.querySelector('[data-step-media-inset]')?.style.getPropertyValue('padding') || '',
+                mediaInsetPaddingPriority: card.querySelector('[data-step-media-inset]')?.style.getPropertyPriority('padding') || '',
+                titleClassName: card.querySelector('[data-step-title]')?.className || '',
+                descriptionClassName: card.querySelector('[data-step-description]')?.className || ''
             }));
 
             printState.stepCardStyles.forEach(({ element }, index) => {
@@ -724,8 +742,24 @@
                 const body = element.querySelector('.card-body');
                 body?.style.setProperty('padding', '40px', 'important');
 
-                const layout = element.querySelector('.card-body > .grid');
+                const layout = element.querySelector('[data-step-layout]');
                 layout?.style.setProperty('gap', '40px', 'important');
+                layout?.style.setProperty('grid-template-columns', 'repeat(2, minmax(0, 1fr))', 'important');
+
+                const mediaColumn = element.querySelector('[data-step-media-column]');
+                mediaColumn?.style.setProperty('grid-column', 'span 1 / span 1', 'important');
+
+                const contentColumn = element.querySelector('[data-step-content-column]');
+                contentColumn?.style.setProperty('grid-column', 'span 1 / span 1', 'important');
+
+                const mediaInset = element.querySelector('[data-step-media-inset]');
+                mediaInset?.style.setProperty('padding', '0', 'important');
+
+                const title = element.querySelector('[data-step-title]');
+                title?.classList.add('text-card-title', 'text-black');
+
+                const description = element.querySelector('[data-step-description]');
+                description?.classList.add('text-body-lg');
 
                 if (index > 0 && index % 2 === 0) {
                     element.style.setProperty('break-before', 'page', 'important');
@@ -774,7 +808,17 @@
                 bodyPadding,
                 bodyPaddingPriority,
                 layoutGap,
-                layoutGapPriority
+                layoutGapPriority,
+                layoutTemplateColumns,
+                layoutTemplateColumnsPriority,
+                mediaColumnGridColumn,
+                mediaColumnGridColumnPriority,
+                contentColumnGridColumn,
+                contentColumnGridColumnPriority,
+                mediaInsetPadding,
+                mediaInsetPaddingPriority,
+                titleClassName,
+                descriptionClassName
             }) => {
                 if (breakInside) {
                     element.style.setProperty('break-inside', breakInside, breakInsidePriority);
@@ -825,11 +869,48 @@
                     body?.style.removeProperty('padding');
                 }
 
-                const layout = element.querySelector('.card-body > .grid');
+                const layout = element.querySelector('[data-step-layout]');
                 if (layoutGap) {
                     layout?.style.setProperty('gap', layoutGap, layoutGapPriority);
                 } else {
                     layout?.style.removeProperty('gap');
+                }
+
+                if (layoutTemplateColumns) {
+                    layout?.style.setProperty('grid-template-columns', layoutTemplateColumns, layoutTemplateColumnsPriority);
+                } else {
+                    layout?.style.removeProperty('grid-template-columns');
+                }
+
+                const mediaColumn = element.querySelector('[data-step-media-column]');
+                if (mediaColumnGridColumn) {
+                    mediaColumn?.style.setProperty('grid-column', mediaColumnGridColumn, mediaColumnGridColumnPriority);
+                } else {
+                    mediaColumn?.style.removeProperty('grid-column');
+                }
+
+                const contentColumn = element.querySelector('[data-step-content-column]');
+                if (contentColumnGridColumn) {
+                    contentColumn?.style.setProperty('grid-column', contentColumnGridColumn, contentColumnGridColumnPriority);
+                } else {
+                    contentColumn?.style.removeProperty('grid-column');
+                }
+
+                const mediaInset = element.querySelector('[data-step-media-inset]');
+                if (mediaInsetPadding) {
+                    mediaInset?.style.setProperty('padding', mediaInsetPadding, mediaInsetPaddingPriority);
+                } else {
+                    mediaInset?.style.removeProperty('padding');
+                }
+
+                const title = element.querySelector('[data-step-title]');
+                if (titleClassName) {
+                    title.className = titleClassName;
+                }
+
+                const description = element.querySelector('[data-step-description]');
+                if (descriptionClassName) {
+                    description.className = descriptionClassName;
                 }
             });
             printState.stepCardStyles = [];
