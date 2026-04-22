@@ -122,7 +122,7 @@
             </header>
 
             <section id="guide-summary-cards" class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section" data-print-hide>
-                <article class="card h-full" data-reveal="section">
+                <article class="card h-full" data-reveal="section" data-print-hide>
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h3>
                         <p id="time-text" class="card-text">Loading guide details...</p>
@@ -132,7 +132,7 @@
                     </div>
                 </article>
 
-                <article class="card h-full" data-reveal="section">
+                <article class="card h-full" data-reveal="section" data-print-hide>
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.requiredPartsTitle">Required Parts and Tools</h3>
                         <p class="card-text" data-i18n="cards.requiredPartsDescription">Some of these items might also
@@ -144,7 +144,7 @@
                     </div>
                 </article>
 
-                <article class="card h-full" data-reveal="section">
+                <article class="card h-full" data-reveal="section" data-print-hide>
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.printTitle">Print Step In This Page</h3>
                         <p class="card-text" data-i18n="cards.printDescription">
@@ -179,7 +179,7 @@
             </div>
         </main>
 
-        <div class="container-balanced mt-64 pt-64" data-reveal="section">
+        <div class="container-balanced mt-64 pt-64" data-reveal="section" data-print-hide>
             <footer class="footer">
                 <div class="footer-body">
                     <div class="footer-grid">
@@ -634,11 +634,14 @@
             revealPrintableContent();
             printState.hiddenElements = Array.from(document.querySelectorAll('[data-print-hide]')).map((element) => ({
                 element,
-                hidden: element.hidden
+                hidden: element.hidden,
+                inlineDisplay: element.style.getPropertyValue('display'),
+                inlineDisplayPriority: element.style.getPropertyPriority('display')
             }));
 
             printState.hiddenElements.forEach(({ element }) => {
                 element.hidden = true;
+                element.style.setProperty('display', 'none', 'important');
             });
 
             printState.prepared = true;
@@ -649,8 +652,14 @@
                 return;
             }
 
-            printState.hiddenElements.forEach(({ element, hidden }) => {
+            printState.hiddenElements.forEach(({ element, hidden, inlineDisplay, inlineDisplayPriority }) => {
                 element.hidden = hidden;
+
+                if (inlineDisplay) {
+                    element.style.setProperty('display', inlineDisplay, inlineDisplayPriority);
+                } else {
+                    element.style.removeProperty('display');
+                }
             });
 
             printState.hiddenElements = [];
