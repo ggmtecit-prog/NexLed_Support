@@ -27,7 +27,7 @@
 
 <body class="bg-grey-tertiary text-black selection:bg-green-primary/10" data-support-page="steps">
     <div class="min-h-screen flex flex-col gap-24 py-24">
-        <div class="container-balanced">
+        <div class="container-balanced" data-print-hide>
             <div class="w-full mx-auto">
                 <header class="nav-bar">
                     <a href="#" class="flex items-center gap-12 group" data-support-route="home">
@@ -110,7 +110,7 @@
 
         <main class="container-standard flex-1">
             <div class="w-full mx-auto space-y-48">
-            <nav aria-label="Breadcrumb" class="w-full" data-support-breadcrumb data-reveal="section"></nav>
+            <nav aria-label="Breadcrumb" class="w-full" data-support-breadcrumb data-reveal="section" data-print-hide></nav>
 
             <header class="page-header-hero" data-reveal="hero">
                 <h1 id="main-title" class="text-hero-title text-black">Loading guide...</h1>
@@ -121,7 +121,7 @@
                 </p>
             </header>
 
-            <section id="guide-summary-cards" class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section">
+            <section id="guide-summary-cards" class="grid grid-cols-1 gap-24 md:grid-cols-3" data-reveal="section" data-print-hide>
                 <article class="card h-full" data-reveal="section">
                     <div class="card-body">
                         <h3 class="card-title" data-i18n="cards.timeTitle">Estimated Time &amp; Difficulty</h3>
@@ -609,6 +609,11 @@
             SupportSite.observeRevealTargets(stepsContainer);
         }
 
+        const printState = {
+            prepared: false,
+            hiddenElements: []
+        };
+
         function revealPrintableContent() {
             document.documentElement.classList.remove('has-scroll-reveal');
             document.querySelectorAll('[data-reveal]').forEach((element) => {
@@ -621,8 +626,39 @@
             }
         }
 
-        async function triggerStepPrint() {
+        function preparePrintLayout() {
+            if (printState.prepared) {
+                return;
+            }
+
             revealPrintableContent();
+            printState.hiddenElements = Array.from(document.querySelectorAll('[data-print-hide]')).map((element) => ({
+                element,
+                hidden: element.hidden
+            }));
+
+            printState.hiddenElements.forEach(({ element }) => {
+                element.hidden = true;
+            });
+
+            printState.prepared = true;
+        }
+
+        function restorePrintLayout() {
+            if (!printState.prepared) {
+                return;
+            }
+
+            printState.hiddenElements.forEach(({ element, hidden }) => {
+                element.hidden = hidden;
+            });
+
+            printState.hiddenElements = [];
+            printState.prepared = false;
+        }
+
+        async function triggerStepPrint() {
+            preparePrintLayout();
             await new Promise((resolve) => window.requestAnimationFrame(resolve));
             window.print();
         }
@@ -667,7 +703,8 @@
 
         initStepsPage();
 
-        window.addEventListener('beforeprint', revealPrintableContent);
+        window.addEventListener('beforeprint', preparePrintLayout);
+        window.addEventListener('afterprint', restorePrintLayout);
 
         document.querySelector('[data-steps-print]')?.addEventListener('click', () => {
             triggerStepPrint();
