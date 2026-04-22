@@ -611,7 +611,8 @@
 
         const printState = {
             prepared: false,
-            hiddenElements: []
+            hiddenElements: [],
+            stepCardStyles: []
         };
 
         function revealPrintableContent() {
@@ -644,6 +645,32 @@
                 element.style.setProperty('display', 'none', 'important');
             });
 
+            const stepCards = Array.from(document.querySelectorAll('#steps-container > article.card'));
+            printState.stepCardStyles = stepCards.map((card) => ({
+                element: card,
+                breakInside: card.style.getPropertyValue('break-inside'),
+                breakInsidePriority: card.style.getPropertyPriority('break-inside'),
+                pageBreakInside: card.style.getPropertyValue('page-break-inside'),
+                pageBreakInsidePriority: card.style.getPropertyPriority('page-break-inside'),
+                breakBefore: card.style.getPropertyValue('break-before'),
+                breakBeforePriority: card.style.getPropertyPriority('break-before'),
+                pageBreakBefore: card.style.getPropertyValue('page-break-before'),
+                pageBreakBeforePriority: card.style.getPropertyPriority('page-break-before')
+            }));
+
+            printState.stepCardStyles.forEach(({ element }, index) => {
+                element.style.setProperty('break-inside', 'avoid-page', 'important');
+                element.style.setProperty('page-break-inside', 'avoid', 'important');
+
+                if (index > 0 && index % 2 === 0) {
+                    element.style.setProperty('break-before', 'page', 'important');
+                    element.style.setProperty('page-break-before', 'always', 'important');
+                } else {
+                    element.style.removeProperty('break-before');
+                    element.style.removeProperty('page-break-before');
+                }
+            });
+
             printState.prepared = true;
         }
 
@@ -663,6 +690,42 @@
             });
 
             printState.hiddenElements = [];
+            printState.stepCardStyles.forEach(({
+                element,
+                breakInside,
+                breakInsidePriority,
+                pageBreakInside,
+                pageBreakInsidePriority,
+                breakBefore,
+                breakBeforePriority,
+                pageBreakBefore,
+                pageBreakBeforePriority
+            }) => {
+                if (breakInside) {
+                    element.style.setProperty('break-inside', breakInside, breakInsidePriority);
+                } else {
+                    element.style.removeProperty('break-inside');
+                }
+
+                if (pageBreakInside) {
+                    element.style.setProperty('page-break-inside', pageBreakInside, pageBreakInsidePriority);
+                } else {
+                    element.style.removeProperty('page-break-inside');
+                }
+
+                if (breakBefore) {
+                    element.style.setProperty('break-before', breakBefore, breakBeforePriority);
+                } else {
+                    element.style.removeProperty('break-before');
+                }
+
+                if (pageBreakBefore) {
+                    element.style.setProperty('page-break-before', pageBreakBefore, pageBreakBeforePriority);
+                } else {
+                    element.style.removeProperty('page-break-before');
+                }
+            });
+            printState.stepCardStyles = [];
             printState.prepared = false;
         }
 
