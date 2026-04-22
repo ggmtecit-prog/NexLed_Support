@@ -706,6 +706,8 @@
                 widthPriority: card.style.getPropertyPriority('width'),
                 maxWidth: card.style.getPropertyValue('max-width'),
                 maxWidthPriority: card.style.getPropertyPriority('max-width'),
+                minHeight: card.style.getPropertyValue('min-height'),
+                minHeightPriority: card.style.getPropertyPriority('min-height'),
                 bodyPadding: card.querySelector('.card-body')?.style.getPropertyValue('padding') || '',
                 bodyPaddingPriority: card.querySelector('.card-body')?.style.getPropertyPriority('padding') || '',
                 layoutGap: card.querySelector('.card-body > .grid')?.style.getPropertyValue('gap') || '',
@@ -717,12 +719,13 @@
                 element.style.setProperty('page-break-inside', 'avoid', 'important');
                 element.style.setProperty('width', '100%', 'important');
                 element.style.setProperty('max-width', '100%', 'important');
+                element.style.setProperty('min-height', '360px', 'important');
 
                 const body = element.querySelector('.card-body');
-                body?.style.setProperty('padding', '32px', 'important');
+                body?.style.setProperty('padding', '40px', 'important');
 
                 const layout = element.querySelector('.card-body > .grid');
-                layout?.style.setProperty('gap', '32px', 'important');
+                layout?.style.setProperty('gap', '40px', 'important');
 
                 if (index > 0 && index % 2 === 0) {
                     element.style.setProperty('break-before', 'page', 'important');
@@ -766,6 +769,8 @@
                 widthPriority,
                 maxWidth,
                 maxWidthPriority,
+                minHeight,
+                minHeightPriority,
                 bodyPadding,
                 bodyPaddingPriority,
                 layoutGap,
@@ -805,6 +810,12 @@
                     element.style.setProperty('max-width', maxWidth, maxWidthPriority);
                 } else {
                     element.style.removeProperty('max-width');
+                }
+
+                if (minHeight) {
+                    element.style.setProperty('min-height', minHeight, minHeightPriority);
+                } else {
+                    element.style.removeProperty('min-height');
                 }
 
                 const body = element.querySelector('.card-body');
