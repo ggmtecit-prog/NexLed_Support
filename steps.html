@@ -612,7 +612,8 @@
         const printState = {
             prepared: false,
             hiddenElements: [],
-            stepCardStyles: []
+            stepCardStyles: [],
+            layoutStyles: []
         };
 
         function revealPrintableContent() {
@@ -645,6 +646,51 @@
                 element.style.setProperty('display', 'none', 'important');
             });
 
+            const mainContainer = document.querySelector('main.container-standard');
+            const mainContent = mainContainer?.querySelector(':scope > .w-full.mx-auto.space-y-48');
+            const stepsSection = document.getElementById('steps');
+            const stepsContainer = document.getElementById('steps-container');
+
+            printState.layoutStyles = [
+                {
+                    element: mainContainer,
+                    properties: {
+                        'max-width': mainContainer?.style.getPropertyValue('max-width') || '',
+                        width: mainContainer?.style.getPropertyValue('width') || '',
+                        'padding-left': mainContainer?.style.getPropertyValue('padding-left') || '',
+                        'padding-right': mainContainer?.style.getPropertyValue('padding-right') || ''
+                    }
+                },
+                {
+                    element: mainContent,
+                    properties: {
+                        'max-width': mainContent?.style.getPropertyValue('max-width') || '',
+                        width: mainContent?.style.getPropertyValue('width') || ''
+                    }
+                },
+                {
+                    element: stepsSection,
+                    properties: {
+                        'max-width': stepsSection?.style.getPropertyValue('max-width') || ''
+                    }
+                },
+                {
+                    element: stepsContainer,
+                    properties: {
+                        gap: stepsContainer?.style.getPropertyValue('gap') || ''
+                    }
+                }
+            ].filter(({ element }) => element);
+
+            mainContainer?.style.setProperty('max-width', '100%', 'important');
+            mainContainer?.style.setProperty('width', '100%', 'important');
+            mainContainer?.style.setProperty('padding-left', '0', 'important');
+            mainContainer?.style.setProperty('padding-right', '0', 'important');
+            mainContent?.style.setProperty('max-width', '100%', 'important');
+            mainContent?.style.setProperty('width', '100%', 'important');
+            stepsSection?.style.setProperty('max-width', '100%', 'important');
+            stepsContainer?.style.setProperty('gap', '32px', 'important');
+
             const stepCards = Array.from(document.querySelectorAll('#steps-container > article.card'));
             printState.stepCardStyles = stepCards.map((card) => ({
                 element: card,
@@ -655,12 +701,28 @@
                 breakBefore: card.style.getPropertyValue('break-before'),
                 breakBeforePriority: card.style.getPropertyPriority('break-before'),
                 pageBreakBefore: card.style.getPropertyValue('page-break-before'),
-                pageBreakBeforePriority: card.style.getPropertyPriority('page-break-before')
+                pageBreakBeforePriority: card.style.getPropertyPriority('page-break-before'),
+                width: card.style.getPropertyValue('width'),
+                widthPriority: card.style.getPropertyPriority('width'),
+                maxWidth: card.style.getPropertyValue('max-width'),
+                maxWidthPriority: card.style.getPropertyPriority('max-width'),
+                bodyPadding: card.querySelector('.card-body')?.style.getPropertyValue('padding') || '',
+                bodyPaddingPriority: card.querySelector('.card-body')?.style.getPropertyPriority('padding') || '',
+                layoutGap: card.querySelector('.card-body > .grid')?.style.getPropertyValue('gap') || '',
+                layoutGapPriority: card.querySelector('.card-body > .grid')?.style.getPropertyPriority('gap') || ''
             }));
 
             printState.stepCardStyles.forEach(({ element }, index) => {
                 element.style.setProperty('break-inside', 'avoid-page', 'important');
                 element.style.setProperty('page-break-inside', 'avoid', 'important');
+                element.style.setProperty('width', '100%', 'important');
+                element.style.setProperty('max-width', '100%', 'important');
+
+                const body = element.querySelector('.card-body');
+                body?.style.setProperty('padding', '32px', 'important');
+
+                const layout = element.querySelector('.card-body > .grid');
+                layout?.style.setProperty('gap', '32px', 'important');
 
                 if (index > 0 && index % 2 === 0) {
                     element.style.setProperty('break-before', 'page', 'important');
@@ -699,7 +761,15 @@
                 breakBefore,
                 breakBeforePriority,
                 pageBreakBefore,
-                pageBreakBeforePriority
+                pageBreakBeforePriority,
+                width,
+                widthPriority,
+                maxWidth,
+                maxWidthPriority,
+                bodyPadding,
+                bodyPaddingPriority,
+                layoutGap,
+                layoutGapPriority
             }) => {
                 if (breakInside) {
                     element.style.setProperty('break-inside', breakInside, breakInsidePriority);
@@ -724,8 +794,45 @@
                 } else {
                     element.style.removeProperty('page-break-before');
                 }
+
+                if (width) {
+                    element.style.setProperty('width', width, widthPriority);
+                } else {
+                    element.style.removeProperty('width');
+                }
+
+                if (maxWidth) {
+                    element.style.setProperty('max-width', maxWidth, maxWidthPriority);
+                } else {
+                    element.style.removeProperty('max-width');
+                }
+
+                const body = element.querySelector('.card-body');
+                if (bodyPadding) {
+                    body?.style.setProperty('padding', bodyPadding, bodyPaddingPriority);
+                } else {
+                    body?.style.removeProperty('padding');
+                }
+
+                const layout = element.querySelector('.card-body > .grid');
+                if (layoutGap) {
+                    layout?.style.setProperty('gap', layoutGap, layoutGapPriority);
+                } else {
+                    layout?.style.removeProperty('gap');
+                }
             });
             printState.stepCardStyles = [];
+
+            printState.layoutStyles.forEach(({ element, properties }) => {
+                Object.entries(properties).forEach(([property, value]) => {
+                    if (value) {
+                        element.style.setProperty(property, value);
+                    } else {
+                        element.style.removeProperty(property);
+                    }
+                });
+            });
+            printState.layoutStyles = [];
             printState.prepared = false;
         }
 
